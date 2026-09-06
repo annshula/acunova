@@ -1,0 +1,97 @@
+{
+  "generatedAt": "2026-09-07T00:00:00Z",
+  "source": "CJDropshipping calculate_freight, CN -> destination, 1 unit at ~180 g, pulled 2026-09-07 for CJ product CJYD1516108 (pid 1543548690886045696). Re-run the freight tool and overwrite this file when rates change.",
+  "product": {
+    "pid": "1543548690886045696",
+    "productSku": "CJYD1516108",
+    "productNameEn": "Massage PE Needle Physiotherapy Automatic Acupuncture",
+    "productUrl": "https://www.cjdropshipping.com/product/massage-pe-needle-physiotherapy-automatic-acupuncture-p-1543548690886045696.html"
+  },
+  "originCountry": "CN",
+  "defaultRegionCode": "US",
+  "regions": [
+    {
+      "code": "US",
+      "label": "United States",
+      "group": "North America",
+      "minDays": 5,
+      "maxDays": 11,
+      "_internalCourier": "CJPacket Sensitive Pro",
+      "_internalPriceUsd": 7.88
+    },
+    {
+      "code": "CA",
+      "label": "Canada",
+      "group": "North America",
+      "minDays": 9,
+      "maxDays": 15,
+      "_internalCourier": "CJPacket Sensitive Pro",
+      "_internalPriceUsd": 9.92
+    },
+    {
+      "code": "GB",
+      "label": "United Kingdom",
+      "group": "Europe",
+      "minDays": 9,
+      "maxDays": 10,
+      "_internalCourier": "CJPacket Fast Line",
+      "_internalPriceUsd": 5.8
+    },
+    {
+      "code": "AU",
+      "label": "Australia",
+      "group": "Asia Pacific",
+      "minDays": 8,
+      "maxDays": 17,
+      "_internalCourier": "CJPacket Eub Special Line",
+      "_internalPriceUsd": 7.55
+    },
+    {
+      "code": "IN",
+      "label": "India",
+      "group": "Asia Pacific",
+      "minDays": 10,
+      "maxDays": 18,
+      "_internalCourier": "CJPacket Asia Liquid Line",
+      "_internalPriceUsd": 4.95
+    }
+  ],
+  "variantWeights": [
+    {
+      "sku": "CJYD151610801AZ",
+      "title": "3 heads, oil-free",
+      "vid": "2504140919121613400",
+      "weightGrams": 180
+    },
+    {
+      "sku": "CJYD151610804DW",
+      "title": "3 heads, oil-free, blister pack",
+      "vid": "2504140919121614400",
+      "weightGrams": 180
+    },
+    {
+      "sku": "CJYD151610803CX",
+      "title": "3 heads with oil",
+      "vid": "2504140919121614000",
+      "weightGrams": 180
+    },
+    {
+      "sku": "CJYD151610805EV",
+      "title": "3 heads with oil, blister pack",
+      "vid": "2504140919121615200",
+      "weightGrams": 180
+    },
+    {
+      "sku": "CJYD151610806FU",
+      "title": "3 heads with oil, gift box",
+      "vid": "2504140919121615300",
+      "weightGrams": 180
+    },
+    {
+      "sku": "CJYD151610802BY",
+      "title": "5 heads, oil-free",
+      "vid": "1543548690932183040",
+      "weightGrams": 178
+    }
+  ]
+}

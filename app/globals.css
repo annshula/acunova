@@ -1,0 +1,527 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   AcuNova design tokens.
+
+   The reference build this repo started from was a dark, warm-parchment
+   editorial look built for a men's jewellery brand. None of that survives
+   here. AcuNova's brand poster sets the direction instead: a bright,
+   airy, almost clinical canvas, generous whitespace, thin line icons,
+   soft rounded photo cards, wide-tracked caps labels, and exactly one
+   accent — the bronze from the wordmark.
+
+   Rules that keep it on-brand:
+     - The canvas is near-white. Dark surfaces are used for the footer
+       and nothing else; there is no dark hero, no dark story band.
+     - Bronze is the only accent. It carries CTAs, active states, rules
+       and the script flourish. Never introduce a second hue.
+     - Silver exists solely to describe the device itself.
+     - Contrast comes from weight and space, not from slabs of colour.
+   ------------------------------------------------------------------ */
+@theme {
+  /* ── The canvas ─────────────────────────────────────────────────── */
+  --color-canvas: #f4fefb;
+  --color-surface: #ffffff;
+  --color-surface-sunken: #eaf4f1;
+  --color-linen: #ffffff;
+  --color-parchment: #eaf4f1;
+  --color-ivory: #ffffff;
+
+  /* ── Ink: warm near-black, never pure #000 ──────────────────────── */
+  --color-ink: #121d1a;
+  --color-ink-soft: #53645f;
+  --color-ink-mute: #5f706b;
+  --color-ink-muted: #53645f;
+  --color-ink-subtle: #5f706b;
+
+  /* ── Hairlines ──────────────────────────────────────────────────── */
+  --color-line: #d9e4e0;
+  --color-line-strong: #c2d2cd;
+
+  /* ── The one accent: bronze from the wordmark ─────────────────────
+     Two bronzes, and the split is a contrast contract, not taste:
+       --color-gold-deep (#7e5c36) is the ONLY bronze that may carry a
+         white label. White on it is 6.05:1 — text-safe.
+       --color-gold (#a67c4e) is 3.74:1 against white — UI-safe only.
+         Icons, hairlines, the script flourish, graphical highlights.
+         It must NEVER be a fill behind white text, which is exactly
+         what the first hand-picked draft of this palette did.
+     Verified with scripts/check_contrast.py --matrix; see the Color
+     contract in .tastemaker/style-lock.md before adding a pairing. */
+  --color-gold: #0b808d;
+  --color-gold-hot: #12a0b0;
+  --color-gold-deep: #0f846e;
+  --color-gold-wash: #c3e8dc;
+  /* Star fill on ratings — a truer yellow-gold than the wordmark bronze,
+     matching the poster's rating row. */
+  --color-star: #c9a227;
+
+  /* ── Brushed silver: the device, and only the device ────────────── */
+  --color-silver: #c9ccd1;
+  --color-silver-deep: #8f959d;
+
+  /* ── Semantic aliases ───────────────────────────────────────────── */
+  /* primary = the deep bronze, because primary is what buttons fill
+     with and buttons carry white labels. Do not swap these two. */
+  --color-primary: #0f846e;
+  --color-primary-hover: #0b6957;
+  --color-on-primary: #ffffff;
+  --color-accent: #0b808d;
+  --color-accent-hover: #0f846e;
+  --color-accent-soft: #c3e8dc;
+  --color-on-accent: #ffffff;
+  --color-ring: #0f846e;
+  --color-overlay: rgb(18 29 26 / 0.50);
+
+  /* ── Dark surfaces: footer only ─────────────────────────────────── */
+  --color-footer: #0d1a17;
+  --color-void: #0a1512;
+  --color-pitch: #0d1a17;
+  --color-carbon: #122320;
+  --color-graphite: #1a2e2a;
+  --color-slate-line: #24403a;
+  --color-steel: #cfe0da;
+  --color-ash: #9aada7;
+  --color-dim: #71847e;
+  --color-chalk: #f4fefb;
+
+  /* ── Type ───────────────────────────────────────────────────────────
+     Outfit carries every heading and all UI chrome; Figtree is the
+     reading face; Parisienne appears once per page at most, for the
+     poster's "Small Device. Big Relief." flourish. */
+  --font-display: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-label: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-script: var(--font-parisienne), ui-serif, Georgia, cursive;
+  /* Legacy alias from the reference build — resolves to the display face
+     so nothing renders in a font that no longer loads. */
+  --font-mega: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+
+  /* Fluid scale. Headlines run large and light, the way the poster sets
+     them, so the clamps are wider than a typical body-copy scale. */
+  --text-caption: 0.6875rem;
+  --text-caption--line-height: 1.5;
+  --text-caption--letter-spacing: 0.18em;
+  --text-body-sm: 0.875rem;
+  --text-body-sm--line-height: 1.65;
+  --text-body: 1rem;
+  --text-body--line-height: 1.7;
+  --text-subheading: clamp(1rem, 0.6rem + 1.1vw, 1.375rem);
+  --text-subheading--line-height: 1.4;
+  --text-subheading--letter-spacing: 0;
+  --text-heading-sm: clamp(1.5rem, 1.1rem + 1.4vw, 1.875rem);
+  --text-heading-sm--line-height: 1.2;
+  --text-heading: clamp(1.875rem, 1.1rem + 3vw, 2.75rem);
+  --text-heading--line-height: 1.15;
+  --text-heading-lg: clamp(2.25rem, 1.2rem + 4.2vw, 3.5rem);
+  --text-heading-lg--line-height: 1.1;
+  --text-display: clamp(2.5rem, 1rem + 6.4vw, 4.5rem);
+  --text-display--line-height: 1.05;
+
+  /* Soft, generous radii — the poster's photo cards and chips. */
+  --radius-card: 14px;
+  --radius-photo: 18px;
+
+  /* ── Motion ─────────────────────────────────────────────────────── */
+  --ease-out-soft: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in-soft: cubic-bezier(0.6, 0, 0.9, 0.4);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --ease-out-expo: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* ── Elevation: barely-there. A bright layout carries depth with
+     hairlines and space, not heavy drop shadows. ─────────────────── */
+  --shadow-e1: 0 1px 2px rgb(18 29 26 / 0.04);
+  --shadow-e2: 0 2px 6px rgb(18 29 26 / 0.05), 0 1px 2px rgb(18 29 26 / 0.03);
+  --shadow-e3: 0 6px 18px -6px rgb(18 29 26 / 0.10), 0 2px 6px rgb(18 29 26 / 0.04);
+  --shadow-e4: 0 16px 40px -12px rgb(18 29 26 / 0.14), 0 4px 10px rgb(18 29 26 / 0.05);
+  --shadow-lift: 0 16px 40px -12px rgb(18 29 26 / 0.14), 0 4px 10px rgb(18 29 26 / 0.05);
+  --shadow-photo: 0 10px 30px -10px rgb(18 29 26 / 0.16);
+  --shadow-gold: 0 8px 20px -8px rgb(15 132 110 / 0.40);
+}
+
+/* ---------------------------------- base ---------------------------------- */
+
+:root {
+  color-scheme: light;
+  --nav-h: 68px;
+  --marquee-h: 0px; /* announcement marquee is disabled */
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+/* Browsers don't give <button> a pointer cursor by default (only <a href>
+   gets one from the UA stylesheet) — every clickable control in this app is
+   a real <button>, so restore it globally instead of per-component. */
+button:not(:disabled),
+[role="button"],
+summary,
+label[for] {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+  -webkit-text-size-adjust: 100%;
+  /* The page is never meant to pan horizontally — carousels and marquees
+     scroll inside their own overflow-hidden containers. Clipping at the root
+     guarantees no element can ever force a whole-page horizontal scroll on
+     mobile. */
+  overflow-x: clip;
+  /* Thin, self-tinted scrollbar (Firefox) — see the WebKit rules below for
+     the rest of the design. Built from currentColor, not a fixed colour, so
+     it reads correctly on the light canvas and on the dark surfaces (footer,
+     mobile drawer) without per-surface overrides. */
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, currentColor 30%, transparent) transparent;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "cv02", "cv03", "cv04", "ss01";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-ink);
+  color: #ffffff;
+}
+
+/* -------------------------------- scrollbar --------------------------------
+   WebKit/Blink half of the design above — Chrome, Edge, Safari. The rule
+   resolves per scrolling element, not where it's declared, so a nested
+   scroller (e.g. the dark mobile drawer) picks up its own text colour. */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: color-mix(in srgb, currentColor 26%, transparent);
+  border-radius: 999px;
+  transition: background-color 0.25s var(--ease-out-soft);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-gold);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* The footer newsletter field uses its own quiet styling — suppress the
+   global orange focus ring here. */
+.newsletter-form input:focus-visible {
+  outline: none;
+}
+
+/* Utility escape hatch for the display face. Family only — weight and
+   tracking come from per-element utilities or the base heading rule
+   below. */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
+
+/* The poster's headline treatment: large, set light, tracked in a
+   little. The emphasis inside it comes from a bolder span, never from
+   a different family or a colour block — see .headline-accent. */
+.font-mega {
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+}
+
+/* The bolder half of a poster headline ("Healthier, Happier You."). */
+.headline-accent {
+  font-weight: 700;
+  color: var(--color-gold-deep);
+}
+
+/* The script flourish — "Small Device. Big Relief." Genuine calligraphic
+   face, not an italicised sans. Strictly once per page. */
+.font-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* Wide-tracked caps for eyebrows, photo-card captions, nav links and UI
+   chrome. The poster leans on this heavily — every small label is caps
+   at ~0.18em. */
+.font-label {
+  font-family: var(--font-label);
+  letter-spacing: 0.18em;
+}
+
+/* Base headings: Outfit, set light and tracked in slightly. The poster
+   never shouts — hierarchy comes from size and weight contrast against
+   a lot of white space. Per-element font-* utilities still override. */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* ------------------------------ 3D tilt card ------------------------------ */
+
+.tilt {
+  --rx: 0deg;
+  --ry: 0deg;
+  --mx: 50%;
+  --my: 50%;
+  transform-style: preserve-3d;
+  transform: perspective(1400px) rotateX(var(--rx)) rotateY(var(--ry));
+  transition: transform 0.5s var(--ease-out-expo);
+}
+.tilt[data-active="true"] {
+  transition: transform 0.12s linear;
+}
+.tilt__layer {
+  transform: translate3d(0, 0, var(--z, 0px));
+  transform-style: preserve-3d;
+}
+/* Specular sheen that tracks the pointer across the stone */
+.tilt__sheen {
+  background: radial-gradient(
+    440px circle at var(--mx) var(--my),
+    rgb(255 255 255 / 0.35),
+    transparent 62%
+  );
+}
+
+/* ------------------------------- float loop ------------------------------- */
+
+@keyframes hv-float {
+  0%, 100% { transform: translate3d(0, -1.1%, 0) rotate(-0.6deg); }
+  50%      { transform: translate3d(0, 1.6%, 0) rotate(0.6deg); }
+}
+.float-slow { animation: hv-float 9s var(--ease-out-expo) infinite; }
+
+@keyframes hv-spin {
+  to { transform: rotate(360deg); }
+}
+.spin-slow { animation: hv-spin 34s linear infinite; }
+
+/* Animated light backdrop for the hero — a slow drifting soft gradient. */
+.hv-backdrop {
+  background:
+    radial-gradient(70vmax 70vmax at 12% 8%, rgba(166, 124, 78, 0.10), transparent 62%),
+    radial-gradient(60vmax 60vmax at 88% 80%, rgba(246, 243, 238, 0.9), transparent 60%),
+    radial-gradient(44vmax 44vmax at 70% 16%, rgba(201, 204, 209, 0.18), transparent 64%);
+  animation: hv-backdrop-drift 22s var(--ease-out-expo) infinite alternate;
+  will-change: transform;
+}
+@keyframes hv-backdrop-drift {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to   { transform: translate3d(2.5%, -2.5%, 0) scale(1.05); }
+}
+
+/* Gold pulse used on the trust dot and CTA ring */
+@keyframes hv-pulse {
+  0%   { opacity: 0.9; transform: scale(1); }
+  70%  { opacity: 0;   transform: scale(2.6); }
+  100% { opacity: 0;   transform: scale(2.6); }
+}
+.pulse-ring::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: hv-pulse 2.4s var(--ease-out-expo) infinite;
+}
+
+/* -------------------------------- marquee --------------------------------- */
+
+@keyframes hv-marquee {
+  to { transform: translate3d(-50%, 0, 0); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: hv-marquee var(--dur, 42s) linear infinite;
+}
+.marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+/* ------------------------- scroll-driven progress ------------------------- */
+/* Progressive enhancement: browsers without scroll timelines simply show
+   the finished state, no JS fallback needed. */
+
+@supports (animation-timeline: view()) {
+  @keyframes hv-parallax {
+    from { transform: translate3d(0, var(--par-from, 5%), 0); }
+    to   { transform: translate3d(0, var(--par-to, -5%), 0); }
+  }
+  .parallax {
+    animation: hv-parallax linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+  }
+
+  @keyframes hv-scale-in {
+    from { transform: scale(0.86); opacity: 0.35; }
+    to   { transform: scale(1); opacity: 1; }
+  }
+  .scroll-scale {
+    animation: hv-scale-in linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 42%;
+  }
+}
+
+/* --------------------------------- FAQ ------------------------------------ */
+/* Native <details> keeps the answers in the DOM for crawlers and needs no JS. */
+
+.faq-item > summary {
+  list-style: none;
+  cursor: pointer;
+}
+.faq-item > summary::-webkit-details-marker { display: none; }
+.faq-item .faq-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.42s var(--ease-out-expo);
+}
+.faq-item[open] .faq-body { grid-template-rows: 1fr; }
+.faq-item .faq-body > div { overflow: hidden; }
+.faq-item .faq-sign { transition: transform 0.42s var(--ease-out-expo); }
+.faq-item[open] .faq-sign { transform: rotate(135deg); }
+
+/* --------------------------------- grain ---------------------------------- */
+/* Deliberately a no-op. The reference build tiled an SVG turbulence over
+   its big dark gradients to kill banding. This design has no dark
+   gradients and the brand look is clean studio white, so grain would
+   only make it look cheap. The class is kept as a no-op so the many
+   components that still carry it need no edit. */
+
+.grain::before {
+  content: none;
+}
+
+/* ---------------------- crawlandcuddle motion library ---------------------- */
+/* The reference's animation vocabulary — keyframes + Tailwind v4 utilities,
+   all driven by the shared ease-out-soft curve. */
+
+@keyframes tf-fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes tf-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes tf-scale-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes tf-slide-right {
+  from { transform: translateX(100%); }
+  to { transform: none; }
+}
+@keyframes tf-slide-up {
+  from { transform: translateY(100%); }
+  to { transform: none; }
+}
+@keyframes tf-pop-in {
+  from { opacity: 0; transform: scale(0.9) translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes tf-shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+@utility animate-fade-up {
+  animation: tf-fade-up 0.45s var(--ease-out-soft) both;
+}
+@utility animate-fade-in {
+  animation: tf-fade-in 0.3s var(--ease-out-soft) both;
+}
+@utility animate-scale-in {
+  animation: tf-scale-in 0.22s var(--ease-out-soft) both;
+}
+@utility animate-slide-right {
+  animation: tf-slide-right 0.3s var(--ease-out-soft) both;
+}
+@utility animate-slide-up {
+  animation: tf-slide-up 0.32s var(--ease-out-soft) both;
+}
+@utility animate-pop-in {
+  animation: tf-pop-in 0.35s var(--ease-spring) both;
+  animation-delay: calc(var(--i, 0) * 40ms);
+}
+@utility reveal-item {
+  animation: tf-fade-up 0.5s var(--ease-out-soft) both;
+  animation-delay: calc(var(--i, 0) * 55ms);
+}
+@utility skeleton {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-surface-sunken) 0%,
+    var(--color-line) 50%,
+    var(--color-surface-sunken) 100%
+  );
+  background-size: 200% 100%;
+  animation: tf-shimmer 1.4s linear infinite;
+}
+
+@keyframes tf-reveal-on-view {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: none; }
+}
+@utility scroll-reveal {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: tf-reveal-on-view linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 35%;
+    }
+  }
+}
+
+/* ------------------------------ accessibility ----------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

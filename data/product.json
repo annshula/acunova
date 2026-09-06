@@ -1,0 +1,551 @@
+{
+  "version": 8,
+  "syncedAt": "2026-09-07T00:00:00.000Z",
+  "shop": {
+    "domain": "trackify-com.myshopify.com",
+    "name": "Trackify",
+    "currencyCode": "USD"
+  },
+  "markets": [
+    "AU",
+    "CA",
+    "GB",
+    "IN",
+    "US"
+  ],
+  "products": [
+    {
+      "id": "gid://shopify/Product/9605585436899",
+      "handle": "acunova-acupressure-pen",
+      "title": "AcuNova Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+      "price": 39.95,
+      "compareAtPrice": 59.95,
+      "currencyCode": "USD",
+      "availableForSale": true,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/49544206352611",
+          "title": "3 heads, oil-free",
+          "sku": "CJYD151610801AZ",
+          "price": 39.95,
+          "compareAtPrice": 59.95,
+          "availableForSale": true,
+          "stockQuantity": 5308,
+          "pricesByMarket": {
+            "US": {
+              "amount": 39.95,
+              "compareAtAmount": 59.95,
+              "currencyCode": "USD"
+            },
+            "CA": {
+              "amount": 55.95,
+              "compareAtAmount": 82.95,
+              "currencyCode": "CAD"
+            },
+            "GB": {
+              "amount": 29.95,
+              "compareAtAmount": 44.95,
+              "currencyCode": "GBP"
+            },
+            "AU": {
+              "amount": 55.95,
+              "compareAtAmount": 83.95,
+              "currencyCode": "AUD"
+            },
+            "IN": {
+              "amount": 1499.0,
+              "compareAtAmount": 2299.0,
+              "currencyCode": "INR"
+            }
+          },
+          "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/9ab8f2cc-2ba9-48b9-b735-ffd149833740.jpg?v=1786902932",
+          "shopifyTitle": "3 heads, oil-free",
+          "subtitle": "Standard pack / 3 heads",
+          "quantity": 1,
+          "weightGrams": 180,
+          "_internalCjCostUsd": 1.76,
+          "_internalCjVid": "2504140919121613400"
+        },
+        {
+          "id": "gid://shopify/ProductVariant/49544206156003",
+          "title": "3 heads, oil-free, blister pack",
+          "sku": "CJYD151610804DW",
+          "price": 39.95,
+          "compareAtPrice": 59.95,
+          "availableForSale": true,
+          "stockQuantity": 7664,
+          "pricesByMarket": {
+            "US": {
+              "amount": 39.95,
+              "compareAtAmount": 59.95,
+              "currencyCode": "USD"
+            },
+            "CA": {
+              "amount": 55.95,
+              "compareAtAmount": 82.95,
+              "currencyCode": "CAD"
+            },
+            "GB": {
+              "amount": 29.95,
+              "compareAtAmount": 44.95,
+              "currencyCode": "GBP"
+            },
+            "AU": {
+              "amount": 55.95,
+              "compareAtAmount": 83.95,
+              "currencyCode": "AUD"
+            },
+            "IN": {
+              "amount": 1499.0,
+              "compareAtAmount": 2299.0,
+              "currencyCode": "INR"
+            }
+          },
+          "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/370894b1-f8d8-4236-9b3a-12a75d49c6eb.jpg?v=1786902932",
+          "shopifyTitle": "3 heads, oil-free, blister pack",
+          "subtitle": "Blister pack / 3 heads",
+          "quantity": 1,
+          "weightGrams": 180,
+          "_internalCjCostUsd": 1.84,
+          "_internalCjVid": "2504140919121614400"
+        },
+        {
+          "id": "gid://shopify/ProductVariant/49544206418147",
+          "title": "3 heads with oil",
+          "sku": "CJYD151610803CX",
+          "price": 44.95,
+          "compareAtPrice": 64.95,
+          "availableForSale": true,
+          "stockQuantity": 5819,
+          "pricesByMarket": {
+            "US": {
+              "amount": 44.95,
+              "compareAtAmount": 64.95,
+              "currencyCode": "USD"
+            },
+            "CA": {
+              "amount": 62.95,
+              "compareAtAmount": 89.95,
+              "currencyCode": "CAD"
+            },
+            "GB": {
+              "amount": 33.95,
+              "compareAtAmount": 48.95,
+              "currencyCode": "GBP"
+            },
+            "AU": {
+              "amount": 62.95,
+              "compareAtAmount": 90.95,
+              "currencyCode": "AUD"
+            },
+            "IN": {
+              "amount": 1799.0,
+              "compareAtAmount": 2699.0,
+              "currencyCode": "INR"
+            }
+          },
+          "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/c6e687c4-4219-49e9-9e78-6e10d3a5bc2d.jpg?v=1786902932",
+          "shopifyTitle": "3 heads with oil",
+          "subtitle": "Standard pack / 3 heads + oil",
+          "quantity": 1,
+          "weightGrams": 180,
+          "_internalCjCostUsd": 1.84,
+          "_internalCjVid": "2504140919121614000"
+        },
+        {
+          "id": "gid://shopify/ProductVariant/49544206221539",
+          "title": "3 heads with oil, blister pack",
+          "sku": "CJYD151610805EV",
+          "price": 44.95,
+          "compareAtPrice": 64.95,
+          "availableForSale": true,
+          "stockQuantity": 8716,
+          "pricesByMarket": {
+            "US": {
+              "amount": 44.95,
+              "compareAtAmount": 64.95,
+              "currencyCode": "USD"
+            },
+            "CA": {
+              "amount": 62.95,
+              "compareAtAmount": 89.95,
+              "currencyCode": "CAD"
+            },
+            "GB": {
+              "amount": 33.95,
+              "compareAtAmount": 48.95,
+              "currencyCode": "GBP"
+            },
+            "AU": {
+              "amount": 62.95,
+              "compareAtAmount": 90.95,
+              "currencyCode": "AUD"
+            },
+            "IN": {
+              "amount": 1799.0,
+              "compareAtAmount": 2699.0,
+              "currencyCode": "INR"
+            }
+          },
+          "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/8f652d8a-4b40-424d-835f-e574cd3e0926.jpg?v=1786902932",
+          "shopifyTitle": "3 heads with oil, blister pack",
+          "subtitle": "Blister pack / 3 heads + oil",
+          "quantity": 1,
+          "weightGrams": 180,
+          "_internalCjCostUsd": 1.93,
+          "_internalCjVid": "2504140919121615200"
+        },
+        {
+          "id": "gid://shopify/ProductVariant/49544206287075",
+          "title": "3 heads with oil, gift box",
+          "sku": "CJYD151610806FU",
+          "price": 47.95,
+          "compareAtPrice": 69.95,
+          "availableForSale": true,
+          "stockQuantity": 9880,
+          "pricesByMarket": {
+            "US": {
+              "amount": 47.95,
+              "compareAtAmount": 69.95,
+              "currencyCode": "USD"
+            },
+            "CA": {
+              "amount": 66.95,
+              "compareAtAmount": 96.95,
+              "currencyCode": "CAD"
+            },
+            "GB": {
+              "amount": 35.95,
+              "compareAtAmount": 51.95,
+              "currencyCode": "GBP"
+            },
+            "AU": {
+              "amount": 66.95,
+              "compareAtAmount": 97.95,
+              "currencyCode": "AUD"
+            },
+            "IN": {
+              "amount": 1899.0,
+              "compareAtAmount": 2899.0,
+              "currencyCode": "INR"
+            }
+          },
+          "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/93c2b9c4-38cf-4516-b556-d6c3ca530065.jpg?v=1786902932",
+          "shopifyTitle": "3 heads with oil, gift box",
+          "subtitle": "Gift box / 3 heads + oil",
+          "quantity": 1,
+          "weightGrams": 180,
+          "_internalCjCostUsd": 2.11,
+          "_internalCjVid": "2504140919121615300"
+        },
+        {
+          "id": "gid://shopify/ProductVariant/49544206483683",
+          "title": "5 heads, oil-free",
+          "sku": "CJYD151610802BY",
+          "price": 49.95,
+          "compareAtPrice": 74.95,
+          "availableForSale": true,
+          "stockQuantity": 46331,
+          "pricesByMarket": {
+            "US": {
+              "amount": 49.95,
+              "compareAtAmount": 74.95,
+              "currencyCode": "USD"
+            },
+            "CA": {
+              "amount": 69.95,
+              "compareAtAmount": 103.95,
+              "currencyCode": "CAD"
+            },
+            "GB": {
+              "amount": 36.95,
+              "compareAtAmount": 55.95,
+              "currencyCode": "GBP"
+            },
+            "AU": {
+              "amount": 69.95,
+              "compareAtAmount": 104.95,
+              "currencyCode": "AUD"
+            },
+            "IN": {
+              "amount": 1999.0,
+              "compareAtAmount": 2999.0,
+              "currencyCode": "INR"
+            }
+          },
+          "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/3e56e05d-cd18-4ac7-8c26-8faf092d913e.jpg?v=1786902932",
+          "shopifyTitle": "5 heads, oil-free",
+          "subtitle": "Standard pack / 5 heads",
+          "quantity": 1,
+          "weightGrams": 180,
+          "_internalCjCostUsd": 3.2,
+          "_internalCjVid": "1543548690932183040"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/da560ae6-4bd7-46e7-86f8-fac502a3cdc3.jpg?v=1786902932",
+          "alt": "AcuNova acupressure pen, auto-sensing meridian massage tool",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/1d82da7b-61e5-40a3-bf85-237570915f2f.jpg?v=1786902931",
+          "alt": "The AcuNova pen with its interchangeable massage heads laid out",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/029e763f-3b6c-44ae-bf9b-74ce60d381df.jpg?v=1786902932",
+          "alt": "Close-up of the AcuNova pen tip and control button",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/b2d00050-9a28-4e1c-9cc2-b6beb1a5766d.jpg?v=1786902932",
+          "alt": "The AcuNova pen held against the neck and shoulder",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/c6e687c4-4219-49e9-9e78-6e10d3a5bc2d.jpg?v=1786902932",
+          "alt": "The AcuNova pen in its retail pack with the oil applicator head",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/f931c505-1b43-4f24-8d78-3fcabbf6b29c.jpg?v=1786902932",
+          "alt": "The AcuNova pen being used on the forearm",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/3e56e05d-cd18-4ac7-8c26-8faf092d913e.jpg?v=1786902932",
+          "alt": "The five-head AcuNova tip fitted to the pen body",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/8f652d8a-4b40-424d-835f-e574cd3e0926.jpg?v=1786902932",
+          "alt": "The AcuNova pen blister pack contents",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/9ab8f2cc-2ba9-48b9-b735-ffd149833740.jpg?v=1786902932",
+          "alt": "The three-head AcuNova tip, oil-free version",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/370894b1-f8d8-4236-9b3a-12a75d49c6eb.jpg?v=1786902932",
+          "alt": "The AcuNova pen shown at scale in the hand",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/93c2b9c4-38cf-4516-b556-d6c3ca530065.jpg?v=1786902932",
+          "alt": "The AcuNova pen gift box presentation",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "media": [
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/da560ae6-4bd7-46e7-86f8-fac502a3cdc3.jpg?v=1786902932",
+          "alt": "AcuNova acupressure pen, auto-sensing meridian massage tool",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/1d82da7b-61e5-40a3-bf85-237570915f2f.jpg?v=1786902931",
+          "alt": "The AcuNova pen with its interchangeable massage heads laid out",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/029e763f-3b6c-44ae-bf9b-74ce60d381df.jpg?v=1786902932",
+          "alt": "Close-up of the AcuNova pen tip and control button",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/b2d00050-9a28-4e1c-9cc2-b6beb1a5766d.jpg?v=1786902932",
+          "alt": "The AcuNova pen held against the neck and shoulder",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/c6e687c4-4219-49e9-9e78-6e10d3a5bc2d.jpg?v=1786902932",
+          "alt": "The AcuNova pen in its retail pack with the oil applicator head",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/f931c505-1b43-4f24-8d78-3fcabbf6b29c.jpg?v=1786902932",
+          "alt": "The AcuNova pen being used on the forearm",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/3e56e05d-cd18-4ac7-8c26-8faf092d913e.jpg?v=1786902932",
+          "alt": "The five-head AcuNova tip fitted to the pen body",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/8f652d8a-4b40-424d-835f-e574cd3e0926.jpg?v=1786902932",
+          "alt": "The AcuNova pen blister pack contents",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/9ab8f2cc-2ba9-48b9-b735-ffd149833740.jpg?v=1786902932",
+          "alt": "The three-head AcuNova tip, oil-free version",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/370894b1-f8d8-4236-9b3a-12a75d49c6eb.jpg?v=1786902932",
+          "alt": "The AcuNova pen shown at scale in the hand",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/93c2b9c4-38cf-4516-b556-d6c3ca530065.jpg?v=1786902932",
+          "alt": "The AcuNova pen gift box presentation",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "subtitle": "Auto-sensing acupressure, no needles",
+      "material": "ABS and aluminium alloy",
+      "descriptionHtml": "<p><b>No needles. Just real acupressure.</b> The AcuNova pen finds the point and delivers gentle electronic stimulation at the push of a button - the same meridian-point technique behind traditional acupuncture, without the needles, the training or the appointment.</p>\n<h3>What it actually does</h3>\n<ul>\n<li><b>Auto point-sensing:</b> the tip responds as it passes over an active point, so you do not need to have memorised a meridian chart to use it properly.</li>\n<li><b>Interchangeable heads:</b> a 3-head tip for precise work on smaller areas, or a 5-head tip that covers a broad muscle group faster.</li>\n<li><b>Oil-free or oil-infused:</b> the oil-infused heads glide more smoothly, which most people prefer on the neck and shoulders.</li>\n<li><b>ABS and aluminium alloy body:</b> built for daily handling rather than a drawer.</li>\n<li><b>Genuinely portable:</b> it lives in a desk drawer, a gym bag or a carry-on.</li>\n</ul>\n<h3>Who it is for</h3>\n<p>Anyone dealing with everyday muscle tension, stiffness or general stress who wants a faster, needle-free alternative to a clinic appointment - at home, on your own schedule.</p>\n<p><b>Important:</b> this is a wellness and massage tool, not a medical device. It is not cleared by the FDA or Health Canada, and nothing about it treats, cures or prevents any condition. Avoid use over broken skin or varicose veins, and speak to a doctor first if you are pregnant, have a pacemaker or other implanted electronic device, or have any ongoing medical condition.</p>",
+      "specs": [
+        {
+          "label": "Type",
+          "value": "Auto-sensing acupressure pen",
+          "description": "Electronic stimulation of meridian points through a metal tip. A wellness tool, not a medical device, and not cleared as one.",
+          "image": {
+            "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/da560ae6-4bd7-46e7-86f8-fac502a3cdc3.jpg?v=1786902932",
+            "alt": "AcuNova acupressure pen, auto-sensing meridian massage tool",
+            "width": 800,
+            "height": 800
+          }
+        },
+        {
+          "label": "Heads",
+          "value": "3-head or 5-head",
+          "description": "The 3-head tip is more precise on small areas; the 5-head covers a broad muscle group faster. Chosen by variant.",
+          "image": {
+            "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/9ab8f2cc-2ba9-48b9-b735-ffd149833740.jpg?v=1786902932",
+            "alt": "The three-head AcuNova tip, oil-free version",
+            "width": 800,
+            "height": 800
+          }
+        },
+        {
+          "label": "Finish",
+          "value": "Oil-free or oil-infused",
+          "description": "Oil-infused heads glide more smoothly on skin, which most people prefer on the neck and shoulders.",
+          "image": {
+            "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/c6e687c4-4219-49e9-9e78-6e10d3a5bc2d.jpg?v=1786902932",
+            "alt": "The AcuNova pen in its retail pack with the oil applicator head",
+            "width": 800,
+            "height": 800
+          }
+        },
+        {
+          "label": "Body",
+          "value": "ABS and aluminium alloy",
+          "description": "Built for daily handling rather than occasional use.",
+          "image": {
+            "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/029e763f-3b6c-44ae-bf9b-74ce60d381df.jpg?v=1786902932",
+            "alt": "Close-up of the AcuNova pen tip and control button",
+            "width": 800,
+            "height": 800
+          }
+        },
+        {
+          "label": "Weight",
+          "value": "158 g",
+          "description": "The oil-free build, without packaging. Light enough to hold at arm's length behind your own shoulder.",
+          "image": {
+            "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/370894b1-f8d8-4236-9b3a-12a75d49c6eb.jpg?v=1786902932",
+            "alt": "The AcuNova pen shown at scale in the hand",
+            "width": 800,
+            "height": 800
+          }
+        },
+        {
+          "label": "Pack",
+          "value": "Standard, blister or gift box",
+          "description": "The same pen in three retail packs. The gift box is the one to pick if it is a present.",
+          "image": {
+            "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/93c2b9c4-38cf-4516-b556-d6c3ca530065.jpg?v=1786902932",
+            "alt": "The AcuNova pen gift box presentation",
+            "width": 800,
+            "height": 800
+          }
+        }
+      ],
+      "features": [
+        {
+          "icon": "device",
+          "label": "Auto point-sensing",
+          "body": "The tip responds as it passes over an active point, so you do not need to have memorised a meridian chart first.",
+          "image": {
+            "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/029e763f-3b6c-44ae-bf9b-74ce60d381df.jpg?v=1786902932",
+            "alt": "Close-up of the AcuNova pen tip and control button",
+            "width": 800,
+            "height": 800
+          }
+        },
+        {
+          "icon": "fit",
+          "label": "Two head styles",
+          "body": "3-head for precise work on smaller areas, 5-head to cover a broad muscle group faster.",
+          "image": {
+            "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/9ab8f2cc-2ba9-48b9-b735-ffd149833740.jpg?v=1786902932",
+            "alt": "The three-head AcuNova tip, oil-free version",
+            "width": 800,
+            "height": 800
+          }
+        },
+        {
+          "icon": "refresh",
+          "label": "Heads swap in seconds",
+          "body": "Tips change over without tools, so one pen covers the neck, the forearms and the lower back.",
+          "image": {
+            "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/1d82da7b-61e5-40a3-bf85-237570915f2f.jpg?v=1786902931",
+            "alt": "The AcuNova pen with its interchangeable massage heads laid out",
+            "width": 800,
+            "height": 800
+          }
+        },
+        {
+          "icon": "ship",
+          "label": "Free tracked shipping",
+          "body": "Free to the US, Canada, the UK, Australia and India, with no minimum order.",
+          "image": {
+            "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/b2d00050-9a28-4e1c-9cc2-b6beb1a5766d.jpg?v=1786902932",
+            "alt": "The AcuNova pen held against the neck and shoulder",
+            "width": 800,
+            "height": 800
+          }
+        }
+      ]
+    }
+  ]
+}

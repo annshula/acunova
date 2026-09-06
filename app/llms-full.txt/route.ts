@@ -1,0 +1,90 @@
+import { blogPosts } from "@/content/blog";
+import { faqs } from "@/content/copy";
+import { getLiveProducts } from "@/lib/product-live";
+import type { Product } from "@/lib/product";
+import { site } from "@/lib/site";
+
+export const revalidate = 3600;
+
+/**
+ * /llms-full.txt — the expanded llmstxt.org variant of /llms.txt: full
+ * product descriptions and full blog post bodies inline, rather than the
+ * truncated summaries in /llms.txt, so a model can answer from this one file
+ * without a further fetch. Same data sources as llms.txt so it can never
+ * drift out of sync with what a visitor sees. Live-synced products (see
+ * app/llms.txt/route.ts's note) — informational only, no checkout path.
+ */
+function buildLlmsFullTxt(products: Product[]): string {
+  const lines: string[] = [];
+
+  lines.push(`# ${site.name} — full content`);
+  lines.push("");
+  lines.push(`> ${site.description}`);
+  lines.push("");
+  lines.push(
+    `${site.name} sells the AcuNova acupressure pen — a handheld consumer wellness device that delivers a low-intensity electrical pulse through a metal tip across selectable intensity levels, with interchangeable heads. Claim policy: hardware facts (pulse, levels, heads, materials, dimensions) are stated as fact; acupressure and meridian point maps are stated as a tradition drawn from classical Chinese medicine, never as a proven mechanism. The device is NOT a medical device and is NOT cleared by the FDA or Health Canada. Nothing on this site claims it treats, cures, prevents or diagnoses any condition. Safety exclusions are stated plainly: not for use with a pacemaker or other implanted electronic device, not during pregnancy, and not over broken skin, the front or sides of the neck, or near the eyes.`,
+  );
+  lines.push("");
+
+  lines.push("## Products");
+  lines.push("");
+  for (const p of products) {
+    const prices = p.variants.map((v) => v.price.amount);
+    const low = Math.min(...prices);
+    const high = Math.max(...prices);
+    const priceLabel = low === high ? `$${low}` : `$${low}–$${high}`;
+    const plain = p.descriptionHtml.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+    lines.push(`### ${p.title}`);
+    lines.push(`${site.url}/products/${p.handle}`);
+    lines.push(`${p.subtitle} — ${p.material}, ${priceLabel}.`);
+    lines.push("");
+    lines.push(plain);
+    lines.push("");
+  }
+
+  lines.push("## Guides");
+  lines.push("");
+  for (const post of [...blogPosts].sort((a, b) => a.publishedAt.localeCompare(b.publishedAt))) {
+    lines.push(`### ${post.title}`);
+    lines.push(`${site.url}/blog/${post.slug}`);
+    lines.push(`Published ${post.publishedAt}, updated ${post.updatedAt}.`);
+    lines.push("");
+    lines.push(post.body.trim());
+    lines.push("");
+  }
+
+  lines.push("## Frequently asked questions");
+  lines.push("");
+  for (const f of faqs) {
+    lines.push(`**${f.q}**`);
+    lines.push(f.a);
+    lines.push("");
+  }
+
+  lines.push("## Policies");
+  lines.push("");
+  lines.push(`- Shipping: ${site.promise.shippingFull}`);
+  lines.push(`- Returns: ${site.promise.returnsDetail}`);
+  lines.push(`- Hardware: ${site.promise.hardware}`);
+  lines.push(`- Support: ${site.promise.support} — ${site.email}`);
+  lines.push("");
+
+  lines.push("## Other");
+  lines.push("");
+  lines.push(`- [Sitemap](${site.url}/sitemap.xml)`);
+  lines.push(`- [About](${site.url}/about)`);
+  lines.push(`- [Contact](${site.url}/contact)`);
+  lines.push(`- [Condensed index](${site.url}/llms-small.txt)`);
+
+  return lines.join("\n") + "\n";
+}
+
+export async function GET() {
+  const products = await getLiveProducts();
+  return new Response(buildLlmsFullTxt(products), {
+    headers: {
+      "Content-Type": "text/markdown; charset=utf-8",
+      "Cache-Control": "public, max-age=3600",
+    },
+  });
+}

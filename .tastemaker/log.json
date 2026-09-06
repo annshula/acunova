@@ -1,0 +1,38 @@
+{
+  "builds": [
+    {
+      "date": "2026-09-07",
+      "project": "acunova",
+      "macrostructure": "Long-Scroll Narrative",
+      "nav": "N2",
+      "hero": "H2",
+      "feature": [
+        "F1",
+        "F4"
+      ],
+      "proof": "P4-gated",
+      "cta": "C2",
+      "footer": "Ft1",
+      "mood": "premium-wellness",
+      "palette": "poster-derived, contrast-corrected"
+    },
+    {
+      "date": "2026-09-07",
+      "project": "acunova",
+      "revision": 2,
+      "macrostructure": "Bento Showcase",
+      "nav": "N3",
+      "hero": "H3",
+      "feature": [
+        "F2",
+        "F4"
+      ],
+      "proof": "P4-gated",
+      "cta": "C2",
+      "footer": "Ft4",
+      "mood": "technical",
+      "palette": "generate_palette.py --mood technical --mode light",
+      "rotated_from": "Long-Scroll Narrative / N2 / H2 / Ft1"
+    }
+  ]
+}

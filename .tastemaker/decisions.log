@@ -1,0 +1,73 @@
+# Append-only. One entry per design decision. Never edit past lines.
+
+2026-09-07 | resolved | palette-role-assignment | color | AcuNova
+  Kept: primary = #7e5c36 (deep bronze), accent = #a67c4e (light bronze).
+  Reason: not taste — check_contrast.py --matrix showed white on #a67c4e is
+  3.74:1, below the 4.5:1 AA floor for a button label. Every CTA on the site
+  was failing. Promoted the already-legal deeper bronze to primary rather
+  than inventing a hue. Verified 6.05:1.
+
+2026-09-07 | resolved | no-serif | typography | AcuNova
+  Rejected: Playfair Display / editorial serif (carried over from the
+  HimVolt reference build).
+  Kept: Outfit (display + UI) + Figtree (body) + Parisienne (one flourish).
+  Reason: user explicitly rejected the reference build's look; the poster is
+  a geometric-sans composition with no serif anywhere.
+
+2026-09-07 | resolved | delete-inherited-assets | assets | AcuNova
+  Kept: deleting all 100 HimVolt image/video/logo files rather than reusing.
+  Reason: user instruction, verbatim — "dont take anything like images from
+  himvolt". Originals remain in reference/ so nothing was lost.
+
+2026-09-07 | resolved | honesty-gate-on-proof | content | AcuNova
+  Rejected: rendering the poster's "4.6/5" and "50,000+ Happy Customers" in
+  the TrustBar.
+  Kept: gating the rating tile on site.metrics.verified (currently false), so
+  it shows a verifiable policy fact until real review data exists.
+  Reason: fabricated ratings are an FTC problem and the fastest way a proof
+  band destroys trust. The tile lights up automatically when the flag flips.
+
+2026-09-07 | pending-review | benefit-claim-wording | content | AcuNova
+  Choice made without user sign-off: the poster's six icon labels
+  ("Relieves Joint Pain", "Improves Blood Circulation") were rephrased as
+  use-cases ("Joint and knee comfort", "Supports circulation").
+  Reason: those are physiological claims for a device with no FDA/Health
+  Canada clearance. Restoring poster-exact wording is a legal decision, not
+  a copy one. NEEDS A REAL ANSWER — do not treat this as approved.
+
+2026-09-07 | pending-review | macrostructure | structure | AcuNova
+  Choice made without user sign-off: Long-Scroll Narrative over Feature
+  Stack / Gallery Grid.
+  Reason: the product is unfamiliar and fights a "is this legit" trust gap,
+  so the page explains before it asks. Worth confirming once the user sees
+  the scroll.
+
+2026-09-07 | resolved | palette-direction-v2 | color | AcuNova
+  Kept: healing teal (#0f846e primary / #0b808d accent) on pale mint.
+  Rejected: the poster's bronze/cream.
+  Reason: user chose teal when asked directly, knowing it will NOT match the
+  printed poster and packaging. Flagged that mismatch explicitly before the
+  choice; user confirmed. Generated via generate_palette.py, not hand-picked.
+
+2026-09-07 | resolved | rebuild-not-recolour | structure | AcuNova
+  Kept: rebuilding the ~22 design-bearing components from scratch.
+  Rejected: continuing to recolour the inherited reference-build files.
+  Reason: user was explicit — "should not use any component or design from
+  himvolt". Recolouring left 60/75 components structurally inherited.
+  Scoped OUT of the rebuild, deliberately and with the user informed: ~38
+  plumbing files (CartProvider, LocalizationProvider, analytics pixels,
+  Schema, account/track/checkout). They carry no design and are the Shopify
+  and CJ integration the user asked to preserve.
+
+2026-09-07 | resolved | full-image-cast | assets | AcuNova
+  Kept: generating 8 images via Higgsfield, all referencing the real Shopify
+  product photo so the device is consistent across frames.
+  Reason: user approved the credit spend when asked. One image across a whole
+  site would have read as thinner than the placeholders it replaced.
+
+2026-09-07 | pending-review | drawer-light-not-dark | structure | AcuNova
+  Choice made without sign-off: the mobile drawer is now a light right-hand
+  sheet, replacing the inherited full-bleed dark takeover.
+  Reason: on a bright site a dark takeover is a jarring context switch and it
+  forced a second inverted style set for every control inside it. Worth
+  confirming once seen on a real device.
