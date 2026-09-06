@@ -281,21 +281,23 @@ export default function Nav() {
                     </li>
                   ))}
                 </ul>
-
-                <div className="mt-8 border-t border-line pt-6">
-                  <AccountMenu variant="list" />
-                  <div className="mt-4">
-                    <CurrencySelector variant="drawer" />
-                  </div>
-                </div>
               </nav>
 
-              <div className="border-t border-line px-5 py-5 pb-[calc(env(safe-area-inset-bottom)+1.25rem)]">
+              {/* Footer section — mirrors the reference drawer: a quiet,
+                  centred icon row (currency, account + sign-out, bag) so the
+                  full-width shop CTA underneath carries the weight. */}
+              <div className="border-t border-line px-5 pt-5 pb-[calc(env(safe-area-inset-bottom)+1.25rem)]">
+                <div className="flex items-center justify-center gap-3">
+                  <CurrencySelector variant="drawer" />
+                  <AccountMenu variant="list" />
+                  <CartButton onOpen={() => setMenuOpen(false)} />
+                </div>
+
                 <Button
                   href={productPath}
                   variant="primary"
                   arrow
-                  className="w-full"
+                  className="mt-4 w-full"
                 >
                   Shop the pen
                 </Button>
