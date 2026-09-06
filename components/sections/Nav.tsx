@@ -51,9 +51,7 @@ export function iconButtonClass(onDark: boolean, className = "") {
   return [
     "grid size-9 place-items-center rounded-full",
     "transition-colors duration-200 ease-(--ease-out-soft)",
-    onDark
-      ? "text-chalk hover:bg-white/15"
-      : "text-ink hover:bg-ink/[0.06]",
+    onDark ? "text-chalk hover:bg-white/15" : "text-ink hover:bg-ink/[0.06]",
     "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
     className,
   ]
@@ -72,7 +70,11 @@ function IconButton({
   className?: string;
 } & ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
-    <button type="button" className={iconButtonClass(onDark, className)} {...rest}>
+    <button
+      type="button"
+      className={iconButtonClass(onDark, className)}
+      {...rest}
+    >
       {children}
     </button>
   );
@@ -98,7 +100,9 @@ function CartButton({
     >
       <Icon name="bag" className="size-5" />
       {itemCount > 0 && (
-        <span className={`absolute -top-0.5 -right-0.5 grid h-4 min-w-4 place-items-center rounded-full px-1 font-sans text-[0.6rem] font-semibold tabular-nums ${onDark ? "bg-chalk text-ink" : "bg-primary text-on-primary"}`}>
+        <span
+          className={`absolute -top-0.5 -right-0.5 grid h-4 min-w-4 place-items-center rounded-full px-1 font-sans text-[0.6rem] font-semibold tabular-nums ${onDark ? "bg-chalk text-ink" : "bg-primary text-on-primary"}`}
+        >
           {itemCount}
         </span>
       )}
@@ -157,7 +161,7 @@ export default function Nav() {
           blend
             ? "bg-transparent"
             : `bg-canvas/85 backdrop-blur-xl ${
-                overHero ? "" : "shadow-(--shadow-e1)"
+                scrolled ? "shadow-(--shadow-e1)" : ""
               }`
         }`}
         style={{ height: "var(--nav-h)" }}
@@ -170,7 +174,9 @@ export default function Nav() {
             {links.map((l) => {
               const active =
                 l.href === pathname ||
-                (l.href !== "/" && !l.href.startsWith("/#") && pathname.startsWith(l.href));
+                (l.href !== "/" &&
+                  !l.href.startsWith("/#") &&
+                  pathname.startsWith(l.href));
               return (
                 <li key={l.href}>
                   <Link
@@ -245,10 +251,15 @@ export default function Nav() {
               exit={{ x: "100%" }}
               transition={{ duration: 0.35, ease: easeOut }}
             >
-              <div className="flex items-center justify-between border-b border-line px-5"
-                   style={{ height: "var(--nav-h)" }}>
+              <div
+                className="flex items-center justify-between border-b border-line px-5"
+                style={{ height: "var(--nav-h)" }}
+              >
                 <Logo variant="dark" />
-                <IconButton onClick={() => setMenuOpen(false)} aria-label="Close menu">
+                <IconButton
+                  onClick={() => setMenuOpen(false)}
+                  aria-label="Close menu"
+                >
                   <Icon name="close" className="size-4" />
                 </IconButton>
               </div>
@@ -262,7 +273,10 @@ export default function Nav() {
                         className="flex items-center justify-between rounded-lg py-3 text-[1.05rem] text-ink transition-colors duration-200 hover:bg-ink/[0.04]"
                       >
                         {l.label}
-                        <Icon name="chevron-right" className="size-4 text-ink-mute" />
+                        <Icon
+                          name="chevron-right"
+                          className="size-4 text-ink-mute"
+                        />
                       </Link>
                     </li>
                   ))}
@@ -277,7 +291,12 @@ export default function Nav() {
               </nav>
 
               <div className="border-t border-line px-5 py-5 pb-[calc(env(safe-area-inset-bottom)+1.25rem)]">
-                <Button href={productPath} variant="primary" arrow className="w-full">
+                <Button
+                  href={productPath}
+                  variant="primary"
+                  arrow
+                  className="w-full"
+                >
                   Shop the pen
                 </Button>
               </div>

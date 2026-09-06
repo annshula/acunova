@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function CheckoutPage() {
   return (
-    <section className="relative min-h-[70vh] bg-parchment px-5 pt-16 pb-24 sm:px-8">
+    <section className="relative min-h-[70vh] bg-parchment px-5 pt-20 pb-24 sm:px-8 lg:pt-28">
       <div className="mx-auto w-full max-w-295">
         <nav
           aria-label="Breadcrumb"

@@ -19,7 +19,7 @@ export default async function AccountLayout({
   }
 
   return (
-    <section className="relative min-h-[70vh] overflow-x-clip bg-parchment pt-10 pb-20 md:pt-14 md:pb-28">
+    <section className="relative min-h-[70vh] overflow-x-clip bg-parchment pt-20 pb-20 md:pt-24 md:pb-28">
       <div className="mx-auto w-full max-w-295 px-5 sm:px-8">
         {/* Both tracks are minmax(0,…): a grid item defaults to min-width:auto,
             which lets a wide child (the scrolling nav rail) push the whole

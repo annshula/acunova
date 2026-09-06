@@ -95,7 +95,7 @@ export default async function BlogPostPage({
         ]}
       />
 
-      <article className="mx-auto w-full max-w-184 px-5 pt-12 pb-20 sm:px-8 sm:pt-16 lg:pb-28">
+      <article className="mx-auto w-full max-w-184 px-5 pt-20 pb-20 sm:px-8 lg:pt-28 lg:pb-28">
         <nav
           aria-label="Breadcrumb"
           className="flex items-center gap-1.5 text-[0.68rem] tracking-[0.06em] text-ink-mute"

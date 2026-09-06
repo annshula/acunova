@@ -43,7 +43,7 @@ export default function BlogIndexPage() {
           { name: "Blog", path: "/blog" },
         ]}
       />
-      <div className="mx-auto w-full max-w-310 px-5 pt-12 pb-2 sm:px-8 sm:pt-16">
+      <div className="mx-auto w-full max-w-310 px-5 pt-20 pb-2 sm:px-8 lg:pt-28">
         <nav
           aria-label="Breadcrumb"
           className="flex items-center gap-1.5 text-[0.68rem] tracking-[0.06em] text-ink-mute"
@@ -59,9 +59,8 @@ export default function BlogIndexPage() {
           The AcuNova Journal
         </h1>
         <p className="mt-3 max-w-[58ch] text-[0.95rem] leading-relaxed text-ink-soft">
-          Point guides, honest answers and buying advice for
-          jewellery — what is measurable, what is tradition, and what we will
-          not claim.
+          Point guides, honest answers and buying advice for jewellery — what is
+          measurable, what is tradition, and what we will not claim.
         </p>
       </div>
 

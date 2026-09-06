@@ -140,7 +140,7 @@ export default async function ProductPage({
         ]}
       />
 
-      <div className="mx-auto w-full max-w-310 px-5 pt-12 sm:px-8 sm:pt-16">
+      <div className="mx-auto w-full max-w-310 px-5 pt-20 sm:px-8 lg:pt-28">
         <nav
           aria-label="Breadcrumb"
           className="flex items-center gap-1.5 text-[0.68rem] tracking-[0.06em] text-ink-mute"

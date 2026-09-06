@@ -19,7 +19,7 @@ export const metadata: Metadata = {
  */
 export default function ConfirmationPage() {
   return (
-    <section className="relative min-h-[70vh] bg-parchment px-5 pt-16 pb-24 sm:px-8">
+    <section className="relative min-h-[70vh] bg-parchment px-5 pt-20 pb-24 sm:px-8 lg:pt-28">
       <ClearCart />
       <div className="mx-auto flex w-full max-w-xl flex-col items-center pt-10 text-center">
         <span className="grid size-16 place-items-center rounded-full bg-gold text-white">
