@@ -40,18 +40,20 @@ export type HeroSlide = {
 export function HeroFrame({
   slides,
   children,
-  minHeight = "min-h-[calc(100svh+var(--nav-h)+var(--marquee-h))]",
+  minHeight = "min-h-svh",
   autoplayMs = 7000,
 }: {
   slides: HeroSlide[];
   children: React.ReactNode;
   /**
-   * Defaults to one viewport PLUS the header height.
+   * Defaults to exactly one viewport.
    *
-   * The extra nav-h is not padding — it compensates for the negative top
-   * margin that tucks this frame under the fixed bar. A plain `min-h-svh`
-   * here leaves the frame's bottom edge exactly nav-h short of the viewport
-   * bottom, which shows as a strip of the next section peeking in.
+   * The header is `position: fixed` (out of flow) and transparent while this
+   * frame is behind it, so the frame starts at the top of the viewport on its
+   * own — no negative margin needed, which means centring the copy with
+   * `justify-center` lines it up with the true middle of the visible viewport.
+   * The nav clearance lives in the content wrapper's symmetric top/bottom
+   * padding instead of in a taller, off-screen section box.
    *
    * svh, not vh: vh jumps on mobile as the browser chrome shows and hides.
    */
@@ -115,7 +117,7 @@ export function HeroFrame({
     <section
       ref={ref}
       data-hero-frame
-      className={`relative isolate -mt-[calc(var(--nav-h)+var(--marquee-h))] flex flex-col bg-surface ${minHeight}`}
+      className={`relative isolate flex flex-col bg-surface ${minHeight}`}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
@@ -178,13 +180,11 @@ export function HeroFrame({
           div its own viewport height (as an earlier pass did) stacks a second
           screen onto the first and the fold overshoots.
 
-          Padding is SYMMETRIC and includes the header height on BOTH sides.
-          That is the whole trick: justify-center centres within the content
-          box, so any asymmetry (a top margin to clear the fixed bar, an uneven
-          py) drags the block off-centre. Earlier passes tried a top margin,
-          then uneven padding — both pushed the copy down. Reserving nav-h at
-          the top AND bottom keeps the content in the true optical middle of
-          the visible viewport while still clearing the bar. */}
+          Padding is SYMMETRIC — nav-h on top clears the fixed transparent
+          header, and the same nav-h on the bottom keeps the box balanced so
+          justify-center lines the copy up with the true middle of the visible
+          viewport. Any asymmetry (a top margin to clear the bar, an uneven py)
+          drags the block off-centre. */}
       <div className="relative mx-auto flex w-full max-w-310 flex-1 flex-col justify-center px-5 py-[calc(var(--nav-h)+var(--marquee-h)+2rem)] sm:px-8 lg:py-[calc(var(--nav-h)+var(--marquee-h)+3rem)]">
         {children}
       </div>
