@@ -28,7 +28,9 @@ export const hero = {
   // The poster's pipe-separated qualifier row, rendered with hairline
   // dividers between the items rather than literal pipe characters.
   qualifiers: ["Drug-free", "Non-invasive", "Safe & easy to use"],
-  sub: site.description,
+  // Hero support line — deliberately shorter than site.description (which is
+  // the SEO meta description). Just enough to say what it is and how it feels.
+  sub: "Micro-current pressure on the points you already rub by hand. Drug-free, non-invasive.",
   cta: "Shop the pen",
   ctaHref: "/shop",
   secondary: "How it works",
@@ -122,7 +124,6 @@ export const reliefAreas = {
   ],
 };
 
-
 /**
  * The Problem / stakes beat of the narrative arc.
  *
@@ -139,17 +140,20 @@ export const problem = {
     {
       doing: "Right now you use",
       breaks: "Your own thumbs",
-      detail: "They find the spot immediately and then give out about ninety seconds in, right when it was starting to help. And they never reach the middle of your own back.",
+      detail:
+        "They find the spot immediately and then give out about ninety seconds in, right when it was starting to help. And they never reach the middle of your own back.",
     },
     {
       doing: "Or you bought",
       breaks: "A sheet of sticky pads",
-      detail: "A pad covers a whole area and hopes the right spot is somewhere under it. Then you peel, place, wire and dial — and buy more adhesive next month.",
+      detail:
+        "A pad covers a whole area and hopes the right spot is somewhere under it. Then you peel, place, wire and dial — and buy more adhesive next month.",
     },
     {
       doing: "Or you booked",
       breaks: "An appointment, eventually",
-      detail: "Which works, and costs an hour plus the fee, and is not available at eleven at night when your shoulder is the reason you are still awake.",
+      detail:
+        "Which works, and costs an hour plus the fee, and is not available at eleven at night when your shoulder is the reason you are still awake.",
     },
   ],
 };
