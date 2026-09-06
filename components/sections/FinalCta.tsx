@@ -1,5 +1,5 @@
 import Button from "@/components/ui/Button";
-import Image from "@/components/ui/Image";
+import StaticImage from "@/components/ui/StaticImage";
 import { Reveal } from "@/components/ui/Motion";
 import { finalCta } from "@/content/copy";
 import { productPath } from "@/lib/catalog";
@@ -41,13 +41,11 @@ export default function FinalCta() {
 
         <Reveal delay={0.1}>
           <figure className="overflow-hidden rounded-(--radius-photo) shadow-(--shadow-photo)">
-            <Image
+            <StaticImage
               src="/product/kit-flatlay.png"
               alt="The AcuNova pen laid out with its interchangeable heads and storage case"
               width={1376}
               height={768}
-              quality={82}
-              sizes="(max-width: 1023px) 92vw, 560px"
               className="h-auto w-full object-cover"
             />
           </figure>

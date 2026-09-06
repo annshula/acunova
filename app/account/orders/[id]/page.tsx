@@ -30,8 +30,7 @@ type PageProps = {
   params: Promise<{ id: string }>;
 };
 
-const panel =
-  "rounded-(--radius-card) border border-line bg-ivory p-6 shadow-sm";
+const panel = "rounded-card border border-line bg-ivory p-6 shadow-sm";
 const panelHeading = "font-display text-base font-bold text-ink uppercase";
 const badge =
   "rounded-full px-3 py-1.5 text-[0.66rem] font-semibold tracking-[0.14em] uppercase";
@@ -120,7 +119,7 @@ export default async function OrderDetailPage({ params }: PageProps) {
       </AccountHeader>
 
       {order.cancelledAt && (
-        <div className="mt-8 flex gap-3 rounded-(--radius-card) border border-red-200 bg-red-50 px-5 py-4">
+        <div className="mt-8 flex gap-3 rounded-card border border-red-200 bg-red-50 px-5 py-4">
           <Icon
             name="close"
             className="mt-0.5 size-4 shrink-0 text-red-700"
@@ -176,7 +175,7 @@ export default async function OrderDetailPage({ params }: PageProps) {
               would only reject them. */}
           <div
             className={cn(
-              "mt-6 flex flex-wrap items-center justify-between gap-5 rounded-(--radius-card) px-6 py-6",
+              "mt-6 flex flex-wrap items-center justify-between gap-5 rounded-card px-6 py-6",
               returns30.items.length > 0 ? "bg-parchment" : "bg-line/40",
             )}
           >

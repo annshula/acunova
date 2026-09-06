@@ -69,7 +69,7 @@ export default function PenClose({
           <StaggerItem
             key={chip.label}
             as="li"
-            className="rounded-(--radius-card) border border-line bg-linen p-6"
+            className="rounded-card border border-line bg-linen p-6"
           >
             <span className="grid h-10 w-10 place-items-center rounded-full border border-gold/30 bg-ivory text-gold">
               {chip.icon}

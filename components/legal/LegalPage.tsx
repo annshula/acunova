@@ -67,7 +67,7 @@ export function LegalPage({ slug }: { slug: string }) {
 
           {page.requiresMerchantReview &&
             process.env.NODE_ENV !== "production" && (
-              <div className="mt-8 flex gap-3 rounded-(--radius-card) border border-line bg-parchment p-5">
+              <div className="mt-8 flex gap-3 rounded-card border border-line bg-parchment p-5">
                 <span className="mt-0.5 h-4.5 w-4.5 shrink-0 text-ink-mute">
                   <AlertIcon />
                 </span>
@@ -107,7 +107,7 @@ export function LegalPage({ slug }: { slug: string }) {
             ))}
           </div>
 
-          <div className="mt-12 rounded-(--radius-card) border border-line bg-linen p-6">
+          <div className="mt-12 rounded-card border border-line bg-linen p-6">
             <p className="text-[0.88rem] leading-[1.6] text-ink-soft">
               Questions about this page? Email{" "}
               <a

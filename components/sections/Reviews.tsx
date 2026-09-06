@@ -43,7 +43,7 @@ export default function Reviews() {
 
       {/* --------------------------- aggregate --------------------------- */}
       {verified ? (
-        <Reveal className="mx-auto mt-12 max-w-184 rounded-(--radius-card) border border-line bg-surface p-8 lg:mt-16">
+        <Reveal className="mx-auto mt-12 max-w-184 rounded-card border border-line bg-surface p-8 lg:mt-16">
           <div className="flex flex-wrap items-baseline justify-center gap-x-4 gap-y-2">
             <span className="font-display text-[2.75rem] leading-none font-light text-ink tabular-nums">
               {penReviewSummary.average.toFixed(1)}
@@ -92,12 +92,12 @@ export default function Reviews() {
           </dl>
         </Reveal>
       ) : (
-        <Reveal className="mx-auto mt-12 max-w-160 rounded-(--radius-card) border border-line bg-surface p-7 text-center lg:mt-16">
+        <Reveal className="mx-auto mt-12 max-w-160 rounded-card border border-line bg-surface p-7 text-center lg:mt-16">
           <p className="text-[0.95rem] leading-[1.7] text-ink-soft">
             We don&rsquo;t publish a star rating yet. The quotes below are
             written examples of the feedback we&rsquo;re collecting, clearly
-            labelled as such — we&rsquo;d rather show nothing than an average
-            we can&rsquo;t evidence.
+            labelled as such — we&rsquo;d rather show nothing than an average we
+            can&rsquo;t evidence.
           </p>
         </Reveal>
       )}
@@ -108,7 +108,7 @@ export default function Reviews() {
           <StaggerItem
             key={r.name}
             as="figure"
-            className="rounded-(--radius-card) border border-line bg-surface p-7"
+            className="rounded-card border border-line bg-surface p-7"
           >
             <span className="flex gap-0.5 text-star" aria-hidden>
               {Array.from({ length: 5 }, (_, i) => (
@@ -133,7 +133,8 @@ export default function Reviews() {
       {!verified && (
         <p className="mx-auto mt-8 max-w-[70ch] text-center text-[0.75rem] leading-relaxed text-ink-mute">
           Illustrative examples, not verified customer reviews. Nothing here is
-          emitted as schema.org review markup — see components/ProductSchema.tsx.
+          emitted as schema.org review markup — see
+          components/ProductSchema.tsx.
         </p>
       )}
     </Section>

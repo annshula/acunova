@@ -57,13 +57,13 @@ import { hero } from "@/content/copy";
  */
 const SLIDES: HeroSlide[] = [
   {
-    desktopSrc: "/hero/inuse-desktop.png",
-    mobileSrc: "/hero/inuse-mobile.png",
+    desktopSrc: "/hero/linen-desktop.png",
+    mobileSrc: "/hero/linen-mobile.png",
     alt: "",
   },
   {
-    desktopSrc: "/hero/linen-desktop.png",
-    mobileSrc: "/hero/linen-mobile.png",
+    desktopSrc: "/hero/inuse-desktop.png",
+    mobileSrc: "/hero/inuse-mobile.png",
     alt: "",
   },
   {
@@ -124,7 +124,6 @@ export default function Hero() {
             {hero.secondary}
           </Button>
         </motion.div>
-
       </motion.div>
     </HeroFrame>
   );

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "@/components/ui/Image";
+import StaticImage from "@/components/ui/StaticImage";
 import Button from "@/components/ui/Button";
 import { benefitIcons } from "@/components/ui/LineIcons";
 import { site } from "@/lib/site";
@@ -150,12 +150,10 @@ export default function BenefitsPage() {
             }`}
           >
             <figure className="relative aspect-4/5 overflow-hidden rounded-(--radius-photo) bg-surface-sunken shadow-(--shadow-photo) lg:aspect-3/4">
-              <Image
+              <StaticImage
                 src={band.image.src}
                 alt={band.image.alt}
                 fill
-                quality={82}
-                sizes="(max-width: 1023px) 92vw, 560px"
                 className="object-cover"
               />
             </figure>
@@ -190,7 +188,10 @@ export default function BenefitsPage() {
             {moments.map((m) => {
               const Icon = benefitIcons[m.icon];
               return (
-                <li key={m.label} className="flex flex-col items-center text-center">
+                <li
+                  key={m.label}
+                  className="flex flex-col items-center text-center"
+                >
                   <span className="h-7 w-7 text-accent">
                     <Icon />
                   </span>
@@ -213,28 +214,33 @@ export default function BenefitsPage() {
             Who this isn&rsquo;t for.
           </h2>
           <p className="mt-5 text-[1rem] leading-[1.75] text-ink-soft">
-            It is a consumer wellness device, not a medical one. It is not cleared
-            by the FDA or Health Canada, and nothing on this page is a claim to
-            treat or prevent anything.
+            It is a consumer wellness device, not a medical one. It is not
+            cleared by the FDA or Health Canada, and nothing on this page is a
+            claim to treat or prevent anything.
           </p>
           <ul className="mt-6 space-y-2.5 text-[0.95rem] leading-[1.65] text-ink-soft">
             <li>
-              <strong className="font-medium text-ink">Do not use it</strong> with a
-              pacemaker or any implanted electronic device, or during pregnancy.
+              <strong className="font-medium text-ink">Do not use it</strong>{" "}
+              with a pacemaker or any implanted electronic device, or during
+              pregnancy.
             </li>
             <li>
-              <strong className="font-medium text-ink">Do not use it</strong> over
-              broken skin, the front or sides of the neck, or near the eyes.
+              <strong className="font-medium text-ink">Do not use it</strong>{" "}
+              over broken skin, the front or sides of the neck, or near the
+              eyes.
             </li>
             <li>
-              <strong className="font-medium text-ink">Ask a doctor first</strong> if
-              you have a heart condition, epilepsy, a metal implant nearby, or
-              reduced sensation in the area.
+              <strong className="font-medium text-ink">
+                Ask a doctor first
+              </strong>{" "}
+              if you have a heart condition, epilepsy, a metal implant nearby,
+              or reduced sensation in the area.
             </li>
           </ul>
           <p className="mt-6 text-[0.9rem] leading-[1.65] text-ink-mute">
-            Persistent pain, pain that radiates into a limb, or pain with numbness
-            or weakness is a reason to see a doctor, not to turn the level up.
+            Persistent pain, pain that radiates into a limb, or pain with
+            numbness or weakness is a reason to see a doctor, not to turn the
+            level up.
           </p>
         </div>
       </section>

@@ -155,7 +155,7 @@ export function CheckoutSummary() {
         ))}
       </ul>
 
-      <aside className="h-fit rounded-(--radius-card) border border-line bg-ivory p-7 shadow-(--shadow-lift) lg:sticky lg:top-24">
+      <aside className="h-fit rounded-card border border-line bg-ivory p-7 shadow-(--shadow-lift) lg:sticky lg:top-24">
         <h2 className="font-display text-lg font-bold text-ink uppercase">
           Order summary
         </h2>

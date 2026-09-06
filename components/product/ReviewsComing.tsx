@@ -30,7 +30,7 @@ export default function ReviewsComing({
         body={r.body}
       />
 
-      <Reveal className="mx-auto mt-12 max-w-184 overflow-hidden rounded-(--radius-card) border border-line bg-ivory shadow-(--shadow-e1) lg:mt-16">
+      <Reveal className="mx-auto mt-12 max-w-184 overflow-hidden rounded-card border border-line bg-ivory shadow-(--shadow-e1) lg:mt-16">
         <div className="grid items-center gap-8 px-8 py-10 sm:grid-cols-[auto_1fr] sm:gap-10 lg:px-12">
           <div className="mx-auto flex flex-col items-center sm:mx-0">
             <span aria-hidden className="flex gap-1.5 text-gold/30">

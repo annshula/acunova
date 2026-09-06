@@ -27,7 +27,7 @@ export default function ProductLoading() {
               />
             ))}
           </div>
-          <div className="skeleton mx-auto aspect-square w-full max-w-115 rounded-(--radius-card)" />
+          <div className="skeleton mx-auto aspect-square w-full max-w-115 rounded-card" />
         </div>
 
         {/* title, price, buy box, description */}

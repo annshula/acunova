@@ -46,7 +46,7 @@ export default async function AccountOverviewPage() {
 
       <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-6 md:grid-cols-2">
         {/* Profile */}
-        <div className="min-w-0 rounded-(--radius-card) border border-line bg-ivory p-5 shadow-sm sm:p-6">
+        <div className="min-w-0 rounded-card border border-line bg-ivory p-5 shadow-sm sm:p-6">
           <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
             <h2 className="font-display text-base font-bold text-ink uppercase">
               Profile
@@ -80,7 +80,7 @@ export default async function AccountOverviewPage() {
         </div>
 
         {/* Default address */}
-        <div className="min-w-0 rounded-(--radius-card) border border-line bg-ivory p-5 shadow-sm sm:p-6">
+        <div className="min-w-0 rounded-card border border-line bg-ivory p-5 shadow-sm sm:p-6">
           <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
             <h2 className="font-display text-base font-bold text-ink uppercase">
               Default address

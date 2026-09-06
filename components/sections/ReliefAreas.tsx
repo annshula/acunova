@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "@/components/ui/Image";
+import StaticImage from "@/components/ui/StaticImage";
 import { Section, SectionHead } from "@/components/ui/Section";
 import { Stagger, StaggerItem } from "@/components/ui/Motion";
 import { reliefAreas } from "@/content/copy";
@@ -33,12 +33,12 @@ export default function ReliefAreas() {
             <Link href="/benefits" className="group block">
               <figure>
                 <div className="relative aspect-4/5 overflow-hidden rounded-(--radius-photo) bg-surface shadow-(--shadow-photo)">
-                  <Image
+                  {/* Local photo — pre-optimised AVIF/WebP pair from /public,
+                      served via <picture> so it never hits Vercel's optimizer. */}
+                  <StaticImage
                     src={area.image.src}
                     alt={area.image.alt}
                     fill
-                    quality={82}
-                    sizes="(max-width: 639px) 44vw, (max-width: 1023px) 30vw, 300px"
                     className="object-cover transition-transform duration-500 ease-(--ease-out-soft) group-hover:scale-[1.03]"
                   />
                 </div>

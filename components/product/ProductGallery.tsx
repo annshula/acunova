@@ -146,7 +146,7 @@ export function ProductGallery({
         )}
 
         {isVideo ? (
-          <div className="relative mx-auto w-full max-w-115 overflow-hidden rounded-(--radius-card) bg-parchment">
+          <div className="relative mx-auto w-full max-w-115 overflow-hidden rounded-card bg-parchment">
             <video
               key={active.poster}
               controls
@@ -243,7 +243,9 @@ function Lightbox({
     const dy = t.clientY - start.y;
     if (Math.abs(dx) < SWIPE_THRESHOLD || Math.abs(dx) < Math.abs(dy)) return;
     onIndexChange(
-      dx < 0 ? (index + 1) % media.length : (index - 1 + media.length) % media.length,
+      dx < 0
+        ? (index + 1) % media.length
+        : (index - 1 + media.length) % media.length,
     );
   };
 

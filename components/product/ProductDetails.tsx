@@ -59,7 +59,7 @@ export function ProductDetails({ product }: { product: Product }) {
             <StaggerItem
               key={f.label}
               as="article"
-              className="overflow-hidden rounded-(--radius-card) border border-line bg-surface"
+              className="overflow-hidden rounded-card border border-line bg-surface"
             >
               {f.image && (
                 <div className="relative aspect-4/3 overflow-hidden bg-surface-sunken">
@@ -90,7 +90,7 @@ export function ProductDetails({ product }: { product: Product }) {
       {specs.length > 0 && (
         <Reveal
           delay={0.1}
-          className="mt-14 overflow-hidden rounded-(--radius-card) border border-line bg-surface lg:mt-20"
+          className="mt-14 overflow-hidden rounded-card border border-line bg-surface lg:mt-20"
         >
           <h3 className="font-label border-b border-line px-6 py-4 text-[0.64rem] font-medium text-ink-mute uppercase lg:px-8">
             Specification

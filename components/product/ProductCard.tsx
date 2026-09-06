@@ -32,7 +32,7 @@ export function ProductCard({ product }: { product: Product }) {
     <article className="h-full">
       <Link
         href={`/products/${product.handle}`}
-        className="group flex h-full flex-col overflow-hidden rounded-(--radius-card) border border-line bg-surface transition-[border-color,box-shadow] duration-300 ease-(--ease-out-soft) hover:border-line-strong hover:shadow-(--shadow-e3)"
+        className="group flex h-full flex-col overflow-hidden rounded-card border border-line bg-surface transition-[border-color,box-shadow] duration-300 ease-(--ease-out-soft) hover:border-line-strong hover:shadow-(--shadow-e3)"
       >
         <div className="relative aspect-4/3 overflow-hidden bg-surface-sunken">
           <Image

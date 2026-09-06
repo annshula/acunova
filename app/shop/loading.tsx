@@ -22,7 +22,7 @@ export default function ShopLoading() {
           {Array.from({ length: 4 }).map((_, i) => (
             <div
               key={i}
-              className="w-full overflow-hidden rounded-(--radius-card) border border-line sm:max-w-72"
+              className="w-full overflow-hidden rounded-card border border-line sm:max-w-72"
             >
               <div className="skeleton aspect-square w-full" />
               <div className="space-y-2 p-4">

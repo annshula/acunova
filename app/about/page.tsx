@@ -53,8 +53,8 @@ export default function AboutPage() {
             delay={0.14}
             className="mt-6 text-[1.02rem] leading-[1.7] text-ink-soft text-pretty"
           >
-            {site.description} No sprawling catalog to get lost in — one
-            device, the heads that fit it, sold honestly.
+            {site.description} No sprawling catalog to get lost in — one device,
+            the heads that fit it, sold honestly.
           </Reveal>
         </div>
       </Section>
@@ -80,7 +80,7 @@ export default function AboutPage() {
             </Reveal>
           </div>
 
-          <Stagger className="space-y-px overflow-hidden rounded-(--radius-card) border border-line bg-line">
+          <Stagger className="space-y-px overflow-hidden rounded-card border border-line bg-line">
             {method.paragraphs.map((p, i) => (
               <StaggerItem
                 key={p.title}
@@ -115,7 +115,7 @@ export default function AboutPage() {
         <Stagger className="mt-14 grid gap-5 sm:grid-cols-3">
           <StaggerItem
             as="article"
-            className="rounded-(--radius-card) border border-line bg-linen p-7"
+            className="rounded-card border border-line bg-linen p-7"
           >
             <h3 className="font-display text-[1.05rem] font-semibold tracking-[-0.02em] text-ink">
               {site.promise.shipping}
@@ -126,7 +126,7 @@ export default function AboutPage() {
           </StaggerItem>
           <StaggerItem
             as="article"
-            className="rounded-(--radius-card) border border-line bg-linen p-7"
+            className="rounded-card border border-line bg-linen p-7"
           >
             <h3 className="font-display text-[1.05rem] font-semibold tracking-[-0.02em] text-ink">
               {site.promise.returns}
@@ -137,7 +137,7 @@ export default function AboutPage() {
           </StaggerItem>
           <StaggerItem
             as="article"
-            className="rounded-(--radius-card) border border-line bg-linen p-7"
+            className="rounded-card border border-line bg-linen p-7"
           >
             <h3 className="font-display text-[1.05rem] font-semibold tracking-[-0.02em] text-ink">
               {site.promise.support}
@@ -174,7 +174,7 @@ export default function AboutPage() {
                 {regions.map((region) => (
                   <article
                     key={region.code}
-                    className="rounded-(--radius-card) border border-line bg-linen p-7 text-center"
+                    className="rounded-card border border-line bg-linen p-7 text-center"
                   >
                     <h4 className="font-display text-[0.95rem] font-semibold tracking-[-0.01em] text-ink">
                       {region.label}

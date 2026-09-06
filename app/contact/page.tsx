@@ -54,7 +54,7 @@ export default function ContactPage() {
             <Reveal delay={0.22} className="mt-9 flex flex-col gap-5">
               <a
                 href={`mailto:${site.email}`}
-                className="group flex items-center gap-3.5 rounded-(--radius-card) border border-line bg-linen p-5 transition-colors duration-300 hover:border-ink/20"
+                className="group flex items-center gap-3.5 rounded-card border border-line bg-linen p-5 transition-colors duration-300 hover:border-ink/20"
               >
                 <span className="grid size-11 shrink-0 place-items-center rounded-full bg-accent text-on-accent">
                   <Icon name="check" className="size-5" />
@@ -69,7 +69,7 @@ export default function ContactPage() {
                 </span>
               </a>
 
-              <div className="flex items-center gap-3.5 rounded-(--radius-card) border border-line bg-linen p-5">
+              <div className="flex items-center gap-3.5 rounded-card border border-line bg-linen p-5">
                 <span className="grid size-11 shrink-0 place-items-center rounded-full bg-parchment text-ink-mute">
                   <Icon name="map-pin" className="size-5" />
                 </span>
@@ -87,7 +87,7 @@ export default function ContactPage() {
 
           <Reveal
             delay={0.1}
-            className="rounded-(--radius-card) border border-line bg-parchment p-6 sm:p-8"
+            className="rounded-card border border-line bg-parchment p-6 sm:p-8"
           >
             <ContactForm />
           </Reveal>

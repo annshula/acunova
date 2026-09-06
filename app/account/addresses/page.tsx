@@ -60,7 +60,7 @@ export default async function AddressesPage() {
               <li
                 key={address.id}
                 className={cn(
-                  "relative flex min-w-0 flex-col overflow-hidden rounded-(--radius-card) border bg-ivory shadow-sm transition-shadow duration-500 ease-(--ease-out-expo) hover:shadow-(--shadow-lift)",
+                  "relative flex min-w-0 flex-col overflow-hidden rounded-card border bg-ivory shadow-sm transition-shadow duration-500 ease-(--ease-out-expo) hover:shadow-(--shadow-lift)",
                   isDefault ? "border-ink/40" : "border-line",
                 )}
               >

@@ -1,4 +1,4 @@
-import Image from "@/components/ui/Image";
+import StaticImage from "@/components/ui/StaticImage";
 import { Section, SectionHead } from "@/components/ui/Section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Motion";
 import { method } from "@/content/copy";
@@ -38,13 +38,11 @@ export default function Method() {
             delay={0.16}
             className="mt-10 overflow-hidden rounded-(--radius-photo) shadow-(--shadow-photo)"
           >
-            <Image
+            <StaticImage
               src="/lifestyle/arms-joints.png"
               alt="The AcuNova pen being used on the forearm, showing the tip in contact with the skin"
               width={928}
               height={1152}
-              quality={82}
-              sizes="(max-width: 1023px) 92vw, 480px"
               className="h-auto w-full object-cover"
             />
           </Reveal>
@@ -86,7 +84,7 @@ export default function Method() {
 
         {/* The three-part statement: what it does, what the tradition is, and
             what we refuse to claim. Hairline-divided, no cards. */}
-        <Stagger className="divide-y divide-line overflow-hidden rounded-(--radius-card) border border-line bg-surface">
+        <Stagger className="divide-y divide-line overflow-hidden rounded-card border border-line bg-surface">
           {method.paragraphs.map((p, i) => (
             <StaggerItem key={p.title} as="article" className="p-7 lg:p-9">
               <div className="flex items-baseline gap-4">

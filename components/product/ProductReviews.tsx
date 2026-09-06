@@ -113,7 +113,7 @@ export default function ProductReviews({
             aria-label="Rating summary"
             className="lg:sticky lg:top-28 lg:self-start"
           >
-            <div className="rounded-(--radius-card) border border-line bg-ivory p-7 shadow-(--shadow-e1)">
+            <div className="rounded-card border border-line bg-ivory p-7 shadow-(--shadow-e1)">
               <div className="flex items-baseline gap-3">
                 <span className="font-display text-[3rem] leading-none font-semibold tracking-[-0.02em] text-ink tabular-nums">
                   {summary.average.toFixed(1)}
@@ -284,7 +284,7 @@ function ReviewCard({ review }: { review: ProductReview }) {
 
   return (
     <li>
-      <article className="h-full rounded-(--radius-card) border border-line bg-ivory p-5 sm:p-6">
+      <article className="h-full rounded-card border border-line bg-ivory p-5 sm:p-6">
         <header className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
           <StarRow stars={review.rating} starClassName="h-3.5 w-3.5" />
           <time
@@ -524,7 +524,7 @@ function Pagination({
 
 function EmptyFilterState({ onReset }: { onReset: () => void }) {
   return (
-    <div className="mt-4 rounded-(--radius-card) border border-dashed border-line-strong bg-ivory px-6 py-14 text-center">
+    <div className="mt-4 rounded-card border border-dashed border-line-strong bg-ivory px-6 py-14 text-center">
       <p className="text-[0.95rem] font-medium text-ink">
         No reviews match this filter yet.
       </p>

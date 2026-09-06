@@ -1,4 +1,4 @@
-import Image from "@/components/ui/Image";
+import StaticImage from "@/components/ui/StaticImage";
 import Link from "next/link";
 
 import { ArrowIcon } from "@/components/ui/Icons";
@@ -18,15 +18,15 @@ export function BlogCard({ post }: { post: BlogPost }) {
     <Reveal as="article">
       <Link
         href={`/blog/${post.slug}`}
-        className="group block overflow-hidden rounded-(--radius-card) border border-line bg-linen transition-[transform,border-color,box-shadow] duration-500 ease-(--ease-out-expo) hover:-translate-y-1 hover:border-ink/15 hover:shadow-(--shadow-e3)"
+        className="group block overflow-hidden rounded-card border border-line bg-linen transition-[transform,border-color,box-shadow] duration-500 ease-(--ease-out-expo) hover:-translate-y-1 hover:border-ink/15 hover:shadow-(--shadow-e3)"
       >
         <div className="relative aspect-3/2 overflow-hidden bg-parchment">
-          <Image
+          {/* Local cover — pre-optimised AVIF/WebP pair from /public, served
+              via <picture> so it never hits Vercel's optimizer. */}
+          <StaticImage
             src={post.coverImage.src}
             alt={post.coverImage.alt}
             fill
-            unoptimized
-            sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 380px"
             className="object-cover transition-transform duration-700 ease-(--ease-out-expo) group-hover:scale-105"
           />
         </div>

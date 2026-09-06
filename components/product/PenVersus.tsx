@@ -33,7 +33,7 @@ export default function PenVersus() {
               key={col}
               delay={colIndex * 0.08}
               className={cn(
-                "relative flex flex-col rounded-(--radius-card) border bg-linen p-6 lg:p-7",
+                "relative flex flex-col rounded-card border bg-linen p-6 lg:p-7",
                 isOurs
                   ? "border-gold/50 shadow-(--shadow-e1) ring-1 ring-gold/20"
                   : "border-line",

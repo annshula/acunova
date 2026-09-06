@@ -21,14 +21,11 @@ import { comparison } from "@/content/copy";
 export default function Comparison() {
   return (
     <Section size="standard" tone="canvas" bordered>
-      <SectionHead
-        title={comparison.headline}
-        body={comparison.body}
-      />
+      <SectionHead title={comparison.headline} body={comparison.body} />
 
       <Reveal
         delay={0.12}
-        className="mt-12 overflow-x-auto rounded-(--radius-card) border border-line bg-surface lg:mt-14"
+        className="mt-12 overflow-x-auto rounded-card border border-line bg-surface lg:mt-14"
       >
         <table className="w-full min-w-175 border-collapse text-left text-[0.86rem]">
           <caption className="sr-only">

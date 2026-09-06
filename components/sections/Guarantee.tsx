@@ -35,12 +35,16 @@ export default function Guarantee() {
 
       <Stagger
         as="ul"
-        className="mt-14 grid gap-px overflow-hidden rounded-(--radius-card) border border-line bg-line sm:grid-cols-2 lg:mt-16 lg:grid-cols-4"
+        className="mt-14 grid gap-px overflow-hidden rounded-card border border-line bg-line sm:grid-cols-2 lg:mt-16 lg:grid-cols-4"
       >
         {guarantee.items.map((f) => {
           const Icon = ICONS[f.icon as keyof typeof ICONS] ?? benefitIcons.safe;
           return (
-            <StaggerItem key={f.label} as="li" className="bg-surface p-7 lg:p-8">
+            <StaggerItem
+              key={f.label}
+              as="li"
+              className="bg-surface p-7 lg:p-8"
+            >
               <span className="block h-6 w-6 text-accent" aria-hidden>
                 <Icon />
               </span>

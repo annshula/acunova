@@ -8,11 +8,7 @@ import type { MomentsContent } from "@/content/pitches";
  * block. Feeling language only, sold hard. Copy comes from a per-product
  * pitch (content/pitches.ts) or defaults to the flagship pen copy.
  */
-export default function PenMoments({
-  moments,
-}: {
-  moments?: MomentsContent;
-}) {
+export default function PenMoments({ moments }: { moments?: MomentsContent }) {
   const m = moments ?? pen.moments;
 
   return (
@@ -29,7 +25,7 @@ export default function PenMoments({
 
       <Stagger
         as="ul"
-        className="mx-auto mt-12 grid max-w-240 gap-px overflow-hidden rounded-(--radius-card) border border-line bg-line sm:grid-cols-2 lg:mt-16"
+        className="mx-auto mt-12 grid max-w-240 gap-px overflow-hidden rounded-card border border-line bg-line sm:grid-cols-2 lg:mt-16"
       >
         {m.items.map((item, i) => (
           <StaggerItem

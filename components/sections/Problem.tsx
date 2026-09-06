@@ -41,7 +41,7 @@ export default function Problem() {
 
       <Stagger
         as="ul"
-        className="mx-auto mt-14 grid max-w-260 gap-px overflow-hidden rounded-(--radius-card) border border-line bg-line sm:grid-cols-3 lg:mt-16"
+        className="mx-auto mt-14 grid max-w-260 gap-px overflow-hidden rounded-card border border-line bg-line sm:grid-cols-3 lg:mt-16"
       >
         {problem.states.map((state) => (
           <StaggerItem

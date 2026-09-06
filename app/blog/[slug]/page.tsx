@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "@/components/ui/Image";
+import StaticImage from "@/components/ui/StaticImage";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -142,21 +142,19 @@ export default async function BlogPostPage({
           </div>
         </header>
 
-        <p className="mt-6 rounded-(--radius-card) border border-line bg-parchment px-5 py-4 text-[0.95rem] leading-[1.65] text-ink">
+        <p className="mt-6 rounded-card border border-line bg-parchment px-5 py-4 text-[0.95rem] leading-[1.65] text-ink">
           <span className="font-display mr-1.5 text-[0.66rem] font-semibold tracking-widest text-ink-mute uppercase">
             Quick answer —
           </span>
           {post.quickAnswer}
         </p>
 
-        <div className="relative mt-8 aspect-3/2 overflow-hidden rounded-(--radius-card) bg-parchment">
-          <Image
+        <div className="relative mt-8 aspect-3/2 overflow-hidden rounded-card bg-parchment">
+          <StaticImage
             src={post.coverImage.src}
             alt={post.coverImage.alt}
             fill
             priority
-            unoptimized
-            sizes="(max-width: 1023px) 92vw, 736px"
             className="object-cover"
           />
         </div>
@@ -190,7 +188,7 @@ export default async function BlogPostPage({
           </section>
         )}
 
-        <div className="mt-12 rounded-(--radius-card) border border-line bg-parchment p-7 text-center">
+        <div className="mt-12 rounded-card border border-line bg-parchment p-7 text-center">
           <p className="font-display text-[1.05rem] font-semibold tracking-[-0.02em] text-ink">
             {site.promise.shipping} · {site.promise.returns}
           </p>

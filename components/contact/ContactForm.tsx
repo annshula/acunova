@@ -19,7 +19,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const labelClass =
   "text-[0.7rem] font-semibold tracking-[0.14em] text-ink-soft uppercase";
 const fieldClass =
-  "w-full rounded-(--radius-card) border border-line bg-parchment px-4 py-3 text-sm text-ink transition-colors duration-300 placeholder:text-ink-mute hover:border-ink/30 focus:border-ink focus:outline-none";
+  "w-full rounded-card border border-line bg-parchment px-4 py-3 text-sm text-ink transition-colors duration-300 placeholder:text-ink-mute hover:border-ink/30 focus:border-ink focus:outline-none";
 
 /**
  * Demo form — no email provider is wired up behind this yet, so a submit
@@ -39,7 +39,9 @@ export function ContactForm() {
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !message.trim()) {
-      setError("Fill in your name, email, and a message — we need all three to reply.");
+      setError(
+        "Fill in your name, email, and a message — we need all three to reply.",
+      );
       return;
     }
     if (!EMAIL_RE.test(email.trim())) {
@@ -57,7 +59,7 @@ export function ContactForm() {
 
   if (sent) {
     return (
-      <div className="rounded-(--radius-card) border border-line bg-linen p-8 text-center">
+      <div className="rounded-card border border-line bg-linen p-8 text-center">
         <span className="mx-auto grid size-12 place-items-center rounded-full bg-accent text-on-accent">
           <Icon name="check" className="size-5" />
         </span>
@@ -122,7 +124,7 @@ export function ContactForm() {
           onChange={(e) => setMessage(e.target.value)}
           placeholder="What can we help with?"
           rows={5}
-          className={`${fieldClass} resize-none rounded-(--radius-card)`}
+          className={`${fieldClass} resize-none rounded-card`}
         />
       </label>
 
@@ -132,7 +134,11 @@ export function ContactForm() {
         </p>
       )}
 
-      <Button type="submit" disabled={sending} className="mt-1 w-full justify-center">
+      <Button
+        type="submit"
+        disabled={sending}
+        className="mt-1 w-full justify-center"
+      >
         {sending ? "Sending…" : "Send message"}
       </Button>
     </form>

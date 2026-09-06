@@ -242,7 +242,7 @@ export function ProductPurchase({
           </p>
         </div>
 
-        <div className="mt-6 overflow-hidden rounded-(--radius-card) border border-line bg-ivory/60 p-4 shadow-(--shadow-e1) sm:p-5">
+        <div className="mt-6 overflow-hidden rounded-card border border-line bg-ivory/60 p-4 shadow-(--shadow-e1) sm:p-5">
           <BuyBox
             product={product}
             selectedId={selectedId}

@@ -1,4 +1,4 @@
-import Image from "@/components/ui/Image";
+import StaticImage from "@/components/ui/StaticImage";
 import { Section, SectionHead } from "@/components/ui/Section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Motion";
 import { showcase } from "@/content/copy";
@@ -37,14 +37,11 @@ export default async function Showcase() {
         delay={0.12}
         className="mt-14 overflow-hidden rounded-(--radius-photo) shadow-(--shadow-photo) lg:mt-20"
       >
-        <Image
+        <StaticImage
           src="/product/heads-macro.png"
           alt="The four interchangeable AcuNova heads in a row: rounded ball, multi-point, fine point and flat spoon"
           width={1376}
           height={768}
-          quality={90}
-          priority={false}
-          sizes="(max-width: 1279px) 92vw, 1240px"
           className="h-auto w-full object-cover"
         />
       </Reveal>
@@ -81,20 +78,18 @@ export default async function Showcase() {
           as="figure"
           className="relative overflow-hidden rounded-(--radius-photo) shadow-(--shadow-photo)"
         >
-          <Image
+          <StaticImage
             src="/lifestyle/desk.png"
             alt="The AcuNova pen resting on a desk beside a closed laptop and a cup of tea"
             width={1376}
             height={768}
-            quality={82}
-            sizes="(max-width: 1023px) 92vw, 660px"
             className="h-full min-h-75 w-full object-cover"
           />
         </Reveal>
 
         <Reveal
           delay={0.08}
-          className="rounded-(--radius-card) border border-line bg-surface p-7 lg:p-9"
+          className="rounded-card border border-line bg-surface p-7 lg:p-9"
         >
           <h3 className="font-label text-[0.64rem] font-medium text-ink-mute uppercase">
             Specification

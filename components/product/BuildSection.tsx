@@ -44,7 +44,7 @@ export default function BuildSection({ content }: { content: BuildContent }) {
 
         <Stagger
           as="ul"
-          className="grid gap-px overflow-hidden rounded-(--radius-card) border border-line bg-line"
+          className="grid gap-px overflow-hidden rounded-card border border-line bg-line"
         >
           {content.points.map((point, i) => (
             <StaggerItem

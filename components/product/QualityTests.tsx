@@ -62,7 +62,7 @@ export default function QualityTests({
             <StaggerItem
               key={check.title}
               as="li"
-              className="group relative overflow-hidden rounded-(--radius-card) border border-line bg-linen p-6 transition-[transform,border-color] duration-500 ease-(--ease-out-expo) hover:-translate-y-1 hover:border-ink/15"
+              className="group relative overflow-hidden rounded-card border border-line bg-linen p-6 transition-[transform,border-color] duration-500 ease-(--ease-out-expo) hover:-translate-y-1 hover:border-ink/15"
             >
               <span className="absolute top-5 right-5 inline-flex items-center gap-1 rounded-full border border-emerald-600/20 bg-emerald-500/10 px-2 py-0.5 text-[0.62rem] font-semibold tracking-[0.14em] text-emerald-700 uppercase">
                 <CheckIcon className="h-2.5 w-2.5" />
@@ -89,8 +89,8 @@ export default function QualityTests({
         >
           These are our own bench checks, not a regulatory clearance. The
           AcuNova pen is a consumer wellness device: it is not cleared by the
-          FDA or Health Canada, and it is not for use with a pacemaker or
-          during pregnancy.
+          FDA or Health Canada, and it is not for use with a pacemaker or during
+          pregnancy.
         </Reveal>
       )}
 

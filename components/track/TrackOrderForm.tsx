@@ -71,7 +71,7 @@ export function TrackOrderForm() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="flex flex-col items-center gap-4 rounded-(--radius-card) border border-line bg-linen py-16 text-center"
+              className="flex flex-col items-center gap-4 rounded-card border border-line bg-linen py-16 text-center"
             >
               <motion.span
                 animate={{ rotate: 360 }}
@@ -88,7 +88,7 @@ export function TrackOrderForm() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, ease: easeOut }}
-              className="rounded-(--radius-card) border border-line bg-linen p-6 sm:p-8"
+              className="rounded-card border border-line bg-linen p-6 sm:p-8"
             >
               <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-line pb-5">
                 <div>
@@ -115,7 +115,7 @@ export function TrackOrderForm() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, ease: easeOut }}
-              className="flex flex-col items-center gap-4 rounded-(--radius-card) border border-line bg-linen px-6 py-16 text-center"
+              className="flex flex-col items-center gap-4 rounded-card border border-line bg-linen px-6 py-16 text-center"
             >
               <span className="grid size-12 place-items-center rounded-full bg-parchment text-ink-mute">
                 <Icon name="package" className="size-6" />

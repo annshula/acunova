@@ -16,14 +16,14 @@ import {
 } from "@/lib/account/order-status";
 import { formatMoney } from "@/lib/money";
 import { site } from "@/lib/site";
-import type {
-  Order,
-  OrderLineItem,
-  ReturnReason,
-} from "@/lib/shopify/types";
+import type { Order, OrderLineItem, ReturnReason } from "@/lib/shopify/types";
 
 type Selection = { quantity: number; reason: string; note: string };
-type EvidenceState = { uploading: boolean; count: number; error: string | null };
+type EvidenceState = {
+  uploading: boolean;
+  count: number;
+  error: string | null;
+};
 
 const labelClass =
   "text-[0.7rem] font-semibold tracking-[0.14em] text-ink-soft uppercase";
@@ -64,7 +64,11 @@ export function ReturnRequestForm({
     if (fileList.length === 0) return;
     setEvidence((cur) => ({
       ...cur,
-      [itemId]: { uploading: true, count: cur[itemId]?.count ?? 0, error: null },
+      [itemId]: {
+        uploading: true,
+        count: cur[itemId]?.count ?? 0,
+        error: null,
+      },
     }));
     const body = new FormData();
     for (const file of Array.from(fileList)) body.append("files", file);
@@ -175,7 +179,7 @@ export function ReturnRequestForm({
           return (
             <li
               key={item.id}
-              className="rounded-(--radius-card) border border-line bg-ivory p-5 shadow-sm sm:p-6"
+              className="rounded-card border border-line bg-ivory p-5 shadow-sm sm:p-6"
             >
               <div className="grid grid-cols-[auto_minmax(0,1fr)] items-start gap-x-4 gap-y-5 sm:grid-cols-[auto_minmax(0,1fr)_auto]">
                 {item.image ? (
@@ -252,68 +256,68 @@ export function ReturnRequestForm({
 
                   {selection?.reason &&
                     reasonNeedsDetail(selection.reason as ReturnReason) && (
-                    <>
-                      <label className="flex flex-col gap-2">
-                        <span className={labelClass}>
-                          Describe what&rsquo;s wrong
-                        </span>
-                        <textarea
-                          value={selection.note}
-                          onChange={(event) =>
-                            update(item.id, { note: event.target.value })
-                          }
-                          rows={3}
-                          maxLength={500}
-                          placeholder="What's damaged, wrong, or different from what you expected?"
-                          className="w-full resize-none rounded-2xl border border-line bg-parchment px-4 py-3 text-sm text-ink transition-colors duration-300 hover:border-ink/30 focus:border-ink focus:outline-none"
-                        />
-                      </label>
-
-                      <div className="flex flex-col gap-2">
-                        <span className={labelClass}>
-                          Attach photos or a video
-                        </span>
-                        <input
-                          type="file"
-                          accept="image/*,video/*"
-                          multiple
-                          onChange={(event) => {
-                            if (event.target.files) {
-                              uploadEvidence(item.id, event.target.files);
+                      <>
+                        <label className="flex flex-col gap-2">
+                          <span className={labelClass}>
+                            Describe what&rsquo;s wrong
+                          </span>
+                          <textarea
+                            value={selection.note}
+                            onChange={(event) =>
+                              update(item.id, { note: event.target.value })
                             }
-                            event.target.value = "";
-                          }}
-                          className="cursor-pointer text-sm text-ink-soft file:mr-3 file:cursor-pointer file:rounded-full file:border-0 file:bg-ink file:px-4 file:py-2 file:text-xs file:font-semibold file:tracking-wide file:text-white file:uppercase"
-                        />
-                        {evidence[item.id]?.uploading && (
-                          <p className="text-xs text-ink-mute">Uploading…</p>
-                        )}
-                        {!evidence[item.id]?.uploading &&
-                          !!evidence[item.id]?.count && (
-                            <p className="text-xs text-emerald-700">
-                              {evidence[item.id].count} file
-                              {evidence[item.id].count === 1 ? "" : "s"}{" "}
-                              attached.
+                            rows={3}
+                            maxLength={500}
+                            placeholder="What's damaged, wrong, or different from what you expected?"
+                            className="w-full resize-none rounded-2xl border border-line bg-parchment px-4 py-3 text-sm text-ink transition-colors duration-300 hover:border-ink/30 focus:border-ink focus:outline-none"
+                          />
+                        </label>
+
+                        <div className="flex flex-col gap-2">
+                          <span className={labelClass}>
+                            Attach photos or a video
+                          </span>
+                          <input
+                            type="file"
+                            accept="image/*,video/*"
+                            multiple
+                            onChange={(event) => {
+                              if (event.target.files) {
+                                uploadEvidence(item.id, event.target.files);
+                              }
+                              event.target.value = "";
+                            }}
+                            className="cursor-pointer text-sm text-ink-soft file:mr-3 file:cursor-pointer file:rounded-full file:border-0 file:bg-ink file:px-4 file:py-2 file:text-xs file:font-semibold file:tracking-wide file:text-white file:uppercase"
+                          />
+                          {evidence[item.id]?.uploading && (
+                            <p className="text-xs text-ink-mute">Uploading…</p>
+                          )}
+                          {!evidence[item.id]?.uploading &&
+                            !!evidence[item.id]?.count && (
+                              <p className="text-xs text-emerald-700">
+                                {evidence[item.id].count} file
+                                {evidence[item.id].count === 1 ? "" : "s"}{" "}
+                                attached.
+                              </p>
+                            )}
+                          {evidence[item.id]?.error && (
+                            <p className="text-xs text-red-600">
+                              {evidence[item.id].error}{" "}
+                              <a
+                                href={`mailto:${site.email}?subject=${encodeURIComponent(
+                                  `Return evidence — order ${order.name}`,
+                                )}&body=${encodeURIComponent(
+                                  `Item: ${item.title}\nOrder: ${order.name}\n\nAttach your photos or a short video here and send — this helps us resolve it faster.`,
+                                )}`}
+                                className="underline decoration-red-600/40 underline-offset-2 hover:decoration-red-600"
+                              >
+                                Email us instead
+                              </a>
+                              .
                             </p>
                           )}
-                        {evidence[item.id]?.error && (
-                          <p className="text-xs text-red-600">
-                            {evidence[item.id].error}{" "}
-                            <a
-                              href={`mailto:${site.email}?subject=${encodeURIComponent(
-                                `Return evidence — order ${order.name}`,
-                              )}&body=${encodeURIComponent(
-                                `Item: ${item.title}\nOrder: ${order.name}\n\nAttach your photos or a short video here and send — this helps us resolve it faster.`,
-                              )}`}
-                              className="underline decoration-red-600/40 underline-offset-2 hover:decoration-red-600"
-                            >
-                              Email us instead
-                            </a>
-                            .
-                          </p>
-                        )}
-                      </div>
-                    </>
+                        </div>
+                      </>
                     )}
                 </div>
               )}
@@ -322,7 +326,7 @@ export function ReturnRequestForm({
         })}
       </ul>
 
-      <aside className="rounded-(--radius-card) border border-line bg-ivory p-6 shadow-sm lg:sticky lg:top-24">
+      <aside className="rounded-card border border-line bg-ivory p-6 shadow-sm lg:sticky lg:top-24">
         <h2 className="font-display text-lg font-bold text-ink uppercase">
           Summary
         </h2>

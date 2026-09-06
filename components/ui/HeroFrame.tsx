@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import { avifSrc, webpSrc } from "@/lib/image-formats";
 
 export type HeroSlide = {
   desktopSrc: string;
@@ -67,7 +68,9 @@ export function HeroFrame({
     const el = ref.current;
     if (!el) return;
     const emit = (over: boolean) =>
-      window.dispatchEvent(new CustomEvent("acunova:overhero", { detail: over }));
+      window.dispatchEvent(
+        new CustomEvent("acunova:overhero", { detail: over }),
+      );
 
     const observer = new IntersectionObserver(
       ([entry]) => emit(entry.isIntersecting),
@@ -122,9 +125,30 @@ export function HeroFrame({
       <div className="absolute inset-0 overflow-hidden" ref={emblaRef}>
         <div className="flex h-full">
           {slides.map((s, i) => (
-            <div key={s.desktopSrc} className="relative h-full min-w-0 flex-[0_0_100%] bg-surface">
+            <div
+              key={s.desktopSrc}
+              className="relative h-full min-w-0 flex-[0_0_100%] bg-surface"
+            >
+              {/* AVIF -> WebP cascade, art-directed per breakpoint. The hero
+                  rasters ship pre-optimised from /public (see
+                  scripts/export-formats.mjs) via a plain <picture> so they
+                  never route through Vercel's /_next/image optimizer; the .png
+                  on the <img> is the last-resort fallback. Desktop sources
+                  come first so a ≥768px browser takes them over the default
+                  mobile sources below. */}
               <picture>
-                <source media="(min-width: 768px)" srcSet={s.desktopSrc} />
+                <source
+                  media="(min-width: 768px)"
+                  srcSet={avifSrc(s.desktopSrc)}
+                  type="image/avif"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcSet={webpSrc(s.desktopSrc)}
+                  type="image/webp"
+                />
+                <source srcSet={avifSrc(s.mobileSrc)} type="image/avif" />
+                <source srcSet={webpSrc(s.mobileSrc)} type="image/webp" />
                 <img
                   src={s.mobileSrc}
                   alt={s.alt}
