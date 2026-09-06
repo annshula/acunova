@@ -185,7 +185,7 @@ export function HeroFrame({
           justify-center lines the copy up with the true middle of the visible
           viewport. Any asymmetry (a top margin to clear the bar, an uneven py)
           drags the block off-centre. */}
-      <div className="relative mx-auto flex w-full max-w-310 flex-1 flex-col justify-center px-5 py-[calc(var(--nav-h)+var(--marquee-h)+2rem)] sm:px-8 lg:py-[calc(var(--nav-h)+var(--marquee-h)+3rem)]">
+      <div className="relative mx-auto flex w-full max-w-310 flex-1 flex-col justify-center px-6 py-[calc(var(--nav-h)+var(--marquee-h)+2rem)] sm:px-0 lg:py-[calc(var(--nav-h)+var(--marquee-h)+3rem)]">
         {children}
       </div>
 

@@ -166,7 +166,7 @@ export default function Nav() {
         }`}
         style={{ height: "var(--nav-h)" }}
       >
-        <nav className="mx-auto flex h-full max-w-310 items-center justify-between gap-6 px-5 sm:px-8">
+        <nav className="mx-auto flex h-full max-w-310 items-center justify-between gap-4 px-6 sm:px-0">
           <Logo variant="dark" />
 
           {/* Desktop links */}
