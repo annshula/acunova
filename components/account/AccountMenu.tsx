@@ -53,7 +53,7 @@ export function AccountMenu({
   const rootRef = useRef<HTMLDivElement | null>(null);
 
   /* The dropdown unmounts on close, so the confirmation is rendered from this
-     component's root instead — closing the menu must not kill the dialog. */
+     component's root instead, closing the menu must not kill the dialog. */
   const askSignOut = () => {
     setOpen(false);
     setSignOutOpen(true);

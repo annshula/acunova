@@ -164,7 +164,7 @@ export function CurrencySelector({
 
   /* Match on currency, not country: the saved country may be any country in a
      currency's market (FR), while the row for it is keyed to the canonical one
-     (DE for EUR) — comparing countries would show "Auto" for a real pick. */
+     (DE for EUR), comparing countries would show "Auto" for a real pick. */
   const activeCurrency =
     (country != null
       ? countries.find((c) => c.isoCode === country)?.currency.isoCode
@@ -247,7 +247,7 @@ export function CurrencySelector({
               ref={sheetRef}
               className="absolute inset-x-0 bottom-0 flex max-h-[85svh] flex-col overflow-hidden rounded-t-[1.75rem] bg-ivory pb-[env(safe-area-inset-bottom)] shadow-(--shadow-lift)"
             >
-              {/* Grab handle — the affordance that says "this can be
+              {/* Grab handle, the affordance that says "this can be
                   dismissed" before anyone reads a word. */}
               <span
                 aria-hidden="true"

@@ -29,7 +29,7 @@ export default function Faq() {
       <SectionHead
         align="center"
         title="The questions we actually get."
-        body="If yours isn't here, email us — a person answers, usually within a few hours."
+        body="If yours isn't here, email us. A person answers, usually within a few hours."
       />
 
       <div className="mx-auto mt-12 max-w-200 lg:mt-16">
@@ -41,7 +41,7 @@ export default function Faq() {
                   <span className="text-[1rem] leading-snug font-medium text-ink transition-colors duration-200 group-hover:text-primary">
                     {f.q}
                   </span>
-                  {/* Rotates to an x when open — see .faq-sign in globals.css */}
+                  {/* Rotates to an x when open, see .faq-sign in globals.css */}
                   <span
                     aria-hidden
                     className="faq-sign relative mt-1 grid size-5 shrink-0 place-items-center text-ink-mute"

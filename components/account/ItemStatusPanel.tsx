@@ -46,7 +46,7 @@ export function ItemStatusPanel({
         onClick={() => setOpen(true)}
         aria-haspopup="dialog"
         aria-expanded={open}
-        aria-label={`${label} — see full status`}
+        aria-label={`${label}, see full status`}
         className="group relative w-full cursor-pointer touch-manipulation overflow-hidden rounded-card border border-line bg-ivory text-left shadow-sm transition-[border-color,box-shadow,transform] duration-500 ease-(--ease-out-expo) hover:border-ink/40 hover:shadow-(--shadow-lift) focus-visible:border-ink focus-visible:outline-none active:scale-[0.995] active:bg-parchment active:duration-100"
       >
         {face}

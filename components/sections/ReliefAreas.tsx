@@ -33,7 +33,7 @@ export default function ReliefAreas() {
             <Link href="/benefits" className="group block">
               <figure>
                 <div className="relative aspect-4/5 overflow-hidden rounded-(--radius-photo) bg-surface shadow-(--shadow-photo)">
-                  {/* Local photo — pre-optimised AVIF/WebP pair from /public,
+                  {/* Local photo, pre-optimised AVIF/WebP pair from /public,
                       served via <picture> so it never hits Vercel's optimizer. */}
                   <StaticImage
                     src={area.image.src}

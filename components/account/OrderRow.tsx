@@ -20,7 +20,7 @@ export function OrderRow({ order }: { order: OrderSummary }) {
       className="group flex items-center justify-between gap-3 rounded-card border border-line bg-ivory px-4 py-4 shadow-sm transition-[border-color,box-shadow] duration-500 ease-(--ease-out-expo) hover:border-ink/40 hover:shadow-(--shadow-lift) sm:gap-4 sm:px-5"
     >
       <div className="flex min-w-0 items-center gap-3 sm:gap-4">
-        {/* The stacked previews are the first thing to go on a narrow phone —
+        {/* The stacked previews are the first thing to go on a narrow phone ,
             the order number and date carry the row on their own. */}
         <div className="hidden -space-x-3 min-[400px]:flex">
           {images.slice(0, 3).map((img, i) => (

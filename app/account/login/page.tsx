@@ -8,7 +8,7 @@ import { isCustomerAccountConfigured } from "@/lib/shopify/config";
 import { isSignedIn } from "@/lib/shopify/guard";
 
 export const metadata: Metadata = {
-  title: "Sign in — AcuNova",
+  title: "Sign in, AcuNova",
   robots: { index: false, follow: false },
 };
 
@@ -25,7 +25,7 @@ const ERROR_MESSAGES: Record<string, string> = {
     "We could not complete the sign-in. Please try again in a moment.",
   missing_code: "The sign-in response was incomplete. Please try again.",
   unconfigured:
-    "Sign-in is not connected to the store yet — please check your Shopify settings.",
+    "Sign-in is not connected to the store yet, please check your Shopify settings.",
   provider: "We could not complete the sign-in. Please try again in a moment.",
 };
 
@@ -62,7 +62,7 @@ export default async function LoginPage({ searchParams }: PageProps) {
         </h1>
         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-ink-soft">
           See your orders, track deliveries and manage your profile. No password
-          is stored by this site — sign-in runs through a secure, encrypted flow
+          is stored by this site, sign-in runs through a secure, encrypted flow
           handled by our store provider.
         </p>
 

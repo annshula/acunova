@@ -284,7 +284,7 @@ export async function getOrder(orderId: string): Promise<Order | null> {
 
   /* The shared store means an order can carry other brands' products. Keep
      only our own line items, and treat an order with nothing of ours as not
-     found — the page has nothing to show. */
+     found, the page has nothing to show. */
   const lineItems = order.lineItems.nodes
     .filter((li) => isOwnItem(li))
     .map((li) => ({
@@ -430,7 +430,7 @@ export async function getOrderReturnStatus(
     return await read(CUSTOMER_ORDER_RETURN_STATUS_FALLBACK_QUERY);
   } catch (error) {
     console.error(
-      "[return-status] fallback query failed too — return filtering is OFF for this order, " +
+      "[return-status] fallback query failed too, return filtering is OFF for this order, " +
         "so items already sent back may still be offered:",
       error instanceof Error ? error.message : error,
     );
@@ -496,7 +496,7 @@ function toReturnSummary(
 
   if (unattributedActive > 0) {
     console.error(
-      `[return-status] ${unattributedActive} active return(s) on this order did not map to a line item id — ` +
+      `[return-status] ${unattributedActive} active return(s) on this order did not map to a line item id, ` +
         "blocking new return requests for it rather than risking a duplicate.",
     );
   }

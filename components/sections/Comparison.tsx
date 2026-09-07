@@ -29,7 +29,7 @@ export default function Comparison() {
       >
         <table className="w-full min-w-175 border-collapse text-left text-[0.86rem]">
           <caption className="sr-only">
-            {comparison.headline} — {comparison.columns.join(", ")}
+            {comparison.headline}, {comparison.columns.join(", ")}
           </caption>
           <thead>
             <tr className="border-b border-line">
@@ -85,7 +85,7 @@ export default function Comparison() {
         className="mt-6 max-w-[62ch] text-[0.82rem] leading-relaxed text-ink-mute"
       >
         Some TENS units have been through FDA clearance for specific uses. Most
-        consumer devices in this category, including this one, have not — which
+        consumer devices in this category, including this one, have not, which
         is why nothing here is framed as a treatment.
       </Reveal>
     </Section>

@@ -103,7 +103,7 @@ export function ReturnRequestForm({
         [itemId]: {
           uploading: false,
           count: cur[itemId]?.count ?? 0,
-          error: "Upload failed — try again.",
+          error: "Upload failed, try again.",
         },
       }));
     }
@@ -142,7 +142,7 @@ export function ReturnRequestForm({
         !selection.note.trim()
       ) {
         setError(
-          "Describe what's wrong for any item marked damaged, wrong, or not as described — we need this to file a claim on your behalf.",
+          "Describe what's wrong for any item marked damaged, wrong, or not as described, we need this to file a claim on your behalf.",
         );
         return;
       }
@@ -305,9 +305,9 @@ export function ReturnRequestForm({
                               {evidence[item.id].error}{" "}
                               <a
                                 href={`mailto:${site.email}?subject=${encodeURIComponent(
-                                  `Return evidence — order ${order.name}`,
+                                  `Return evidence, order ${order.name}`,
                                 )}&body=${encodeURIComponent(
-                                  `Item: ${item.title}\nOrder: ${order.name}\n\nAttach your photos or a short video here and send — this helps us resolve it faster.`,
+                                  `Item: ${item.title}\nOrder: ${order.name}\n\nAttach your photos or a short video here and send, this helps us resolve it faster.`,
                                 )}`}
                                 className="underline decoration-red-600/40 underline-offset-2 hover:decoration-red-600"
                               >

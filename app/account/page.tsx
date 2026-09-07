@@ -10,7 +10,7 @@ import { getCustomer, listOrders } from "@/lib/shopify/customer-service";
 import { requireCustomer } from "@/lib/shopify/guard";
 
 export const metadata: Metadata = {
-  title: "Your account — AcuNova",
+  title: "Your account, AcuNova",
   robots: { index: false, follow: false },
 };
 
@@ -41,7 +41,7 @@ export default async function AccountOverviewPage() {
       <AccountHeader
         eyebrow="Welcome back"
         title={`Hi, ${first}`}
-        body="Your profile, your saved address and everything you have ordered — all in one place."
+        body="Your profile, your saved address and everything you have ordered, all in one place."
       />
 
       <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-6 md:grid-cols-2">
@@ -113,7 +113,7 @@ export default async function AccountOverviewPage() {
               </address>
             ) : (
               <p className="text-sm text-ink-mute">
-                No saved address yet — it will appear here once you add one at
+                No saved address yet, it will appear here once you add one at
                 checkout.
               </p>
             )}

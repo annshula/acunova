@@ -170,18 +170,18 @@ export default async function ProductPage({
 
       <ProductDetails product={liveProduct} />
 
-      {/* The build — how the item is actually made. The pen explains its
+      {/* The build, how the item is actually made. The pen explains its
           body, collar and cell; the head set explains the four tips.
           Header "The build" link scrolls here (#build). */}
       <BuildSection content={pitch?.kind === "heads" ? buildHeads : buildPen} />
 
-      {/* Every product carries the QC band — the header & buy-box "Quality"
+      {/* Every product carries the QC band, the header & buy-box "Quality"
           links scroll here (#quality-test). */}
       <QualityTests product={liveProduct} />
 
       {isFlagship && <PenVersus />}
 
-      {/* Risk-reversal close — flagship keeps its own copy, everything else
+      {/* Risk-reversal close, flagship keeps its own copy, everything else
           uses the shared, product-neutral version. */}
       <PenClose content={isFlagship ? undefined : closeGeneric} />
 

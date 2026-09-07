@@ -46,7 +46,7 @@ export default function TrustBar() {
       className="relative z-10 border-y border-line bg-surface"
     >
       <Stagger className="mx-auto grid max-w-310 grid-cols-1 divide-y divide-line px-5 sm:grid-cols-2 sm:divide-y-0 sm:px-8 lg:grid-cols-4 lg:divide-x">
-        {/* 1 — Rating, but only once it is real. */}
+        {/* 1, Rating, but only once it is real. */}
         {metrics.verified ? (
           <Item
             icon={<StarSolidIcon />}
@@ -78,25 +78,25 @@ export default function TrustBar() {
           />
         )}
 
-        {/* 2 — Free shipping. True: five live Shopify markets. */}
+        {/* 2, Free shipping. True: five live Shopify markets. */}
         <Item
           icon={<ShippingIcon />}
           headline={<>Free</>}
           label="tracked shipping to the US, Canada, UK, Australia and India"
         />
 
-        {/* 3 — Dispatch window, from live carrier data (lib/shipping.ts). */}
+        {/* 3, Dispatch window, from live carrier data (lib/shipping.ts). */}
         <Item
           icon={<PenIcon />}
           headline={<>1–3 days</>}
           label={`to dispatch · ${daysRange(shippingRegion)} days to arrive`}
         />
 
-        {/* 4 — The returns policy exactly as written in lib/site.ts. */}
+        {/* 4, The returns policy exactly as written in lib/site.ts. */}
         <Item
           icon={<SafeIcon />}
           headline={<>30 days</>}
-          label="to report a damaged, missing or wrong item — we replace it free"
+          label="to report a damaged, missing or wrong item, we replace it free"
         />
       </Stagger>
     </section>

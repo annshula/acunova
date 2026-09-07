@@ -21,35 +21,27 @@ import { daysRangeDisplay, defaultRegion } from "@/lib/shipping";
 import { site } from "@/lib/site";
 
 export const hero = {
-  eyebrow: "Natural pain relief anytime, anywhere",
-  // Split deliberately: the first half sets light, the second half sets
-  // bold and bronze. Hero.tsx relies on exactly two entries.
-  headline: ["Targeted relief for a", "healthier, happier you."],
-  // The poster's pipe-separated qualifier row, rendered with hairline
-  // dividers between the items rather than literal pipe characters.
-  qualifiers: ["Drug-free", "Non-invasive", "Safe & easy to use"],
-  // Hero support line — deliberately shorter than site.description (which is
-  // the SEO meta description). Just enough to say what it is and how it feels.
-  sub: "Micro-current pressure on the points you already rub by hand. Drug-free, non-invasive.",
+  // SEO: the H1 must contain the term people actually search. The product's
+  // real Shopify title is "Acupressure Pen - Auto-Sensing Meridian Massage
+  // Tool, No Needles", so "Acupressure pen" is the head term and "no
+  // needles" is the qualifier that separates it from acupuncture results.
+  // The previous headline ("Targeted relief for a healthier, happier you")
+  // was generic wellness copy that ranked for nothing.
+  eyebrow: "Acupressure pen",
+  // Two lines: head term first, differentiator second. Hero.tsx renders
+  // exactly two entries, stacked.
+  headline: ["Real relief.", "No needles."],
+  // One line, doing double duty: it carries the secondary keywords
+  // (meridian massage, drug-free, at home) in a sentence a human would
+  // actually read, rather than a keyword list.
+  sub: "A drug-free meridian massage tool that puts adjustable micro-current on the pressure points you already rub by hand.",
   cta: "Shop the pen",
   ctaHref: "/shop",
   secondary: "How it works",
   secondaryHref: "#method",
-  // The single calligraphic line. Decorative only — everything it says is
-  // already stated in plain text elsewhere in the hero.
-  script: "Small device. Big relief.",
-  // Generated with Higgsfield (marketing_studio_image), using the REAL
-  // Shopify product photo as the reference image so the device in frame is
-  // the device we actually ship — not an invented lookalike. Art-directed
-  // to the Revision 2 palette: pale mint ground, healing-teal ambient
-  // light, negative space on the left for the headline to sit in.
-  // Source reference: cdn.shopify.com/.../da560ae6-...jpg
-  image: {
-    src: "/product/pen-hero.png",
-    alt: "The AcuNova acupressure pen standing upright on a pale stone ledge in soft daylight",
-    width: 896,
-    height: 1200,
-  },
+  // Three short proof chips under the CTAs. Deliberately specs, not
+  // adjectives — "9 intensity levels" is checkable, "amazing relief" is not.
+  chips: ["9 intensity levels", "4 interchangeable heads", "Free US & CA shipping"],
 };
 
 /**
@@ -135,7 +127,7 @@ export const reliefAreas = {
  */
 export const problem = {
   headline: "You already know where it hurts. Reaching it is the problem.",
-  body: "Nobody has to be told to squeeze the back of their own neck at the end of a long day — you go to the same two or three spots without thinking. The trouble is what you have to reach them with.",
+  body: "Nobody has to be told to squeeze the back of their own neck at the end of a long day, you go to the same two or three spots without thinking. The trouble is what you have to reach them with.",
   states: [
     {
       doing: "Right now you use",
@@ -147,7 +139,7 @@ export const problem = {
       doing: "Or you bought",
       breaks: "A sheet of sticky pads",
       detail:
-        "A pad covers a whole area and hopes the right spot is somewhere under it. Then you peel, place, wire and dial — and buy more adhesive next month.",
+        "A pad covers a whole area and hopes the right spot is somewhere under it. Then you peel, place, wire and dial, and buy more adhesive next month.",
     },
     {
       doing: "Or you booked",
@@ -161,7 +153,7 @@ export const problem = {
 export const showcase = {
   eyebrow: "Drug-free · Non-invasive",
   headline: "Small device. Big relief.",
-  body: "The AcuNova pen is a handheld micro-current stimulator built for acupressure points — the same spots on your neck, shoulders, back and knees you already dig a thumb into. Press the tip where it aches, dial the intensity, and let the pulse do the pressing instead of your hands.",
+  body: "The AcuNova pen is a handheld micro-current stimulator built for acupressure points, the same spots on your neck, shoulders, back and knees you already dig a thumb into. Press the tip where it aches, dial the intensity, and let the pulse do the pressing instead of your hands.",
   points: [
     {
       title: "Nine levels, one dial",
@@ -191,7 +183,7 @@ export const method = {
   paragraphs: [
     {
       title: "What the device does",
-      body: "The tip delivers a low-intensity electrical pulse — the same broad family of stimulation used in the TENS units sold in any pharmacy — across nine selectable levels. Level 1 reads as a faint tickle; level 9 is a firm, unmistakable tap. Combined with the physical pressure of the tip itself, that is the entire mechanism. There is nothing else going on inside it.",
+      body: "The tip delivers a low-intensity electrical pulse, the same broad family of stimulation used in the TENS units sold in any pharmacy, across nine selectable levels. Level 1 reads as a faint tickle; level 9 is a firm, unmistakable tap. Combined with the physical pressure of the tip itself, that is the entire mechanism. There is nothing else going on inside it.",
     },
     {
       title: "What acupressure means",
@@ -218,7 +210,7 @@ export const guarantee = {
     {
       icon: "device" as const,
       label: "The complete kit",
-      body: "One AcuNova pen, all four interchangeable heads, a storage case and the quick-start card. No head is held back as a paid extra — the kit is the kit.",
+      body: "One AcuNova pen, all four interchangeable heads, a storage case and the quick-start card. No head is held back as a paid extra, the kit is the kit.",
     },
     {
       icon: "ship" as const,

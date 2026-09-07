@@ -50,7 +50,13 @@
      contract in .tastemaker/style-lock.md before adding a pairing. */
   --color-gold: #0b808d;
   --color-gold-hot: #12a0b0;
-  --color-gold-deep: #0f846e;
+  /* Darkened from #0f846e to clear WCAG AA as TEXT. Measured against the
+     hero slides' brightest copy zone it sat at 4.49:1 — a hair under the
+     4.5 floor — because the hero photography is near-white there. At
+     #0d7562 the same worst case measures 5.46:1. Its only other consumer
+     is a decorative gradient in ProductReviews, which carries no text, so
+     the change is safe to make on the token rather than per-call-site. */
+  --color-gold-deep: #0d7562;
   --color-gold-wash: #c3e8dc;
   /* Star fill on ratings — a truer yellow-gold than the wordmark bronze,
      matching the poster's rating row. */
@@ -244,18 +250,44 @@ body {
   letter-spacing: -0.015em;
 }
 
-/* The poster's headline treatment: large, set light, tracked in a
-   little. The emphasis inside it comes from a bolder span, never from
-   a different family or a colour block — see .headline-accent. */
+/* Light display weight. Still used by secondary page headers (/benefits);
+   deliberately NOT used by the hero — see .font-hero below. */
 .font-mega {
   font-family: var(--font-display);
   font-weight: 300;
   letter-spacing: -0.025em;
 }
 
-/* The bolder half of a poster headline ("Healthier, Happier You."). */
+/* The hero H1 — first (light) line of the pair.
+   Stays on Outfit; two serif attempts were tried here and rejected against
+   real reference screenshots, so the family is not the variable.
+   The hierarchy is built from the PAIR: this class sets the light line,
+   .headline-accent sets the heavy coloured line under it. Neither works
+   alone — read them together. */
+.font-hero {
+  font-family: var(--font-display);
+  /* 200, not 700. Four attempts here tried to buy presence with weight and
+     each one just read as "big bold sans" — generic. Premium display type
+     gets its impact from CONTRAST, not mass: a very light first line set
+     against a heavy accent line (.headline-accent) reads as considered,
+     where two equally-heavy lines read as shouting. This is the same
+     device the brand poster uses. */
+  font-weight: 200;
+  /* Tight, but not as tight as a heavy weight wants — thin strokes need
+     slightly more air or the counters close up at display size. */
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+
+/* The accent (second) line of the hero headline pair. Sets weight, tracking
+   and colour only — never font-family — so it inherits whichever heading
+   class the parent uses. */
 .headline-accent {
-  font-weight: 700;
+  /* The whole hierarchy lives in this jump: 200 -> 600 against a colour
+     change. Both lines were previously 700, which flattened the block into
+     one undifferentiated mass. */
+  font-weight: 600;
+  letter-spacing: -0.035em;
   color: var(--color-gold-deep);
 }
 

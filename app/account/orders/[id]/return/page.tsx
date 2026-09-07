@@ -13,7 +13,7 @@ import { getOrder, getOrderReturnStatus } from "@/lib/shopify/customer-service";
 import { requireCustomer } from "@/lib/shopify/guard";
 
 export const metadata: Metadata = {
-  title: "Request a return — AcuNova",
+  title: "Request a return, AcuNova",
   robots: { index: false, follow: false },
 };
 
@@ -41,7 +41,7 @@ export default async function OrderReturnPage({ params }: PageProps) {
         title={`Send back from ${order.name}`}
         body={
           closesAt
-            ? `Choose what is going back and why. Send it to us by ${shortDate(closesAt.toISOString())} — return shipping is on us.`
+            ? `Choose what is going back and why. Send it to us by ${shortDate(closesAt.toISOString())}, return shipping is on us.`
             : `Choose what is going back and why. You have ${RETURN_WINDOW_DAYS} days from delivery, and return shipping is on us.`
         }
         crumbs={[

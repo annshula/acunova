@@ -104,7 +104,7 @@ export function Logo({
   return (
     <Link
       href="/"
-      aria-label={`${site.name} — home`}
+      aria-label={`${site.name}, home`}
       className={`group inline-flex flex-col gap-1.5 ${className}`}
     >
       <Wordmark

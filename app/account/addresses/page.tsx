@@ -9,7 +9,7 @@ import { requireCustomer } from "@/lib/shopify/guard";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Addresses — AcuNova",
+  title: "Addresses, AcuNova",
   robots: { index: false, follow: false },
 };
 

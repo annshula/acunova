@@ -68,7 +68,7 @@ export default function Schema() {
       "@id": `${url}/#how-to-use`,
       name: "How to use an acupuncture pen safely",
       description:
-        "How to fit a head, choose an intensity level and run a session with the AcuNova acupressure pen — a consumer wellness device, not a medical one.",
+        "How to fit a head, choose an intensity level and run a session with the AcuNova acupressure pen, a consumer wellness device, not a medical one.",
       step: [
         {
           "@type": "HowToStep",

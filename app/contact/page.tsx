@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 import { absoluteUrl } from "@/lib/seo";
 
 const title = "Contact";
-const description = "Get in touch — a person replies, usually within 12 hours.";
+const description = "Get in touch, a person replies, usually within 12 hours.";
 
 export const metadata: Metadata = {
   title,
@@ -47,7 +47,7 @@ export default function ContactPage() {
               delay={0.14}
               className="mt-5 max-w-[46ch] text-[0.98rem] leading-[1.7] text-ink-soft text-pretty"
             >
-              {site.promise.support}. Order questions, sizing, returns —
+              {site.promise.support}. Order questions, sizing, returns ,
               whatever it is, use the form or email us directly.
             </Reveal>
 

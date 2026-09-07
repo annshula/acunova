@@ -73,8 +73,8 @@ export function LegalPage({ slug }: { slug: string }) {
                 </span>
                 <p className="text-[0.82rem] leading-[1.6] text-ink-soft">
                   <strong className="text-ink">Review before launch.</strong>{" "}
-                  This page describes how the storefront actually behaves — real
-                  analytics, real return terms, real fulfillment partner — but
+                  This page describes how the storefront actually behaves, real
+                  analytics, real return terms, real fulfillment partner, but
                   it is not legal advice. Have it reviewed before relying on it
                   in a dispute. Edit the source in{" "}
                   <code className="rounded-xs bg-linen px-1 py-0.5 text-[0.78rem]">

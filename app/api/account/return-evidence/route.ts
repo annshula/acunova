@@ -197,7 +197,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("[return-evidence] upload failed:", error);
     return NextResponse.json(
-      { ok: false, error: "Upload failed — try again." },
+      { ok: false, error: "Upload failed, try again." },
       { status: 502 },
     );
   }
@@ -243,7 +243,7 @@ export async function POST(request: NextRequest) {
       {
         ok: false,
         error:
-          "Uploaded, but couldn't save it to your account — email us instead.",
+          "Uploaded, but couldn't save it to your account, email us instead.",
       },
       { status: 502 },
     );

@@ -17,12 +17,12 @@ export const revalidate = 3600;
 function buildLlmsFullTxt(products: Product[]): string {
   const lines: string[] = [];
 
-  lines.push(`# ${site.name} — full content`);
+  lines.push(`# ${site.name}, full content`);
   lines.push("");
   lines.push(`> ${site.description}`);
   lines.push("");
   lines.push(
-    `${site.name} sells the AcuNova acupressure pen — a handheld consumer wellness device that delivers a low-intensity electrical pulse through a metal tip across selectable intensity levels, with interchangeable heads. Claim policy: hardware facts (pulse, levels, heads, materials, dimensions) are stated as fact; acupressure and meridian point maps are stated as a tradition drawn from classical Chinese medicine, never as a proven mechanism. The device is NOT a medical device and is NOT cleared by the FDA or Health Canada. Nothing on this site claims it treats, cures, prevents or diagnoses any condition. Safety exclusions are stated plainly: not for use with a pacemaker or other implanted electronic device, not during pregnancy, and not over broken skin, the front or sides of the neck, or near the eyes.`,
+    `${site.name} sells the AcuNova acupressure pen, a handheld consumer wellness device that delivers a low-intensity electrical pulse through a metal tip across selectable intensity levels, with interchangeable heads. Claim policy: hardware facts (pulse, levels, heads, materials, dimensions) are stated as fact; acupressure and meridian point maps are stated as a tradition drawn from classical Chinese medicine, never as a proven mechanism. The device is NOT a medical device and is NOT cleared by the FDA or Health Canada. Nothing on this site claims it treats, cures, prevents or diagnoses any condition. Safety exclusions are stated plainly: not for use with a pacemaker or other implanted electronic device, not during pregnancy, and not over broken skin, the front or sides of the neck, or near the eyes.`,
   );
   lines.push("");
 
@@ -36,7 +36,7 @@ function buildLlmsFullTxt(products: Product[]): string {
     const plain = p.descriptionHtml.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
     lines.push(`### ${p.title}`);
     lines.push(`${site.url}/products/${p.handle}`);
-    lines.push(`${p.subtitle} — ${p.material}, ${priceLabel}.`);
+    lines.push(`${p.subtitle}, ${p.material}, ${priceLabel}.`);
     lines.push("");
     lines.push(plain);
     lines.push("");
@@ -66,7 +66,7 @@ function buildLlmsFullTxt(products: Product[]): string {
   lines.push(`- Shipping: ${site.promise.shippingFull}`);
   lines.push(`- Returns: ${site.promise.returnsDetail}`);
   lines.push(`- Hardware: ${site.promise.hardware}`);
-  lines.push(`- Support: ${site.promise.support} — ${site.email}`);
+  lines.push(`- Support: ${site.promise.support}, ${site.email}`);
   lines.push("");
 
   lines.push("## Other");

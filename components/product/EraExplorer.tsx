@@ -132,7 +132,7 @@ export function EraExplorer({ eras }: { eras: StoryContent["eras"] }) {
             {/* Pre-optimised AVIF + WebP fallback (≤1200px) shipped from
                 /public. A plain <picture> (not next/image) so it never
                 routes through Vercel's paid /_next/image optimizer, same
-                reasoning as the review photos in ProductReviews.tsx — and
+                reasoning as the review photos in ProductReviews.tsx, and
                 gets AVIF's real size win where next/image's `unoptimized`
                 flag alone couldn't (that only ever serves the one format
                 you give it). Every /story/*.webp ships with a same-named

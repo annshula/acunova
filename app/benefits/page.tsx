@@ -61,7 +61,7 @@ const bands = [
     index: "01",
     label: "Neck & shoulders",
     heading: "The spot you already reach for.",
-    body: "Nine hours at a screen and your shoulders end up somewhere around your ears. This is where almost everyone starts, and it is the area a pen handles better than your own hands — you can hold a steady pressure on the ridge of the shoulder for two minutes without your thumb giving out.",
+    body: "Nine hours at a screen and your shoulders end up somewhere around your ears. This is where almost everyone starts, and it is the area a pen handles better than your own hands, you can hold a steady pressure on the ridge of the shoulder for two minutes without your thumb giving out.",
     note: "Work the back and top of the neck only. Never the front or sides.",
     image: {
       src: "/lifestyle/neck-shoulders.png",
@@ -75,7 +75,7 @@ const bands = [
     label: "Arms & joints",
     heading: "Forearms, after a day of typing.",
     body: "The muscular top third of the forearm is badly under-rated if you spend the day on a keyboard. A three-point head at a low setting, a minute each side, and the tightness you had stopped noticing becomes obvious by its absence.",
-    note: "Go a level lower around the elbow — there is bone close to the surface.",
+    note: "Go a level lower around the elbow, there is bone close to the surface.",
     image: {
       src: "/lifestyle/arms-joints.png",
       alt: "The AcuNova pen being used on the forearm just below the elbow",
@@ -100,7 +100,7 @@ const bands = [
     index: "04",
     label: "Knees & legs",
     heading: "Calves and knees, after a run.",
-    body: "Broad muscle takes a broader head and a higher setting comfortably — calves and thighs are the areas where a five-point head earns its place, covering ground quickly. Around the knee, drop back to a smaller head and a lower level.",
+    body: "Broad muscle takes a broader head and a higher setting comfortably, calves and thighs are the areas where a five-point head earns its place, covering ground quickly. Around the knee, drop back to a smaller head and a lower level.",
     note: "Work the muscle around the joint, not directly on the kneecap.",
     image: {
       src: "/lifestyle/knees-legs.png",

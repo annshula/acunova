@@ -41,14 +41,14 @@ export function NewsletterForm({ light = false }: { light?: boolean }) {
       const data = await res.json();
       if (!res.ok || !data.ok) {
         setStatus("error");
-        setMessage(data.error ?? "Couldn't sign you up — try again.");
+        setMessage(data.error ?? "Couldn't sign you up, try again.");
         return;
       }
       setStatus("done");
       setCode(data.code ?? null);
     } catch {
       setStatus("error");
-      setMessage("Couldn't sign you up — try again.");
+      setMessage("Couldn't sign you up, try again.");
     }
   };
 

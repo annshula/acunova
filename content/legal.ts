@@ -36,26 +36,26 @@ export const LEGAL_PAGES: LegalPage[] = [
       {
         heading: "Information we collect",
         body: [
-          "Account and order details — name, email, shipping address, and order history — are held by Shopify, our commerce and payments platform, as the system of record. We read this data live from your Shopify customer account rather than keeping a separate copy of it ourselves.",
+          "Account and order details, name, email, shipping address, and order history, are held by Shopify, our commerce and payments platform, as the system of record. We read this data live from your Shopify customer account rather than keeping a separate copy of it ourselves.",
           "If you subscribe to our newsletter, your email is stored as a Shopify customer record for that purpose and used only to send you the emails you signed up for.",
           "If you use the contact form or email us directly, we keep that message and your email address to respond to you and for our own support records.",
           "In your browser we set a cart/session cookie and a region/localization preference so your pricing, currency, and delivery estimate match your country. See our Cookie Policy for the full list.",
-          "We never see or store your payment card details. Checkout is hosted entirely by Shopify, which is independently certified to PCI-DSS Level 1 — your card number never reaches our servers.",
+          "We never see or store your payment card details. Checkout is hosted entirely by Shopify, which is independently certified to PCI-DSS Level 1, your card number never reaches our servers.",
         ],
       },
       {
         heading: "Analytics and advertising",
         body: [
-          "When configured, this site loads Google Analytics (GA4), the Meta Pixel (including server-side Conversions API events), and Microsoft Clarity. Clarity can record how you interact with pages — clicks, scrolling, mouse movement — to help us find and fix confusing layouts. It does not knowingly record text typed into payment fields, which are hosted by Shopify and outside the page Clarity observes.",
-          "These scripts currently load automatically when enabled on our end; this site does not yet show a cookie-consent banner letting you opt out of them individually before they load. You can block most of them using your browser's tracking-protection, \"Do Not Track,\" or ad-blocking settings — we honor blocks made this way, though we do not currently detect or respond to a Do Not Track browser signal on our own server.",
+          "When configured, this site loads Google Analytics (GA4), the Meta Pixel (including server-side Conversions API events), and Microsoft Clarity. Clarity can record how you interact with pages, clicks, scrolling, mouse movement, to help us find and fix confusing layouts. It does not knowingly record text typed into payment fields, which are hosted by Shopify and outside the page Clarity observes.",
+          "These scripts currently load automatically when enabled on our end; this site does not yet show a cookie-consent banner letting you opt out of them individually before they load. You can block most of them using your browser's tracking-protection, \"Do Not Track,\" or ad-blocking settings, we honor blocks made this way, though we do not currently detect or respond to a Do Not Track browser signal on our own server.",
         ],
       },
       {
         heading: "Who we share data with",
         body: [
-          "• Shopify — checkout, payments, customer accounts, and order fulfillment records.",
-          "• Our manufacturer — receives the name, address, and order details needed to pack and ship your order, and nothing more.",
-          "• Google, Meta, and Microsoft — receive analytics and advertising events as described above, under their own privacy policies.",
+          "• Shopify, checkout, payments, customer accounts, and order fulfillment records.",
+          "• Our manufacturer, receives the name, address, and order details needed to pack and ship your order, and nothing more.",
+          "• Google, Meta, and Microsoft, receive analytics and advertising events as described above, under their own privacy policies.",
           "• Law enforcement or regulators, only where we're required to by law.",
           "We do not sell or rent your personal information to anyone, and we never share it for a third party's own marketing purposes.",
         ],
@@ -114,7 +114,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       {
         heading: "Products and descriptions",
         body: [
-          "We describe the AcuNova pen by what the hardware verifiably does — a low-intensity electrical pulse through a metal tip, selectable intensity, interchangeable heads — and separately by the acupressure tradition it draws on, which we always label as a tradition. Nothing on this site is a medical, health, or therapeutic claim. The pen is not a medical device, is not cleared by the FDA or Health Canada, and is not intended to diagnose, treat, cure, or prevent any condition.",
+          "We describe the AcuNova pen by what the hardware verifiably does, a low-intensity electrical pulse through a metal tip, selectable intensity, interchangeable heads, and separately by the acupressure tradition it draws on, which we always label as a tradition. Nothing on this site is a medical, health, or therapeutic claim. The pen is not a medical device, is not cleared by the FDA or Health Canada, and is not intended to diagnose, treat, cure, or prevent any condition.",
           "Product photos show the actual item where noted; colour can vary slightly by display.",
           "We try to keep stock and pricing accurate, but errors happen. If an item you ordered is mispriced or out of stock, we'll contact you before charging or shipping anything.",
         ],
@@ -122,7 +122,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       {
         heading: "Pricing and orders",
         body: [
-          "Prices shown are set in our store and may change without notice; the price and details shown at checkout are the ones that apply to your order. Placing an order is an offer to buy, which we're free to accept or decline — for example, for a pricing or stock error, or suspected fraud. If we cancel an order after payment, we'll refund you in full.",
+          "Prices shown are set in our store and may change without notice; the price and details shown at checkout are the ones that apply to your order. Placing an order is an offer to buy, which we're free to accept or decline, for example, for a pricing or stock error, or suspected fraud. If we cancel an order after payment, we'll refund you in full.",
         ],
       },
       {
@@ -184,7 +184,7 @@ export const LEGAL_PAGES: LegalPage[] = [
     sections: [
       {
         body: [
-          "If your order arrives damaged, missing an item, or is the wrong item, we will send a free replacement or a full refund — no need to send anything back. This applies within 30 days of delivery, and it is the only return/refund path we currently offer: we do not accept change-of-mind, wrong-size, or “didn't like it” returns, so please check sizing and details carefully before you order.",
+          "If your order arrives damaged, missing an item, or is the wrong item, we will send a free replacement or a full refund, no need to send anything back. This applies within 30 days of delivery, and it is the only return/refund path we currently offer: we do not accept change-of-mind, wrong-size, or “didn't like it” returns, so please check sizing and details carefully before you order.",
         ],
       },
       {
@@ -199,7 +199,7 @@ export const LEGAL_PAGES: LegalPage[] = [
         heading: "What's not covered",
         body: [
           "• Change of mind, or the item is simply not what you expected",
-          "• Wrong size selected at checkout (rings are true to standard US sizing and do not stretch — check your size before ordering)",
+          "• Wrong size selected at checkout (rings are true to standard US sizing and do not stretch, check your size before ordering)",
           "• Normal wear and tear, or damage from a hard impact after delivery",
           "• Claims made more than 30 days after your delivery date",
         ],
@@ -207,7 +207,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       {
         heading: "How to start a claim",
         body: [
-          "Email us at the address below (or use your account's order history) with your order number, a photo of the issue, and a short description, within 30 days of delivery. We will review it and confirm your replacement or refund by email — most claims are approved within a few hours, and we'll tell you directly if we need anything else to process yours.",
+          "Email us at the address below (or use your account's order history) with your order number, a photo of the issue, and a short description, within 30 days of delivery. We will review it and confirm your replacement or refund by email, most claims are approved within a few hours, and we'll tell you directly if we need anything else to process yours.",
         ],
       },
       {
@@ -219,7 +219,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       {
         heading: "Order cancellations",
         body: [
-          "Orders are sent to fulfillment quickly, so if you need to cancel or change one, email us as soon as possible — we can only make changes before it's dispatched.",
+          "Orders are sent to fulfillment quickly, so if you need to cancel or change one, email us as soon as possible, we can only make changes before it's dispatched.",
         ],
       },
     ],
@@ -245,7 +245,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       {
         heading: "Processing and delivery time",
         body: [
-          "Orders are processed and dispatched within 1–3 business days. Tracked delivery time after that varies by region — see the country-by-country breakdown on our About page, or your exact estimate at checkout.",
+          "Orders are processed and dispatched within 1–3 business days. Tracked delivery time after that varies by region, see the country-by-country breakdown on our About page, or your exact estimate at checkout.",
         ],
       },
       {
@@ -257,19 +257,19 @@ export const LEGAL_PAGES: LegalPage[] = [
       {
         heading: "Customs, duties, and taxes",
         body: [
-          "For orders shipped outside the country our warehouse ships from, your local customs authority may charge import duties, taxes, or handling fees on arrival. These are set by your country, not by us, and aren't included in your order total — they're the recipient's responsibility to pay if charged. We can't predict or waive them.",
+          "For orders shipped outside the country our warehouse ships from, your local customs authority may charge import duties, taxes, or handling fees on arrival. These are set by your country, not by us, and aren't included in your order total, they're the recipient's responsibility to pay if charged. We can't predict or waive them.",
         ],
       },
       {
         heading: "Address accuracy",
         body: [
-          "Please double-check your shipping address at checkout. We ship to the address exactly as entered, and can't reroute a package once it's handed to the carrier — if it comes back to us as undeliverable due to an incorrect address, we'll contact you to arrange reshipment, which may involve an additional shipping charge.",
+          "Please double-check your shipping address at checkout. We ship to the address exactly as entered, and can't reroute a package once it's handed to the carrier, if it comes back to us as undeliverable due to an incorrect address, we'll contact you to arrange reshipment, which may involve an additional shipping charge.",
         ],
       },
       {
         heading: "Delays and lost packages",
         body: [
-          "Carrier delays are outside our control, but we can help you chase one — contact us with your order number. If tracking shows your package as delivered but you can't find it, check with neighbors and your local carrier facility first, then contact us within 7 days so we can open a trace with the carrier.",
+          "Carrier delays are outside our control, but we can help you chase one, contact us with your order number. If tracking shows your package as delivered but you can't find it, check with neighbors and your local carrier facility first, then contact us within 7 days so we can open a trace with the carrier.",
         ],
       },
     ],
@@ -283,14 +283,14 @@ export const LEGAL_PAGES: LegalPage[] = [
     sections: [
       {
         body: [
-          "This page explains exactly what AcuNova claims about its acupressure pen, and where we draw the line. We describe the product two ways — by what the hardware verifiably does, and by the tradition it draws on — and we never blur the two into a health claim.",
+          "This page explains exactly what AcuNova claims about its acupressure pen, and where we draw the line. We describe the product two ways, by what the hardware verifiably does, and by the tradition it draws on, and we never blur the two into a health claim.",
         ],
       },
       {
         heading: "What the hardware does",
         body: [
-          "The AcuNova pen is a handheld device that delivers a low-intensity electrical pulse through a metal tip, across a range of selectable intensity levels, with interchangeable heads that change how much pressure and current land per square millimetre. The body is ABS and aluminium alloy. That is the entire mechanism — there is nothing else inside the casing.",
-          "These are physical facts about the product and we stand behind them. If the unit you receive does not power on, does not step cleanly through its intensity range, or arrives missing a head, contact us — see our Refund & Return Policy.",
+          "The AcuNova pen is a handheld device that delivers a low-intensity electrical pulse through a metal tip, across a range of selectable intensity levels, with interchangeable heads that change how much pressure and current land per square millimetre. The body is ABS and aluminium alloy. That is the entire mechanism, there is nothing else inside the casing.",
+          "These are physical facts about the product and we stand behind them. If the unit you receive does not power on, does not step cleanly through its intensity range, or arrives missing a head, contact us, see our Refund & Return Policy.",
         ],
       },
       {
@@ -316,7 +316,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       {
         heading: "Questions about a specific claim",
         body: [
-          "If something on this site reads to you like a health claim, we consider that a bug, not a feature — email us at the address below with the page and the exact wording, and we'll review and correct it.",
+          "If something on this site reads to you like a health claim, we consider that a bug, not a feature, email us at the address below with the page and the exact wording, and we'll review and correct it.",
         ],
       },
     ],
@@ -336,7 +336,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       {
         heading: "What we've done",
         body: [
-          "Motion throughout the site respects your operating system's “reduce motion” setting — animations shorten or disable automatically rather than ignoring that preference.",
+          "Motion throughout the site respects your operating system's “reduce motion” setting, animations shorten or disable automatically rather than ignoring that preference.",
           "The FAQ uses native, keyboard-operable disclosure elements rather than custom widgets, and the whole site is navigable by keyboard.",
           "Images carry descriptive alt text; purely decorative images are marked so screen readers skip them.",
           "Text and interactive elements are built to maintain sufficient color contrast against their backgrounds.",
@@ -345,14 +345,14 @@ export const LEGAL_PAGES: LegalPage[] = [
       {
         heading: "Known limitations",
         body: [
-          "Some areas — particularly checkout — are hosted by Shopify, whose accessibility is outside our direct control, though Shopify maintains its own accessibility commitments.",
+          "Some areas, particularly checkout, are hosted by Shopify, whose accessibility is outside our direct control, though Shopify maintains its own accessibility commitments.",
           "We haven't yet completed a full third-party accessibility audit, so some issues may exist that we're not aware of.",
         ],
       },
       {
         heading: "Feedback",
         body: [
-          "If you hit a barrier using this site, tell us — email the address below with the page and what happened, and we'll look into it and get back to you.",
+          "If you hit a barrier using this site, tell us, email the address below with the page and what happened, and we'll look into it and get back to you.",
         ],
       },
     ],
@@ -372,7 +372,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       {
         heading: "Essential cookies",
         body: [
-          "Used for your shopping cart, checkout session, sign-in, and your delivery-region and currency preference. These are set by us and by Shopify, our checkout provider. The site won't function correctly without these, and they can't be switched off through a settings panel — you can only block them at the browser level, which will also break checkout.",
+          "Used for your shopping cart, checkout session, sign-in, and your delivery-region and currency preference. These are set by us and by Shopify, our checkout provider. The site won't function correctly without these, and they can't be switched off through a settings panel, you can only block them at the browser level, which will also break checkout.",
         ],
       },
       {

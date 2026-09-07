@@ -283,7 +283,7 @@ export default function Nav() {
                 </ul>
               </nav>
 
-              {/* Footer section — mirrors the reference drawer: a quiet,
+              {/* Footer section, mirrors the reference drawer: a quiet,
                   centred icon row (currency, account + sign-out, bag) so the
                   full-width shop CTA underneath carries the weight. */}
               <div className="border-t border-line px-5 pt-5 pb-[calc(env(safe-area-inset-bottom)+1.25rem)]">

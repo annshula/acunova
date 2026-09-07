@@ -519,14 +519,14 @@ export async function syncAllProducts(): Promise<SyncedCatalogRecord> {
   }
   if (!isAdminConfigured(cfg)) {
     throw new Error(
-      "Shopify Admin API is not configured — set SHOPIFY_ADMIN_CLIENT_ID + SHOPIFY_ADMIN_CLIENT_SECRET (or SHOPIFY_ADMIN_API_TOKEN).",
+      "Shopify Admin API is not configured, set SHOPIFY_ADMIN_CLIENT_ID + SHOPIFY_ADMIN_CLIENT_SECRET (or SHOPIFY_ADMIN_API_TOKEN).",
     );
   }
 
   const existing = await readJsonFile<SyncedCatalogRecord>(OUTPUT_PATH);
   if (!existing) {
     throw new Error(
-      `${OUTPUT_PATH} does not exist — this refreshes known products, it doesn't create the catalog from scratch. Seed it with at least one product's id/handle first.`,
+      `${OUTPUT_PATH} does not exist, this refreshes known products, it doesn't create the catalog from scratch. Seed it with at least one product's id/handle first.`,
     );
   }
   const knownIds = existing.products.map((p) => p.id);
@@ -567,7 +567,7 @@ export async function syncAllProducts(): Promise<SyncedCatalogRecord> {
   for (const id of knownIds) {
     if (!freshById.has(id)) {
       console.error(
-        `[sync] product ${id} (${existingById.get(id)?.handle}) no longer exists on Shopify — dropping it`,
+        `[sync] product ${id} (${existingById.get(id)?.handle}) no longer exists on Shopify, dropping it`,
       );
     }
   }
@@ -612,7 +612,7 @@ export async function syncAllProducts(): Promise<SyncedCatalogRecord> {
 
   for (const id of knownIds) {
     const freshProduct = freshById.get(id);
-    if (!freshProduct) continue; // deleted upstream — dropped, already warned above
+    if (!freshProduct) continue; // deleted upstream, dropped, already warned above
     const existingProduct = existingById.get(id)!;
 
     const existingVariantById = new Map(
@@ -780,7 +780,7 @@ export async function seedProductIntoCatalog(
     const record = await readJsonFile<SyncedCatalogRecord>(OUTPUT_PATH);
     if (!record) {
       throw new Error(
-        `${OUTPUT_PATH} does not exist — this seeds known products, it can't create the catalog from scratch.`,
+        `${OUTPUT_PATH} does not exist, this seeds known products, it can't create the catalog from scratch.`,
       );
     }
     if (record.products.some((p) => p.id === productId)) return { existed: true };

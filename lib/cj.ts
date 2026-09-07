@@ -88,7 +88,7 @@ export type FreightResult =
   | { ok: false; reason: string };
 
 const FREIGHT_NOT_CONNECTED =
-  "Delivery estimates aren't connected yet. Standard shipping still applies — see our shipping page for typical timelines.";
+  "Delivery estimates aren't connected yet. Standard shipping still applies, see our shipping page for typical timelines.";
 
 /**
  * Live pincode-level delivery estimate for one variant. Picks the fastest
@@ -151,7 +151,7 @@ export async function getFreightEstimate(params: {
     if (options.length === 0) {
       return {
         ok: false,
-        reason: "No delivery options found for that pincode — try a nearby one, or check the general shipping timelines instead.",
+        reason: "No delivery options found for that pincode, try a nearby one, or check the general shipping timelines instead.",
       };
     }
 
@@ -230,7 +230,7 @@ export async function getTracking(trackingNumber: string): Promise<TrackingResul
     if (days.length === 0) {
       return {
         ok: false,
-        reason: "No tracking events yet — check back once it ships.",
+        reason: "No tracking events yet, check back once it ships.",
       };
     }
 

@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
   // error that a retry can never fix.
   if (!isAdminConfigured()) {
     console.error(
-      "[webhook/products] Admin API not configured — skipping sync (set SHOPIFY_ADMIN_CLIENT_ID + SHOPIFY_ADMIN_CLIENT_SECRET or SHOPIFY_ADMIN_API_TOKEN).",
+      "[webhook/products] Admin API not configured, skipping sync (set SHOPIFY_ADMIN_CLIENT_ID + SHOPIFY_ADMIN_CLIENT_SECRET or SHOPIFY_ADMIN_API_TOKEN).",
     );
     return ack();
   }

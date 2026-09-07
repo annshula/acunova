@@ -88,7 +88,7 @@ export const sources = [
 export const acupressureEras: StoryContent["eras"] = [
   {
     title: "The points were written down",
-    body: "Classical Chinese medicine mapped a set of points along channels it called meridians, and wrote them down. Whatever you make of the underlying theory, that map has been in continuous use ever since — it is still what every acupressure chart is drawn from today.",
+    body: "Classical Chinese medicine mapped a set of points along channels it called meridians, and wrote them down. Whatever you make of the underlying theory, that map has been in continuous use ever since. It is still what every acupressure chart is drawn from today.",
     image: {
       src: "/story/era-1-origins.webp",
       alt: "An old acupressure point chart on paper beside the AcuNova pen",
@@ -112,7 +112,7 @@ export const acupressureEras: StoryContent["eras"] = [
   },
   {
     title: "It ends up on your desk",
-    body: "Nine hours at a screen, a commute, a night on the wrong pillow. The pen lives in a drawer and comes out for ten minutes — which is precisely the routine most people were already doing badly with their hands.",
+    body: "Nine hours at a screen, a commute, a night on the wrong pillow. The pen lives in a drawer and comes out for ten minutes, which is precisely the routine most people were already doing badly with their hands.",
     image: {
       src: "/story/era-4-desk.webp",
       alt: "The AcuNova pen resting on a desk beside a laptop and a cup",
@@ -136,7 +136,7 @@ export const quality = {
     {
       icon: "shield" as const,
       title: "All nine levels, in order",
-      body: "Each unit is stepped from 1 to 9 and back. The steps have to be even and the top level has to stay inside spec — a unit that jumps a step or overshoots is rejected, not downgraded.",
+      body: "Each unit is stepped from 1 to 9 and back. The steps have to be even and the top level has to stay inside spec, a unit that jumps a step or overshoots is rejected, not downgraded.",
     },
     {
       icon: "refresh" as const,
@@ -185,7 +185,7 @@ export const buildPen: BuildContent = {
     },
     {
       title: "Nine steps, held on the display",
-      body: "The level you set stays on the display until you change it, so the setting that suited you yesterday is the one you come back to — not a guess at the same button-press count.",
+      body: "The level you set stays on the display until you change it, so the setting that suited you yesterday is the one you come back to, not a guess at the same button-press count.",
     },
     {
       title: "One AA cell",
@@ -210,7 +210,7 @@ export const buildHeads: BuildContent = {
     },
     {
       title: "Ridged",
-      body: "For kneading across a muscle rather than pressing into it — the one most people end up leaving fitted.",
+      body: "For kneading across a muscle rather than pressing into it, the one most people end up leaving fitted.",
     },
     {
       title: "Fine point",
@@ -259,7 +259,7 @@ export const pitches: Pitch[] = [
     story: {
       eyebrow: "The spare set",
       heading: "Because the fine point is the one that goes missing.",
-      lede: "The same four heads that ship with every pen, sold as a set: rounded ball, ridged, fine point and flat spoon. Same thread, same finish, same bench checks — for the head that rolled under the sofa, or the second pen in the house that everyone fights over.",
+      lede: "The same four heads that ship with every pen, sold as a set: rounded ball, ridged, fine point and flat spoon. Same thread, same finish, same bench checks, for the head that rolled under the sofa, or the second pen in the house that everyone fights over.",
       claim:
         "Nothing in this set wears out in normal use. It exists because small metal things get lost, not because we designed them to be replaced.",
       caption: "Four heads · same thread as every AcuNova pen.",

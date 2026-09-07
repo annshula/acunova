@@ -202,7 +202,7 @@ export function OrderItemStatus({
     <ItemStatusPanel face={face} label={item.title}>
       <div className="flex min-h-0 flex-1 flex-col md:grid md:grid-cols-[minmax(0,17rem)_minmax(0,1fr)]">
         {/* On a phone this is the sheet's header; from md up it becomes the
-            dialog's left column — a quiet panel the timeline reads against. */}
+            dialog's left column, a quiet panel the timeline reads against. */}
         <div className="shrink-0 border-line px-5 pt-4 pb-5 md:border-r md:bg-parchment md:px-7 md:py-8">
           <div className="flex items-start gap-4 md:flex-col md:gap-5">
             {thumb(

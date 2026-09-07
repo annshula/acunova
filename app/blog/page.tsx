@@ -9,7 +9,7 @@ import { absoluteUrl } from "@/lib/seo";
 
 const title = "Blog";
 const description =
-  "How to use an acupressure pen, where the common points are, and what the evidence does and does not support — tradition kept separate from fact, no health claims.";
+  "How to use an acupressure pen, where the common points are, and what the evidence does and does not support, tradition kept separate from fact, no health claims.";
 
 export const metadata: Metadata = {
   title,
@@ -59,7 +59,7 @@ export default function BlogIndexPage() {
           The AcuNova Journal
         </h1>
         <p className="mt-3 max-w-[58ch] text-[0.95rem] leading-relaxed text-ink-soft">
-          Point guides, honest answers and buying advice for jewellery — what is
+          Point guides, honest answers and buying advice for jewellery, what is
           measurable, what is tradition, and what we will not claim.
         </p>
       </div>

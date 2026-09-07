@@ -60,7 +60,7 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-const title = `${site.name} — Electric Acupuncture Pen for Drug-Free Pain Relief`;
+const title = `${site.name}, Electric Acupuncture Pen for Drug-Free Pain Relief`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -140,7 +140,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Google Tag Manager — loaded as early as possible so container tags
+        {/* Google Tag Manager, loaded as early as possible so container tags
             (GA4, remarketing, …) fire before the first interaction. */}
         {GTM_ID && (
           <script
@@ -155,7 +155,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         )}
       </head>
       <body className="antialiased" suppressHydrationWarning>
-        {/* Google Tag Manager (noscript) — tracking fallback when JS is off. */}
+        {/* Google Tag Manager (noscript), tracking fallback when JS is off. */}
         {GTM_ID && (
           <noscript>
             <iframe

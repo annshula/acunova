@@ -166,7 +166,7 @@ export function HeroFrame({
         </div>
       </div>
 
-      {/* A soft white wash over the text zone only — left on desktop, top on
+      {/* A soft white wash over the text zone only, left on desktop, top on
           mobile. It lifts contrast where the copy sits without darkening the
           top band, which is what keeps the header seamless. */}
       <div
@@ -175,12 +175,12 @@ export function HeroFrame({
       />
 
       {/* ------------------------------ content ----------------------------- */}
-      {/* A flex child, deliberately — NOT another min-h-svh box. The section
+      {/* A flex child, deliberately, NOT another min-h-svh box. The section
           owns the height; this fills it and centres within it. Giving this
           div its own viewport height (as an earlier pass did) stacks a second
           screen onto the first and the fold overshoots.
 
-          Padding is SYMMETRIC — nav-h on top clears the fixed transparent
+          Padding is SYMMETRIC, nav-h on top clears the fixed transparent
           header, and the same nav-h on the bottom keeps the box balanced so
           justify-center lines the copy up with the true middle of the visible
           viewport. Any asymmetry (a top margin to clear the bar, an uneven py)

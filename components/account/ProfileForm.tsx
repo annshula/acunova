@@ -32,7 +32,7 @@ export function ProfileForm({
 
   /* The saved value wins over the prop once an update succeeds. The inputs are
      uncontrolled, so React will not push a new defaultValue into a mounted
-     field — keying them on what was actually saved remounts the pair and drops
+     field, keying them on what was actually saved remounts the pair and drops
      the pre-save value the browser was still showing. */
   const savedFirst =
     state.ok && state.firstName !== undefined

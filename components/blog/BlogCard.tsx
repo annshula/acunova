@@ -21,7 +21,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
         className="group block overflow-hidden rounded-card border border-line bg-linen transition-[transform,border-color,box-shadow] duration-500 ease-(--ease-out-expo) hover:-translate-y-1 hover:border-ink/15 hover:shadow-(--shadow-e3)"
       >
         <div className="relative aspect-3/2 overflow-hidden bg-parchment">
-          {/* Local cover — pre-optimised AVIF/WebP pair from /public, served
+          {/* Local cover, pre-optimised AVIF/WebP pair from /public, served
               via <picture> so it never hits Vercel's optimizer. */}
           <StaticImage
             src={post.coverImage.src}

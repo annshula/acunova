@@ -143,7 +143,7 @@ export function ProductPurchase({
   // Description stays 3 lines until "Read more" expands it. The toggle only
   // renders when the text genuinely overflows the clamp (measured once, while
   // collapsed), so a short description never shows a pointless link.
-  const descHtml = product.descriptionHtml.replace(/\s*—\s*/g, ", ").trim();
+  const descHtml = product.descriptionHtml.replace(/\s*,\s*/g, ", ").trim();
   const [descExpanded, setDescExpanded] = useState(false);
   const [descCanExpand, setDescCanExpand] = useState(false);
   const descRef = useRef<HTMLDivElement | null>(null);
@@ -160,7 +160,7 @@ export function ProductPurchase({
   return (
     <div className="mx-auto grid w-full max-w-310 gap-12 px-5 pt-8 pb-16 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:pt-10 lg:pb-24">
       {/* Fired against the initially-selected variant (bestDeal), not the
-          possibly-since-changed `selected` — one ViewContent per page view,
+          possibly-since-changed `selected`, one ViewContent per page view,
           matching what the shopper saw first, not every swatch/size click. */}
       <ProductViewTracker
         variantId={bestDeal.id}
@@ -214,7 +214,7 @@ export function ProductPurchase({
           </h1>
 
           {/* Minimal scroll guide to the build & QC sections further down
-              this page — quiet text at rest, with a hover underline and a
+              this page, quiet text at rest, with a hover underline and a
               sliding chevron as the only "this is clickable" cue. The right
               link states the real check count instead of a vague "quality
               tested", pulled from the QC list itself so it can't drift from

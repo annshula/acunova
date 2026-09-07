@@ -23,7 +23,7 @@ export const pen = {
   story: {
     eyebrow: "An old practice, on a battery",
     heading: "People have been pressing these points for two thousand years.",
-    lede: "Nobody had to teach you to squeeze the back of your own neck at the end of a long day. You do it without thinking, and you go straight to the same handful of spots every time. Those spots are not a coincidence — they are the points classical Chinese medicine mapped a very long time ago, and the ones every acupressure chart still draws from today.",
+    lede: "Nobody had to teach you to squeeze the back of your own neck at the end of a long day. You do it without thinking, and you go straight to the same handful of spots every time. Those spots are not a coincidence, they are the points classical Chinese medicine mapped a very long time ago, and the ones every acupressure chart still draws from today.",
     claim:
       "The pen does not invent anything. It just applies that pressure more precisely than a tired thumb can, and adds a pulse you can dial to a level that suits you.",
     stats: [
@@ -84,7 +84,7 @@ export const pen = {
   moments: {
     eyebrow: "When people reach for it",
     heading: "For the ten minutes that make the evening better.",
-    lede: "Not a treatment plan. A small, repeatable ritual — the same one you already improvise with your thumbs, done with something that does not get tired halfway through.",
+    lede: "Not a treatment plan. A small, repeatable ritual, the same one you already improvise with your thumbs, done with something that does not get tired halfway through.",
     items: [
       {
         title: "The end of a desk day",
@@ -100,7 +100,7 @@ export const pen = {
       },
       {
         title: "Winding down",
-        body: "Low level, dim room, a few minutes on the hands and forearms. Plenty of people use it the way others use a foam roller or a hot shower — as the signal that the day is over.",
+        body: "Low level, dim room, a few minutes on the hands and forearms. Plenty of people use it the way others use a foam roller or a hot shower, as the signal that the day is over.",
       },
     ],
   },
@@ -111,7 +111,7 @@ export const pen = {
   versus: {
     eyebrow: "Know exactly what you're buying",
     heading: "A pen, a box of pads, and a pair of thumbs.",
-    lede: "This is a low-intensity stimulation device with a metal tip. Here is how it sits next to the two things you are probably already doing, so the difference is obvious before you buy — from us or anywhere else.",
+    lede: "This is a low-intensity stimulation device with a metal tip. Here is how it sits next to the two things you are probably already doing, so the difference is obvious before you buy, from us or anywhere else.",
     columns: ["The AcuNova pen", "Stick-on TENS pads", "Your own hands"],
     rows: [
       {

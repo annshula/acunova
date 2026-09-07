@@ -26,7 +26,7 @@ function buildLlmsTxt(products: Product[]): string {
   lines.push(`> ${site.description}`);
   lines.push("");
   lines.push(
-    `${site.name} sells the AcuNova acupressure pen — a handheld consumer wellness device that delivers a low-intensity electrical pulse through a metal tip across selectable intensity levels, with interchangeable heads. Claim policy: hardware facts (pulse, levels, heads, materials, dimensions) are stated as fact; acupressure and meridian point maps are stated as a tradition drawn from classical Chinese medicine, never as a proven mechanism. The device is NOT a medical device and is NOT cleared by the FDA or Health Canada. Nothing on this site claims it treats, cures, prevents or diagnoses any condition. Safety exclusions are stated plainly: not for use with a pacemaker or other implanted electronic device, not during pregnancy, and not over broken skin, the front or sides of the neck, or near the eyes.`,
+    `${site.name} sells the AcuNova acupressure pen, a handheld consumer wellness device that delivers a low-intensity electrical pulse through a metal tip across selectable intensity levels, with interchangeable heads. Claim policy: hardware facts (pulse, levels, heads, materials, dimensions) are stated as fact; acupressure and meridian point maps are stated as a tradition drawn from classical Chinese medicine, never as a proven mechanism. The device is NOT a medical device and is NOT cleared by the FDA or Health Canada. Nothing on this site claims it treats, cures, prevents or diagnoses any condition. Safety exclusions are stated plainly: not for use with a pacemaker or other implanted electronic device, not during pregnancy, and not over broken skin, the front or sides of the neck, or near the eyes.`,
   );
   lines.push("");
 
@@ -39,7 +39,7 @@ function buildLlmsTxt(products: Product[]): string {
     const priceLabel = low === high ? `$${low}` : `$${low}–$${high}`;
     const plain = p.descriptionHtml.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
     lines.push(
-      `- [${p.title}](${site.url}/products/${p.handle}): ${p.subtitle} — ${p.material}, ${priceLabel}. ${plain.slice(0, 200)}${plain.length > 200 ? "…" : ""}`,
+      `- [${p.title}](${site.url}/products/${p.handle}): ${p.subtitle}, ${p.material}, ${priceLabel}. ${plain.slice(0, 200)}${plain.length > 200 ? "…" : ""}`,
     );
   }
   lines.push("");
@@ -47,7 +47,7 @@ function buildLlmsTxt(products: Product[]): string {
   lines.push("## Guides");
   lines.push("");
   lines.push(
-    "Editorial posts, each targeting a real, measured search query (Google Trends US, 12mo) rather than a guessed keyword. Mineral fact and cultural tradition are explicitly separated in every post — see the claim policy above.",
+    "Editorial posts, each targeting a real, measured search query (Google Trends US, 12mo) rather than a guessed keyword. Mineral fact and cultural tradition are explicitly separated in every post, see the claim policy above.",
   );
   lines.push("");
   for (const post of [...blogPosts].sort((a, b) => a.publishedAt.localeCompare(b.publishedAt))) {
@@ -68,7 +68,7 @@ function buildLlmsTxt(products: Product[]): string {
   lines.push(`- Shipping: ${site.promise.shippingFull}`);
   lines.push(`- Returns: ${site.promise.returnsDetail}`);
   lines.push(`- Hardware: ${site.promise.hardware}`);
-  lines.push(`- Support: ${site.promise.support} — ${site.email}`);
+  lines.push(`- Support: ${site.promise.support}, ${site.email}`);
   lines.push("");
 
   lines.push("## Other");

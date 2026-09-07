@@ -53,7 +53,7 @@ export default function Problem() {
             <p className="font-label text-[0.62rem] font-medium text-ink-mute uppercase">
               {state.doing}
             </p>
-            {/* The specific way it runs out — the actual stake. */}
+            {/* The specific way it runs out, the actual stake. */}
             <p className="mt-4 text-[1.05rem] leading-[1.45] font-medium text-ink text-balance">
               {state.breaks}
             </p>

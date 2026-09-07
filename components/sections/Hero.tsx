@@ -95,27 +95,34 @@ export default function Hero() {
         variants={container}
         initial="hidden"
         animate="visible"
-        className="max-w-[34rem] sm:max-w-[42rem] lg:max-w-[48rem]"
+        className="max-w-120 sm:max-w-xl lg:max-w-2xl"
       >
+        {/* Eyebrow carries the head keyword ("Acupressure pen"). No leading
+            rule or dash: wide tracking and the uppercase setting already
+            separate it from the headline below, and a decorative dash was
+            reading as a stray mark rather than as structure. */}
         <motion.p
           variants={item}
-          className="font-label text-[0.68rem] font-medium text-ink-mute uppercase"
+          className="font-label text-[0.7rem] font-medium tracking-[0.22em] text-ink-mute uppercase"
         >
           {hero.eyebrow}
         </motion.p>
 
-        <h1 className="font-mega mt-5 text-[clamp(2.3rem,5.2vw,3.9rem)] leading-[1.06] text-ink">
-          {hero.headline[0]}{" "}
-          <span className="font-medium text-primary">{hero.headline[1]}</span>
+        {/* The H1 is short on purpose. Two three-word lines at display size
+            read as a statement; the previous nine-word sentence read as
+            body copy no matter what weight it was set in. */}
+        <h1 className="font-hero mt-6 text-[clamp(3rem,8vw,5.5rem)] text-ink">
+          <span className="block">{hero.headline[0]}</span>
+          <span className="headline-accent block">{hero.headline[1]}</span>
         </h1>
 
-        <p className="mt-6 max-w-[46ch] text-[1.05rem] leading-[1.75] text-ink-soft text-pretty">
+        <p className="mt-7 max-w-[42ch] text-[1.05rem] leading-[1.7] text-ink-soft text-pretty">
           {hero.sub}
         </p>
 
         <motion.div
           variants={item}
-          className="mt-9 flex flex-wrap items-center gap-4"
+          className="mt-10 flex flex-wrap items-center gap-3"
         >
           <Button href={hero.ctaHref} size="lg" arrow variant="primary">
             {hero.cta}
@@ -124,6 +131,24 @@ export default function Hero() {
             {hero.secondary}
           </Button>
         </motion.div>
+
+        {/* Spec chips, not adjectives. These are the only "extra" content in
+            the fold and they earn it by being checkable facts, they also
+            give the block a quiet closing edge instead of ending on buttons. */}
+        <motion.ul
+          variants={item}
+          className="mt-9 flex flex-wrap items-center gap-x-5 gap-y-2"
+        >
+          {hero.chips.map((chip) => (
+            <li
+              key={chip}
+              className="flex items-center gap-2 text-[0.82rem] text-ink-mute"
+            >
+              <span aria-hidden className="size-1 rounded-full bg-accent" />
+              {chip}
+            </li>
+          ))}
+        </motion.ul>
       </motion.div>
     </HeroFrame>
   );

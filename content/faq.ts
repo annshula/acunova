@@ -43,7 +43,7 @@ export const faqGroups: FaqGroup[] = [
       ...pick("what-it-does"),
       {
         q: "Is an acupressure pen the same as acupuncture?",
-        a: "No, and the distinction matters. Acupuncture involves inserting fine needles through the skin and is performed by a trained practitioner. This device never breaks the skin — it presses on a point and adds a mild electrical pulse. It borrows the point map that acupuncture and acupressure both use, which is where the name comes from, but the procedure is not the same and it is not a substitute for seeing one.",
+        a: "No, and the distinction matters. Acupuncture involves inserting fine needles through the skin and is performed by a trained practitioner. This device never breaks the skin. It presses on a point and adds a mild electrical pulse. It borrows the point map that acupuncture and acupressure both use, which is where the name comes from, but the procedure is not the same and it is not a substitute for seeing one.",
       },
       {
         q: "Is it a medical device?",
@@ -51,7 +51,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "Does the evidence support acupressure?",
-        a: 'The honest answer is that it is mixed. Acupressure and acupuncture have both been studied, particularly for musculoskeletal discomfort and nausea, and reviews tend to find some modest effects alongside real methodological problems — small samples and the genuine difficulty of blinding a treatment that involves someone pressing on you attentively. We would rather state that plainly than quote only the favourable studies. There is a fuller discussion in <a href="/blog/do-acupressure-pens-work">do acupressure pens actually work</a>.',
+        a: 'The honest answer is that it is mixed. Acupressure and acupuncture have both been studied, particularly for musculoskeletal discomfort and nausea, and reviews tend to find some modest effects alongside real methodological problems: small samples and the genuine difficulty of blinding a treatment that involves someone pressing on you attentively. We would rather state that plainly than quote only the favourable studies. There is a fuller discussion in <a href="/blog/do-acupressure-pens-work">do acupressure pens actually work</a>.',
       },
     ],
   },
@@ -65,7 +65,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "Can I use it while pregnant?",
-        a: "No. Electrical stimulation devices are not recommended during pregnancy. Several commonly used acupressure points are also traditionally avoided in pregnancy, but you do not need to learn which — the simpler guidance is to skip the device entirely and speak to your midwife or doctor.",
+        a: "No. Electrical stimulation devices are not recommended during pregnancy. Several commonly used acupressure points are also traditionally avoided in pregnancy, but you do not need to learn which. The simpler guidance is to skip the device entirely and speak to your midwife or doctor.",
       },
       {
         q: "Which areas should I avoid?",
@@ -83,7 +83,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "How often can I use it?",
-        a: "Once or twice a day is a sensible ceiling for most people, with sessions of five to fifteen minutes across a few points. Consistency does more than duration — a short daily round beats a long weekly one. Stop if a spot becomes numb, unusually sore, or stays red for more than an hour or two.",
+        a: "Once or twice a day is a sensible ceiling for most people, with sessions of five to fifteen minutes across a few points. Consistency does more than duration: a short daily round beats a long weekly one. Stop if a spot becomes numb, unusually sore, or stays red for more than an hour or two.",
       },
     ],
   },
@@ -93,7 +93,7 @@ export const faqGroups: FaqGroup[] = [
       ...pick("in-the-box"),
       {
         q: "What is the difference between the 3-head and 5-head versions?",
-        a: `A three-point head is more precise and suits smaller or contoured areas — the forearm, the neck, around the knee. A five-point head covers more ground per pass, so it works faster across broad muscle like the calves, thighs and the wide part of the back. Neither is better; pick three-point if you mostly work neck and arms, five-point if you mostly work back and legs. Both are listed on <a href="${productPath}">the product page</a>.`,
+        a: `A three-point head is more precise and suits smaller or contoured areas: the forearm, the neck, around the knee. A five-point head covers more ground per pass, so it works faster across broad muscle like the calves, thighs and the wide part of the back. Neither is better; pick three-point if you mostly work neck and arms, five-point if you mostly work back and legs. Both are listed on <a href="${productPath}">the product page</a>.`,
       },
       {
         q: "Oil-free or oil-infused?",

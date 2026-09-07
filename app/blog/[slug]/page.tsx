@@ -144,7 +144,7 @@ export default async function BlogPostPage({
 
         <p className="mt-6 rounded-card border border-line bg-parchment px-5 py-4 text-[0.95rem] leading-[1.65] text-ink">
           <span className="font-display mr-1.5 text-[0.66rem] font-semibold tracking-widest text-ink-mute uppercase">
-            Quick answer —
+            Quick answer ,
           </span>
           {post.quickAnswer}
         </p>

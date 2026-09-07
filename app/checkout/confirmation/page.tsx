@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Order confirmed",
-  description: "Thank you — your AcuNova order is confirmed.",
+  description: "Thank you, your AcuNova order is confirmed.",
   robots: { index: false, follow: false },
 };
 
@@ -26,7 +26,7 @@ export default function ConfirmationPage() {
           <Icon name="check" className="size-7" />
         </span>
         <h1 className="font-display mt-6 text-[clamp(1.9rem,1.4rem+1.8vw,2.75rem)] leading-[1.02] font-extrabold tracking-[-0.04em] text-ink">
-          Thank you — order confirmed
+          Thank you, order confirmed
         </h1>
         <p className="mt-5 max-w-[46ch] text-[1.02rem] leading-[1.65] text-ink-soft text-pretty">
           Your order is in. We&rsquo;ve emailed your receipt, and tracking will

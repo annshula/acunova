@@ -20,7 +20,7 @@ import type { Money } from "@/lib/shopify/types";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Order details — AcuNova",
+  title: "Order details, AcuNova",
   robots: { index: false, follow: false },
 };
 
@@ -83,7 +83,7 @@ export default async function OrderDetailPage({ params }: PageProps) {
   const money = (value: Money | null) =>
     value
       ? formatMoney(value.amount, value.currencyCode ?? currency ?? undefined)
-      : "—";
+      : ",";
 
   return (
     <div className="min-w-0">
@@ -189,7 +189,7 @@ export default async function OrderDetailPage({ params }: PageProps) {
                 {returns30.items.length === 0
                   ? returns30.reason
                   : returns30.closesAt
-                    ? `Send it back by ${shortDate(returns30.closesAt.toISOString())} — return shipping is on us.`
+                    ? `Send it back by ${shortDate(returns30.closesAt.toISOString())}, return shipping is on us.`
                     : `You have ${RETURN_WINDOW_DAYS} days from delivery, and return shipping is on us.`}
               </p>
             </div>
@@ -258,7 +258,7 @@ export default async function OrderDetailPage({ params }: PageProps) {
             <div className="mt-5 space-y-1.5 border-t border-line pt-4 text-xs text-ink-mute">
               {currency && (
                 <p>
-                  Charged in <span className="text-ink-soft">{currency}</span> —
+                  Charged in <span className="text-ink-soft">{currency}</span> ,
                   the currency at the time you ordered, not the one selected in
                   the header.
                 </p>

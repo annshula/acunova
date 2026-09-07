@@ -270,7 +270,7 @@ export function returnEligibility(
      shopper files a second request for a parcel we have already refunded. */
   if (!summary) {
     console.error(
-      "[return-eligibility] return status unavailable — refusing returns for this order rather than risking a duplicate.",
+      "[return-eligibility] return status unavailable, refusing returns for this order rather than risking a duplicate.",
     );
     return none(
       "We could not check this order's return status just now. Please try again shortly, or contact us and we will sort it out.",
@@ -283,7 +283,7 @@ export function returnEligibility(
 
   /* Shopify reported a live return whose line items are not in this order.
      The return is real; only our ability to say *which* item it covers has
-     failed — almost always an id shape we did not expect. Treat it exactly
+     failed, almost always an id shape we did not expect. Treat it exactly
      like an unattributed return and log both id sets, because that comparison
      is the whole diagnosis. */
   const orderItemIds = new Set(order.lineItems.map((item) => item.id));

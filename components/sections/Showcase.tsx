@@ -51,7 +51,7 @@ export default async function Showcase() {
         delay={0.18}
         className="mt-5 text-center text-[0.78rem] tracking-[0.02em] text-ink-mute"
       >
-        Interchangeable heads — the contact area is what changes how a session
+        Interchangeable heads, the contact area is what changes how a session
         feels, more than the dial does.
       </Reveal>
 

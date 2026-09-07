@@ -40,12 +40,12 @@ export function ContactForm() {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !message.trim()) {
       setError(
-        "Fill in your name, email, and a message — we need all three to reply.",
+        "Fill in your name, email, and a message, we need all three to reply.",
       );
       return;
     }
     if (!EMAIL_RE.test(email.trim())) {
-      setError("That email doesn't look right — double-check it.");
+      setError("That email doesn't look right, double-check it.");
       return;
     }
     setError(null);

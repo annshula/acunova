@@ -42,7 +42,7 @@ export default function TrackPage() {
             className="mt-4 text-[0.98rem] leading-[1.7] text-ink-soft text-pretty"
           >
             Paste the order number from your confirmation email, or the tracking
-            number from your shipping email — either works.
+            number from your shipping email, either works.
           </Reveal>
 
           <Reveal delay={0.22} className="mt-10">

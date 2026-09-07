@@ -97,7 +97,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} {site.legalName}. All rights
             reserved.
           </p>
-          {/* The disclaimer sits in the colophon on every page by design —
+          {/* The disclaimer sits in the colophon on every page by design ,
               it is the one claim-policy statement that must be unmissable. */}
           <p className="max-w-[62ch] text-[0.68rem] leading-relaxed text-dim">
             AcuNova sells a consumer wellness device. It is not a medical

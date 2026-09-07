@@ -309,7 +309,7 @@ function ReviewCard({ review }: { review: ProductReview }) {
                 aria-label="Open customer photo"
                 className="group relative block h-24 w-24 overflow-hidden rounded-lg border border-line bg-parchment"
               >
-                {/* Local review photos are pre-optimised WebP (≤1200px) shipped from /public — served directly via `unoptimized` so they never route through Vercel's paid /_next/image optimizer, the same reason Shopify product art uses its CDN loader. */}
+                {/* Local review photos are pre-optimised WebP (≤1200px) shipped from /public, served directly via `unoptimized` so they never route through Vercel's paid /_next/image optimizer, the same reason Shopify product art uses its CDN loader. */}
                 <Image
                   src={src}
                   alt="Customer photo of the AcuNova acupuncture pen"

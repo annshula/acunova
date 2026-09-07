@@ -7,7 +7,7 @@ import { getCustomer } from "@/lib/shopify/customer-service";
 import { requireCustomer } from "@/lib/shopify/guard";
 
 export const metadata: Metadata = {
-  title: "Your profile — AcuNova",
+  title: "Your profile, AcuNova",
   robots: { index: false, follow: false },
 };
 
@@ -48,7 +48,7 @@ export default async function ProfilePage() {
                 Email
               </dt>
               <dd className="min-w-0 truncate font-medium text-ink">
-                {customer.emailAddress ?? "—"}
+                {customer.emailAddress ?? ","}
               </dd>
             </div>
             <div className="flex items-center justify-between gap-4 py-3 last:pb-0">
@@ -59,7 +59,7 @@ export default async function ProfilePage() {
                 Phone
               </dt>
               <dd className="min-w-0 truncate font-medium text-ink">
-                {customer.phoneNumber ?? "—"}
+                {customer.phoneNumber ?? ","}
               </dd>
             </div>
           </dl>

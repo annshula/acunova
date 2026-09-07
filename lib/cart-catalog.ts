@@ -30,7 +30,7 @@ for (const product of catalog.products) {
     lineMap.set(synced.id, {
       variantId: synced.id,
       name: local
-        ? `${local.product.title} — ${local.variant.title}`
+        ? `${local.product.title}, ${local.variant.title}`
         : product.title,
       image: local?.variant.image ?? local?.product.gallery?.[0]?.src ?? "",
       unitPriceCents: Math.round(synced.price * 100),

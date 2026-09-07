@@ -14,7 +14,7 @@ export const revalidate = 3600;
 function buildLlmsSmallTxt(products: Product[]): string {
   const lines: string[] = [];
 
-  lines.push(`# ${site.name} — condensed index`);
+  lines.push(`# ${site.name}, condensed index`);
   lines.push("");
   lines.push(`> ${site.description}`);
   lines.push("");

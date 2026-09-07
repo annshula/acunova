@@ -15,7 +15,7 @@ const shippingGroups: [string, ShippingRegion[]][] = Object.entries(
     return acc;
   }, {}),
 );
-const description = `${site.description} One product, made properly — no catalog to pad, nothing to upsell.`;
+const description = `${site.description} One product, made properly, no catalog to pad, nothing to upsell.`;
 
 export const metadata: Metadata = {
   title,
@@ -53,7 +53,7 @@ export default function AboutPage() {
             delay={0.14}
             className="mt-6 text-[1.02rem] leading-[1.7] text-ink-soft text-pretty"
           >
-            {site.description} No sprawling catalog to get lost in — one device,
+            {site.description} No sprawling catalog to get lost in, one device,
             the heads that fit it, sold honestly.
           </Reveal>
         </div>
@@ -150,7 +150,7 @@ export default function AboutPage() {
               >
                 {site.email}
               </a>{" "}
-              and a person answers — not a bot, not a ticket queue.
+              and a person answers, not a bot, not a ticket queue.
             </p>
           </StaggerItem>
         </Stagger>
@@ -193,7 +193,7 @@ export default function AboutPage() {
         </Stagger>
 
         <p className="mx-auto mt-8 max-w-160 text-center text-[0.76rem] leading-relaxed text-ink-mute">
-          Tracked delivery, free on every order to the US and Canada — no
+          Tracked delivery, free on every order to the US and Canada, no
           minimum, no upsell for speed. We do not currently ship outside these
           two countries; estimates update as carrier performance changes.
         </p>

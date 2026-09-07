@@ -10,7 +10,7 @@ import { absoluteUrl } from "@/lib/seo";
 
 const title = "FAQ";
 const description =
-  "Every question we actually get about the pen — how to use it, who should not, shipping and returns — with the safety answer stated plainly rather than buried.";
+  "Every question we actually get about the pen, how to use it, who should not, shipping and returns, with the safety answer stated plainly rather than buried.";
 
 export const metadata: Metadata = {
   title,
@@ -92,7 +92,7 @@ export default function FaqPage() {
             >
               {site.email}
             </a>{" "}
-            — a person answers, usually within a few hours.
+, a person answers, usually within a few hours.
           </Reveal>
 
           <div className="mt-12 space-y-12">

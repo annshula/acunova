@@ -96,7 +96,7 @@ export default function Reviews() {
           <p className="text-[0.95rem] leading-[1.7] text-ink-soft">
             We don&rsquo;t publish a star rating yet. The quotes below are
             written examples of the feedback we&rsquo;re collecting, clearly
-            labelled as such — we&rsquo;d rather show nothing than an average we
+            labelled as such, we&rsquo;d rather show nothing than an average we
             can&rsquo;t evidence.
           </p>
         </Reveal>
@@ -133,7 +133,7 @@ export default function Reviews() {
       {!verified && (
         <p className="mx-auto mt-8 max-w-[70ch] text-center text-[0.75rem] leading-relaxed text-ink-mute">
           Illustrative examples, not verified customer reviews. Nothing here is
-          emitted as schema.org review markup — see
+          emitted as schema.org review markup, see
           components/ProductSchema.tsx.
         </p>
       )}
