@@ -2,7 +2,7 @@
  * Every word on the page. Kept out of the components so copy can be edited,
  * A/B tested or localised without a developer.
  *
- * Claim policy — read this before writing a single new line. The AcuNova pen
+ * Claim policy — read this before writing a single new line. The AccuPenPro pen
  * is a consumer wellness device, not a medical device. It is not cleared by
  * the FDA or Health Canada, so nothing on this site may say or imply that it
  * treats, cures, heals, diagnoses or prevents anything. What we describe is:
@@ -81,7 +81,7 @@ export const reliefAreas = {
       label: "Neck & shoulders",
       image: {
         src: "/lifestyle/neck-shoulders.png",
-        alt: "A woman using the AcuNova pen at the base of her neck while seated at a desk",
+        alt: "A woman using the AccuPenPro pen at the base of her neck while seated at a desk",
         width: 928,
         height: 1152,
       },
@@ -90,7 +90,7 @@ export const reliefAreas = {
       label: "Arms & joints",
       image: {
         src: "/lifestyle/arms-joints.png",
-        alt: "The AcuNova pen being used on the forearm just below the elbow",
+        alt: "The AccuPenPro pen being used on the forearm just below the elbow",
         width: 928,
         height: 1152,
       },
@@ -99,7 +99,7 @@ export const reliefAreas = {
       label: "Back",
       image: {
         src: "/lifestyle/back.png",
-        alt: "Reaching behind to use the AcuNova pen on the lower back beside the spine",
+        alt: "Reaching behind to use the AccuPenPro pen on the lower back beside the spine",
         width: 928,
         height: 1152,
       },
@@ -108,7 +108,7 @@ export const reliefAreas = {
       label: "Knees & legs",
       image: {
         src: "/lifestyle/knees-legs.png",
-        alt: "Using the AcuNova pen on the outer side of the knee while seated",
+        alt: "Using the AccuPenPro pen on the outer side of the knee while seated",
         width: 928,
         height: 1152,
       },
@@ -153,7 +153,7 @@ export const problem = {
 export const showcase = {
   eyebrow: "Drug-free · Non-invasive",
   headline: "Small device. Big relief.",
-  body: "The AcuNova pen is a handheld micro-current stimulator built for acupressure points, the same spots on your neck, shoulders, back and knees you already dig a thumb into. Press the tip where it aches, dial the intensity, and let the pulse do the pressing instead of your hands.",
+  body: "The AccuPenPro pen is a handheld micro-current stimulator built for acupressure points, the same spots on your neck, shoulders, back and knees you already dig a thumb into. Press the tip where it aches, dial the intensity, and let the pulse do the pressing instead of your hands.",
   points: [
     {
       title: "Nine levels, one dial",
@@ -179,7 +179,7 @@ export const method = {
   eyebrow: "How it works",
   headline: "An old practice, on a battery.",
   lede: "Acupressure is the practice of pressing specific points on the body, mapped along what traditional Chinese medicine calls meridians. People have been doing it with thumbs and knuckles for thousands of years, and most of us do a crude version of it every time we squeeze the back of our own neck.",
-  body: "The AcuNova pen is a modern way of applying that same pressure: a metal tip you press against the point, plus a low-level electrical pulse you can dial from barely-there to firm. It is a comfort tool, and we will always describe it as one.",
+  body: "The AccuPenPro pen is a modern way of applying that same pressure: a metal tip you press against the point, plus a low-level electrical pulse you can dial from barely-there to firm. It is a comfort tool, and we will always describe it as one.",
   paragraphs: [
     {
       title: "What the device does",
@@ -210,7 +210,7 @@ export const guarantee = {
     {
       icon: "device" as const,
       label: "The complete kit",
-      body: "One AcuNova pen, all four interchangeable heads, a storage case and the quick-start card. No head is held back as a paid extra, the kit is the kit.",
+      body: "One AccuPenPro pen, all four interchangeable heads, a storage case and the quick-start card. No head is held back as a paid extra, the kit is the kit.",
     },
     {
       icon: "ship" as const,
@@ -239,7 +239,7 @@ export const comparison = {
   eyebrow: "How it compares",
   headline: "The pen, your thumbs, or a box of pads.",
   body: "Most people arrive here already doing one of two things: pressing sore points by hand, or sticking TENS pads on and hoping they land in the right place. Here is the honest difference between the three.",
-  columns: ["AcuNova pen", "Your own hands", "Stick-on TENS pads"],
+  columns: ["AccuPenPro pen", "Your own hands", "Stick-on TENS pads"],
   rows: [
     {
       label: "Precision",
@@ -378,7 +378,7 @@ export const footerNav = [
   {
     title: "Shop",
     links: [
-      { label: "The AcuNova pen", href: "/shop" },
+      { label: "The AccuPenPro pen", href: "/shop" },
       { label: "How it works", href: "/#method" },
       { label: "Pressure point guide", href: "/blog" },
       { label: "Safety and who it's for", href: "/faq" },

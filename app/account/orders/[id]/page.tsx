@@ -20,7 +20,7 @@ import type { Money } from "@/lib/shopify/types";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Order details, AcuNova",
+  title: "Order details, AccuPenPro",
   robots: { index: false, follow: false },
 };
 

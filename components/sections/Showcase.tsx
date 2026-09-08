@@ -39,7 +39,7 @@ export default async function Showcase() {
       >
         <StaticImage
           src="/product/heads-macro.png"
-          alt="The four interchangeable AcuNova heads in a row: rounded ball, multi-point, fine point and flat spoon"
+          alt="The four interchangeable AccuPenPro heads in a row: rounded ball, multi-point, fine point and flat spoon"
           width={1376}
           height={768}
           className="h-auto w-full object-cover"
@@ -80,7 +80,7 @@ export default async function Showcase() {
         >
           <StaticImage
             src="/lifestyle/desk.png"
-            alt="The AcuNova pen resting on a desk beside a closed laptop and a cup of tea"
+            alt="The AccuPenPro pen resting on a desk beside a closed laptop and a cup of tea"
             width={1376}
             height={768}
             className="h-full min-h-75 w-full object-cover"

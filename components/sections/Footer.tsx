@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LogoMark, Wordmark } from "@/components/ui/Logo";
+import { Wordmark } from "@/components/ui/Logo";
 import { NewsletterForm } from "@/components/marketing/NewsletterForm";
 import { Reveal } from "@/components/ui/Motion";
 import { footerNav } from "@/content/copy";
@@ -33,10 +33,7 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_2fr]">
           {/* --------------------------- brand --------------------------- */}
           <div>
-            <div className="flex items-center gap-2.5">
-              <LogoMark className="h-8 w-8" />
-              <Wordmark variant="light" className="text-[1.2rem]" />
-            </div>
+            <Wordmark variant="light" className="h-11" />
 
             <p className="font-display mt-6 text-[1.6rem] leading-tight font-light text-chalk text-balance">
               Ten minutes, most evenings.
@@ -100,7 +97,7 @@ export default function Footer() {
           {/* The disclaimer sits in the colophon on every page by design ,
               it is the one claim-policy statement that must be unmissable. */}
           <p className="max-w-[62ch] text-[0.68rem] leading-relaxed text-dim">
-            AcuNova sells a consumer wellness device. It is not a medical
+            AccuPenPro sells a consumer wellness device. It is not a medical
             device, it is not cleared by the FDA or Health Canada, and nothing
             on this site is a health claim or a treatment for any condition. Not
             for use with a pacemaker or during pregnancy.

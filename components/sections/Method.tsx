@@ -36,11 +36,11 @@ export default function Method() {
 
           <Reveal
             delay={0.16}
-            className="mt-10 overflow-hidden rounded-(--radius-photo) shadow-(--shadow-photo)"
+            className="mt-10 overflow-hidden rounded-photo shadow-(--shadow-photo)"
           >
             <StaticImage
               src="/lifestyle/arms-joints.png"
-              alt="The AcuNova pen being used on the forearm, showing the tip in contact with the skin"
+              alt="The AccuPenPro pen being used on the forearm, showing the tip in contact with the skin"
               width={928}
               height={1152}
               className="h-auto w-full object-cover"
@@ -95,7 +95,7 @@ export default function Method() {
                   {p.title}
                 </h3>
               </div>
-              <p className="mt-4 pl-[1.75rem] text-[0.92rem] leading-[1.75] text-ink-soft text-pretty">
+              <p className="mt-4 pl-7 text-[0.92rem] leading-[1.75] text-ink-soft text-pretty">
                 {p.body}
               </p>
             </StaggerItem>

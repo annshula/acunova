@@ -96,7 +96,7 @@ export async function generateMetadata({
  * needs to decide and buy on the right (title, price, pack picker, "Add to
  * bag"), specs and reviews underneath.
  *
- * The flagship product (the AcuNova pen) additionally mounts a full
+ * The flagship product (the AccuPenPro pen) additionally mounts a full
  * marketing stack below the buy box — PenStory (dark history band),
  * PenMoments (when people reach for it), PenVersus (the pen vs pads vs
  * hands) and PenClose (risk-reversal CTA) — plus a verified-reviews
@@ -116,7 +116,7 @@ export default async function ProductPage({
   // Synced catalog data (data/product.json) — pricing, stock and photography.
   const liveProduct = await getProduct(handle);
 
-  // Flagship product — the AcuNova pen — additionally keeps its comparison
+  // Flagship product — the AccuPenPro pen — additionally keeps its comparison
   // section (Versus), its bespoke pitch and its full review dataset. Every
   // other listing gets the same playbook from a per-product pitch in
   // content/pitches.ts so no page is a copy-paste of another.

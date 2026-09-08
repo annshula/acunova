@@ -1,5 +1,5 @@
 /**
- * Marketing copy for the flagship product page — the AcuNova acupuncture pen.
+ * Marketing copy for the flagship product page — the AccuPenPro acupuncture pen.
  * Mounted by components/product/Pen*.tsx, which the product page renders only
  * for this handle (app/products/[handle]/page.tsx), so no other listing
  * inherits the pitch.
@@ -15,7 +15,15 @@
  */
 
 export const pen = {
-  handle: "acunova-acupressure-pen",
+  // Must match the REAL Shopify handle in data/product.json exactly.
+  // This was wrong from the first commit of this rebuild (checked against
+  // git log: product-pen.ts and product.json both landed in the same
+  // commit with mismatched handles) and it silences the entire narrative
+  // section of the PDP: isFlagship compares against this value, and when
+  // it's false, PenStory/PenMoments/PenVersus never render at all. The
+  // live product page was missing its hardware stats, its two-thousand-
+  // years story, and its comparison table because of this one string.
+  handle: "acupressure-pen-meridian-massage-tool",
 
   /* ------------------------------------------------------------------ */
   /* Cinematic dark story band — right after the buy box.                */
@@ -46,7 +54,7 @@ export const pen = {
         body: "The classical Chinese medical texts set out a map of points along channels they called meridians. Whatever you make of the theory, the map itself has been in continuous use ever since, and it is still what the chart on the back of your quick-start card is drawn from.",
         image: {
           src: "/story/era-1-origins.webp",
-          alt: "An old acupressure point chart on paper beside the AcuNova pen",
+          alt: "An old acupressure point chart on paper beside the AccuPenPro pen",
         },
       },
       {
@@ -59,10 +67,10 @@ export const pen = {
       },
       {
         title: "Electricity joined in",
-        body: "Low-level electrical stimulation through the skin became a consumer category in the 1970s, and you can buy a TENS unit in any pharmacy today. The AcuNova pen is that idea in one hand: the pulse and the pressure delivered by the same tip, instead of a box, four leads and a sheet of sticky pads.",
+        body: "Low-level electrical stimulation through the skin became a consumer category in the 1970s, and you can buy a TENS unit in any pharmacy today. The AccuPenPro pen is that idea in one hand: the pulse and the pressure delivered by the same tip, instead of a box, four leads and a sheet of sticky pads.",
         image: {
           src: "/story/era-3-current.webp",
-          alt: "The tip of the AcuNova pen with its intensity display lit",
+          alt: "The tip of the AccuPenPro pen with its intensity display lit",
         },
       },
       {
@@ -70,7 +78,7 @@ export const pen = {
         body: "Nine hours at a screen, a commute, a night on the wrong pillow. The pen lives in the drawer and comes out for ten minutes, which is precisely the routine most people were already doing badly with their hands.",
         image: {
           src: "/story/era-4-desk.webp",
-          alt: "The AcuNova pen resting on a desk beside a laptop and a cup",
+          alt: "The AccuPenPro pen resting on a desk beside a laptop and a cup",
         },
       },
     ],
@@ -112,7 +120,7 @@ export const pen = {
     eyebrow: "Know exactly what you're buying",
     heading: "A pen, a box of pads, and a pair of thumbs.",
     lede: "This is a low-intensity stimulation device with a metal tip. Here is how it sits next to the two things you are probably already doing, so the difference is obvious before you buy, from us or anywhere else.",
-    columns: ["The AcuNova pen", "Stick-on TENS pads", "Your own hands"],
+    columns: ["The AccuPenPro pen", "Stick-on TENS pads", "Your own hands"],
     rows: [
       {
         label: "How it lands",

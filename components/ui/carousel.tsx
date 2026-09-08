@@ -19,7 +19,7 @@ import { Icon } from "@/components/ui/Icons";
 
 /**
  * Carousel — the shadcn/ui Carousel, built on Embla Carousel, adapted to
- * AcuNova's primitives (project `Icon` component instead of lucide, plain
+ * AccuPenPro's primitives (project `Icon` component instead of lucide, plain
  * arrow buttons instead of the CTA Button, and a `gap`-based slide layout
  * instead of shadcn's negative-margin pattern since `cn` here has no
  * tailwind-merge).

@@ -156,22 +156,22 @@ export function liveVariantFor(local: Variant): SyncedVariant {
 /* ── Brand identity on a shared store ──────────────────────────────────── */
 
 /** Every product this storefront sells — how we tell our line items apart from other brands sharing the Shopify store. */
-export const acunovaProductIds = new Set(syncedProducts.map((p) => p.id));
+export const accupenproProductIds = new Set(syncedProducts.map((p) => p.id));
 
 /** Every variant of every one of our products; anything else on the shared store belongs to another brand. */
-const acunovaVariantIds = new Set(
+const accupenproVariantIds = new Set(
   syncedProducts.flatMap((p) => p.variants.map((v) => v.id)),
 );
 
 /**
- * Whether an order line item belongs to AcuNova. Matches the product id
+ * Whether an order line item belongs to AccuPenPro. Matches the product id
  * first (any variant of one of our products counts, including a design
  * added after the last sync), falling back to the exact variant id set.
  */
-export function belongsToAcuNova(input: {
+export function belongsToAccuPenPro(input: {
   variantId?: string | null;
   productId?: string | null;
 }): boolean {
-  if (input.productId && acunovaProductIds.has(input.productId)) return true;
-  return Boolean(input.variantId && acunovaVariantIds.has(input.variantId));
+  if (input.productId && accupenproProductIds.has(input.productId)) return true;
+  return Boolean(input.variantId && accupenproVariantIds.has(input.variantId));
 }

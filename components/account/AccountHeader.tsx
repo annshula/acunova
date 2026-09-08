@@ -7,7 +7,7 @@ export type Crumb = { label: string; href?: string };
 
 /**
  * The account area's page header: breadcrumbs, an optional eyebrow, the page
- * title (display caps — AcuNova's voice is deliberate and black & white) and a
+ * title (display caps — AccuPenPro's voice is deliberate and black & white) and a
  * supporting line, then any extra content the page hangs beneath it.
  */
 export function AccountHeader({

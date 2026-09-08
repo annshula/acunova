@@ -56,7 +56,7 @@ export default function BlogIndexPage() {
         </nav>
 
         <h1 className="font-display mt-7 text-[clamp(2rem,1.5rem+2.2vw,3.2rem)] leading-[1.02] font-extrabold tracking-[-0.04em] text-ink">
-          The AcuNova Journal
+          The AccuPenPro Journal
         </h1>
         <p className="mt-3 max-w-[58ch] text-[0.95rem] leading-relaxed text-ink-soft">
           Point guides, honest answers and buying advice for jewellery, what is

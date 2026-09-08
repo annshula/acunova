@@ -4,7 +4,7 @@
  * calling the real API; until then it returns an honest "not connected yet"
  * result instead of throwing or faking data.
  *
- *   CJ_API_EMAIL=you@acunova.com
+ *   CJ_API_EMAIL=you@accupenpro.com
  *   CJ_API_KEY=...
  *
  * ⚠️ Endpoint shapes below follow CJDropshipping's published API v2

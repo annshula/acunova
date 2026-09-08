@@ -30,7 +30,7 @@ export default function ProductSchema({ product }: { product: Product }) {
     audience: { "@type": "PeopleAudience", suggestedGender: "male" },
     // Gallery images may already be absolute (Shopify CDN) or site-relative
     // (local /product art) — never blindly prefix, or an absolute URL turns
-    // into "https://acunova.com/https://cdn.shopify.com/...".
+    // into "https://accupenpro.com/https://cdn.shopify.com/...".
     image: product.gallery.map((g) => (g.src.startsWith("http") ? g.src : `${url}${g.src}`)),
     ...(site.metrics.verified
       ? {

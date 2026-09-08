@@ -126,7 +126,7 @@ export function returnReasonLabel(reason: ReturnReason): string {
 
 /**
  * Whether this reason is one our supplier dispute process actually needs
- * detail on. AcuNova ships via CJdropshipping, and CJ's own dispute policy
+ * detail on. AccuPenPro ships via CJdropshipping, and CJ's own dispute policy
  * requires a description (and photo/video evidence) for damaged, wrong-item
  * and not-as-described claims before they'll refund or replace it on our
  * end — a size/style/colour return doesn't go through that process at all.

@@ -8,7 +8,7 @@ import { isCustomerAccountConfigured } from "@/lib/shopify/config";
 import { isSignedIn } from "@/lib/shopify/guard";
 
 export const metadata: Metadata = {
-  title: "Sign in, AcuNova",
+  title: "Sign in, AccuPenPro",
   robots: { index: false, follow: false },
 };
 

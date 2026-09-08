@@ -98,7 +98,7 @@ const variantIdNums = new Set(
   syncedProducts.flatMap((p) => p.variants.map((v: { id: string }) => v.id.split("/").pop())),
 );
 
-/** True when a webhook line item belongs to AcuNova (shared store). */
+/** True when a webhook line item belongs to AccuPenPro (shared store). */
 function isOurLineItem(line: ShopifyLineItem): boolean {
   if (line.product_id != null && productIdNums.has(String(line.product_id))) {
     return true;
@@ -231,7 +231,7 @@ async function sendGa4Purchase(order: ShopifyOrder): Promise<void> {
         body: JSON.stringify({
           /* One stable server-side client per order, so the purchase is not
              counted as its own brand-new "user". */
-          client_id: `order-${order.id}.acunova`,
+          client_id: `order-${order.id}.accupenpro`,
           events: [
             {
               name: "purchase",

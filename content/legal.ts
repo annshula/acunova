@@ -1,7 +1,7 @@
 /**
  * Legal / compliance pages.
  *
- * This is genuine, accurate content describing how AcuNova's storefront
+ * This is genuine, accurate content describing how AccuPenPro's storefront
  * actually behaves — the real analytics it loads, the real third parties
  * it uses, the real return window (see lib/site.ts's `promise.returns`,
  * which this must never contradict). It is not boilerplate copied from a
@@ -24,13 +24,13 @@ export const LEGAL_PAGES: LegalPage[] = [
   {
     slug: "privacy",
     title: "Privacy Policy",
-    description: "What data AcuNova collects, who sees it, and why.",
+    description: "What data AccuPenPro collects, who sees it, and why.",
     lastUpdated: "2026-09-04",
     requiresMerchantReview: true,
     sections: [
       {
         body: [
-          "AcuNova (“we”, “us”, “our”) operates acunova.com. This policy explains what information we collect when you browse, create an account, subscribe, or place an order, why we collect it, who we share it with, and the choices you have. By using this site, you agree to the practices described here.",
+          "AccuPenPro (“we”, “us”, “our”) operates accupenpro.com. This policy explains what information we collect when you browse, create an account, subscribe, or place an order, why we collect it, who we share it with, and the choices you have. By using this site, you agree to the practices described here.",
         ],
       },
       {
@@ -96,13 +96,13 @@ export const LEGAL_PAGES: LegalPage[] = [
   {
     slug: "terms",
     title: "Terms of Service",
-    description: "The terms that apply when you use acunova.com or place an order.",
+    description: "The terms that apply when you use accupenpro.com or place an order.",
     lastUpdated: "2026-09-04",
     requiresMerchantReview: true,
     sections: [
       {
         body: [
-          "These Terms of Service govern your use of acunova.com and any order you place with us. By browsing this site or placing an order, you agree to these terms and to Shopify's own terms for the checkout and payment portion of your purchase, which we use to process orders. If you don't agree to these terms, please don't use this site.",
+          "These Terms of Service govern your use of accupenpro.com and any order you place with us. By browsing this site or placing an order, you agree to these terms and to Shopify's own terms for the checkout and payment portion of your purchase, which we use to process orders. If you don't agree to these terms, please don't use this site.",
         ],
       },
       {
@@ -114,7 +114,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       {
         heading: "Products and descriptions",
         body: [
-          "We describe the AcuNova pen by what the hardware verifiably does, a low-intensity electrical pulse through a metal tip, selectable intensity, interchangeable heads, and separately by the acupressure tradition it draws on, which we always label as a tradition. Nothing on this site is a medical, health, or therapeutic claim. The pen is not a medical device, is not cleared by the FDA or Health Canada, and is not intended to diagnose, treat, cure, or prevent any condition.",
+          "We describe the AccuPenPro pen by what the hardware verifiably does, a low-intensity electrical pulse through a metal tip, selectable intensity, interchangeable heads, and separately by the acupressure tradition it draws on, which we always label as a tradition. Nothing on this site is a medical, health, or therapeutic claim. The pen is not a medical device, is not cleared by the FDA or Health Canada, and is not intended to diagnose, treat, cure, or prevent any condition.",
           "Product photos show the actual item where noted; colour can vary slightly by display.",
           "We try to keep stock and pricing accurate, but errors happen. If an item you ordered is mispriced or out of stock, we'll contact you before charging or shipping anything.",
         ],
@@ -140,13 +140,13 @@ export const LEGAL_PAGES: LegalPage[] = [
       {
         heading: "Intellectual property",
         body: [
-          "The AcuNova name, logo, product photography, and site content are ours or used with permission. You may not copy, reuse, or redistribute them without asking first.",
+          "The AccuPenPro name, logo, product photography, and site content are ours or used with permission. You may not copy, reuse, or redistribute them without asking first.",
         ],
       },
       {
         heading: "Liability",
         body: [
-          "This site and its products are provided \"as is.\" To the extent permitted by law, AcuNova is not liable for indirect, incidental, or consequential damages arising from your use of this site or its products, and our total liability for any claim is limited to the amount you paid for the order in question. Nothing here limits liability that cannot legally be limited, including for our own gross negligence or willful misconduct.",
+          "This site and its products are provided \"as is.\" To the extent permitted by law, AccuPenPro is not liable for indirect, incidental, or consequential damages arising from your use of this site or its products, and our total liability for any claim is limited to the amount you paid for the order in question. Nothing here limits liability that cannot legally be limited, including for our own gross negligence or willful misconduct.",
         ],
       },
       {
@@ -283,13 +283,13 @@ export const LEGAL_PAGES: LegalPage[] = [
     sections: [
       {
         body: [
-          "This page explains exactly what AcuNova claims about its acupressure pen, and where we draw the line. We describe the product two ways, by what the hardware verifiably does, and by the tradition it draws on, and we never blur the two into a health claim.",
+          "This page explains exactly what AccuPenPro claims about its acupressure pen, and where we draw the line. We describe the product two ways, by what the hardware verifiably does, and by the tradition it draws on, and we never blur the two into a health claim.",
         ],
       },
       {
         heading: "What the hardware does",
         body: [
-          "The AcuNova pen is a handheld device that delivers a low-intensity electrical pulse through a metal tip, across a range of selectable intensity levels, with interchangeable heads that change how much pressure and current land per square millimetre. The body is ABS and aluminium alloy. That is the entire mechanism, there is nothing else inside the casing.",
+          "The AccuPenPro pen is a handheld device that delivers a low-intensity electrical pulse through a metal tip, across a range of selectable intensity levels, with interchangeable heads that change how much pressure and current land per square millimetre. The body is ABS and aluminium alloy. That is the entire mechanism, there is nothing else inside the casing.",
           "These are physical facts about the product and we stand behind them. If the unit you receive does not power on, does not step cleanly through its intensity range, or arrives missing a head, contact us, see our Refund & Return Policy.",
         ],
       },
@@ -324,13 +324,13 @@ export const LEGAL_PAGES: LegalPage[] = [
   {
     slug: "accessibility",
     title: "Accessibility",
-    description: "Our approach to making acunova.com usable for everyone.",
+    description: "Our approach to making accupenpro.com usable for everyone.",
     lastUpdated: "2026-09-04",
     requiresMerchantReview: true,
     sections: [
       {
         body: [
-          "We want acunova.com to be usable by as many people as possible, including people using assistive technology such as screen readers, screen magnifiers, or keyboard-only navigation. We're working toward the WCAG 2.1 Level AA guidelines as an ongoing effort, not a one-time fix.",
+          "We want accupenpro.com to be usable by as many people as possible, including people using assistive technology such as screen readers, screen magnifiers, or keyboard-only navigation. We're working toward the WCAG 2.1 Level AA guidelines as an ongoing effort, not a one-time fix.",
         ],
       },
       {
@@ -366,7 +366,7 @@ export const LEGAL_PAGES: LegalPage[] = [
     sections: [
       {
         body: [
-          "Cookies are small text files a site stores in your browser to remember information between visits or page loads. This page lists what acunova.com uses them for and the choices you have.",
+          "Cookies are small text files a site stores in your browser to remember information between visits or page loads. This page lists what accupenpro.com uses them for and the choices you have.",
         ],
       },
       {

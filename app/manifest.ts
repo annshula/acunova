@@ -8,8 +8,13 @@ export default function manifest(): MetadataRoute.Manifest {
     description: site.description,
     start_url: "/",
     display: "standalone",
-    background_color: "#ffffff",
-    theme_color: "#ffffff",
+    // Matched to the live palette (app/globals.css --color-canvas /
+    // --color-primary), not left at the Next.js scaffold default. This
+    // controls the splash screen and status bar colour when the site is
+    // added to a home screen, so a stale white here is a real visible bug
+    // the moment someone installs the PWA, not just an unused field.
+    background_color: "#f4fefb",
+    theme_color: "#0f846e",
     icons: [
       {
         src: "/icon-192.png",

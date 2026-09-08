@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils";
 import type { ProductReview, ReviewSummary } from "@/data/reviews";
 
 /**
- * Full customer-reviews experience for the AcuNova pen: an
+ * Full customer-reviews experience for the AccuPenPro pen: an
  * aggregate summary (clickable star breakdown), quick filters (all / with
  * photos / by star) and a paginated, modern review feed. Customer photos
  * open in a lightbox (same portal + CSS-transition modal pattern as
@@ -312,7 +312,7 @@ function ReviewCard({ review }: { review: ProductReview }) {
                 {/* Local review photos are pre-optimised WebP (≤1200px) shipped from /public, served directly via `unoptimized` so they never route through Vercel's paid /_next/image optimizer, the same reason Shopify product art uses its CDN loader. */}
                 <Image
                   src={src}
-                  alt="Customer photo of the AcuNova acupuncture pen"
+                  alt="Customer photo of the AccuPenPro acupuncture pen"
                   fill
                   sizes="96px"
                   unoptimized
@@ -421,7 +421,7 @@ function ReviewImageLightbox({
         >
           <Image
             src={src}
-            alt="Customer photo of the AcuNova acupuncture pen"
+            alt="Customer photo of the AccuPenPro acupuncture pen"
             fill
             sizes="(max-width: 900px) 100vw, 900px"
             unoptimized

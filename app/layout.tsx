@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     "handheld massager",
     "acupressure massage pen",
     "neck and shoulder massager",
-    "AcuNova",
+    "AccuPenPro",
   ],
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
@@ -109,7 +109,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description: site.description,
-    creator: "@acunova",
+    creator: "@accupenpro",
   },
   robots: {
     index: true,

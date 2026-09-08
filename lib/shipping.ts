@@ -55,7 +55,7 @@ export const arrivesShort = (region: ShippingRegion = defaultRegion) =>
 
 const cjVidBySku = new Map(shipping.variantWeights.map((v) => [v.sku, v.vid]));
 
-/** Maps a AcuNova variant SKU (lib/product.ts) to CJDropshipping's own variant id — the one live freight lookups need, not the Shopify variant id. Falls back to the default ("one band") variant for an unknown SKU. */
+/** Maps a AccuPenPro variant SKU (lib/product.ts) to CJDropshipping's own variant id — the one live freight lookups need, not the Shopify variant id. Falls back to the default ("one band") variant for an unknown SKU. */
 export function cjVidForSku(sku: string): string {
   return cjVidBySku.get(sku) ?? shipping.variantWeights[0]?.vid ?? "";
 }

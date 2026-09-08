@@ -1,6 +1,6 @@
-# AcuNova
+# AccuPenPro
 
-Launch site for **AcuNova** — a men's brand built around genuine natural
+Launch site for **AccuPenPro** — a men's brand built around genuine natural
 hematite: iron-oxide bracelets and rings for men.
 
 > Lite your life.
@@ -89,7 +89,7 @@ you do not need to run them to build.
 Everything is already wired. Set two variables and the site switches over:
 
 ```bash
-SHOPIFY_STORE_DOMAIN=acunova.myshopify.com
+SHOPIFY_STORE_DOMAIN=accupenpro.myshopify.com
 SHOPIFY_STOREFRONT_TOKEN=shpat_...
 ```
 

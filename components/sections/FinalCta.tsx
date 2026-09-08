@@ -43,7 +43,7 @@ export default function FinalCta() {
           <figure className="overflow-hidden rounded-(--radius-photo) shadow-(--shadow-photo)">
             <StaticImage
               src="/product/kit-flatlay.png"
-              alt="The AcuNova pen laid out with its interchangeable heads and storage case"
+              alt="The AccuPenPro pen laid out with its interchangeable heads and storage case"
               width={1376}
               height={768}
               className="h-auto w-full object-cover"

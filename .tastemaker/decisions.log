@@ -71,3 +71,30 @@
   Reason: on a bright site a dark takeover is a jarring context switch and it
   forced a second inverted style set for every control inside it. Worth
   confirming once seen on a real device.
+
+---
+2026-09-07 (PDP audit): Found and fixed three instances of the same bug
+class, all from the initial rebuild commit (a31cb76) — a hardcoded product
+handle that never matched data/product.json's real Shopify handle
+("acupressure-pen-meridian-massage-tool"):
+  1. content/product-pen.ts `pen.handle` — was "acunova-acupressure-pen".
+     This silenced isFlagship, which gated PenStory/PenMoments/PenVersus —
+     the entire narrative section of the PDP (hardware stats, "two thousand
+     years" story, comparison table) never rendered on the live product.
+  2. data/reviews.ts `PEN_REVIEWS_HANDLE` — same wrong string. Silenced
+     reviewSetForHandle(), so the PDP showed the empty "reviews are being
+     collected" state despite real review content existing in the file.
+  3. content/pitches.ts has an orphaned pitch for
+     "acunova-replacement-head-set" — not a live bug (pitchFor() returns
+     undefined safely), but there is no such SKU in the real catalog.
+     Left as-is; flagged to user rather than deleted, in case a head-set
+     listing is coming.
+Generated the 4 missing /story/era-*.webp+avif images EraExplorer needs
+(dormant until fix #1 landed, then live) and the 2 missing PWA icons
+manifest.ts pointed at (0 icon files existed in public/ at all). Also fixed
+manifest.ts theme_color/background_color, hardcoded to #ffffff instead of
+the live teal palette.
+Net effect: the real live PDP went from 5 sections with 2 broken images to
+9 sections with 0 broken images, without any of the underlying component
+code changing — it was 100% dead content becoming reachable via 3
+one-line string fixes.

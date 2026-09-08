@@ -29,12 +29,12 @@ export const maxDuration = 60;
 const PRODUCT_TOPICS = new Set(["products/create", "products/update"]);
 
 // Webhook topics are store-scoped: products/create|update fire for every
-// merchant sharing the connected Shopify store, not just AcuNova. Never seed
+// merchant sharing the connected Shopify store, not just AccuPenPro. Never seed
 // or sync a product whose vendor is not on the brand allowlist, otherwise any
 // brand on the store could inject products (and their description HTML) into
-// this storefront. Defaults to "ACUNOVA" — the vendor this catalog sells.
+// this storefront. Defaults to "ACCUPENPRO" — the vendor this catalog sells.
 const ALLOWED_PRODUCT_BRANDS = new Set(
-  (process.env.SHOPIFY_ALLOWED_PRODUCT_BRANDS ?? "ACUNOVA")
+  (process.env.SHOPIFY_ALLOWED_PRODUCT_BRANDS ?? "ACCUPENPRO")
     .split(",")
     .map((brand) => brand.trim().toLowerCase())
     .filter(Boolean),
@@ -95,7 +95,7 @@ export async function POST(request: NextRequest) {
 
   try {
     // Brand-scope gate: HMAC verification only proves the delivery came from
-    // Shopify, not that the product belongs to AcuNova's catalog. Reject any
+    // Shopify, not that the product belongs to AccuPenPro's catalog. Reject any
     // product whose vendor is not allowlisted before it can be seeded/synced.
     const vendor = (payload.vendor ?? "").trim().toLowerCase();
     if (!vendor || !ALLOWED_PRODUCT_BRANDS.has(vendor)) {

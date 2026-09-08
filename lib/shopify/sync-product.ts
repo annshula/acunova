@@ -742,7 +742,7 @@ export async function syncAllProducts(): Promise<SyncedCatalogRecord> {
     syncedAt: new Date().toISOString(),
     shop: {
       domain: cfg.storeDomain,
-      name: shopData.shop?.name || existing.shop?.name || "AcuNova",
+      name: shopData.shop?.name || existing.shop?.name || "AccuPenPro",
       currencyCode: currency,
     },
     markets,

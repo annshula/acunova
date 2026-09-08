@@ -3,10 +3,10 @@
  * `customerRequest`, which injects the signed-in customer's own access token.
  *
  * The store is shared with other brands, so both order reads filter line items
- * down to this storefront's own product — see {@link belongsToAcuNova}.
+ * down to this storefront's own product — see {@link belongsToAccuPenPro}.
  */
 
-import { belongsToAcuNova } from "@/lib/catalog";
+import { belongsToAccuPenPro } from "@/lib/catalog";
 import { customerRequest } from "@/lib/shopify/customer-account";
 import {
   CUSTOMER_ORDERS_QUERY,
@@ -125,7 +125,7 @@ type RawLineItemIdentity = {
 
 /** True when a line item is this storefront's own product, not another brand sharing the store. */
 function isOwnItem(item: RawLineItemIdentity | null | undefined): boolean {
-  return belongsToAcuNova({
+  return belongsToAccuPenPro({
     variantId: item?.variantId ?? null,
     productId: item?.productId ?? null,
   });

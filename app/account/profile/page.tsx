@@ -7,7 +7,7 @@ import { getCustomer } from "@/lib/shopify/customer-service";
 import { requireCustomer } from "@/lib/shopify/guard";
 
 export const metadata: Metadata = {
-  title: "Your profile, AcuNova",
+  title: "Your profile, AccuPenPro",
   robots: { index: false, follow: false },
 };
 

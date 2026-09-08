@@ -22,8 +22,8 @@ import { NextRequest, NextResponse } from "next/server";
  */
 const POSTERS: Record<string, { avif: string; webp: string }> = {
   hero: {
-    avif: "/videos/acunova-hero-poster.avif",
-    webp: "/videos/acunova-hero-poster.webp",
+    avif: "/videos/accupenpro-hero-poster.avif",
+    webp: "/videos/accupenpro-hero-poster.webp",
   },
   method: {
     avif: "/media/current-poster.avif",

@@ -10,7 +10,7 @@ import { listOrders } from "@/lib/shopify/customer-service";
 import { requireCustomer } from "@/lib/shopify/guard";
 
 export const metadata: Metadata = {
-  title: "Order history, AcuNova",
+  title: "Order history, AccuPenPro",
   robots: { index: false, follow: false },
 };
 

@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { Reveal } from "@/components/ui/Motion";
 
 /**
- * Section primitives for the AcuNova layout system.
+ * Section primitives for the AccuPenPro layout system.
  *
  * Rebuilt, not inherited. Three things the previous version did that this one
  * deliberately does not:

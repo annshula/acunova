@@ -1,6 +1,6 @@
 /**
  * Shared conversion content for every product page — the same playbook as
- * the flagship AcuNova pen, rolled out to every listing in the store.
+ * the flagship AccuPenPro pen, rolled out to every listing in the store.
  *
  * Structure:
  *  - `quality`  — the "put to the test" QC section (mounted on every PDP,
@@ -91,7 +91,7 @@ export const acupressureEras: StoryContent["eras"] = [
     body: "Classical Chinese medicine mapped a set of points along channels it called meridians, and wrote them down. Whatever you make of the underlying theory, that map has been in continuous use ever since. It is still what every acupressure chart is drawn from today.",
     image: {
       src: "/story/era-1-origins.webp",
-      alt: "An old acupressure point chart on paper beside the AcuNova pen",
+      alt: "An old acupressure point chart on paper beside the AccuPenPro pen",
     },
   },
   {
@@ -104,10 +104,10 @@ export const acupressureEras: StoryContent["eras"] = [
   },
   {
     title: "Electricity joined in",
-    body: "Low-level stimulation through the skin became a consumer category in the 1970s, and you can buy a TENS unit in any pharmacy today. The AcuNova pen is that idea in one hand: pulse and pressure through the same tip, instead of a box, four leads and a sheet of sticky pads.",
+    body: "Low-level stimulation through the skin became a consumer category in the 1970s, and you can buy a TENS unit in any pharmacy today. The AccuPenPro pen is that idea in one hand: pulse and pressure through the same tip, instead of a box, four leads and a sheet of sticky pads.",
     image: {
       src: "/story/era-3-current.webp",
-      alt: "The tip of the AcuNova pen with its intensity display lit",
+      alt: "The tip of the AccuPenPro pen with its intensity display lit",
     },
   },
   {
@@ -115,7 +115,7 @@ export const acupressureEras: StoryContent["eras"] = [
     body: "Nine hours at a screen, a commute, a night on the wrong pillow. The pen lives in a drawer and comes out for ten minutes, which is precisely the routine most people were already doing badly with their hands.",
     image: {
       src: "/story/era-4-desk.webp",
-      alt: "The AcuNova pen resting on a desk beside a laptop and a cup",
+      alt: "The AccuPenPro pen resting on a desk beside a laptop and a cup",
     },
   },
 ];
@@ -202,7 +202,7 @@ export const buildPen: BuildContent = {
 export const buildHeads: BuildContent = {
   eyebrow: "How it's built",
   heading: "Four heads, four jobs, one thread.",
-  lede: "Each head is turned from the same metal stock and finished to the same standard, then threaded to the collar every AcuNova pen uses. They are consumable in the sense that they get lost, not in the sense that they wear out.",
+  lede: "Each head is turned from the same metal stock and finished to the same standard, then threaded to the collar every AccuPenPro pen uses. They are consumable in the sense that they get lost, not in the sense that they wear out.",
   points: [
     {
       title: "Rounded ball",
@@ -254,7 +254,7 @@ export const reviewsLanding: ReviewLandingContent = {
 /* ------------------------------------------------------------------ */
 export const pitches: Pitch[] = [
   {
-    handle: "acunova-replacement-head-set",
+    handle: "accupenpro-replacement-head-set",
     kind: "heads",
     story: {
       eyebrow: "The spare set",
@@ -262,10 +262,10 @@ export const pitches: Pitch[] = [
       lede: "The same four heads that ship with every pen, sold as a set: rounded ball, ridged, fine point and flat spoon. Same thread, same finish, same bench checks, for the head that rolled under the sofa, or the second pen in the house that everyone fights over.",
       claim:
         "Nothing in this set wears out in normal use. It exists because small metal things get lost, not because we designed them to be replaced.",
-      caption: "Four heads · same thread as every AcuNova pen.",
+      caption: "Four heads · same thread as every AccuPenPro pen.",
       stats: [
         { value: "4 heads", label: "ball, ridged, fine point, flat spoon" },
-        { value: "One thread", label: "fits every AcuNova pen ever shipped" },
+        { value: "One thread", label: "fits every AccuPenPro pen ever shipped" },
         { value: "Bench-checked", label: "same tip and finish check as a kit" },
       ],
       eras: acupressureEras,

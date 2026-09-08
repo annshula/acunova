@@ -18,7 +18,7 @@
  * no per-variant equivalent of a metafield-backed display name to source it
  * from — see lib/shopify/sync-product.ts for the full account.
  *
- * The live catalog is the AcuNova acupressure pen (Shopify product
+ * The live catalog is the AccuPenPro acupressure pen (Shopify product
  * 9605585436899, vendor Trackify), sourced from CJDropshipping. Its variants
  * differ by head count (3 or 5), whether the heads are oil-infused, and which
  * retail pack it ships in.

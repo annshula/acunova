@@ -1,4 +1,4 @@
-# Style lock — AcuNova
+# Style lock — AccuPenPro
 
 > **REVISION 2 (2026-09-07).** The user explicitly asked for a different
 > direction: different colours, different aesthetic, different layout. The
@@ -41,7 +41,7 @@ put teal body copy on cards, not on the page background.
 ## Revision 1 (SUPERSEDED — bronze/cream, kept for the reasoning trail)
 
 Established: 2026-09-07.
-Source: the AcuNova brand poster supplied by the user (product + design reference).
+Source: the AccuPenPro brand poster supplied by the user (product + design reference).
 
 > **Extraction honesty note.** `scripts/extract_palette.py` was NOT run — the
 > poster arrived as a chat attachment, and that script needs a file on disk.

@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 import { absoluteUrl } from "@/lib/seo";
 
 const title = "Shop";
-const description = `The AcuNova acupressure pen and the heads that fit it. ${site.promise.shipping}. ${site.promise.returns}.`;
+const description = `The AccuPenPro acupressure pen and the heads that fit it. ${site.promise.shipping}. ${site.promise.returns}.`;
 
 export const metadata: Metadata = {
   title,

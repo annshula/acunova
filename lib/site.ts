@@ -6,23 +6,23 @@
 import { daysRange, defaultRegion } from "@/lib/shipping";
 
 export const site = {
-  name: "AcuNova",
-  legalName: "AcuNova",
+  name: "AccuPenPro",
+  legalName: "AccuPenPro",
   tagline: "Balance · Relieve · Rejuvenate",
-  domain: "acunova.com",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://acunova.com",
-  email: "support@acunova.com",
+  domain: "accupenpro.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://accupenpro.com",
+  email: "support@accupenpro.com",
   address: "Toronto, Ontario, Canada",
   description:
-    "The AcuNova acupuncture pen puts adjustable micro-current pressure on the points you already rub by hand. Drug-free, non-invasive, four interchangeable heads, nine intensity levels. Free shipping in the US and Canada.",
+    "The AccuPenPro acupuncture pen puts adjustable micro-current pressure on the points you already rub by hand. Drug-free, non-invasive, four interchangeable heads, nine intensity levels. Free shipping in the US and Canada.",
   locale: "en_US",
   currency: "USD",
 
   socials: {
-    instagram: "https://www.instagram.com/acunova_official",
-    tiktok: "https://tiktok.com/@acunova",
-    facebook: "https://facebook.com/acunova",
-    youtube: "https://youtube.com/@acunova_official",
+    instagram: "https://www.instagram.com/accupenpro_official",
+    tiktok: "https://tiktok.com/@accupenpro",
+    facebook: "https://facebook.com/accupenpro",
+    youtube: "https://youtube.com/@accupenpro_official",
   },
 
   /**

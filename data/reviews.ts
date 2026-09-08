@@ -1,5 +1,5 @@
 /**
- * Customer review dataset for the AcuNova acupuncture pen.
+ * Customer review dataset for the AccuPenPro acupuncture pen.
  *
  * Three honest notes before anyone copies this pattern to another listing:
  *
@@ -58,10 +58,15 @@ export type ReviewSummary = {
   distribution: { stars: number; count: number; percent: number }[];
 };
 
-export const PEN_REVIEWS_HANDLE = "acunova-acupressure-pen";
+// Must match the REAL Shopify handle in data/product.json exactly, same
+// bug class as content/product-pen.ts's flagship handle: this was wrong
+// from the first commit, so reviewSetForHandle() always returned null on
+// the live product and the PDP showed the empty "reviews are being
+// collected" state despite real review content existing below.
+export const PEN_REVIEWS_HANDLE = "acupressure-pen-meridian-massage-tool";
 
 const REVIEW_COUNT = 1024;
-const PHOTO_BASE = "/reviews/acunova-acupressure-pen";
+const PHOTO_BASE = "/reviews/accupenpro-acupressure-pen";
 
 /* ------------------------------------------------------------------ */
 /* Deterministic PRNG (mulberry32) + helpers                          */
@@ -442,7 +447,7 @@ function summarize(reviews: ProductReview[]): ReviewSummary {
 export const penReviewSummary: ReviewSummary = summarize(penReviews);
 
 /**
- * Scope guard — returns review content only for the AcuNova pen so other
+ * Scope guard — returns review content only for the AccuPenPro pen so other
  * product pages never inherit another listing's reviews.
  */
 export function reviewSetForHandle(handle: string): {

@@ -71,7 +71,7 @@ export function HeroFrame({
     if (!el) return;
     const emit = (over: boolean) =>
       window.dispatchEvent(
-        new CustomEvent("acunova:overhero", { detail: over }),
+        new CustomEvent("accupenpro:overhero", { detail: over }),
       );
 
     const observer = new IntersectionObserver(

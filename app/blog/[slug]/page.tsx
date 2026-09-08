@@ -160,7 +160,7 @@ export default async function BlogPostPage({
         </div>
 
         <div
-          className="prose-acunova mt-10 max-w-none text-[1rem] leading-[1.75] text-ink-soft [&_a]:text-gold [&_a]:underline [&_a]:underline-offset-4 [&_h2]:font-display [&_h2]:mt-10 [&_h2]:mb-3 [&_h2]:text-[1.3rem] [&_h2]:font-bold [&_h2]:tracking-[-0.02em] [&_h2]:text-ink [&_li]:mt-1.5 [&_p]:mt-4 [&_strong]:text-ink [&_ul]:mt-4 [&_ul]:list-disc [&_ul]:pl-5"
+          className="prose-accupenpro mt-10 max-w-none text-[1rem] leading-[1.75] text-ink-soft [&_a]:text-gold [&_a]:underline [&_a]:underline-offset-4 [&_h2]:font-display [&_h2]:mt-10 [&_h2]:mb-3 [&_h2]:text-[1.3rem] [&_h2]:font-bold [&_h2]:tracking-[-0.02em] [&_h2]:text-ink [&_li]:mt-1.5 [&_p]:mt-4 [&_strong]:text-ink [&_ul]:mt-4 [&_ul]:list-disc [&_ul]:pl-5"
           // Author-controlled HTML, same trust model as lib/product.ts's descriptionHtml — never user input.
           dangerouslySetInnerHTML={{ __html: post.body }}
         />

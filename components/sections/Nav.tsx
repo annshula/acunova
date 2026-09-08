@@ -132,8 +132,8 @@ export default function Nav() {
   useEffect(() => {
     const onOverHero = (e: Event) =>
       setOverHero((e as CustomEvent<boolean>).detail);
-    window.addEventListener("acunova:overhero", onOverHero);
-    return () => window.removeEventListener("acunova:overhero", onOverHero);
+    window.addEventListener("accupenpro:overhero", onOverHero);
+    return () => window.removeEventListener("accupenpro:overhero", onOverHero);
   }, []);
 
   // Blend only while a hero is behind the bar AND the page is still at rest.

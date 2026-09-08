@@ -1,5 +1,5 @@
 /**
- * Tiny class-name joiner. AcuNova deliberately avoids a tailwind-merge
+ * Tiny class-name joiner. AccuPenPro deliberately avoids a tailwind-merge
  * dependency — every call site here composes non-conflicting utilities, so a
  * truthy filter + join is all that is needed.
  */

@@ -13,7 +13,7 @@ import { getOrder, getOrderReturnStatus } from "@/lib/shopify/customer-service";
 import { requireCustomer } from "@/lib/shopify/guard";
 
 export const metadata: Metadata = {
-  title: "Request a return, AcuNova",
+  title: "Request a return, AccuPenPro",
   robots: { index: false, follow: false },
 };
 

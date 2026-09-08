@@ -5,7 +5,7 @@
  * lib/product.ts's descriptionHtml), never user input.
  *
  * Claim policy carries over from content/copy.ts unchanged, and it is the
- * hardest constraint on this file. The AcuNova pen is a consumer wellness
+ * hardest constraint on this file. The AccuPenPro pen is a consumer wellness
  * device with no FDA or Health Canada clearance. So:
  *   - Describe what the hardware does and what the user does with it.
  *   - Describe acupressure as the tradition it is, and say so explicitly.
@@ -53,13 +53,13 @@ export type BlogPost = {
   faqs?: { question: string; answer: string }[];
 };
 
-const author = "The AcuNova Team";
+const author = "The AccuPenPro Team";
 export { author as blogAuthor };
 
 /** Every post currently shares the studio hero shot. Swap per-post as real photography lands. */
 const cover = {
   src: "/product/pen-hero.png",
-  alt: "The AcuNova acupressure pen standing upright on a pale stone ledge in soft daylight",
+  alt: "The AccuPenPro acupressure pen standing upright on a pale stone ledge in soft daylight",
   width: 896,
   height: 1200,
 };
@@ -112,7 +112,7 @@ ${SAFETY_HTML}
 <p>Longer is not better, and there is no prize for enduring level 9. If a spot goes numb, unusually sore, or red, stop and leave it alone.</p>
 <h2>What to expect, honestly</h2>
 <p>It feels like a firm, rhythmic tap, and afterwards the area usually feels warm and a bit looser, the same sort of after-effect as a decent self-massage or a hot shower. That is what the tool is for. Anyone promising more than that is selling you something else.</p>
-<p>If you want the device itself, <a href="${productPath}">the AcuNova pen</a> ships with the heads described above and a card mapping the common points.</p>
+<p>If you want the device itself, <a href="${productPath}">the AccuPenPro pen</a> ships with the heads described above and a card mapping the common points.</p>
 `,
     faqs: [
       {

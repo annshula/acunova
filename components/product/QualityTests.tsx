@@ -88,7 +88,7 @@ export default function QualityTests({
           className="mx-auto mt-8 max-w-160 text-center text-[0.78rem] leading-relaxed text-ink-mute"
         >
           These are our own bench checks, not a regulatory clearance. The
-          AcuNova pen is a consumer wellness device: it is not cleared by the
+          AccuPenPro pen is a consumer wellness device: it is not cleared by the
           FDA or Health Canada, and it is not for use with a pacemaker or during
           pregnancy.
         </Reveal>

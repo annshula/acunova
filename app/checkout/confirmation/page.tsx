@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Order confirmed",
-  description: "Thank you, your AcuNova order is confirmed.",
+  description: "Thank you, your AccuPenPro order is confirmed.",
   robots: { index: false, follow: false },
 };
 

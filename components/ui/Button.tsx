@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { ArrowIcon } from "./Icons";
 
 /**
- * Buttons for the AcuNova system.
+ * Buttons for the AccuPenPro system.
  *
  * Rebuilt. What the inherited version did that this one drops:
  *

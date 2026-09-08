@@ -5,7 +5,7 @@ import { CheckoutSummary } from "@/components/cart/CheckoutSummary";
 
 export const metadata: Metadata = {
   title: "Checkout",
-  description: "Review your bag and complete your AcuNova order.",
+  description: "Review your bag and complete your AccuPenPro order.",
   robots: { index: false, follow: false },
 };
 

@@ -65,7 +65,7 @@ const bands = [
     note: "Work the back and top of the neck only. Never the front or sides.",
     image: {
       src: "/lifestyle/neck-shoulders.png",
-      alt: "A woman using the AcuNova pen at the base of her neck while seated at a desk",
+      alt: "A woman using the AccuPenPro pen at the base of her neck while seated at a desk",
       width: 928,
       height: 1152,
     },
@@ -78,7 +78,7 @@ const bands = [
     note: "Go a level lower around the elbow, there is bone close to the surface.",
     image: {
       src: "/lifestyle/arms-joints.png",
-      alt: "The AcuNova pen being used on the forearm just below the elbow",
+      alt: "The AccuPenPro pen being used on the forearm just below the elbow",
       width: 928,
       height: 1152,
     },
@@ -91,7 +91,7 @@ const bands = [
     note: "Stay off the spine itself and off the bony ridge of the blade.",
     image: {
       src: "/lifestyle/back.png",
-      alt: "Reaching behind to use the AcuNova pen on the lower back beside the spine",
+      alt: "Reaching behind to use the AccuPenPro pen on the lower back beside the spine",
       width: 928,
       height: 1152,
     },
@@ -104,7 +104,7 @@ const bands = [
     note: "Work the muscle around the joint, not directly on the kneecap.",
     image: {
       src: "/lifestyle/knees-legs.png",
-      alt: "Using the AcuNova pen on the outer side of the knee while seated",
+      alt: "Using the AccuPenPro pen on the outer side of the knee while seated",
       width: 928,
       height: 1152,
     },
