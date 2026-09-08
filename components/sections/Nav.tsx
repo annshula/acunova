@@ -42,8 +42,6 @@ const links = [
   { label: "Shop", href: "/shop" },
   { label: "How it works", href: "/#method" },
   { label: "Uses", href: "/benefits" },
-  { label: "Guides", href: "/blog" },
-  { label: "FAQ", href: "/faq" },
 ];
 
 /** Shared chrome for the small square icon buttons in the bar. */
@@ -270,7 +268,7 @@ export default function Nav() {
                     <li key={l.href}>
                       <Link
                         href={l.href}
-                        className="flex items-center justify-between rounded-lg py-3 text-[1.05rem] text-ink transition-colors duration-200 hover:bg-ink/[0.04]"
+                        className="flex items-center justify-between rounded-lg py-3 text-[1.05rem] text-ink transition-colors duration-200 hover:bg-ink/4"
                       >
                         {l.label}
                         <Icon
