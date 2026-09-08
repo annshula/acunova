@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "syncedAt": "2026-09-08T19:03:14.641Z",
+  "syncedAt": "2026-09-08T19:19:55.175Z",
   "shop": {
     "domain": "trackify-com.myshopify.com",
     "name": "Trackify",
@@ -32,19 +32,19 @@
           "availableForSale": true,
           "stockQuantity": 7664,
           "pricesByMarket": {
-            "AU": {
-              "amount": 55.95,
-              "compareAtAmount": 83.95,
-              "currencyCode": "AUD"
-            },
             "CA": {
               "amount": 55.95,
               "compareAtAmount": 82.95,
               "currencyCode": "CAD"
             },
+            "AU": {
+              "amount": 55.95,
+              "compareAtAmount": 83.95,
+              "currencyCode": "AUD"
+            },
             "IN": {
-              "amount": 1499,
-              "compareAtAmount": 2299,
+              "amount": 3499,
+              "compareAtAmount": 5299,
               "currencyCode": "INR"
             },
             "GB": {
@@ -73,19 +73,19 @@
           "availableForSale": true,
           "stockQuantity": 8716,
           "pricesByMarket": {
-            "AU": {
-              "amount": 62.95,
-              "compareAtAmount": 90.95,
-              "currencyCode": "AUD"
-            },
             "CA": {
               "amount": 62.95,
               "compareAtAmount": 89.95,
               "currencyCode": "CAD"
             },
+            "AU": {
+              "amount": 62.95,
+              "compareAtAmount": 90.95,
+              "currencyCode": "AUD"
+            },
             "IN": {
-              "amount": 1799,
-              "compareAtAmount": 2699,
+              "amount": 3999,
+              "compareAtAmount": 5699,
               "currencyCode": "INR"
             },
             "GB": {
@@ -114,19 +114,19 @@
           "availableForSale": true,
           "stockQuantity": 9880,
           "pricesByMarket": {
-            "AU": {
-              "amount": 66.95,
-              "compareAtAmount": 97.95,
-              "currencyCode": "AUD"
-            },
             "CA": {
               "amount": 66.95,
               "compareAtAmount": 96.95,
               "currencyCode": "CAD"
             },
+            "AU": {
+              "amount": 66.95,
+              "compareAtAmount": 97.95,
+              "currencyCode": "AUD"
+            },
             "IN": {
-              "amount": 1899,
-              "compareAtAmount": 2899,
+              "amount": 4199,
+              "compareAtAmount": 6199,
               "currencyCode": "INR"
             },
             "GB": {
@@ -155,19 +155,19 @@
           "availableForSale": true,
           "stockQuantity": 5308,
           "pricesByMarket": {
-            "AU": {
-              "amount": 55.95,
-              "compareAtAmount": 83.95,
-              "currencyCode": "AUD"
-            },
             "CA": {
               "amount": 55.95,
               "compareAtAmount": 82.95,
               "currencyCode": "CAD"
             },
+            "AU": {
+              "amount": 55.95,
+              "compareAtAmount": 83.95,
+              "currencyCode": "AUD"
+            },
             "IN": {
-              "amount": 1499,
-              "compareAtAmount": 2299,
+              "amount": 3499,
+              "compareAtAmount": 5299,
               "currencyCode": "INR"
             },
             "GB": {
@@ -196,19 +196,19 @@
           "availableForSale": true,
           "stockQuantity": 5819,
           "pricesByMarket": {
-            "AU": {
-              "amount": 62.95,
-              "compareAtAmount": 90.95,
-              "currencyCode": "AUD"
-            },
             "CA": {
               "amount": 62.95,
               "compareAtAmount": 89.95,
               "currencyCode": "CAD"
             },
+            "AU": {
+              "amount": 62.95,
+              "compareAtAmount": 90.95,
+              "currencyCode": "AUD"
+            },
             "IN": {
-              "amount": 1799,
-              "compareAtAmount": 2699,
+              "amount": 3999,
+              "compareAtAmount": 5699,
               "currencyCode": "INR"
             },
             "GB": {
@@ -237,19 +237,19 @@
           "availableForSale": true,
           "stockQuantity": 46331,
           "pricesByMarket": {
-            "AU": {
-              "amount": 69.95,
-              "compareAtAmount": 104.95,
-              "currencyCode": "AUD"
-            },
             "CA": {
               "amount": 69.95,
               "compareAtAmount": 103.95,
               "currencyCode": "CAD"
             },
+            "AU": {
+              "amount": 69.95,
+              "compareAtAmount": 104.95,
+              "currencyCode": "AUD"
+            },
             "IN": {
-              "amount": 1999,
-              "compareAtAmount": 2999,
+              "amount": 4399,
+              "compareAtAmount": 6599,
               "currencyCode": "INR"
             },
             "GB": {
@@ -271,6 +271,12 @@
         }
       ],
       "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sd44a5fa2dfee40b5a49a5d208a0165c6B.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
         {
           "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sa895515640a942659a1ff572b10224cej.webp?v=1788893818",
           "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
@@ -309,12 +315,6 @@
         },
         {
           "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sc3402fe0a09040348098bc4ee43c87dfy.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sd44a5fa2dfee40b5a49a5d208a0165c6B.webp?v=1788893818",
           "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
           "width": 1000,
           "height": 1000
@@ -395,6 +395,13 @@
       "media": [
         {
           "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sd44a5fa2dfee40b5a49a5d208a0165c6B.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
           "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sa895515640a942659a1ff572b10224cej.webp?v=1788893818",
           "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
           "width": 1000,
@@ -438,13 +445,6 @@
         {
           "kind": "image",
           "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sc3402fe0a09040348098bc4ee43c87dfy.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sd44a5fa2dfee40b5a49a5d208a0165c6B.webp?v=1788893818",
           "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
           "width": 1000,
           "height": 1000
