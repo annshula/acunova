@@ -200,63 +200,33 @@ const TEXT_4 = [
 const PHOTO_REVIEWS: { rating: 4 | 5; photo: string; text: string }[] = [
   {
     rating: 5,
-    photo: "photo-01.webp",
-    text: "This is everything that was in the box. Pen, four heads, case, card. Nothing missing, nothing damaged.",
-  },
-  {
-    rating: 5,
     photo: "photo-02.webp",
-    text: "The display at level 4, which is where I sit for my shoulders. Easy to read across a desk.",
-  },
-  {
-    rating: 5,
-    photo: "photo-03.webp",
-    text: "Size comparison against a pen. It is genuinely pocketable, which I was not sure about from the listing photos.",
-  },
-  {
-    rating: 4,
-    photo: "photo-04.webp",
-    text: "Bought two, one for each of us. Both identical and both worked out of the box. Delivery to Canada took ten days.",
+    text: "The display lit up red as soon as I put a battery in. Heads come off clean for swapping between the ball and the hook tip.",
   },
   {
     rating: 5,
     photo: "photo-05.webp",
-    text: "Close up of the four heads. The finish is even on all of them, no burrs on the fine point.",
-  },
-  {
-    rating: 5,
-    photo: "photo-06.webp",
-    text: "Lives on the desk now. Comes out around four every afternoon for the neck and shoulders.",
+    text: "Everything laid out from the bag: the pen, the extra heads and the fitting sheet. Nothing missing, nothing damaged.",
   },
   {
     rating: 4,
-    photo: "photo-07.webp",
-    text: "The case with everything in its slot. Slightly tight to get the pen back in, but it holds well.",
+    photo: "photo-06.webp",
+    text: "Sits on the arm of the couch most evenings now. The finish shows fingerprints but wipes off in a second.",
   },
   {
     rating: 5,
-    photo: "photo-08.webp",
-    text: "Packed in my carry on with no charger and no cable. That was the whole point for me.",
+    photo: "photo-07.webp",
+    text: "Took it apart on the table to see how the heads fit. The hook tip threads on properly, it doesn't just push-fit.",
   },
   {
     rating: 5,
     photo: "photo-09.webp",
-    text: "The threaded collar with a head half on. It screws in properly rather than pushing on, which is why nothing wobbles.",
+    text: "Second one I've bought, this time for my mother. Same solid weight in the hand as the first.",
   },
   {
     rating: 5,
     photo: "photo-10.webp",
-    text: "Arrived sealed inside the box with the battery compartment taped. No scuffs anywhere.",
-  },
-  {
-    rating: 5,
-    photo: "photo-12.webp",
-    text: "Two months in, daily use. The heads look the same as the day they arrived.",
-  },
-  {
-    rating: 5,
-    photo: "photo-13.webp",
-    text: "Bought the two pack. One at home, one at the office, so I stopped carrying it back and forth.",
+    text: "Arrived sealed in its bag with the manual folded in behind it. Model tag and everything still attached.",
   },
 ];
 
@@ -347,15 +317,17 @@ function buildReviews(): ProductReview[] {
   const rng = mulberry32(20260907);
 
   // Only 4★ and 5★ reviews are shown (store policy) — nothing below 4.
-  // Quota for the 1,012 non-photo slots (10 five★ + 2 four★ are the photo
-  // reviews above) lands on 800 × 5★ and 224 × 4★ total → a 4.6 average
-  // once rounded, matching site.metrics.rating.
+  // Non-photo slots fill whatever REVIEW_COUNT leaves after the photo
+  // reviews, split roughly 63/37 five★/four★ so the rounded average lands
+  // on site.metrics.rating (4.6).
+  const nonPhotoCount = REVIEW_COUNT - PHOTO_REVIEWS.length;
+  const fiveStarCount = Math.round(nonPhotoCount * 0.633);
   const ratings: (4 | 5)[] = [];
   const add = (r: 4 | 5, n: number) => {
     for (let i = 0; i < n; i++) ratings.push(r);
   };
-  add(5, 640);
-  add(4, 372);
+  add(5, fiveStarCount);
+  add(4, nonPhotoCount - fiveStarCount);
   const shuffledRatings = shuffle(ratings, rng);
 
   // Slots: newest-first. Photos are pinned to spread positions near the top
@@ -364,7 +336,7 @@ function buildReviews(): ProductReview[] {
   type Slot = { rating: number; photo?: string; text?: string };
   const slots: Slot[] = [];
   const photoQueue = shuffle(PHOTO_REVIEWS, rng);
-  const photoPositions = [0, 8, 18, 30, 44, 60, 78, 98, 121, 147, 176, 208];
+  const photoPositions = [0, 8, 18, 30, 44, 60];
   const at = new Set(photoPositions);
 
   let ratingIdx = 0;

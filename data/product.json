@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "syncedAt": "2026-09-06T22:10:31.713Z",
+  "syncedAt": "2026-09-08T18:59:35.718Z",
   "shop": {
     "domain": "trackify-com.myshopify.com",
     "name": "Trackify",
@@ -32,6 +32,11 @@
           "availableForSale": true,
           "stockQuantity": 7664,
           "pricesByMarket": {
+            "GB": {
+              "amount": 29.95,
+              "compareAtAmount": 44.95,
+              "currencyCode": "GBP"
+            },
             "CA": {
               "amount": 55.95,
               "compareAtAmount": 82.95,
@@ -51,11 +56,6 @@
               "amount": 39.95,
               "compareAtAmount": 59.95,
               "currencyCode": "USD"
-            },
-            "GB": {
-              "amount": 29.95,
-              "compareAtAmount": 44.95,
-              "currencyCode": "GBP"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/370894b1-f8d8-4236-9b3a-12a75d49c6eb.jpg?v=1786902932",
@@ -73,6 +73,11 @@
           "availableForSale": true,
           "stockQuantity": 8716,
           "pricesByMarket": {
+            "GB": {
+              "amount": 33.95,
+              "compareAtAmount": 48.95,
+              "currencyCode": "GBP"
+            },
             "CA": {
               "amount": 62.95,
               "compareAtAmount": 89.95,
@@ -92,11 +97,6 @@
               "amount": 44.95,
               "compareAtAmount": 64.95,
               "currencyCode": "USD"
-            },
-            "GB": {
-              "amount": 33.95,
-              "compareAtAmount": 48.95,
-              "currencyCode": "GBP"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/8f652d8a-4b40-424d-835f-e574cd3e0926.jpg?v=1786902932",
@@ -114,6 +114,11 @@
           "availableForSale": true,
           "stockQuantity": 9880,
           "pricesByMarket": {
+            "GB": {
+              "amount": 35.95,
+              "compareAtAmount": 51.95,
+              "currencyCode": "GBP"
+            },
             "CA": {
               "amount": 66.95,
               "compareAtAmount": 96.95,
@@ -133,11 +138,6 @@
               "amount": 47.95,
               "compareAtAmount": 69.95,
               "currencyCode": "USD"
-            },
-            "GB": {
-              "amount": 35.95,
-              "compareAtAmount": 51.95,
-              "currencyCode": "GBP"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/93c2b9c4-38cf-4516-b556-d6c3ca530065.jpg?v=1786902932",
@@ -155,6 +155,11 @@
           "availableForSale": true,
           "stockQuantity": 5308,
           "pricesByMarket": {
+            "GB": {
+              "amount": 29.95,
+              "compareAtAmount": 44.95,
+              "currencyCode": "GBP"
+            },
             "CA": {
               "amount": 55.95,
               "compareAtAmount": 82.95,
@@ -174,11 +179,6 @@
               "amount": 39.95,
               "compareAtAmount": 59.95,
               "currencyCode": "USD"
-            },
-            "GB": {
-              "amount": 29.95,
-              "compareAtAmount": 44.95,
-              "currencyCode": "GBP"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/9ab8f2cc-2ba9-48b9-b735-ffd149833740.jpg?v=1786902932",
@@ -196,6 +196,11 @@
           "availableForSale": true,
           "stockQuantity": 5819,
           "pricesByMarket": {
+            "GB": {
+              "amount": 33.95,
+              "compareAtAmount": 48.95,
+              "currencyCode": "GBP"
+            },
             "CA": {
               "amount": 62.95,
               "compareAtAmount": 89.95,
@@ -215,11 +220,6 @@
               "amount": 44.95,
               "compareAtAmount": 64.95,
               "currencyCode": "USD"
-            },
-            "GB": {
-              "amount": 33.95,
-              "compareAtAmount": 48.95,
-              "currencyCode": "GBP"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/c6e687c4-4219-49e9-9e78-6e10d3a5bc2d.jpg?v=1786902932",
@@ -237,6 +237,11 @@
           "availableForSale": true,
           "stockQuantity": 46331,
           "pricesByMarket": {
+            "GB": {
+              "amount": 36.95,
+              "compareAtAmount": 55.95,
+              "currencyCode": "GBP"
+            },
             "CA": {
               "amount": 69.95,
               "compareAtAmount": 103.95,
@@ -256,11 +261,6 @@
               "amount": 49.95,
               "compareAtAmount": 74.95,
               "currencyCode": "USD"
-            },
-            "GB": {
-              "amount": 36.95,
-              "compareAtAmount": 55.95,
-              "currencyCode": "GBP"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/029e763f-3b6c-44ae-bf9b-74ce60d381df.jpg?v=1786902932",
@@ -272,149 +272,266 @@
       ],
       "images": [
         {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/da560ae6-4bd7-46e7-86f8-fac502a3cdc3.jpg?v=1786902932",
-          "alt": "AccuPenPro acupressure pen, auto-sensing meridian massage tool",
-          "width": 1920,
-          "height": 1920
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sa895515640a942659a1ff572b10224cej.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
         },
         {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/1d82da7b-61e5-40a3-bf85-237570915f2f.jpg?v=1786902931",
-          "alt": "The AccuPenPro pen with its interchangeable massage heads laid out",
-          "width": 591,
-          "height": 786
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S84cb4be72e9546b38e93c3574065d008j.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
         },
         {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/029e763f-3b6c-44ae-bf9b-74ce60d381df.jpg?v=1786902932",
-          "alt": "Close-up of the AccuPenPro pen tip and control button",
-          "width": 1920,
-          "height": 1920
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S08679b1b5063463c8fc5c6a621d38ac91.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
         },
         {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/b2d00050-9a28-4e1c-9cc2-b6beb1a5766d.jpg?v=1786902932",
-          "alt": "The AccuPenPro pen held against the neck and shoulder",
-          "width": 1080,
-          "height": 1301
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S66064b4d043440caa2d4e78addc3dbf5B.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
         },
         {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/c6e687c4-4219-49e9-9e78-6e10d3a5bc2d.jpg?v=1786902932",
-          "alt": "The AccuPenPro pen in its retail pack with the oil applicator head",
-          "width": 1920,
-          "height": 1920
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S67945f27e60b4b859926550d0026adfek.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
         },
         {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/f931c505-1b43-4f24-8d78-3fcabbf6b29c.jpg?v=1786902932",
-          "alt": "The AccuPenPro pen being used on the forearm",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sb995d021ae334ebb99079f73d48fa39fB.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sc3402fe0a09040348098bc4ee43c87dfy.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sd44a5fa2dfee40b5a49a5d208a0165c6B.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S0e068698913e4b28841bfec65fb9494fk.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 790,
+          "height": 1104
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S2d28817f188e4cadaa5d9ec9d43a5bebm.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
           "width": 800,
           "height": 800
         },
         {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/3e56e05d-cd18-4ac7-8c26-8faf092d913e.jpg?v=1786902932",
-          "alt": "The five-head AccuPenPro tip fitted to the pen body",
-          "width": 476,
-          "height": 434
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S4c487cc12fcd412aa7f6a0cf9f789015f.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 800,
+          "height": 800
         },
         {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/8f652d8a-4b40-424d-835f-e574cd3e0926.jpg?v=1786902932",
-          "alt": "The AccuPenPro pen blister pack contents",
-          "width": 1920,
-          "height": 1920
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S5b668a806ff74098b5d24afa1db9f49fv.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 800,
+          "height": 800
         },
         {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/9ab8f2cc-2ba9-48b9-b735-ffd149833740.jpg?v=1786902932",
-          "alt": "The three-head AccuPenPro tip, oil-free version",
-          "width": 1920,
-          "height": 1920
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S5fbd8258196e469ba1f0b060c6effd2aP.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
         },
         {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/370894b1-f8d8-4236-9b3a-12a75d49c6eb.jpg?v=1786902932",
-          "alt": "The AccuPenPro pen shown at scale in the hand",
-          "width": 1920,
-          "height": 1920
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S7ada4b10530f4f3a94a877dca84cf785h.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
         },
         {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/93c2b9c4-38cf-4516-b556-d6c3ca530065.jpg?v=1786902932",
-          "alt": "The AccuPenPro pen gift box presentation",
-          "width": 1920,
-          "height": 1920
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S7c52dc8b2f6044dc9121ada59345025ev.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 790,
+          "height": 910
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S9f36b9e156194c7380e20a5067dd175dg.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 790,
+          "height": 1100
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S36b0670a94a043009720487771249129c.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S62f6a358147c4006897565ae7a18f5e6m.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S76feb74656f24df18d715dd7ef72bf86q.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S94f13ba1e3e64a5e9f8cd03847e38e7ad.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 790,
+          "height": 1105
         }
       ],
       "media": [
         {
           "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/da560ae6-4bd7-46e7-86f8-fac502a3cdc3.jpg?v=1786902932",
-          "alt": "AccuPenPro acupressure pen, auto-sensing meridian massage tool",
-          "width": 1920,
-          "height": 1920
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sa895515640a942659a1ff572b10224cej.webp?v=1788893818",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
         },
         {
           "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/1d82da7b-61e5-40a3-bf85-237570915f2f.jpg?v=1786902931",
-          "alt": "The AccuPenPro pen with its interchangeable massage heads laid out",
-          "width": 591,
-          "height": 786
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S84cb4be72e9546b38e93c3574065d008j.webp?v=1788893818",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
         },
         {
           "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/029e763f-3b6c-44ae-bf9b-74ce60d381df.jpg?v=1786902932",
-          "alt": "Close-up of the AccuPenPro pen tip and control button",
-          "width": 1920,
-          "height": 1920
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S08679b1b5063463c8fc5c6a621d38ac91.webp?v=1788893818",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
         },
         {
           "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/b2d00050-9a28-4e1c-9cc2-b6beb1a5766d.jpg?v=1786902932",
-          "alt": "The AccuPenPro pen held against the neck and shoulder",
-          "width": 1080,
-          "height": 1301
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S66064b4d043440caa2d4e78addc3dbf5B.webp?v=1788893818",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
         },
         {
           "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/c6e687c4-4219-49e9-9e78-6e10d3a5bc2d.jpg?v=1786902932",
-          "alt": "The AccuPenPro pen in its retail pack with the oil applicator head",
-          "width": 1920,
-          "height": 1920
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S67945f27e60b4b859926550d0026adfek.webp?v=1788893818",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
         },
         {
           "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/f931c505-1b43-4f24-8d78-3fcabbf6b29c.jpg?v=1786902932",
-          "alt": "The AccuPenPro pen being used on the forearm",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sb995d021ae334ebb99079f73d48fa39fB.webp?v=1788893818",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sc3402fe0a09040348098bc4ee43c87dfy.webp?v=1788893818",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sd44a5fa2dfee40b5a49a5d208a0165c6B.webp?v=1788893818",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S0e068698913e4b28841bfec65fb9494fk.webp?v=1788893818",
+          "alt": "",
+          "width": 790,
+          "height": 1104
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S2d28817f188e4cadaa5d9ec9d43a5bebm.webp?v=1788893818",
+          "alt": "",
           "width": 800,
           "height": 800
         },
         {
           "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/3e56e05d-cd18-4ac7-8c26-8faf092d913e.jpg?v=1786902932",
-          "alt": "The five-head AccuPenPro tip fitted to the pen body",
-          "width": 476,
-          "height": 434
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S4c487cc12fcd412aa7f6a0cf9f789015f.webp?v=1788893818",
+          "alt": "",
+          "width": 800,
+          "height": 800
         },
         {
           "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/8f652d8a-4b40-424d-835f-e574cd3e0926.jpg?v=1786902932",
-          "alt": "The AccuPenPro pen blister pack contents",
-          "width": 1920,
-          "height": 1920
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S5b668a806ff74098b5d24afa1db9f49fv.webp?v=1788893818",
+          "alt": "",
+          "width": 800,
+          "height": 800
         },
         {
           "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/9ab8f2cc-2ba9-48b9-b735-ffd149833740.jpg?v=1786902932",
-          "alt": "The three-head AccuPenPro tip, oil-free version",
-          "width": 1920,
-          "height": 1920
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S5fbd8258196e469ba1f0b060c6effd2aP.webp?v=1788893818",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
         },
         {
           "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/370894b1-f8d8-4236-9b3a-12a75d49c6eb.jpg?v=1786902932",
-          "alt": "The AccuPenPro pen shown at scale in the hand",
-          "width": 1920,
-          "height": 1920
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S7ada4b10530f4f3a94a877dca84cf785h.webp?v=1788893818",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
         },
         {
           "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/93c2b9c4-38cf-4516-b556-d6c3ca530065.jpg?v=1786902932",
-          "alt": "The AccuPenPro pen gift box presentation",
-          "width": 1920,
-          "height": 1920
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S7c52dc8b2f6044dc9121ada59345025ev.webp?v=1788893818",
+          "alt": "",
+          "width": 790,
+          "height": 910
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S9f36b9e156194c7380e20a5067dd175dg.webp?v=1788893818",
+          "alt": "",
+          "width": 790,
+          "height": 1100
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S36b0670a94a043009720487771249129c.webp?v=1788893818",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S62f6a358147c4006897565ae7a18f5e6m.webp?v=1788893818",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S76feb74656f24df18d715dd7ef72bf86q.webp?v=1788893818",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S94f13ba1e3e64a5e9f8cd03847e38e7ad.webp?v=1788893818",
+          "alt": "",
+          "width": 790,
+          "height": 1105
         }
       ],
       "subtitle": "Auto-sensing acupressure, no needles",
