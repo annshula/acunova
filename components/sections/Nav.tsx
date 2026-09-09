@@ -39,9 +39,9 @@ import { productPath } from "@/lib/catalog";
  */
 
 const links = [
+  { label: "Home", href: "/" },
   { label: "Shop", href: "/shop" },
-  { label: "How it works", href: "/#method" },
-  { label: "Uses", href: "/benefits" },
+  { label: "Benefits", href: "/benefits" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

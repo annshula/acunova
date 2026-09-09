@@ -109,19 +109,20 @@ export default function TrustBar() {
         />
       </Stagger>
 
-      {/* Key facts / TL;DR summary + a real, visible <time> — the same
+      {/* Key facts / TL;DR summary + a real <time> element — the same
           pattern the product page's "Key facts" card already uses (see
           app/products/[handle]/page.tsx), surfaced on the home page too. The
-          strip above states four checkable facts already; this line just
-          makes the page's real last-updated date visible in the markup
-          (not only inside the JSON-LD's dateModified) and gives a reader or
-          an answer engine a one-line summary before it has to read the rest
-          of the page. syncedAt is the real Shopify catalog sync timestamp
+          strip above states four checkable facts already, so this line is
+          redundant for a sighted visitor and reads as clutter — sr-only
+          keeps it in the raw HTML for answer engines and screen readers
+          (the page's real last-updated date is now visible in the markup,
+          not only inside the JSON-LD's dateModified) without showing on
+          screen. syncedAt is the real Shopify catalog sync timestamp
           (data/product.json), not a fabricated "updated today". */}
-      <p className="mx-auto max-w-310 px-5 pb-6 text-center text-[0.72rem] text-ink-mute sm:px-8">
-        <span className="font-medium text-ink-soft">Key facts:</span> 9
-        intensity levels · 4 interchangeable heads · one AA battery · free
-        shipping to 5 countries. Page last updated{" "}
+      <p className="sr-only">
+        <span className="font-medium">Key facts:</span> 9 intensity levels,
+        4 interchangeable heads, one AA battery, free worldwide shipping.
+        Page last updated{" "}
         <time dateTime={syncedAt}>{formatSyncedDate(syncedAt)}</time>.
       </p>
     </section>

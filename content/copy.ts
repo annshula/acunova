@@ -45,7 +45,7 @@ export const hero = {
   // (meridian massage, drug-free, at home, and the "acupuncture pen" search
   // term people actually type) in a sentence a human would actually read,
   // rather than a keyword list.
-  sub: "A drug-free meridian massage tool — often searched as an acupuncture pen — that puts adjustable micro-current on the pressure points you already rub by hand.",
+  sub: "A drug-free meridian massage tool, often searched as an acupuncture pen, that puts adjustable micro-current on the pressure points you already rub by hand.",
   cta: "Shop the pen",
   ctaHref: "/shop",
   secondary: "How it works",
