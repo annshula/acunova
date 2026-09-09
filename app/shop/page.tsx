@@ -74,8 +74,8 @@ export default async function ShopPage() {
           Shop
         </h1>
         <p className="mt-4 max-w-[54ch] text-[1rem] leading-[1.75] text-ink-soft text-pretty">
-          One device, honestly described. Every version ships with the heads it
-          lists, free across the US, Canada, UK, Australia and India.
+          One device, honestly described. Every version ships with the heads
+          it lists, free, worldwide.
         </p>
       </div>
 

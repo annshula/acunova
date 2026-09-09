@@ -36,7 +36,9 @@ export default function ProductSchema({ product }: { product: Product }) {
     dateModified: syncedAt,
     material: product.material,
     color: "Black",
-    audience: { "@type": "PeopleAudience", suggestedGender: "male" },
+    // "unisex", not "male" — the product is unisex and nothing on the page
+    // markets it to one gender.
+    audience: { "@type": "PeopleAudience", suggestedGender: "unisex" },
     // Gallery images may already be absolute (Shopify CDN) or site-relative
     // (local /product art) — never blindly prefix, or an absolute URL turns
     // into "https://accupenpro.com/https://cdn.shopify.com/...".
