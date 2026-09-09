@@ -35,7 +35,7 @@ export default async function Showcase() {
       {/* ---------------------------- the object ---------------------------- */}
       <Reveal
         delay={0.12}
-        className="mt-14 overflow-hidden rounded-(--radius-photo) shadow-(--shadow-photo) lg:mt-20"
+        className="mt-14 overflow-hidden rounded-photo shadow-(--shadow-photo) lg:mt-20"
       >
         <StaticImage
           src="/product/heads-macro.png"
@@ -76,7 +76,7 @@ export default async function Showcase() {
       <div className="mt-20 grid gap-8 lg:mt-28 lg:grid-cols-[1.15fr_0.85fr]">
         <Reveal
           as="figure"
-          className="relative overflow-hidden rounded-(--radius-photo) shadow-(--shadow-photo)"
+          className="relative overflow-hidden rounded-photo shadow-(--shadow-photo)"
         >
           <StaticImage
             src="/lifestyle/desk.png"

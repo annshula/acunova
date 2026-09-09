@@ -151,7 +151,7 @@ function Item({
         {headline}
       </p>
       {aside}
-      <p className="max-w-[26ch] text-[0.78rem] leading-[1.5] text-ink-soft">
+      <p className="max-w-[26ch] text-[0.78rem] leading-normal text-ink-soft">
         {label}
       </p>
     </StaggerItem>
