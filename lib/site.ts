@@ -13,8 +13,10 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://accupenpro.com",
   email: "support@accupenpro.com",
   address: "Toronto, Ontario, Canada",
+  // 120-160 chars: keep the electric acupuncture pen / drug-free pain relief
+  // keywords plus a CTA, and stop counting before it runs past ~160.
   description:
-    "The AccuPenPro acupuncture pen puts adjustable micro-current pressure on the points you already rub by hand. Drug-free, non-invasive, four interchangeable heads, nine intensity levels. Free shipping in the US and Canada.",
+    "AccuPenPro: an electric acupuncture pen for drug-free pain relief. 9 intensity levels, 4 heads, no needles. Shop now, free US & CA shipping.",
   locale: "en_US",
   currency: "USD",
 

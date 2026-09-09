@@ -154,6 +154,12 @@ export function HeroFrame({
                 <img
                   src={s.mobileSrc}
                   alt={s.alt}
+                  // Intrinsic size of the mobile crop this <img> actually
+                  // points at (all four /hero/*-mobile.png sources share it) —
+                  // CSS overrides the rendered box, but the browser still
+                  // needs real dimensions to reserve layout space pre-decode.
+                  width={768}
+                  height={1376}
                   // Only the first slide is a real LCP candidate.
                   fetchPriority={i === 0 ? "high" : "low"}
                   loading={i === 0 ? "eager" : "lazy"}

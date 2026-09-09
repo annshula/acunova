@@ -157,6 +157,27 @@ export default async function ProductPage({
             {product.title}
           </span>
         </nav>
+
+        {/* Key facts / TL;DR — every line pulled straight from the real
+            spec sheet (also shown in full further down in ProductDetails),
+            not new copy invented for this block. Gives a reader (or an
+            answer engine skimming the page) the load-bearing facts before
+            the full narrative below. */}
+        {liveProduct.specs.length > 0 && (
+          <div className="mt-6 max-w-160 rounded-card border border-line bg-surface-sunken px-5 py-4">
+            <h2 className="font-label text-[0.62rem] font-medium tracking-[0.14em] text-ink-mute uppercase">
+              Key facts
+            </h2>
+            <ul className="mt-2.5 flex flex-wrap gap-x-5 gap-y-1.5 text-[0.82rem] text-ink-soft">
+              {liveProduct.specs.slice(0, 5).map((s) => (
+                <li key={s.label}>
+                  <span className="text-ink-mute">{s.label}:</span>{" "}
+                  <span className="font-medium text-ink">{s.value}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
 
       <ProductPurchase

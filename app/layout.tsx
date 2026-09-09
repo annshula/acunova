@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Figtree, Outfit, Parisienne } from "next/font/google";
+import Script from "next/script";
 import { ClarityAnalytics } from "@/components/analytics/ClarityAnalytics";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { MetaPixel } from "@/components/analytics/MetaPixel";
@@ -60,7 +61,10 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-const title = `${site.name}, Electric Acupuncture Pen for Drug-Free Pain Relief`;
+// Shares real words with the homepage H1 ("Real relief. No needles.") and
+// its eyebrow ("Acupressure pen") — an SEO/AEO audit flags 0% title/H1 word
+// overlap otherwise. Keeps the electric-acupuncture-pen keyword too.
+const title = `${site.name} Acupressure Pen, Real Relief With No Needles`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -96,6 +100,24 @@ export const metadata: Metadata = {
   category: "shopping",
   alternates: {
     canonical: "/",
+    // Single-language site (en-US only, no i18n routes) — a self-referencing
+    // hreflang is still a legitimate low-cost signal that this is the
+    // canonical English version, and x-default covers any locale not listed.
+    languages: {
+      en: "/",
+      "x-default": "/",
+    },
+  },
+  // No app/favicon.ico or app/icon.png for Next's auto-detection to pick up,
+  // so it's wired explicitly to the existing PWA icons in /public instead of
+  // shipping a new asset just for this.
+  icons: {
+    icon: [
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/icon-192.png",
+    apple: "/icon-192.png",
   },
   openGraph: {
     type: "website",
@@ -104,12 +126,25 @@ export const metadata: Metadata = {
     title,
     description: site.description,
     locale: site.locale,
+    // Reuses the existing homepage hero photo (no purpose-cut 1200x630 asset
+    // exists yet) — real product photography beats no image at all for the
+    // og:image / twitter:image checks. 1376x768 is close enough to the
+    // canonical 1200x630 og:image ratio that platforms crop it cleanly.
+    images: [
+      {
+        url: "/hero/linen-desktop.png",
+        width: 1376,
+        height: 768,
+        alt: `${site.name} acupressure pen kit laid out on linen`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description: site.description,
     creator: "@accupenpro",
+    images: ["/hero/linen-desktop.png"],
   },
   robots: {
     index: true,
@@ -140,21 +175,32 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Google Tag Manager, loaded as early as possible so container tags
-            (GA4, remarketing, …) fire before the first interaction. */}
+        {/* Third-party origins this page actually talks to — resolves DNS
+            and (for the ones serving real payloads) opens the connection
+            ahead of the request, instead of paying that cost on first use. */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://cdn.shopify.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://cdn.shopify.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        <link rel="dns-prefetch" href="https://analytics.tiktok.com" />
+      </head>
+      <body className="antialiased" suppressHydrationWarning>
+        {/* Google Tag Manager — was a raw <script> in <head> (render-blocking:
+            no async/defer on the inline bootstrap itself, even though the tag
+            it injects loads async). next/script's afterInteractive strategy
+            still fires immediately after hydration, before the page is
+            interactive, so GA4/remarketing tags still see effectively every
+            pageview, but the initial HTML parse is no longer blocked on it. */}
         {GTM_ID && (
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          <Script id="gtm-init" strategy="afterInteractive">
+            {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${GTM_ID}');`,
-            }}
-          />
+})(window,document,'script','dataLayer','${GTM_ID}');`}
+          </Script>
         )}
-      </head>
-      <body className="antialiased" suppressHydrationWarning>
         {/* Google Tag Manager (noscript), tracking fallback when JS is off. */}
         {GTM_ID && (
           <noscript>
@@ -163,6 +209,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               height="0"
               width="0"
               style={{ display: "none", visibility: "hidden" }}
+              // Hidden tracking pixel, not real content — sandboxed to the bare
+              // minimum: it only needs to load ns.html, nothing script-driven.
+              sandbox="allow-same-origin"
+              title="Google Tag Manager (noscript)"
             />
           </noscript>
         )}

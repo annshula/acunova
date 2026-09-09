@@ -197,6 +197,32 @@ export const method = {
 };
 
 /**
+ * The genuinely sequential "how to run a session" steps — shared between the
+ * visible <ol> in Method.tsx and the HowTo JSON-LD in components/Schema.tsx,
+ * so the two can never drift apart (a rich-result HowTo whose steps aren't
+ * also visible on the page is exactly the kind of schema/content mismatch an
+ * SEO audit flags). Safety leads, on purpose, same reasoning as the JSON-LD.
+ */
+export const howToUse = [
+  {
+    title: "Check the safety list first",
+    body: "Do not use the pen if you have a pacemaker, an implanted defibrillator or any other implanted electronic device, or if you are pregnant. Do not use it over broken skin, an open wound, a rash, the front of the neck, or the eyes. With a heart condition, epilepsy, a metal implant near the area, or any ongoing medical condition, ask your doctor before using it at all.",
+  },
+  {
+    title: "Fit the head that suits the area",
+    body: "Screw the rounded ball head on for broad muscle such as the shoulders or calves, the ridged head to knead across a muscle, the fine point for a single specific point, and the flat spoon head for larger areas like the lower back and thighs.",
+  },
+  {
+    title: "Start at level 1 and work up",
+    body: "Hold the tip against the point, switch on at level 1, and step up only until the pulse is clearly felt and still comfortable. The level stays on the front display so the same setting can be repeated next time.",
+  },
+  {
+    title: "Keep sessions short",
+    body: "Five to fifteen minutes across a few points, once or twice a day, is a sensible session. Longer is not better. If a spot goes numb, sore or red, stop and move on.",
+  },
+];
+
+/**
  * The policy/trust band (components/sections/Guarantee.tsx) — every claim in
  * `items` is a real, already-established policy (lib/site.ts `promise.*`),
  * not new copy invented for this band. Kept in sync by pulling the same

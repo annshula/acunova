@@ -124,6 +124,12 @@ export function OrderItemStatus({
       <img
         src={item.image.url}
         alt={item.image.altText ?? ""}
+        // Shopify product photography is square; the `size` className drives
+        // the actual rendered box (fixed on mobile, fluid on desktop via
+        // md:w-full/aspect-square) — this just gives the browser a real
+        // intrinsic ratio to reserve before decode.
+        width={400}
+        height={400}
         className={cn("shrink-0 bg-parchment object-cover", size)}
       />
     ) : (

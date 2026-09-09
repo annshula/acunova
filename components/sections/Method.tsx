@@ -1,7 +1,7 @@
 import StaticImage from "@/components/ui/StaticImage";
 import { Section, SectionHead } from "@/components/ui/Section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Motion";
-import { method } from "@/content/copy";
+import { method, howToUse } from "@/content/copy";
 
 /**
  * The mechanism beat — what the device actually does, and where the claims
@@ -102,6 +102,40 @@ export default function Method() {
           ))}
         </Stagger>
       </div>
+
+      {/* Running a session actually is a sequence (check safety, fit a head,
+          start low, keep it short), unlike the three-part statement above —
+          hence <ol>, not another <ul>. Mirrors the HowTo JSON-LD in
+          components/Schema.tsx one-for-one (content/copy.ts's howToUse is
+          the single source both read from), so the rich-result markup
+          reflects something a visitor can actually read on the page. */}
+      <Reveal delay={0.1} className="mt-14 lg:mt-20">
+        <h3 className="font-label text-[0.64rem] font-medium text-ink-mute uppercase">
+          Running a session, in order
+        </h3>
+        <Stagger
+          as="ol"
+          className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          {howToUse.map((step, i) => (
+            <StaggerItem
+              key={step.title}
+              as="li"
+              className="rounded-card border border-line bg-surface p-6"
+            >
+              <span className="font-label text-[0.64rem] text-accent tabular-nums">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h4 className="mt-2 text-[0.95rem] leading-snug font-medium text-ink">
+                {step.title}
+              </h4>
+              <p className="mt-2.5 text-[0.85rem] leading-[1.65] text-ink-soft">
+                {step.body}
+              </p>
+            </StaggerItem>
+          ))}
+        </Stagger>
+      </Reveal>
     </Section>
   );
 }

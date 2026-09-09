@@ -29,6 +29,10 @@ export function OrderRow({ order }: { order: OrderSummary }) {
               key={i}
               src={img.url}
               alt=""
+              // Real intrinsic size matching the largest rendered box
+              // (size-11 = 44px) — CSS still governs the actual box.
+              width={44}
+              height={44}
               className="size-10 rounded-full border-2 border-ivory bg-parchment object-cover sm:size-11"
             />
           ))}

@@ -147,6 +147,12 @@ export function EraExplorer({ eras }: { eras: StoryContent["eras"] }) {
               <img
                 src={era.image.src}
                 alt={era.image.alt}
+                // Source photos vary in native ratio; the parent's aspect-4/3
+                // box (with object-cover) is what actually governs the
+                // rendered crop, so these dimensions match that box rather
+                // than any one source file's real pixels.
+                width={800}
+                height={600}
                 loading="lazy"
                 className="skeleton absolute inset-0 h-full w-full object-cover"
               />

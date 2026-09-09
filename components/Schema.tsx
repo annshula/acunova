@@ -1,5 +1,6 @@
 import { site } from "@/lib/site";
-import { faqs } from "@/content/copy";
+import { faqs, howToUse } from "@/content/copy";
+import { syncedAt } from "@/lib/catalog";
 
 /**
  * Structured data for the home page — Organization, WebSite, the FAQPage
@@ -41,8 +42,15 @@ export default function Schema() {
       name: site.name,
       description: site.description,
       publisher: { "@id": `${url}/#organization` },
+      // No individual byline on this site — every page is brand-authored,
+      // so the Organization is the honest `author` entity, not a fabricated
+      // person.
+      author: { "@id": `${url}/#organization` },
       about: { "@id": `${url}/#acupressure` },
       inLanguage: "en",
+      // Real catalog sync timestamp (data/product.json), not a fabricated
+      // "updated today" — moves only when `npm run shopify:sync-product` runs.
+      dateModified: syncedAt,
     },
     {
       "@type": "Thing",
@@ -69,28 +77,14 @@ export default function Schema() {
       name: "How to use an acupuncture pen safely",
       description:
         "How to fit a head, choose an intensity level and run a session with the AccuPenPro acupressure pen, a consumer wellness device, not a medical one.",
-      step: [
-        {
-          "@type": "HowToStep",
-          name: "Check the safety list first",
-          text: "Do not use the pen if you have a pacemaker, an implanted defibrillator or any other implanted electronic device, or if you are pregnant. Do not use it over broken skin, an open wound, a rash, the front of the neck, or the eyes. With a heart condition, epilepsy, a metal implant near the area, or any ongoing medical condition, ask your doctor before using it at all.",
-        },
-        {
-          "@type": "HowToStep",
-          name: "Fit the head that suits the area",
-          text: "Screw the rounded ball head on for broad muscle such as the shoulders or calves, the ridged head to knead across a muscle, the fine point for a single specific point, and the flat spoon head for larger areas like the lower back and thighs.",
-        },
-        {
-          "@type": "HowToStep",
-          name: "Start at level 1 and work up",
-          text: "Hold the tip against the point, switch on at level 1, and step up only until the pulse is clearly felt and still comfortable. The level stays on the front display so the same setting can be repeated next time.",
-        },
-        {
-          "@type": "HowToStep",
-          name: "Keep sessions short",
-          text: "Five to fifteen minutes across a few points, once or twice a day, is a sensible session. Longer is not better. If a spot goes numb, sore or red, stop and move on.",
-        },
-      ],
+      // Sourced from content/copy.ts's howToUse — the same steps render as a
+      // visible <ol> in components/sections/Method.tsx, so this rich-result
+      // markup never claims content the page doesn't actually show.
+      step: howToUse.map((s) => ({
+        "@type": "HowToStep",
+        name: s.title,
+        text: s.body,
+      })),
     },
   ];
 

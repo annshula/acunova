@@ -30,6 +30,7 @@ const tags = {
   h2: motion.h2,
   h3: motion.h3,
   ul: motion.ul,
+  ol: motion.ol,
   li: motion.li,
   article: motion.article,
   header: motion.header,

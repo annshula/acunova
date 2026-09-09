@@ -1,4 +1,8 @@
 import type { NextConfig } from "next";
+import catalog from "./data/product.json";
+
+/** Real Shopify sync timestamp (data/product.json), formatted as an HTTP-date for Last-Modified — never a fabricated "freshness" signal. */
+const catalogLastModified = new Date(catalog.syncedAt).toUTCString();
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -45,6 +49,7 @@ const nextConfig: NextConfig = {
         source: "/:path*",
         headers: [
           { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           { key: "X-DNS-Prefetch-Control", value: "on" },
           {
@@ -67,6 +72,14 @@ const nextConfig: NextConfig = {
             value: "public, max-age=31536000, immutable",
           },
         ],
+      },
+      {
+        // Real signal, not a rolling "always fresh" fake: this is the actual
+        // timestamp of the last `npm run shopify:sync-product` run
+        // (data/product.json's syncedAt), so it only moves when the catalog
+        // genuinely changes.
+        source: "/products/:path*",
+        headers: [{ key: "Last-Modified", value: catalogLastModified }],
       },
     ];
   },

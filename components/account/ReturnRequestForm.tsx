@@ -187,6 +187,9 @@ export function ReturnRequestForm({
                   <img
                     src={item.image.url}
                     alt={item.image.altText ?? ""}
+                    // Matches the rendered box (size-16 = 64px).
+                    width={64}
+                    height={64}
                     className="size-16 shrink-0 rounded-xl bg-parchment object-cover"
                   />
                 ) : (

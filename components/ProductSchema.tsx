@@ -1,5 +1,6 @@
 import { site } from "@/lib/site";
 import { defaultRegion } from "@/lib/shipping";
+import { syncedAt } from "@/lib/catalog";
 import type { Product } from "@/lib/product";
 
 /**
@@ -25,6 +26,14 @@ export default function ProductSchema({ product }: { product: Product }) {
     description: product.descriptionHtml.replace(/<[^>]+>/g, ""),
     sku: product.variants[0].sku,
     brand: { "@type": "Brand", name: site.name },
+    // No individual byline — the listing is brand-authored, so the
+    // Organization is the honest `author` entity rather than a fabricated
+    // person.
+    author: { "@id": `${url}/#organization` },
+    // Real catalog sync timestamp (data/product.json's syncedAt), not a
+    // fabricated "updated today" — moves only when the catalog is re-synced
+    // from Shopify.
+    dateModified: syncedAt,
     material: product.material,
     color: "Black",
     audience: { "@type": "PeopleAudience", suggestedGender: "male" },
