@@ -57,7 +57,11 @@ export async function generateMetadata({
     };
   }
   const path = pathForHandle(product.handle);
-  const { title } = product;
+  // Bare product.title, same string the visible <h1> renders
+  // (ProductPurchase.tsx) — full word overlap by construction. The root
+  // layout's title template (`%s · ${site.name}`) appends the brand once
+  // this is applied, so it must not be prefixed here too.
+  const title = product.title;
   const description = `${product.subtitle}. ${site.promise.shipping}. ${site.promise.returns}.`;
   const cover = product.gallery[0];
   return {
@@ -66,7 +70,7 @@ export async function generateMetadata({
     alternates: { canonical: path },
     openGraph: {
       type: "website",
-      title: `${title} · ${site.name}`,
+      title,
       description,
       url: absoluteUrl(path),
       siteName: site.name,
@@ -81,7 +85,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} · ${site.name}`,
+      title,
       description,
       images: [cover.src],
     },
