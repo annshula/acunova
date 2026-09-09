@@ -37,10 +37,31 @@ const regionByCode = new Map(shipping.regions.map((r) => [r.code, r]));
 export const defaultRegion =
   regionByCode.get(shipping.defaultRegionCode) ?? shipping.regions[0];
 
-/** Looks up the transit window for an ISO country code, falling back to the default region for anywhere we haven't priced yet. */
+/**
+ * We ship worldwide via CJDropshipping (CN-origin CJPacket network), but only
+ * hold real per-country freight/transit data (data/cj-shipping.json) for the
+ * 5 regions CJDropshipping quotes have actually been pulled for. Rather than
+ * silently reusing the US's own 5–11 day window for an unpriced country
+ * (wrong for e.g. Brazil or Japan), anywhere else gets this honest, wider
+ * "rest of world" estimate: the min/max across every region we do have real
+ * data for, so it's never a number pulled from nowhere. Re-run the
+ * CJDropshipping freight tool for a country to get it its own accurate row
+ * instead of this fallback.
+ */
+export const restOfWorldRegion: ShippingRegion = {
+  code: "ROW",
+  label: "Worldwide",
+  group: "Rest of world",
+  minDays: Math.min(...shipping.regions.map((r) => r.minDays)),
+  maxDays: Math.max(...shipping.regions.map((r) => r.maxDays)),
+  _internalCourier: "CJPacket (route varies by destination)",
+  _internalPriceUsd: 0,
+};
+
+/** Looks up the transit window for an ISO country code, falling back to a wider worldwide estimate for anywhere we haven't priced individually yet. */
 export function regionForCountry(isoCode?: string | null): ShippingRegion {
   if (!isoCode) return defaultRegion;
-  return regionByCode.get(isoCode.toUpperCase()) ?? defaultRegion;
+  return regionByCode.get(isoCode.toUpperCase()) ?? restOfWorldRegion;
 }
 
 /** "4–6" */

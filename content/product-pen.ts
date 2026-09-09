@@ -182,7 +182,7 @@ export const pen = {
   covered: {
     eyebrow: "Covered, or we make it right",
     heading: "Thirty days to tell us it arrived wrong.",
-    lede: "Every order ships tracked and free across the US and Canada. If your pen arrives damaged, is missing a head, or is not what you ordered, send a photo within 30 days and we replace it or refund it, free, with no forms to fight through and nothing to post back.",
+    lede: "Every order ships tracked and free, worldwide. If your pen arrives damaged, is missing a head, or is not what you ordered, send a photo within 30 days and we replace it or refund it, free, with no forms to fight through and nothing to post back.",
     cta: "Add it to your bag",
     note: "Dispatched in 1–3 business days · tracked to your door · a human answers within 12 hours",
   },

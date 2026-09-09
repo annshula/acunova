@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 
 import { Section, SectionHeading, Eyebrow } from "@/components/ui/Section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Motion";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { method } from "@/content/copy";
 import { site } from "@/lib/site";
 import { absoluteUrl } from "@/lib/seo";
-import { shipping, daysRange, type ShippingRegion } from "@/lib/shipping";
+import { shipping, daysRange, restOfWorldRegion, type ShippingRegion } from "@/lib/shipping";
 
 const title = "About";
 
@@ -35,9 +36,43 @@ export const metadata: Metadata = {
   },
 };
 
+/** AboutPage structured data — references the real Organization already defined once in components/Schema.tsx (home page) rather than redeclaring it, so there's a single source of truth for the business entity. */
+function AboutPageSchema() {
+  const url = site.url;
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": `${url}/about#page`,
+    url: `${url}/about`,
+    name: "About AccuPenPro",
+    description,
+    about: { "@id": `${url}/#organization` },
+    mainEntity: { "@id": `${url}/#organization` },
+  };
+  return (
+    <script
+      type="application/ld+json"
+      // Content is fully author-controlled; no user input reaches this string.
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+const policyLinks = [
+  { label: "Shipping policy", href: "/shipping-policy" },
+  { label: "Refund & return policy", href: "/refund-policy" },
+  { label: "Privacy policy", href: "/privacy" },
+  { label: "Terms of service", href: "/terms" },
+  { label: "Cookie policy", href: "/cookie-policy" },
+  { label: "Claims policy", href: "/claims-policy" },
+];
+
 export default function AboutPage() {
   return (
     <main>
+      <AboutPageSchema />
+      <BreadcrumbSchema items={[{ name: "Home", path: "/" }, { name: "About", path: "/about" }]} />
+
       <Section className="pt-20 lg:pt-28">
         <div className="mx-auto max-w-184 text-center">
           <Eyebrow>Who we are</Eyebrow>
@@ -161,7 +196,7 @@ export default function AboutPage() {
           align="center"
           eyebrow="Shipping, honestly"
           title="Shipping timelines by region."
-          body="Every order ships tracked and free across the US and Canada, on the fastest reliable route for where you are. Figures below reflect live carrier data."
+          body="Every order ships tracked and free, worldwide, on the fastest reliable route for where you are. Figures below reflect live carrier data for the regions we've priced individually; everywhere else uses a wider estimate until we have."
         />
 
         <Stagger className="mt-14 space-y-10">
@@ -190,13 +225,152 @@ export default function AboutPage() {
               </div>
             </StaggerItem>
           ))}
+          <StaggerItem as="div">
+            <h3 className="font-display text-[0.72rem] font-semibold tracking-[0.16em] text-ink-mute uppercase">
+              Everywhere else
+            </h3>
+            <div className="mt-4 grid gap-5 sm:grid-cols-3">
+              <article className="rounded-card border border-line bg-linen p-7 text-center">
+                <h4 className="font-display text-[0.95rem] font-semibold tracking-[-0.01em] text-ink">
+                  {restOfWorldRegion.label}
+                </h4>
+                <p className="mt-4 font-display text-[1.8rem] font-bold tracking-[-0.03em] text-ink tabular-nums">
+                  {daysRange(restOfWorldRegion)}
+                </p>
+                <p className="mt-1 text-[0.78rem] text-ink-mute">
+                  business days, estimated
+                </p>
+              </article>
+            </div>
+          </StaggerItem>
         </Stagger>
 
         <p className="mx-auto mt-8 max-w-160 text-center text-[0.76rem] leading-relaxed text-ink-mute">
-          Tracked delivery, free on every order to the US and Canada, no
-          minimum, no upsell for speed. We do not currently ship outside these
-          two countries; estimates update as carrier performance changes.
+          Tracked delivery, free on every order, worldwide, no minimum, no
+          upsell for speed. Countries above have their own carrier-quoted
+          window; everywhere else uses a wider estimate until we've priced
+          that country individually, and updates as carrier performance
+          changes.
         </p>
+      </Section>
+
+      <Section>
+        <SectionHeading
+          align="center"
+          eyebrow="What we do and don't claim"
+          title="A wellness device, described as one."
+          body="The AccuPenPro pen is not cleared by the FDA or Health Canada as a medical device. Nothing on this site says or implies it treats, cures, heals, diagnoses or prevents any condition, and we've written a full policy explaining exactly where that line sits."
+        />
+        <Stagger className="mt-14 grid gap-5 sm:grid-cols-2">
+          <StaggerItem
+            as="article"
+            className="rounded-card border border-line bg-linen p-7"
+          >
+            <h3 className="font-display text-[1.05rem] font-semibold tracking-[-0.02em] text-ink">
+              What the hardware verifiably does
+            </h3>
+            <p className="mt-2.5 text-[0.86rem] leading-[1.65] text-ink-soft">
+              A metal tip delivers a low-intensity electrical pulse across
+              nine selectable levels, combined with the physical pressure of
+              the tip itself. That's the entire mechanism, and it's the same
+              broad family of stimulation as the TENS units sold in any
+              pharmacy.
+            </p>
+          </StaggerItem>
+          <StaggerItem
+            as="article"
+            className="rounded-card border border-line bg-linen p-7"
+          >
+            <h3 className="font-display text-[1.05rem] font-semibold tracking-[-0.02em] text-ink">
+              Who shouldn't use it
+            </h3>
+            <p className="mt-2.5 text-[0.86rem] leading-[1.65] text-ink-soft">
+              Anyone with a pacemaker or other implanted electronic device,
+              anyone pregnant, and never over broken skin, a rash, or the
+              front of the neck. Full safety detail is in our{" "}
+              <a
+                href="/faq#safety"
+                className="text-gold underline underline-offset-4"
+              >
+                FAQ
+              </a>
+              .
+            </p>
+          </StaggerItem>
+        </Stagger>
+        <p className="mx-auto mt-8 max-w-160 text-center text-[0.76rem] leading-relaxed text-ink-mute">
+          Read the full{" "}
+          <a
+            href="/claims-policy"
+            className="text-gold underline underline-offset-4"
+          >
+            claims policy
+          </a>{" "}
+          for the complete line between what we say the hardware does and
+          what acupressure is, as a tradition, not a treatment.
+        </p>
+      </Section>
+
+      <Section className="border-t border-line bg-parchment">
+        <SectionHeading
+          align="center"
+          eyebrow="Who you're buying from"
+          title="A real business, reachable by email."
+          body="We're a small team, not a faceless storefront. Here's how to find us and reach us."
+        />
+        <div className="mx-auto mt-14 grid max-w-160 gap-5 sm:grid-cols-2">
+          <div className="rounded-card border border-line bg-linen p-7">
+            <h3 className="font-display text-[1.05rem] font-semibold tracking-[-0.02em] text-ink">
+              {site.legalName}
+            </h3>
+            <p className="mt-2.5 text-[0.86rem] leading-[1.65] text-ink-soft">
+              {site.address}
+            </p>
+          </div>
+          <div className="rounded-card border border-line bg-linen p-7">
+            <h3 className="font-display text-[1.05rem] font-semibold tracking-[-0.02em] text-ink">
+              Get in touch
+            </h3>
+            <p className="mt-2.5 text-[0.86rem] leading-[1.65] text-ink-soft">
+              <a
+                href={`mailto:${site.email}`}
+                className="text-gold underline underline-offset-4"
+              >
+                {site.email}
+              </a>
+              , or use our{" "}
+              <a
+                href="/contact"
+                className="text-gold underline underline-offset-4"
+              >
+                contact page
+              </a>
+              . {site.promise.support}.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="border-t border-line">
+        <SectionHeading
+          align="center"
+          eyebrow="Policies"
+          title="Every policy, in one place."
+        />
+        <nav
+          aria-label="Company policies"
+          className="mx-auto mt-10 flex max-w-160 flex-wrap items-center justify-center gap-x-8 gap-y-3"
+        >
+          {policyLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-[0.86rem] text-ink-soft underline decoration-line underline-offset-4 transition-colors hover:text-ink hover:decoration-gold"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
       </Section>
     </main>
   );

@@ -18,7 +18,7 @@ export const site = {
   // search term people actually type (Google Trends: ~5x the volume of
   // "acupressure pen"), a CTA, and stop counting before it runs past ~160.
   description:
-    "AccuPenPro acupressure pen, often searched as an acupuncture pen. Drug-free, no needles, 9 intensity levels, 4 heads. Shop now, free US & CA shipping.",
+    "AccuPenPro acupressure pen, often searched as an acupuncture pen. Drug-free, no needles, 9 intensity levels, 4 heads. Shop now, free worldwide shipping.",
   locale: "en_US",
   currency: "USD",
 
@@ -45,13 +45,13 @@ export const site = {
   },
 
   promise: {
-    shipping: "Free shipping in the US and Canada",
+    shipping: "Free worldwide shipping",
     // Day range only — no country named here. The real, per-country transit
     // times (live CJDropshipping data, lib/shipping.ts) live on the About
     // page; product/cart surfaces resolve the shopper's own region silently
     // via useLocalization() instead of repeating a single figure for everyone.
     shippingDetail: `Dispatched in 1–3 business days · ${daysRange(defaultRegion)} days to arrive`,
-    shippingFull: `Orders are processed within 1–3 business days, then tracked delivery typically takes ${daysRange(defaultRegion)} business days depending on where you are. Full country-by-country transit times are on our About page.`,
+    shippingFull: `Orders are processed within 1–3 business days, then tracked delivery typically takes ${daysRange(defaultRegion)} business days depending on where you are, worldwide. Full country-by-country transit times are on our About page.`,
     // Accurate scope: our supplier's dispute process only backs damaged,
     // missing, and wrong-item claims — there is no general change-of-mind
     // return, so the copy must never imply one. See

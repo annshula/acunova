@@ -230,7 +230,7 @@ export const buildHeads: BuildContent = {
 export const closeGeneric: CloseContent = {
   eyebrow: "Covered, or we make it right",
   heading: "Thirty days to tell us it arrived wrong.",
-  lede: "Every order ships tracked and free across the US and Canada. If your order arrives damaged, incomplete or wrong, send a photo within 30 days and we replace it or refund it, free, with nothing to post back.",
+  lede: "Every order ships tracked and free, worldwide. If your order arrives damaged, incomplete or wrong, send a photo within 30 days and we replace it or refund it, free, with nothing to post back.",
   cta: "Add it to your bag",
   note: "Dispatched in 1–3 business days · tracked to your door · a human answers within 12 hours",
 };

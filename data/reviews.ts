@@ -19,10 +19,13 @@
  *    those quotes as marketing is a separate decision, and an FTC-relevant
  *    one.
  *
- * 3. Countries are limited to the markets this store actually ships to
- *    (lib/site.ts `promise.shipping` — the US and Canada). A review feed
- *    full of countries the shipping policy excludes is the fastest way to
- *    look fake.
+ * 3. Countries used here should stay countries the store actually ships to
+ *    (lib/site.ts `promise.shipping` — worldwide, via CJDropshipping). A
+ *    review feed full of countries the shipping policy excludes is the
+ *    fastest way to look fake; the reverse (only ever showing US/Canada
+ *    locations on a worldwide-shipping store) just undersells the reach and
+ *    isn't itself dishonest, but is worth widening if this pool gets
+ *    reworked.
  *
  * Data is generated deterministically (seeded PRNG) at module load from a
  * hand-written pool of review texts and real name lists, so the set is

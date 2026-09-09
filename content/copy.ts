@@ -52,7 +52,7 @@ export const hero = {
   secondaryHref: "#method",
   // Three short proof chips under the CTAs. Deliberately specs, not
   // adjectives — "9 intensity levels" is checkable, "amazing relief" is not.
-  chips: ["9 intensity levels", "4 interchangeable heads", "Free US & CA shipping"],
+  chips: ["9 intensity levels", "4 interchangeable heads", "Free worldwide shipping"],
 };
 
 /**
@@ -242,7 +242,7 @@ export const howToUse = [
 export const guarantee = {
   eyebrow: "Buy with confidence",
   headline: "What every order includes.",
-  body: "The pen, all four heads, free shipping across the US and Canada, and a real fix if anything arrives wrong.",
+  body: "The pen, all four heads, free worldwide shipping, and a real fix if anything arrives wrong.",
   items: [
     {
       icon: "device" as const,
@@ -409,7 +409,7 @@ export const faqs = [
   {
     id: "delivery",
     q: "How long does delivery take, and what does it cost?",
-    a: `Shipping is free to the US and Canada, with no minimum order. Orders are processed within 1–3 business days, then tracked delivery typically takes ${daysRangeDisplay(defaultRegion)} depending on where you are. See the full country-by-country breakdown on our About page. Your tracking number arrives by email the moment the label is scanned.`,
+    a: `Shipping is free worldwide, with no minimum order. Orders are processed within 1–3 business days, then tracked delivery typically takes ${daysRangeDisplay(defaultRegion)} depending on where you are. See the full country-by-country breakdown on our About page. Your tracking number arrives by email the moment the label is scanned.`,
   },
   {
     id: "damaged-or-wrong",
@@ -421,7 +421,7 @@ export const faqs = [
 export const finalCta = {
   eyebrow: site.tagline,
   headline: "Put the pressure somewhere useful.",
-  sub: "Free shipping in the US and Canada. Free fix for damaged, missing, or wrong items. Dispatched within 1–3 business days.",
+  sub: "Free worldwide shipping. Free fix for damaged, missing, or wrong items. Dispatched within 1–3 business days.",
   cta: "Shop the pen",
 };
 
@@ -467,7 +467,7 @@ export const footerNav = [
 ];
 
 export const marqueeWords = [
-  "Free shipping in the US and Canada",
+  "Free worldwide shipping",
   "Free fix for damaged or wrong items",
   "Drug-free · Non-invasive",
   "Dispatched in 1–3 business days",

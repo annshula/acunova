@@ -42,6 +42,8 @@ const links = [
   { label: "Shop", href: "/shop" },
   { label: "How it works", href: "/#method" },
   { label: "Uses", href: "/benefits" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 /** Shared chrome for the small square icon buttons in the bar. */

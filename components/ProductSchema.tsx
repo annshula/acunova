@@ -1,5 +1,5 @@
 import { site } from "@/lib/site";
-import { defaultRegion } from "@/lib/shipping";
+import { restOfWorldRegion } from "@/lib/shipping";
 import { syncedAt } from "@/lib/catalog";
 import type { Product } from "@/lib/product";
 
@@ -73,21 +73,28 @@ export default function ProductSchema({ product }: { product: Product }) {
         shippingDetails: {
           "@type": "OfferShippingDetails",
           shippingRate: { "@type": "MonetaryAmount", value: 0, currency: site.currency },
-          shippingDestination: { "@type": "DefinedRegion", addressCountry: ["US", "GB", "CA", "AU", "DE", "FR"] },
+          // "*" is schema.org's own wildcard for "ships everywhere" — accurate
+          // now that shipping is worldwide (see lib/shipping.ts), rather than
+          // naming a handful of countries and implying the rest are excluded.
+          shippingDestination: { "@type": "DefinedRegion", addressCountry: "*" },
           deliveryTime: {
             "@type": "ShippingDeliveryTime",
             handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 1, unitCode: "DAY" },
+            // Widest real transit window across every region we have live
+            // carrier data for (lib/shipping.ts restOfWorldRegion) — honest
+            // for a worldwide claim, rather than defaultRegion's US-only
+            // 5–11 days understating transit time for slower destinations.
             transitTime: {
               "@type": "QuantitativeValue",
-              minValue: defaultRegion.minDays,
-              maxValue: defaultRegion.maxDays,
+              minValue: restOfWorldRegion.minDays,
+              maxValue: restOfWorldRegion.maxDays,
               unitCode: "DAY",
             },
           },
         },
         hasMerchantReturnPolicy: {
           "@type": "MerchantReturnPolicy",
-          applicableCountry: ["US", "GB", "CA", "AU", "DE", "FR"],
+          applicableCountry: "*",
           returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
           merchantReturnDays: 60,
           returnMethod: "https://schema.org/ReturnByMail",
