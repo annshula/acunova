@@ -196,6 +196,11 @@ export function HeroFrame({
       </div>
 
       {/* ------------------------------- dots ------------------------------- */}
+      {/* Each button's real hit area is a 44px square (via padding) — the
+          visible pill stays the same tiny 6px/28px dot, centered inside that
+          padded box, so the touch target meets the 44x44 minimum without the
+          indicator itself growing. -m-4.75 cancels the padding's effect on
+          the flex gap so the visible dots keep their original spacing. */}
       {slides.length > 1 && (
         <div className="absolute right-5 bottom-10 z-10 flex gap-2.5 sm:right-8 lg:bottom-14">
           {slides.map((s, i) => (
@@ -205,12 +210,17 @@ export function HeroFrame({
               onClick={() => goTo(i)}
               aria-label={`Show slide ${i + 1} of ${slides.length}`}
               aria-current={i === selected}
-              className={`h-1.5 rounded-full transition-[width,background-color] duration-300 ease-(--ease-out-soft) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring ${
-                i === selected
-                  ? "w-7 bg-primary"
-                  : "w-1.5 bg-ink/25 hover:bg-ink/45"
-              }`}
-            />
+              className="group -m-4.75 grid place-items-center p-4.75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            >
+              <span
+                aria-hidden
+                className={`block h-1.5 rounded-full transition-[width,background-color] duration-300 ease-(--ease-out-soft) ${
+                  i === selected
+                    ? "w-7 bg-primary"
+                    : "w-1.5 bg-ink/25 group-hover:bg-ink/45"
+                }`}
+              />
+            </button>
           ))}
         </div>
       )}

@@ -149,7 +149,7 @@ export default function BenefitsPage() {
               i % 2 === 1 ? "lg:[&>figure]:order-last" : ""
             }`}
           >
-            <figure className="relative aspect-4/5 overflow-hidden rounded-(--radius-photo) bg-surface-sunken shadow-(--shadow-photo) lg:aspect-3/4">
+            <figure className="relative aspect-4/5 overflow-hidden rounded-photo bg-surface-sunken shadow-(--shadow-photo) lg:aspect-3/4">
               <StaticImage
                 src={band.image.src}
                 alt={band.image.alt}
@@ -161,7 +161,6 @@ export default function BenefitsPage() {
             <div>
               <p className="font-label flex items-center gap-3 text-[0.64rem] font-medium text-ink-mute uppercase">
                 <span className="text-accent tabular-nums">{band.index}</span>
-                <span aria-hidden className="h-px w-6 bg-line-strong" />
                 {band.label}
               </p>
               <h2 className="font-display mt-5 text-[clamp(1.7rem,3.2vw,2.4rem)] leading-[1.15] font-light text-ink text-balance">
