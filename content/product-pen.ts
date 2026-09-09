@@ -18,12 +18,12 @@ export const pen = {
   // Must match the REAL Shopify handle in data/product.json exactly.
   // This was wrong from the first commit of this rebuild (checked against
   // git log: product-pen.ts and product.json both landed in the same
-  // commit with mismatched handles) and it silences the entire narrative
+  // commit with mismatched handles) and it silenced the entire narrative
   // section of the PDP: isFlagship compares against this value, and when
   // it's false, PenStory/PenMoments/PenVersus never render at all. The
   // live product page was missing its hardware stats, its two-thousand-
   // years story, and its comparison table because of this one string.
-  handle: "acupressure-pen-meridian-massage-tool",
+  handle: "acupressure-pen-pro",
 
   /* ------------------------------------------------------------------ */
   /* Cinematic dark story band — right after the buy box.                */

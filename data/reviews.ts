@@ -61,12 +61,14 @@ export type ReviewSummary = {
   distribution: { stars: number; count: number; percent: number }[];
 };
 
-// Must match the REAL Shopify handle in data/product.json exactly, same
-// bug class as content/product-pen.ts's flagship handle: this was wrong
-// from the first commit, so reviewSetForHandle() always returned null on
-// the live product and the PDP showed the empty "reviews are being
-// collected" state despite real review content existing below.
-export const PEN_REVIEWS_HANDLE = "acupressure-pen-meridian-massage-tool";
+// Must match the REAL Shopify handle in data/product.json exactly — it was
+// "acupressure-pen-meridian-massage-tool" from the first commit, which never
+// matched the real "acupressure-pen-pro" handle, so reviewSetForHandle()
+// always returned null on the live product and the PDP showed the empty
+// "reviews are being collected" state despite real review content
+// (including the shopper-added photos in public/reviews/
+// accupenpro-acupressure-pen/) existing below the whole time.
+export const PEN_REVIEWS_HANDLE = "acupressure-pen-pro";
 
 const REVIEW_COUNT = 1024;
 const PHOTO_BASE = "/reviews/accupenpro-acupressure-pen";
