@@ -13,10 +13,12 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://accupenpro.com",
   email: "support@accupenpro.com",
   address: "Toronto, Ontario, Canada",
-  // 120-160 chars: keep the electric acupuncture pen / drug-free pain relief
-  // keywords plus a CTA, and stop counting before it runs past ~160.
+  // 120-160 chars: keep the acupressure pen keyword (the claims-safe head
+  // term — see content/copy.ts hero comment) plus the "acupuncture pen"
+  // search term people actually type (Google Trends: ~5x the volume of
+  // "acupressure pen"), a CTA, and stop counting before it runs past ~160.
   description:
-    "AccuPenPro: an electric acupuncture pen for drug-free pain relief. 9 intensity levels, 4 heads, no needles. Shop now, free US & CA shipping.",
+    "AccuPenPro acupressure pen, often searched as an acupuncture pen. Drug-free, no needles, 9 intensity levels, 4 heads. Shop now, free US & CA shipping.",
   locale: "en_US",
   currency: "USD",
 

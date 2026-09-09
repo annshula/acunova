@@ -27,14 +27,25 @@ export const hero = {
   // needles" is the qualifier that separates it from acupuncture results.
   // The previous headline ("Targeted relief for a healthier, happier you")
   // was generic wellness copy that ranked for nothing.
+  //
+  // Google Trends (US, 12mo, checked 2026-09-09): "acupuncture pen" gets
+  // roughly 5x the search volume of "acupressure pen" (avg 37 vs 7), and
+  // "electronic/electric acupuncture pen" are the top related queries. We
+  // are NOT switching the head term to "acupuncture pen" — that word implies
+  // needles and a clinical practice this device does not perform, which is
+  // the exact false-advertising risk the claim policy at the top of this
+  // file exists to avoid. Instead the sub line below name-checks "often
+  // searched as an acupuncture pen" once, in a factual/comparison frame, to
+  // capture that query's intent without claiming to be one.
   eyebrow: "Acupressure pen",
   // Two lines: head term first, differentiator second. Hero.tsx renders
   // exactly two entries, stacked.
   headline: ["Real relief.", "No needles."],
   // One line, doing double duty: it carries the secondary keywords
-  // (meridian massage, drug-free, at home) in a sentence a human would
-  // actually read, rather than a keyword list.
-  sub: "A drug-free meridian massage tool that puts adjustable micro-current on the pressure points you already rub by hand.",
+  // (meridian massage, drug-free, at home, and the "acupuncture pen" search
+  // term people actually type) in a sentence a human would actually read,
+  // rather than a keyword list.
+  sub: "A drug-free meridian massage tool — often searched as an acupuncture pen — that puts adjustable micro-current on the pressure points you already rub by hand.",
   cta: "Shop the pen",
   ctaHref: "/shop",
   secondary: "How it works",
@@ -360,6 +371,11 @@ export const faqs = [
     id: "what-it-does",
     q: "What does an acupuncture pen actually do?",
     a: "Two things at once, and neither involves a needle. Physically, the metal tip lets you press a specific point with steady, repeatable pressure, the same points you would press with a thumb. Electrically, it delivers a low-intensity pulse through that tip across nine levels, in the same broad family as a pharmacy TENS unit. That is the whole mechanism. It does not break the skin, and it is not acupuncture in the clinical sense of the word.",
+  },
+  {
+    id: "acupuncture-vs-acupressure-pen",
+    q: "Is this the same as an \"acupuncture pen\"?",
+    a: "It is what a lot of people search for under that name, but the accurate word is acupressure pen. Acupuncture is a needle-based clinical practice; this device never breaks the skin. It is a handheld tool that combines physical pressure with a low-intensity electrical pulse on the same points, which is why it turns up in \"acupuncture pen\" and \"electronic acupuncture pen\" searches even though acupressure is the correct term for what it does.",
   },
   {
     id: "does-it-hurt",
