@@ -64,6 +64,52 @@ const cover = {
   height: 1200,
 };
 
+/**
+ * Real, existing product/lifestyle photos (already used elsewhere in the app
+ * with these exact alt strings — see components/sections/Showcase.tsx and
+ * FinalCta.tsx) reused as covers for the 10 trend-driven posts below, so each
+ * gets a distinct, accurate image rather than all sharing `cover`. No new
+ * photography or AI-generated imagery is referenced here — Higgsfield image
+ * generation for these posts is a separate, pending follow-up blocked on
+ * account credits; swap these for the generated covers once available.
+ */
+const headsMacro = {
+  src: "/product/heads-macro.png",
+  alt: "The four interchangeable AccuPenPro heads in a row: rounded ball, multi-point, fine point and flat spoon",
+  width: 1376,
+  height: 768,
+};
+const kitFlatlay = {
+  src: "/product/kit-flatlay.png",
+  alt: "The AccuPenPro pen laid out with its interchangeable heads and storage case",
+  width: 1376,
+  height: 768,
+};
+const lifestyleDesk = {
+  src: "/lifestyle/desk.png",
+  alt: "The AccuPenPro pen resting on a desk beside a closed laptop and a cup of tea",
+  width: 1376,
+  height: 768,
+};
+const lifestyleKneesLegs = {
+  src: "/lifestyle/knees-legs.png",
+  alt: "Using the AccuPenPro pen on the outer side of the knee while seated",
+  width: 928,
+  height: 1152,
+};
+const lifestyleArmsJoints = {
+  src: "/lifestyle/arms-joints.png",
+  alt: "The AccuPenPro pen being used on the forearm just below the elbow",
+  width: 928,
+  height: 1152,
+};
+const lifestyleNeckShoulders = {
+  src: "/lifestyle/neck-shoulders.png",
+  alt: "A woman using the AccuPenPro pen at the base of her neck while seated at a desk",
+  width: 928,
+  height: 1152,
+};
+
 const SAFETY_HTML = `
 <h2>Before you use one at all</h2>
 <p>This is the part most listings bury, so here it is up front. An acupressure pen passes a low-intensity electrical pulse through your skin. That means there are people who should not use one, and areas nobody should use one on.</p>
@@ -472,6 +518,427 @@ ${SAFETY_HTML}
         question: "Should I choose oil-free or oil-infused heads?",
         answer:
           "Oil-infused heads glide rather than drag, which most people prefer for sliding strokes over the neck and shoulders. Oil-free heads suit staying on a single point and avoid getting product on clothes or hair. Neither is better, oil-infused is the safer first pick for neck and shoulder work.",
+      },
+    ],
+  },
+  {
+    slug: "acupressure-points-feet",
+    title: "Acupressure Points in the Feet: Where They Are and How to Use Them",
+    excerpt:
+      "The feet carry more mapped points than almost any other area. Here's where the well-known ones sit, and a sensible seated routine for using them.",
+    targetKeyword: "acupressure points feet",
+    quickAnswer:
+      "The most commonly used foot points sit in the arch, the ball just below the toes, the top of the foot between the big and second toe, and the heel. Work them seated, one foot at a time, at a low-to-moderate setting, the sole is thick-skinned but the top of the foot is not.",
+    tags: ["Point guides"],
+    publishedAt: "2026-09-09",
+    updatedAt: "2026-09-09",
+    readingMinutes: 6,
+    coverImage: lifestyleKneesLegs,
+    body: `
+<p>Reflexology charts map the entire body onto the sole of the foot, which is a much bigger claim than the evidence supports. What is true and useful, without overselling it, is that the feet carry several genuinely tender, easy-to-find points that people have pressed by hand for centuries, and that a device with a 170&nbsp;mm handle reaches your own sole far more comfortably than folding forward to use your thumbs.</p>
+${SAFETY_HTML}
+<h2>The arch</h2>
+<p>Run a thumb along the inner curve of the sole. Most people find one or two spots partway along that feel noticeably denser than the surrounding tissue, especially after a day on your feet or in stiff shoes.</p>
+<p>Thick, calloused skin here means you can typically use a higher setting than anywhere else on the body, work up from level 1 as usual and see where it lands.</p>
+<h2>The ball of the foot, just below the toes</h2>
+<p>The padded area you land on when walking barefoot. Traditionally associated with the chest and shoulders in reflexology charts, though we'd rather you know that as a tradition than a claim. Practically, it is simply a spot most people find satisfying to work after standing for a long stretch.</p>
+<h2>The top of the foot, between the big and second toe</h2>
+<p>Unlike the sole, the top of the foot is thin-skinned and bony. Drop the intensity here, a setting that felt fine on your arch will likely feel sharp on top of the foot.</p>
+<h2>The heel</h2>
+<p>Firm, thick tissue that tolerates a broader head and a moderate setting well. Useful if you spend the day on hard floors.</p>
+<h2>A seated five-minute round</h2>
+<ol>
+<li>Arch of each foot: 60 seconds each, moderate setting.</li>
+<li>Ball of each foot: 45 seconds each.</li>
+<li>Top of each foot, between the toes: 30 seconds each, low setting.</li>
+<li>Heel of each foot: 45 seconds each.</li>
+</ol>
+<p>Do this seated, ideally with the foot resting on the opposite knee so you can see and reach the sole without straining. It is roughly five minutes and the one routine in this whole site that pairs well with actually watching television.</p>
+<p>The <a href="${productPath}">flat spoon head</a> suits the arch and heel, the fine point is better kept for the top of the foot where precision matters more than coverage.</p>
+`,
+    faqs: [
+      {
+        question: "Can I use an acupressure pen on my feet every day?",
+        answer:
+          "Yes, the sole tolerates frequent use well since the skin is thick. Keep sessions to five to fifteen minutes, and if the top of the foot or any spot goes numb, sore or red, stop and move on.",
+      },
+      {
+        question: "Is reflexology the same as acupressure on the feet?",
+        answer:
+          "They're related but distinct traditions. Reflexology maps the whole body onto zones of the foot; acupressure works specific meridian points, some of which happen to be on the foot. Neither is a treatment for a named condition, both describe a self-massage practice.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-read-an-acupressure-chart",
+    title: "How to Read an Acupressure Points Chart (Without Getting Lost)",
+    excerpt:
+      "Charts look like a subway map of the body. Here's what the lines, dots and labels actually mean, and how to use one without memorising it.",
+    targetKeyword: "acupressure points chart",
+    quickAnswer:
+      "A chart's dots mark traditional points, the lines connecting them are meridians, and the codes (like LI4 or GB20) identify which meridian and position. You don't need to memorise a chart, use it to confirm a spot you already found by feel, not as the starting instruction.",
+    tags: ["Point guides", "Getting started"],
+    publishedAt: "2026-09-09",
+    updatedAt: "2026-09-09",
+    readingMinutes: 6,
+    coverImage: headsMacro,
+    body: `
+<p>The first time you see a full acupressure or acupuncture chart, it looks like a subway map somebody drew on a body. Dozens of dots, criss-crossing lines, and codes like "LI4" or "GB20" that mean nothing until someone explains them. Here is the plain-language version.</p>
+<h2>What the dots are</h2>
+<p>Each dot marks a traditional point, a specific, named spot on the body that classical Chinese medicine assigns significance to. There are roughly 360 of them on a full chart, though in practice almost everyone who owns a device like this one only ever uses a dozen or so.</p>
+<h2>What the lines are</h2>
+<p>The lines connect points into meridians, pathways that traditional theory says carry the body's energy, or qi. There are fourteen major meridians, each associated with an organ system in the traditional framework (Lung, Large Intestine, Stomach, and so on). That association is a traditional, not an anatomical one, the Large Intestine meridian does not run along your actual large intestine.</p>
+<h2>What the codes mean</h2>
+<p>A code like LI4 breaks down simply: the letters identify the meridian (LI = Large Intestine), and the number is the point's position along it, counted from a fixed starting point. LI4, for instance, is the fourth point on the Large Intestine meridian, and it happens to be the well-known web-of-the-hand point covered in our <a href="/blog/acupressure-points-in-the-hand">hand points guide</a>.</p>
+<p>You never need to learn the codes to use a chart practically, they exist so practitioners can refer to the same point unambiguously across languages and centuries.</p>
+<h2>How to actually use a chart</h2>
+<p>Backwards from how it looks designed to be used, honestly. Rather than starting at a chart and hunting for a point, start with a sore spot you have already found by feel, then check the chart to see whether it lines up with a named point. Charts are good for confirming and naming what your hands already know, and for showing you nearby points you might not have tried.</p>
+<p>Treat a chart as a reference, not an instruction manual. If a spot the chart marks does not feel tender to you, there is no rule that says you have to work it anyway.</p>
+<h2>A few points worth knowing by name</h2>
+<table>
+<thead><tr><th>Common name</th><th>Chart code</th><th>Where it is</th></tr></thead>
+<tbody>
+<tr><td>Web of the hand</td><td>LI4</td><td>Between thumb and index finger</td></tr>
+<tr><td>Base of the skull</td><td>GB20</td><td>Hollows below the skull ridge</td></tr>
+<tr><td>Shoulder ridge</td><td>GB21</td><td>Midpoint of the shoulder muscle</td></tr>
+<tr><td>Inner wrist</td><td>PC6</td><td>Three finger-widths below the wrist crease</td></tr>
+</tbody>
+</table>
+<p>All four are covered in more depth in our other point guides, this table is just to make the codes feel less like a foreign language next time you see one.</p>
+`,
+    faqs: [
+      {
+        question: "Do I need to memorise an acupressure chart to use a pen?",
+        answer:
+          "No. Most people never learn the formal codes. Find a tender spot by feel, work it, and use a chart only if you want to know its traditional name or find nearby points.",
+      },
+      {
+        question: "Are acupressure meridians anatomically real?",
+        answer:
+          "Meridians are a traditional Chinese medicine framework, not an anatomical structure that shows up on a scan. The points themselves are physical locations you can find and press; the meridian lines connecting them are a conceptual map from the tradition, not a description of nerves or blood vessels.",
+      },
+    ],
+  },
+  {
+    slug: "sinus-pressure-points",
+    title: "Sinus Pressure Points: Where to Press When Your Head Feels Full",
+    excerpt:
+      "The handful of points people reach for around the nose, brow and cheekbones when sinus pressure builds, and the ones to avoid entirely.",
+    targetKeyword: "sinus acupressure points",
+    quickAnswer:
+      "The commonly used points sit either side of the nostrils, at the inner edge of the eyebrows, and on the cheekbones below the eyes. Use light pressure only, this is thin-skinned facial tissue, and never work directly on or over the eyes.",
+    tags: ["Point guides"],
+    publishedAt: "2026-09-09",
+    updatedAt: "2026-09-09",
+    readingMinutes: 5,
+    coverImage: headsMacro,
+    body: `
+<p>A blocked, pressure-filled head is one of the most common reasons people go looking for facial pressure points. Here are the ones the tradition points to, and the safety notes that matter more than usual because the face is thin-skinned and close to the eyes.</p>
+${SAFETY_HTML}
+<p><strong>One addition for the face specifically:</strong> never work on or directly over the eyes, eyelids, or the thin skin immediately beneath them. Keep any device at least a thumb's width from the eye socket at all times.</p>
+<h2>Either side of the nostrils</h2>
+<p>In the small groove where the side of the nose meets the cheek. This is the point most people find themselves pressing instinctively when their sinuses feel congested, often without knowing it has a name.</p>
+<p>Very light pressure only, and the lowest intensity setting available. This is delicate tissue directly over the sinus cavities.</p>
+<h2>The inner edge of the eyebrows</h2>
+<p>Where the eyebrow meets the bridge of the nose, in the small notch at the inner corner. Traditionally associated with pressure behind the brow.</p>
+<p>Stay on the bony ridge of the brow itself, not the soft tissue below it toward the eye.</p>
+<h2>The cheekbones below the eyes</h2>
+<p>Directly below the pupil, on the ridge of the cheekbone, roughly level with the bottom of the nose. Keep firmly on the bone, moving down onto the soft tissue brings you too close to the eye.</p>
+<h2>A gentle two-minute round</h2>
+<ol>
+<li>Either side of the nostrils: 20 seconds each, lowest setting.</li>
+<li>Inner eyebrow notch, both sides: 20 seconds each.</li>
+<li>Cheekbone below each eye: 20 seconds each, staying on bone.</li>
+</ol>
+<p>This is a short round on purpose. Facial skin is thin and the margin for error near the eyes is small, there is no benefit to lingering here the way you might on a shoulder.</p>
+<p>Use the <a href="${productPath}">fine point head</a> at its lowest settings for all three spots, the broader heads are too large to control precisely enough on the face.</p>
+`,
+    faqs: [
+      {
+        question: "Can an acupressure pen help with sinus congestion?",
+        answer:
+          "It can be used on traditional facial pressure points the way you might already press them with a finger, gently and at the lowest setting. It is not a treatment for congestion or sinusitis, and persistent or severe sinus symptoms should be seen by a doctor.",
+      },
+      {
+        question: "Is it safe to use an acupressure pen near the eyes?",
+        answer:
+          "Only with real caution, and never on the eyes or eyelids themselves. Keep at least a thumb's width of clearance from the eye socket, use the lowest intensity, and stop immediately if anything feels sharp rather than a gentle tap.",
+      },
+    ],
+  },
+  {
+    slug: "acupressure-mat-vs-acupressure-pen",
+    title: "Acupressure Mat vs. Acupressure Pen: Which One Actually Reaches the Spot?",
+    excerpt:
+      "A mat covers a wide area and hopes; a pen finds one point and works it. Here's the honest comparison, including where a mat still wins.",
+    targetKeyword: "acupressure mat",
+    quickAnswer:
+      "A mat is a passive, whole-back tool, you lie on it and whatever lands under a spike, lands. A pen is an active, single-point tool, you find the exact spot and work it directly. Mats are better for a broad relaxing lie-down; a pen is better when you have one specific spot that needs attention.",
+    tags: ["Buying guide", "Comparisons"],
+    publishedAt: "2026-09-09",
+    updatedAt: "2026-09-09",
+    readingMinutes: 6,
+    coverImage: kitFlatlay,
+    body: `
+<p>Acupressure mats and acupressure pens both borrow the same underlying idea, pressure on traditional points, but they are close to opposite tools in practice. Here is the honest comparison, the kind neither product's own listing tends to give you.</p>
+<h2>How each one actually works</h2>
+<p>A mat is a flat surface covered in plastic spikes. You lie on it, usually on your back, and your body weight presses hundreds of points at once, wherever they happen to land under a spike. It is a passive, whole-back experience: you do nothing once you're down.</p>
+<p>A pen is the opposite: one metal tip, one point, under your direct control. You find the exact spot, place the tip on it, and add a low-level electrical pulse on top of the physical pressure. It is active and precise where a mat is passive and broad.</p>
+<h2>Precision</h2>
+<p>No contest. A mat covers a whole area and hopes a spike lands somewhere useful; a 2&nbsp;mm pen tip lands on the exact spot you chose. If you have one specific point, the base of the skull, a single knot in the shoulder, a pen finds it and a mat simply doesn't aim.</p>
+<h2>Reaching your own back</h2>
+<p>A mat wins outright here in one sense: lying down on it works your entire back at once without you doing anything, no reaching required. A pen with a 170&nbsp;mm handle extends your own reach, but you are still the one holding it and working point by point.</p>
+<h2>Intensity control</h2>
+<p>A mat's intensity is fixed by your body weight, more weight, more pressure, and that's your only control. A pen has an adjustable dial, typically several distinct levels, shown on a display, so you can set precisely how much you want and repeat it exactly next time.</p>
+<h2>Time and ritual</h2>
+<p>A mat session is a lie-down, usually ten to twenty minutes, often paired with reading or resting. A pen session is more active and shorter, working through a handful of points in five to ten minutes. Different rituals for different moods.</p>
+<h2>Where each one actually makes sense</h2>
+<table>
+<thead><tr><th></th><th>Acupressure mat</th><th>Acupressure pen</th></tr></thead>
+<tbody>
+<tr><td>Best for</td><td>A broad, passive wind-down lying flat</td><td>One specific sore spot</td></tr>
+<tr><td>Precision</td><td>None, whatever lands under a spike</td><td>Exact, 2mm tip</td></tr>
+<tr><td>Reaches your own back</td><td>Yes, by lying on it</td><td>Yes, by holding the handle</td></tr>
+<tr><td>Setup</td><td>Unroll and lie down</td><td>Pick it up, press the button</td></tr>
+<tr><td>Portable</td><td>Bulky, rolls up but doesn't pocket</td><td>170&nbsp;mm, fits a bag</td></tr>
+</tbody>
+</table>
+<p>Plenty of people reasonably own both, they solve different problems. If you're choosing one first, a sore spot you can point to argues for <a href="${productPath}">a pen</a>; wanting a passive ten-minute lie-down most evenings argues for a mat.</p>
+`,
+    faqs: [
+      {
+        question: "Do I need both an acupressure mat and an acupressure pen?",
+        answer:
+          "Not necessarily, they solve different problems. A mat suits a broad, passive lie-down across your whole back; a pen suits working one specific sore point precisely. Many people who own both use the mat a few evenings a week and the pen for whatever spot is bothering them that day.",
+      },
+      {
+        question: "Which hurts less, a mat or a pen?",
+        answer:
+          "A mat's intensity is fixed by your body weight and can feel sharp the first few uses (a folded towel underneath softens it while you adjust). A pen has an adjustable dial starting from a very faint level 1, so it's easier to control precisely how much sensation you get.",
+      },
+    ],
+  },
+  {
+    slug: "tens-unit-vs-acupressure-pen",
+    title: "TENS Unit vs. Acupressure Pen: What's Actually Different?",
+    excerpt:
+      "Both use a mild electrical pulse. The real differences are precision, setup time, and what you're pairing the pulse with.",
+    targetKeyword: "tens unit for pain",
+    quickAnswer:
+      "A TENS unit uses sticky pads wired to a control box to cover a broad area with electrical stimulation. An acupressure pen delivers a similar pulse through a small metal tip, combined with direct physical pressure, on one point at a time. TENS suits a larger area you want to leave in place; a pen suits a specific point you want to work directly.",
+    tags: ["Buying guide", "Comparisons"],
+    publishedAt: "2026-09-09",
+    updatedAt: "2026-09-09",
+    readingMinutes: 6,
+    coverImage: lifestyleArmsJoints,
+    body: `
+<p>People searching for a TENS unit and people searching for an acupressure pen are often, without quite realising it, weighing the same underlying question: an electrical pulse over a broad area with pads, or a pulse through a point with direct pressure. Here's the honest comparison.</p>
+<h2>What each device actually is</h2>
+<p>A TENS (transcutaneous electrical nerve stimulation) unit is a small control box wired to adhesive pads you stick to the skin. Once placed, the pads stay put and deliver a steady or pulsing current across the area they cover, hands-free, while you do something else.</p>
+<p>An acupressure pen delivers a similar family of low-intensity electrical pulse, but through a small metal tip you hold and press directly onto one point, combined with the physical pressure of the tip itself. It is active rather than hands-free, you are the one aiming it.</p>
+<h2>Coverage vs. precision</h2>
+<p>This is the real trade-off. A TENS pad covers a defined area, several square centimetres, continuously, which suits a broad ache across the lower back or a large muscle. A pen's 2&nbsp;mm tip covers one point at a time with real precision, which suits a single specific spot rather than a whole region.</p>
+<h2>Setup</h2>
+<p>TENS pads require placement: peel, position, connect the leads, set the box, and the adhesive itself is a running cost, most pads lose their stick after a handful of uses. A pen has no setup beyond picking it up, no leads, no adhesive, nothing to place.</p>
+<h2>Hands-free vs. hands-on</h2>
+<p>TENS is the clear winner if you want to set it and continue working, reading or watching something, the pads stay in place unattended. A pen requires your hand the entire session, it is a more active, deliberate few minutes rather than a background treatment.</p>
+<h2>Reaching your own back</h2>
+<p>Both work here, differently. TENS pads, once placed correctly (sometimes needing a second pair of hands), stay exactly where you put them. A pen's extended handle lets you reach and work a spot directly yourself, without needing help to place it.</p>
+<h2>Side-by-side</h2>
+<table>
+<thead><tr><th></th><th>TENS unit</th><th>Acupressure pen</th></tr></thead>
+<tbody>
+<tr><td>Best for</td><td>A broad area, hands-free</td><td>One specific point, hands-on</td></tr>
+<tr><td>Setup time</td><td>Peel, place, wire, dial</td><td>Pick it up, press the button</td></tr>
+<tr><td>Consumables</td><td>Replacement adhesive pads</td><td>None, one AA cell</td></tr>
+<tr><td>Precision</td><td>Whole pad area</td><td>2mm tip, exact point</td></tr>
+<tr><td>Placing on your own back</td><td>Often needs a second pair of hands</td><td>Handle extends your own reach</td></tr>
+</tbody>
+</table>
+<p>If what you want is to stick something on and forget about it while you work, a TENS unit is built for exactly that. If you have one point you want to find and work directly, <a href="${productPath}">a pen</a> is the more precise tool for the job.</p>
+`,
+    faqs: [
+      {
+        question: "Is an acupressure pen a type of TENS unit?",
+        answer:
+          "They're closely related. Both deliver a low-intensity electrical pulse through the skin, in the same broad TENS family. The main difference is delivery: a TENS unit uses adhesive pads over a broad area, while an acupressure pen uses a small pressed tip on one specific point, combined with physical pressure.",
+      },
+      {
+        question: "Can I use a TENS unit and an acupressure pen together?",
+        answer:
+          "There's no inherent conflict using them on different days or areas, but don't run both on the same spot at the same time, and follow each device's own safety guidance, particularly around pacemakers, pregnancy and placement, before combining anything.",
+      },
+    ],
+  },
+  {
+    slug: "facial-pressure-points-for-tension",
+    title: "Facial Pressure Points for Tension: A Calmer Face, Not a New One",
+    excerpt:
+      "The jaw, temples and brow hold tension most people never notice until it's pointed out. Here's where to work it, gently.",
+    targetKeyword: "facial acupressure points",
+    quickAnswer:
+      "The most useful facial tension points sit at the temples, the hinge of the jaw, and the inner brow. All are thin-skinned, so use the lowest intensity setting and light pressure only. This is about easing tension, not a cosmetic or anti-ageing treatment, and we will not describe it as one.",
+    tags: ["Point guides"],
+    publishedAt: "2026-09-09",
+    updatedAt: "2026-09-09",
+    readingMinutes: 5,
+    coverImage: headsMacro,
+    body: `
+<p>A quick note before anything else, because this topic attracts a lot of overreach elsewhere: this is a guide to easing facial muscle tension, the same jaw-clenching, brow-furrowing tightness that builds up during a stressful day. It is not a cosmetic treatment, it will not change the structure or appearance of your face, and any site that implies otherwise is overselling a self-massage routine.</p>
+${SAFETY_HTML}
+<p><strong>Facial-specific rule:</strong> stay off the eyes and eyelids entirely, keep at least a thumb's width of clearance, and use the lowest intensity setting available anywhere on the face.</p>
+<h2>The temples</h2>
+<p>The soft hollow just behind the outer corner of each eyebrow. A common spot for tension to build from jaw clenching or squinting at a screen, and one of the more satisfying facial spots to work.</p>
+<h2>The hinge of the jaw</h2>
+<p>Place a finger just in front of your ear and clench your jaw, you'll feel the muscle bunch. That bunching point, right at the jaw hinge, is where clenching and grinding tension concentrates.</p>
+<p>Light pressure, a lower setting than you'd use on the shoulder, this is thin tissue directly over a joint.</p>
+<h2>The inner brow</h2>
+<p>The notch where the eyebrow meets the bridge of the nose, the spot people rub instinctively when frowning at a screen for too long. Stay on the bony ridge, not the soft tissue toward the eye.</p>
+<h2>A gentle three-minute round</h2>
+<ol>
+<li>Both temples: 30 seconds each, low setting.</li>
+<li>Jaw hinge, both sides: 30 seconds each.</li>
+<li>Inner brow notch, both sides: 20 seconds each.</li>
+</ol>
+<p>Slow and light throughout. The face rewards a gentler touch than almost anywhere else the pen gets used, and there is no benefit to pushing the intensity higher here.</p>
+<p>The <a href="${productPath}">fine point head</a>, at its lowest one or two settings, is the right tool for every spot on this list.</p>
+`,
+    faqs: [
+      {
+        question: "Can facial acupressure reduce wrinkles?",
+        answer:
+          "No, and we won't claim otherwise. This is a tension-easing self-massage practice, not a cosmetic or anti-ageing treatment. It has no effect on the structure or appearance of your skin.",
+      },
+      {
+        question: "Is it safe to use an acupressure pen on your face?",
+        answer:
+          "With care. Use the lowest intensity setting, stay a thumb's width clear of the eyes and eyelids at all times, and stop if anything feels sharp rather than a gentle tap. The safety list in our safety guide (pacemakers, pregnancy, broken skin) applies to the face exactly as it does everywhere else.",
+      },
+    ],
+  },
+  {
+    slug: "acupressure-points-for-nausea",
+    title: "The Wrist Point People Swear By for Nausea",
+    excerpt:
+      "One point does most of the work here, on the inner wrist, three finger-widths from the crease. Here's where it is and how people use it.",
+    targetKeyword: "acupressure points for nausea",
+    quickAnswer:
+      "The point most associated with nausea sits on the inner forearm, roughly three finger-widths below the wrist crease, between the two central tendons. It's the same spot used in over-the-counter anti-nausea wristbands. Use a low setting, this is thin-skinned tissue over tendon.",
+    tags: ["Point guides"],
+    publishedAt: "2026-09-09",
+    updatedAt: "2026-09-09",
+    readingMinutes: 5,
+    coverImage: lifestyleArmsJoints,
+    body: `
+<p>If you've ever seen someone wearing a plain elastic band around their wrist on a boat or a long flight, they were very likely using this exact point, it's the same one those over-the-counter nausea wristbands press on with a fixed plastic bead.</p>
+<h2>Where it is</h2>
+<p>On the inside of your forearm, palm facing up. Measure roughly three finger-widths down from the wrist crease, toward the elbow. You're looking for the spot between the two central tendons you can feel stand up if you make a loose fist, that gap is the point.</p>
+<p>It's a small, precise spot over tendon and thin tissue, so a fine point head at a low setting is the right combination, broader heads and higher intensities are both the wrong tool here.</p>
+<h2>What the evidence actually says</h2>
+<p>This is one of the better-studied acupressure points, largely because of those wristbands, and it's worth being honest about where the evidence sits: some trials on this point for nausea (particularly motion sickness and post-operative nausea) report a modest benefit, but the research is mixed and far from conclusive, and reviews disagree on how much of the effect is genuinely physiological versus expectation. It is a long-standing, widely-used tradition with some supportive but inconclusive research behind it, not a proven remedy.</p>
+<p>If nausea is severe, persistent, or comes with other symptoms, see a doctor rather than relying on a pressure point.</p>
+<h2>How people use it</h2>
+<ol>
+<li>Locate the spot, three finger-widths below the wrist crease, between the central tendons.</li>
+<li>Start at level 1, work up only to a level that's clearly felt and still comfortable.</li>
+<li>Hold for one to two minutes per wrist.</li>
+<li>Repeat on the other wrist, or as needed.</li>
+</ol>
+<p>Do not use this, or any point, if you're pregnant, this particular point is one traditionally flagged in that context, and the general rule already covers it: pregnancy means skipping the device entirely.</p>
+`,
+    faqs: [
+      {
+        question: "Does the wrist acupressure point really help with nausea?",
+        answer:
+          "The evidence is mixed. Some studies, particularly around motion sickness and post-operative nausea, report a modest benefit; others don't find a clear effect beyond placebo. It's fair to call it a widely-used tradition with some supportive but inconclusive research, not a proven remedy, and it isn't a substitute for medical care if nausea is severe or persistent.",
+      },
+      {
+        question: "Is this the same point anti-nausea wristbands use?",
+        answer:
+          "Yes, over-the-counter motion sickness wristbands press a fixed plastic bead on this same inner-wrist point, roughly three finger-widths below the crease. An acupressure pen lets you find and work the exact spot yourself with adjustable pressure instead of a fixed bead.",
+      },
+    ],
+  },
+  {
+    slug: "what-are-acupressure-meridians",
+    title: "What Are Meridians? The 2,000-Year-Old Map Behind Acupressure",
+    excerpt:
+      "Meridians are the pathways every acupressure chart is built from. Here's what the concept actually means, and how it relates to what a modern device does.",
+    targetKeyword: "chinese acupressure points",
+    quickAnswer:
+      "Meridians are pathways in traditional Chinese medicine believed to carry the body's energy, or qi, connecting the acupressure and acupuncture points mapped along them. They're a traditional framework, not an anatomical structure, but the points themselves are real, physical, findable locations that people have pressed by hand for over two thousand years.",
+    tags: ["Getting started"],
+    publishedAt: "2026-09-09",
+    updatedAt: "2026-09-09",
+    readingMinutes: 6,
+    coverImage: cover,
+    body: `
+<p>Every acupressure chart, every point code, every "meridian massage" description on this site traces back to one underlying idea, so it's worth explaining properly rather than assuming everyone already knows it.</p>
+<h2>The basic concept</h2>
+<p>In traditional Chinese medicine, meridians are pathways said to carry qi, usually translated as vital energy or life force, through the body. There are fourteen major meridians, each running along a specific route and associated with an organ system in the traditional framework, Lung, Large Intestine, Stomach, Spleen, Heart, and so on through to Liver.</p>
+<p>Acupressure and acupuncture points are specific locations along these pathways where, in the tradition, that flow of energy can be accessed and influenced through pressure, needles, or heat.</p>
+<h2>How old is this, really</h2>
+<p>Genuinely old. The classical point maps trace back well over two thousand years, with foundational texts like the Huangdi Neijing (the Yellow Emperor's Inner Classic) dating to roughly the Han dynasty. The specific points and meridians in use today are, for the most part, the same ones described in those early texts, refined and standardised over centuries rather than invented recently.</p>
+<h2>Tradition versus anatomy</h2>
+<p>Here's the distinction worth being precise about: meridians are not nerves, blood vessels, or lymphatic channels, no dissection has ever found a physical structure matching the meridian maps. That doesn't make the points themselves imaginary, they are specific, physical, findable locations on the body, many of which correspond to areas with genuine anatomical significance (nerve clusters, muscle trigger points, areas of higher tissue sensitivity). What's traditional, rather than anatomically demonstrated, is the idea of energy flowing along connecting lines between them.</p>
+<p>We think that distinction matters enough to state plainly rather than blur: a tradition with a long history and real cultural weight is not the same claim as a scientifically demonstrated mechanism, and we'd rather tell you which one you're getting.</p>
+<h2>What a modern device actually does with this</h2>
+<p>An acupressure pen doesn't do anything with qi or meridians directly, it cannot, that's not a claim a battery and a metal tip can make good on. What it does is let you apply precise, repeatable physical pressure plus a low-intensity electrical pulse to the same physical locations the tradition has mapped for two millennia, the same points people have pressed with thumbs and knuckles the whole time, just with a tool that reaches further and holds a steady setting.</p>
+<p>Whether working those points does anything beyond what a good self-massage does is a separate, genuinely open question, covered honestly in our <a href="/blog/do-acupressure-pens-work">"do acupressure pens work" guide</a>. This article is just about what the map itself actually is.</p>
+`,
+    faqs: [
+      {
+        question: "Are meridians a real anatomical structure?",
+        answer:
+          "No dissection has found a physical structure matching the meridian maps, so they aren't nerves, blood vessels or lymph channels. They're a traditional Chinese medicine framework for describing energy pathways. The acupressure points themselves are real, findable physical locations, some of which do correspond to areas of genuine anatomical significance, but the connecting meridian lines are a conceptual, traditional map.",
+      },
+      {
+        question: "How old is meridian theory?",
+        answer:
+          "The core framework traces back over two thousand years, with foundational texts like the Huangdi Neijing dating to roughly the Han dynasty. Most points and meridians used today are the same ones described in those early classical texts.",
+      },
+    ],
+  },
+  {
+    slug: "cordless-pain-relief-tools",
+    title: "Cordless Pain-Relief Tools: Why No Wires Wins",
+    excerpt:
+      "Corded devices tie you to an outlet and a chair. Here's what you actually give up, and gain, by going cordless.",
+    targetKeyword: "wireless tens unit",
+    quickAnswer:
+      "A cordless device runs on a battery instead of mains power or a tethered control box, which means no outlet, no trailing wire, and the freedom to use it anywhere, a couch, a desk, a hotel room. The trade-off is that you eventually replace or recharge the battery, a small cost against a real gain in where and how you can use the thing.",
+    tags: ["Buying guide"],
+    publishedAt: "2026-09-09",
+    updatedAt: "2026-09-09",
+    readingMinutes: 5,
+    coverImage: lifestyleDesk,
+    body: `
+<p>"Wireless" gets thrown around loosely in pain-relief and massage devices, so it's worth being precise: here we mean genuinely cordless, no cable to an outlet, no wired control box, nothing tethering you to a fixed spot while you use it.</p>
+<h2>What a corded or tethered device actually costs you</h2>
+<p>A mains-powered device needs to stay near an outlet, which decides where you can use it before you've decided how you want to use it. A tethered device, like a TENS unit with pads wired to a control box, is more mobile but still involves a wire between two points on your body, something that can catch, pull, or simply be annoying mid-session.</p>
+<h2>What cordless actually gets you</h2>
+<p>A device that runs entirely on an internal battery goes wherever you go, a couch, a desk between meetings, a hotel room, the back seat of a car. There is nothing to route around, catch on clothing, or worry about tugging loose mid-use.</p>
+<p>It also simplifies setup to almost nothing: pick it up, press the button. No cable to untangle, no outlet to locate, no control box to carry alongside the pads.</p>
+<h2>The real trade-off</h2>
+<p>Battery power is finite, a cordless device eventually needs a fresh or recharged battery. The honest comparison isn't cordless-versus-corded on convenience, corded loses that comparison outright, it's whether the battery upkeep is worth the freedom. For something you use in five-to-fifteen-minute sessions rather than continuously, a single standard battery typically lasts a genuinely long time.</p>
+<h2>What to check before buying a cordless device</h2>
+<ul>
+<li><strong>Battery type.</strong> A standard, widely available cell (like an AA) means you're never stuck waiting on a proprietary charger, you can pick up a replacement anywhere.</li>
+<li><strong>Size and weight.</strong> Cordless only delivers real freedom if the device is also small enough to actually carry around, a bulky cordless unit is a contradiction.</li>
+<li><strong>What it replaces.</strong> A cordless device that still needs adhesive pads, cases, or accessories hasn't fully removed the setup friction, just one part of it.</li>
+</ul>
+<p><a href="${productPath}">The AccuPenPro pen</a> runs on a single AA cell, at 170&nbsp;mm and 60&nbsp;grams, which is the specific combination that makes cordless mean something in practice: nothing to plug in, nothing to route, small enough for a bag.</p>
+`,
+    faqs: [
+      {
+        question: "Do cordless pain-relief devices work as well as corded ones?",
+        answer:
+          "The underlying mechanism, whether it's an electrical pulse or physical pressure, doesn't depend on where the power comes from. Cordless devices deliver the same pulse a mains-powered or wired unit does; the difference is entirely in where and how conveniently you can use it, not in the sensation itself.",
+      },
+      {
+        question: "How long does a battery last in a cordless acupressure pen?",
+        answer:
+          "It depends on usage, but for a device used in short five-to-fifteen-minute sessions rather than continuously, a single standard AA cell typically lasts a long time before needing replacement, far longer than something powered continuously through the day.",
       },
     ],
   },
