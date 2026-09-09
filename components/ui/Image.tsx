@@ -21,7 +21,20 @@ import { cn } from "@/lib/utils";
  *    metaobject images are the overwhelming majority of distinct source
  *    URLs in this app, so this is what actually keeps the quota from
  *    maxing out. Only applies when the caller hasn't already set its own
- *    `loader`; every other source still optimizes through Vercel as before.
+ *    `loader`; every other remote source still optimizes through Vercel as
+ *    before.
+ *
+ *    Local `/public` sources (the site's own logo, product photos, blog
+ *    covers) get `unoptimized` instead of a loader — there's no remote CDN
+ *    to delegate a resize to for a same-origin file, so the only way to keep
+ *    these off Vercel's `/_next/image` quota too is to skip the pipeline
+ *    outright. This still ships real files, not degraded ones: every local
+ *    image referenced through this component already has hand-exported
+ *    AVIF/WebP siblings alongside its PNG (see public/product,
+ *    public/lifestyle, public/brand) sized close to their largest on-page
+ *    use, so the responsive `srcset` Vercel would have generated isn't
+ *    buying much beyond what's already on disk. Only applies when the
+ *    caller hasn't already set its own `unoptimized`.
  *
  * 2. Shows the shared `.skeleton` shimmer (app/globals.css) as the image's
  *    own CSS background while it loads. A background on a replaced element
@@ -64,6 +77,7 @@ function shopifyLoader({ src, width }: ImageLoaderProps): string {
 export default function Image({
   src,
   loader,
+  unoptimized,
   className,
   skeleton = true,
   ...rest
@@ -71,10 +85,12 @@ export default function Image({
   /** Set false for anything with real transparency (logo, icon) — see note above. Default true. */
   skeleton?: boolean;
 }) {
+  const shopifyHosted = isShopifyHosted(src);
   return (
     <NextImage
       src={src}
-      loader={loader ?? (isShopifyHosted(src) ? shopifyLoader : undefined)}
+      loader={loader ?? (shopifyHosted ? shopifyLoader : undefined)}
+      unoptimized={unoptimized ?? (!shopifyHosted && !loader ? true : undefined)}
       className={skeleton ? cn("skeleton", className) : className}
       {...rest}
     />

@@ -33,7 +33,7 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_2fr]">
           {/* --------------------------- brand --------------------------- */}
           <div>
-            <Wordmark variant="light" className="h-11" />
+            <Wordmark variant="light" className="h-20" />
 
             <p className="font-display mt-6 text-[1.6rem] leading-tight font-light text-chalk text-balance">
               Ten minutes, most evenings.

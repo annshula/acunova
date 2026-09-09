@@ -52,7 +52,7 @@ export function Logo({
         height={887}
         priority
         skeleton={false}
-        className={showTagline ? "h-14 w-auto sm:h-16" : "h-9 w-auto sm:h-10"}
+        className={showTagline ? "h-16 w-auto sm:h-20" : "h-12 w-auto sm:h-14"}
         style={{ aspectRatio: `1774 / 887` }}
       />
     </Link>
