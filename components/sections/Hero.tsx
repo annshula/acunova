@@ -122,13 +122,14 @@ export default function Hero() {
           {hero.sub}
         </p>
 
-        {/* A visually-quiet, fuller answer immediately after the punchy hero
-            line — see content/copy.ts hero.directAnswer for why this exists
-            as its own paragraph rather than folded into `sub`. Small and
-            muted so it reads as supporting detail, not a second headline. */}
-        <p className="mt-4 max-w-[58ch] text-[0.86rem] leading-[1.7] text-ink-mute text-pretty">
-          {hero.directAnswer}
-        </p>
+        {/* A fuller direct answer, present in the HTML immediately after the
+            hero copy for AI/AEO crawlers, but `sr-only` — visually hidden,
+            not display:none — so it doesn't clutter the hero's look. Screen
+            readers and text-based crawlers still see it; a display:none
+            block risks being discounted by some crawlers as hidden content,
+            which sr-only's clip-based hiding avoids. See content/copy.ts
+            hero.directAnswer for the full reasoning. */}
+        <p className="sr-only">{hero.directAnswer}</p>
 
         <motion.div
           variants={item}

@@ -245,7 +245,7 @@ export default function Nav() {
               role="dialog"
               aria-modal="true"
               aria-label="Menu"
-              className="fixed inset-y-0 right-0 z-90 flex w-[min(21rem,88vw)] flex-col bg-canvas shadow-(--shadow-e4) lg:hidden"
+              className="fixed inset-y-0 right-0 z-90 flex w-full flex-col bg-canvas shadow-(--shadow-e4) lg:hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}

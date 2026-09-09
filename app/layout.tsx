@@ -109,8 +109,10 @@ export const metadata: Metadata = {
     },
   },
   // No app/favicon.ico or app/icon.png for Next's auto-detection to pick up,
-  // so it's wired explicitly to the existing PWA icons in /public instead of
-  // shipping a new asset just for this.
+  // so it's wired explicitly to /public/icon-192.png and icon-512.png
+  // instead of shipping a new asset just for this. Both are a real crop of
+  // the pen mark from public/brand/accupen-logo-black.png (previously a
+  // generic placeholder icon unrelated to the brand).
   icons: {
     icon: [
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
