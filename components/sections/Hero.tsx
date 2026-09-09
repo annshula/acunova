@@ -59,22 +59,22 @@ const SLIDES: HeroSlide[] = [
   {
     desktopSrc: "/hero/linen-desktop.png",
     mobileSrc: "/hero/linen-mobile.png",
-    alt: "",
+    alt: "The AccuPenPro pen and its four interchangeable heads laid out on white linen",
   },
   {
     desktopSrc: "/hero/inuse-desktop.png",
     mobileSrc: "/hero/inuse-mobile.png",
-    alt: "",
+    alt: "A close-up of the AccuPenPro pen being pressed against the side of the neck",
   },
   {
     desktopSrc: "/hero/forearm-desktop.png",
     mobileSrc: "/hero/forearm-mobile.png",
-    alt: "",
+    alt: "A close-up of the AccuPenPro pen's tip pressed against the inner forearm",
   },
   {
     desktopSrc: "/hero/dish-desktop.png",
     mobileSrc: "/hero/dish-mobile.png",
-    alt: "",
+    alt: "The AccuPenPro pen resting beside a small ceramic dish on a linen surface",
   },
 ];
 
