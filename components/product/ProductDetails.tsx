@@ -14,6 +14,44 @@ type Entry = {
 };
 
 /**
+ * The Shopify feature-highlight photos for these three labels are square
+ * (800x800) product shots, cropped hard by this section's 4:3 `object-cover`
+ * box — the auto-sensing display and the head tips end up clipped at the
+ * edges. These three real studio photos (public/product/) replace the
+ * synced image for these labels only; every other feature (currently just
+ * "Free tracked shipping") keeps whatever Shopify sends.
+ */
+const LOCAL_FEATURE_IMAGES: Record<string, CatalogImage & { fit?: "cover" | "contain" }> = {
+  "Auto point-sensing": {
+    src: "/product/pen-tip-closeup.png",
+    alt: "Close-up of the AccuPenPro pen's intensity display and control button",
+    width: 2048,
+    height: 2048,
+  },
+  "Two head styles": {
+    // 1376x768 is wider than the card's 4:3 box, and all four heads span
+    // its full width — a cover crop always clips the rightmost one. Only
+    // this entry sets fit: "contain" (below) so it letterboxes instead of
+    // cropping a head out of frame.
+    src: "/product/heads-macro.png",
+    alt: "The four AccuPenPro head styles laid out side by side",
+    width: 1376,
+    height: 768,
+    fit: "contain",
+  },
+  "Heads swap in seconds": {
+    // Cropped to 4:3 from pen-heads-layout.png (originally 1856x2304
+    // portrait, mostly empty background) so this section's object-cover
+    // box shows the full pen and every detached head instead of clipping
+    // the ones furthest from center.
+    src: "/product/pen-heads-layout-crop.png",
+    alt: "The AccuPenPro pen with its interchangeable heads detached and laid out",
+    width: 1856,
+    height: 1392,
+  },
+};
+
+/**
  * Feature highlights and the spec sheet.
  *
  * Rebuilt, and the thing it fixes is the worst spacing problem on the site.
@@ -35,7 +73,9 @@ type Entry = {
 export function ProductDetails({ product }: { product: Product }) {
   // Shipping isn't a property of the product — BuyBox's guarantee list already
   // covers it, so repeating it here would pad a section about the object.
-  const features = product.features.filter((f) => f.icon !== "ship");
+  const features = product.features
+    .filter((f) => f.icon !== "ship")
+    .map((f) => ({ ...f, image: LOCAL_FEATURE_IMAGES[f.label] ?? f.image }));
   const specs = product.specs;
 
   if (features.length === 0 && specs.length === 0) return null;

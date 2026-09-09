@@ -110,15 +110,12 @@ export function ProductPurchase({
   product,
   rating,
   bestSeller = false,
-  displayTitle,
 }: {
   product: Product;
   /** Aggregate rating shown as a scroll-to-reviews link — only present when this product has a real review dataset (gated on verified data). */
   rating?: { average: number; count: number };
   /** Optional "Best seller" pill above the title — set only for the flagship pen. */
   bestSeller?: boolean;
-  /** Optional on-brand H1 override (content/product-pen.ts's `displayTitle`) — falls back to the raw Shopify catalog title for any listing that hasn't defined one. */
-  displayTitle?: string;
 }) {
   // Default to whichever variant carries the deepest real discount (a BOGO
   // or bundle deal) rather than always the first — that's the offer worth
@@ -210,10 +207,10 @@ export function ProductPurchase({
           <h1
             className={cn(
               "font-sans mt-5 leading-[1.18] font-semibold tracking-[-0.02em] text-ink text-balance",
-              titleSizeClass(displayTitle ?? product.title),
+              titleSizeClass(product.title),
             )}
           >
-            {displayTitle ?? product.title}
+            {product.title}
           </h1>
 
           {/* Minimal scroll guide to the build & QC sections further down

@@ -25,17 +25,6 @@ export const pen = {
   // years story, and its comparison table because of this one string.
   handle: "acupressure-pen-pro",
 
-  // Display override for <title>/<h1> on the PDP only. data/product.json's
-  // `title` ("Acupressure Pen - Auto-Sensing Meridian Massage Tool, No
-  // Needles") is the raw Shopify listing title, kept as-is there for
-  // Product schema `name` and left alone for the next `shopify:sync` to
-  // overwrite freely. This shorter, on-brand string is what a shopper (and
-  // an AI/SEO crawler comparing <title> to <h1>) should actually read as
-  // the page's topic — it shares its core words with site.ts's own
-  // homepage title instead of standing alone as unbranded keyword-stuffed
-  // listing copy.
-  displayTitle: "AccuPenPro Acupressure Pen",
-
   /* ------------------------------------------------------------------ */
   /* Cinematic dark story band — right after the buy box.                */
   /* ------------------------------------------------------------------ */
