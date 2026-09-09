@@ -11,6 +11,7 @@ import Reviews from "@/components/sections/Reviews";
 import Faq from "@/components/sections/Faq";
 import FinalCta from "@/components/sections/FinalCta";
 import Schema from "@/components/Schema";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 /**
  * The home page, built as a Long-Scroll Narrative (see
@@ -44,6 +45,12 @@ export default function Home() {
   return (
     <>
       <Schema />
+      {/* Minimal single-level breadcrumb — every other page already carries
+          one (BreadcrumbSchema wired into /shop, /products/[handle], /blog,
+          /faq); the home page was the one gap an SEO/AEO/GEO scan flags,
+          since it is the root of the hierarchy and had no BreadcrumbList of
+          its own. */}
+      <BreadcrumbSchema items={[{ name: "Home", path: "/" }]} />
       <main>
         <Hero />
         <BenefitGrid />

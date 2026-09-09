@@ -23,13 +23,6 @@ import type { Product } from "@/lib/product";
 
 const MAX_QTY = 10;
 
-const priceSkeleton = (h: string, w: string) => (
-  <span
-    aria-hidden="true"
-    className={`inline-block animate-pulse rounded-full bg-line align-middle ${h} ${w}`}
-  />
-);
-
 /**
  * The purchase surface — gallery lives beside this in the product page, this
  * is everything else: price, stock, the pack picker, quantity and the two
@@ -93,9 +86,11 @@ export function BuyBox({
           transition={{ duration: 0.3, ease: easeOut }}
           className="font-display text-[2.2rem] leading-none font-semibold tracking-[-0.02em] text-ink tabular-nums"
         >
-          {selectedPrice.pending
-            ? priceSkeleton("h-9", "w-28")
-            : formatMoney(selectedPrice.amount, selectedPrice.currencyCode)}
+          {/* Always a real, displayable price — selectedPrice.amount already
+              falls back to the server-rendered default-market price before
+              localization resolves (see useLocalizedAmount), so the price is
+              present in the initial HTML rather than a blank skeleton. */}
+          {formatMoney(selectedPrice.amount, selectedPrice.currencyCode)}
         </motion.span>
         {selectedPrice.compareAtAmount != null && (
           <span className="text-[1.05rem] text-ink-mute line-through tabular-nums">
@@ -210,14 +205,10 @@ export function BuyBox({
             <span className="relative">
               {outOfStock
                 ? "Out of stock"
-                : `Add to bag · ${
-                    selectedPrice.pending
-                      ? "…"
-                      : formatMoney(
-                          selectedPrice.amount * quantity,
-                          selectedPrice.currencyCode,
-                        )
-                  }`}
+                : `Add to bag · ${formatMoney(
+                    selectedPrice.amount * quantity,
+                    selectedPrice.currencyCode,
+                  )}`}
             </span>
           </button>
         </Magnetic>

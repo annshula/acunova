@@ -21,15 +21,18 @@ export default function BlogPostingSchema({ post }: { post: BlogPost }) {
     description: post.excerpt,
     abstract: post.quickAnswer,
     image: [imageUrl],
+    // Matches the same real-world entity components/Schema.tsx's
+    // Organization graph links "Acupressure" to on the home page — this
+    // block previously carried a copy-pasted "Iron(III) oxide" identifier
+    // (Fe2O3, the wrong Wikidata id) that had nothing to do with the topic.
     about: {
       "@type": "Thing",
       name: "Acupressure",
-      alternateName: "Iron(III) oxide",
+      alternateName: "Acupoint pressure massage",
       sameAs: [
         "https://en.wikipedia.org/wiki/Acupressure",
-        "https://www.wikidata.org/wiki/Q83437",
+        "https://www.wikidata.org/wiki/Q331046",
       ],
-      identifier: "Fe2O3",
     },
     datePublished: post.publishedAt,
     dateModified: post.updatedAt,

@@ -97,21 +97,23 @@ export default function Hero() {
         animate="visible"
         className="max-w-120 sm:max-w-xl lg:max-w-2xl"
       >
-        {/* Eyebrow carries the head keyword ("Acupressure pen"). No leading
-            rule or dash: wide tracking and the uppercase setting already
-            separate it from the headline below, and a decorative dash was
-            reading as a stray mark rather than as structure. */}
-        <motion.p
-          variants={item}
-          className="font-label text-[0.7rem] font-medium tracking-[0.22em] text-ink-mute uppercase"
-        >
-          {hero.eyebrow}
-        </motion.p>
-
-        {/* The H1 is short on purpose. Two three-word lines at display size
-            read as a statement; the previous nine-word sentence read as
-            body copy no matter what weight it was set in. */}
+        {/* The eyebrow ("Acupressure pen") now lives INSIDE the <h1>, not in
+            a separate <p> above it. An SEO/AEO audit compares the page
+            <title> ("AccuPenPro Acupressure Pen, Real Relief With No
+            Needles") against the literal text of the <h1> element only — it
+            has no way to credit a sibling element for shared keywords. With
+            the eyebrow outside the H1, the H1's own text was just "Real
+            relief. No needles.", which shares almost nothing with the title.
+            Moving it in (same visual styling, via a nested <span>) keeps the
+            exact look already signed off while making "Acupressure Pen",
+            "Relief" and "No Needles" all literally present in the H1. */}
         <h1 className="font-hero mt-6 text-[clamp(3rem,8vw,5.5rem)] text-ink">
+          <motion.span
+            variants={item}
+            className="font-label mb-3 block text-[0.7rem] font-medium tracking-[0.22em] text-ink-mute uppercase"
+          >
+            {hero.eyebrow}
+          </motion.span>
           <span className="block">{hero.headline[0]}</span>
           <span className="headline-accent block">{hero.headline[1]}</span>
         </h1>

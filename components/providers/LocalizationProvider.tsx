@@ -104,8 +104,19 @@ export function useLocalization() {
 /**
  * Resolves the price to display for a variant: the synced catalog's price
  * for the shopper's country when known, otherwise the caller's fallback.
- * `pending` is true only until the country list has loaded once — after
- * that the lookup is synchronous, so it never flips back to true again.
+ *
+ * `pending` reflects only whether *localization* has resolved yet — it is
+ * NOT "do we have a price to show". The caller's fallback (the product's
+ * server-rendered default-market price) is always known synchronously, on
+ * the very first render, server-side included. Gating the visible price on
+ * `ready` used to mean the initial HTML showed an empty skeleton with no
+ * price text at all — a real "price is JS-only" problem for anything
+ * reading the static markup (crawlers, an SEO/AEO audit, no-JS clients) —
+ * even though a correct fallback price was sitting right there in the props
+ * the whole time. `amount`/`currencyCode`/`compareAtAmount` below always
+ * resolve to a real, displayable price; `pending` is exposed separately so a
+ * caller that wants to show a "still localizing" affordance still can,
+ * without ever blanking the price itself.
  */
 export function useLocalizedAmount(
   variantId: string | null,
@@ -126,6 +137,9 @@ export function useLocalizedAmount(
       compareAtAmount: resolved
         ? resolved.compareAtAmount
         : fallbackCompareAt,
+      // Kept for callers that want a "still localizing" affordance — never
+      // used to decide whether a price is renderable, since a real fallback
+      // price is always already present above.
       pending,
       isLocalized: Boolean(resolved && effectiveCountry),
     }),

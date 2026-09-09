@@ -398,6 +398,15 @@ export const faqs = [
     a: "The pen, all four heads (rounded ball, ridged, fine point and flat spoon), a storage case and a quick-start card. It runs on a single AA battery rather than a charger, which is also why it is fine to pack in hand luggage.",
   },
   {
+    id: "why-not-hands-or-pads",
+    // Reuses the real, already-published comparison rows (content/copy.ts's
+    // `comparison` section) rather than inventing a new claim — same facts,
+    // question form. Answer-engine coverage wants an explicit "Why" question
+    // alongside the existing What/Does/Is/Where/How ones.
+    q: "Why use an acupressure pen instead of your hands or stick-on pads?",
+    a: "Reach and precision. A 2 mm tip lands on one point at a time, shown on a display across 9 levels, where a thumb covers several points at once and tires out, and a stick-on pad covers a whole area on a guess. The 170 mm body also reaches the middle of your own back and shoulders, which your own hands mostly cannot. There is nothing to peel, place or wire, and no adhesive pads to keep buying, just one AA battery and four reusable heads.",
+  },
+  {
     id: "delivery",
     q: "How long does delivery take, and what does it cost?",
     a: `Shipping is free to the US and Canada, with no minimum order. Orders are processed within 1–3 business days, then tracked delivery typically takes ${daysRangeDisplay(defaultRegion)} depending on where you are. See the full country-by-country breakdown on our About page. Your tracking number arrives by email the moment the label is scanned.`,

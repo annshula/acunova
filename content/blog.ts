@@ -148,7 +148,7 @@ ${SAFETY_HTML}
 <h2>Does acupressure itself do anything?</h2>
 <p>Here the honest answer is: the evidence is mixed, and it is weaker than enthusiasts claim and stronger than sceptics allow.</p>
 <p>Acupressure and acupuncture have been studied a great deal, particularly for musculoskeletal discomfort and nausea. Reviews of that literature tend to land in a similar place: some studies find modest effects, the studies are frequently small or poorly blinded, and separating a genuine effect from placebo is notoriously difficult when the intervention involves someone attentively pressing on you for ten minutes.</p>
-<p>What we will not do is cherry-pick the favourable studies and present them as settled. If you want to read the state of the evidence yourself, the US National Center for Complementary and Integrative Health maintains a plain-language summary that does not sell anything.</p>
+<p>What we will not do is cherry-pick the favourable studies and present them as settled. If you want to read the state of the evidence yourself, the <a href="https://www.nccih.nih.gov/health/acupuncture" target="_blank" rel="noopener noreferrer">US National Center for Complementary and Integrative Health maintains a plain-language summary</a> that does not sell anything.</p>
 <h2>Will it fix my back?</h2>
 <p>We do not know, and neither does anyone selling you one.</p>
 <p>This device is not cleared by the FDA or Health Canada. It is not a medical device. It has not been evaluated as a treatment for any condition, and if your pain is persistent, worsening, or comes with numbness, weakness or anything else unusual, the correct move is a doctor, not a gadget, and not a blog post.</p>

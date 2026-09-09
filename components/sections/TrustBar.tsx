@@ -6,6 +6,15 @@ import { benefitIcons, StarSolidIcon } from "@/components/ui/LineIcons";
 import { useLocalization } from "@/components/providers/LocalizationProvider";
 import { site } from "@/lib/site";
 import { daysRange, regionForCountry } from "@/lib/shipping";
+import { syncedAt } from "@/lib/catalog";
+
+function formatSyncedDate(iso: string) {
+  return new Date(iso).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+}
 
 /**
  * The credibility strip — the poster's bottom bar, rebuilt to only state
@@ -99,6 +108,22 @@ export default function TrustBar() {
           label="to report a damaged, missing or wrong item, we replace it free"
         />
       </Stagger>
+
+      {/* Key facts / TL;DR summary + a real, visible <time> — the same
+          pattern the product page's "Key facts" card already uses (see
+          app/products/[handle]/page.tsx), surfaced on the home page too. The
+          strip above states four checkable facts already; this line just
+          makes the page's real last-updated date visible in the markup
+          (not only inside the JSON-LD's dateModified) and gives a reader or
+          an answer engine a one-line summary before it has to read the rest
+          of the page. syncedAt is the real Shopify catalog sync timestamp
+          (data/product.json), not a fabricated "updated today". */}
+      <p className="mx-auto max-w-310 px-5 pb-6 text-center text-[0.72rem] text-ink-mute sm:px-8">
+        <span className="font-medium text-ink-soft">Key facts:</span> 9
+        intensity levels · 4 interchangeable heads · one AA battery · free
+        shipping to 5 countries. Page last updated{" "}
+        <time dateTime={syncedAt}>{formatSyncedDate(syncedAt)}</time>.
+      </p>
     </section>
   );
 }

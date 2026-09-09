@@ -6,11 +6,13 @@ import { notFound } from "next/navigation";
 import BlogPostingSchema from "@/components/blog/BlogPostingSchema";
 import FAQSchema from "@/components/blog/FAQSchema";
 import { BlogCard } from "@/components/blog/BlogCard";
+import { TableOfContents } from "@/components/blog/TableOfContents";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Reveal } from "@/components/ui/Motion";
 import { blogAuthor, blogPosts, getBlogPost } from "@/content/blog";
 import { site } from "@/lib/site";
 import { absoluteUrl } from "@/lib/seo";
+import { addHeadingIds, extractToc } from "@/lib/toc";
 
 export const revalidate = 3600;
 
@@ -82,6 +84,14 @@ export default async function BlogPostPage({
   if (!post) notFound();
 
   const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
+
+  // Jump-link ToC only for genuinely long-form posts — every current post
+  // has 4+ <h2> sections and a 5-7 min read, which is exactly the shape a
+  // reader benefits from being able to jump around in. A short post (should
+  // one ever ship with 2-3 headings) just skips it rather than rendering a
+  // token-effort ToC.
+  const tocEntries = extractToc(post.body);
+  const bodyWithIds = tocEntries.length >= 3 ? addHeadingIds(post.body) : post.body;
 
   return (
     <main>
@@ -159,10 +169,12 @@ export default async function BlogPostPage({
           />
         </div>
 
+        {tocEntries.length >= 3 && <TableOfContents entries={tocEntries} />}
+
         <div
           className="prose-accupenpro mt-10 max-w-none text-[1rem] leading-[1.75] text-ink-soft [&_a]:text-gold [&_a]:underline [&_a]:underline-offset-4 [&_h2]:font-display [&_h2]:mt-10 [&_h2]:mb-3 [&_h2]:text-[1.3rem] [&_h2]:font-bold [&_h2]:tracking-[-0.02em] [&_h2]:text-ink [&_li]:mt-1.5 [&_p]:mt-4 [&_strong]:text-ink [&_ul]:mt-4 [&_ul]:list-disc [&_ul]:pl-5"
           // Author-controlled HTML, same trust model as lib/product.ts's descriptionHtml — never user input.
-          dangerouslySetInnerHTML={{ __html: post.body }}
+          dangerouslySetInnerHTML={{ __html: bodyWithIds }}
         />
 
         {post.faqs && post.faqs.length > 0 && (
