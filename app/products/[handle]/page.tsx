@@ -57,11 +57,13 @@ export async function generateMetadata({
     };
   }
   const path = pathForHandle(product.handle);
-  // Bare product.title, same string the visible <h1> renders
-  // (ProductPurchase.tsx) — full word overlap by construction. The root
+  // Same on-brand override as the visible <h1> (ProductPurchase.tsx via
+  // displayTitle below) — full word overlap by construction, instead of
+  // the raw Shopify catalog title standing alone and unbranded. The root
   // layout's title template (`%s · ${site.name}`) appends the brand once
   // this is applied, so it must not be prefixed here too.
-  const title = product.title;
+  const title =
+    product.handle === penCopy.handle ? penCopy.displayTitle : product.title;
   const description = `${product.subtitle}. ${site.promise.shipping}. ${site.promise.returns}.`;
   const cover = product.gallery[0];
   return {
@@ -190,6 +192,7 @@ export default async function ProductPage({
         product={liveProduct}
         rating={reviewSet?.summary}
         bestSeller={isFlagship}
+        displayTitle={isFlagship ? penCopy.displayTitle : undefined}
       />
 
       {(isFlagship || pitch) && <PenStory story={story} />}
