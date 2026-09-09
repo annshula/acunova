@@ -33,7 +33,7 @@ export const pen = {
     heading: "People have been pressing these points for two thousand years.",
     lede: "Nobody had to teach you to squeeze the back of your own neck at the end of a long day. You do it without thinking, and you go straight to the same handful of spots every time. Those spots are not a coincidence, they are the points classical Chinese medicine mapped a very long time ago, and the ones every acupressure chart still draws from today.",
     claim:
-      "The pen does not invent anything. It just applies that pressure more precisely than a tired thumb can, and adds a pulse you can dial to a level that suits you.",
+      "The pen does not invent anything. It just applies that pressure more precisely than a tired thumb can, and adds a pulse you can dial to a level that suits you, through a 2 mm tip on a 170 mm body built to reach your own back.",
     stats: [
       {
         value: "9",

@@ -5,6 +5,14 @@ import { reviews } from "@/content/copy";
 import { penReviewSummary } from "@/data/reviews";
 import { site } from "@/lib/site";
 
+/** Same slug shape as lib/toc.ts, kept local — this is a review name, not a heading. */
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 /**
  * The proof beat.
  *
@@ -118,11 +126,17 @@ export default function Reviews() {
                 />
               ))}
             </span>
-            <blockquote className="mt-4 text-[0.95rem] leading-[1.7] text-ink text-pretty">
+            <blockquote
+              cite={`#review-${slugify(r.name)}`}
+              className="mt-4 text-[0.95rem] leading-[1.7] text-ink text-pretty"
+            >
               {r.quote}
             </blockquote>
-            <figcaption className="mt-5 text-[0.8rem] text-ink-mute">
-              <span className="font-medium text-ink-soft">{r.name}</span>
+            <figcaption
+              id={`review-${slugify(r.name)}`}
+              className="mt-5 text-[0.8rem] text-ink-mute"
+            >
+              <cite className="font-medium text-ink-soft not-italic">{r.name}</cite>
               {" · "}
               {r.meta}
             </figcaption>

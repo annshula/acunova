@@ -295,7 +295,10 @@ function ReviewCard({ review }: { review: ProductReview }) {
           </time>
         </header>
 
-        <blockquote className="mt-3 text-[0.92rem] leading-[1.7] text-ink-soft text-pretty">
+        <blockquote
+          cite={`#review-${review.id}`}
+          className="mt-3 text-[0.92rem] leading-[1.7] text-ink-soft text-pretty"
+        >
           {review.text}
         </blockquote>
 
@@ -329,14 +332,14 @@ function ReviewCard({ review }: { review: ProductReview }) {
           </div>
         ) : null}
 
-        <figcaption className="mt-5 flex items-center gap-3 border-t border-line pt-4">
+        <figcaption id={`review-${review.id}`} className="mt-5 flex items-center gap-3 border-t border-line pt-4">
           <span className="grid size-10 shrink-0 place-items-center rounded-full bg-ink font-display text-[0.9rem] font-semibold text-ivory">
             {review.author.charAt(0)}
           </span>
           <span className="min-w-0 flex-1">
-            <span className="block truncate text-[0.9rem] font-semibold text-ink">
+            <cite className="block truncate text-[0.9rem] font-semibold text-ink not-italic">
               {maskName(review.author)}
-            </span>
+            </cite>
             <span className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[0.72rem] text-ink-mute">
               {review.country}
               {review.verified && (

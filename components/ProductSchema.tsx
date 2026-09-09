@@ -25,7 +25,8 @@ export default function ProductSchema({ product }: { product: Product }) {
     name: product.title,
     description: product.descriptionHtml.replace(/<[^>]+>/g, ""),
     sku: product.variants[0].sku,
-    brand: { "@type": "Brand", name: site.name },
+    brand: { "@type": "Brand", name: site.name, "@id": `${url}/#organization` },
+    manufacturer: { "@id": `${url}/#organization` },
     // No individual byline — the listing is brand-authored, so the
     // Organization is the honest `author` entity rather than a fabricated
     // person.

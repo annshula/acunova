@@ -12,7 +12,9 @@ import ReviewsComing from "@/components/product/ReviewsComing";
 import QualityTests from "@/components/product/QualityTests";
 import BuildSection from "@/components/product/BuildSection";
 import ProductReviews from "@/components/product/ProductReviews";
+import Faq from "@/components/sections/Faq";
 import ProductSchema from "@/components/ProductSchema";
+import { FaqOnlySchema } from "@/components/Schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { pen as penCopy } from "@/content/product-pen";
 import {
@@ -132,6 +134,7 @@ export default async function ProductPage({
   return (
     <main>
       <ProductSchema product={liveProduct} />
+      <FaqOnlySchema />
       <BreadcrumbSchema
         items={[
           { name: "Home", path: "/" },
@@ -216,6 +219,11 @@ export default async function ProductPage({
       ) : (
         <ReviewsComing />
       )}
+
+      {/* Same vetted What/Is/Does/Where/Why/How question set as the
+          homepage — the PDP had no FAQ content at all, so an AI crawler
+          landing directly on the product page saw none of this Q&A. */}
+      <Faq />
     </main>
   );
 }

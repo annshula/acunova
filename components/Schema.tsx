@@ -14,6 +14,31 @@ import { syncedAt } from "@/lib/catalog";
  * The HowTo deliberately leads with the safety step rather than burying it,
  * because a rich result can surface any single step on its own.
  */
+/**
+ * FAQPage-only block, for pages that render the same <Faq /> question set
+ * as the homepage but shouldn't also carry Organization/WebSite/HowTo
+ * (those describe the site as a whole and belong on home only).
+ */
+export function FaqOnlySchema() {
+  const url = site.url;
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${url}/#faq`,
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
 export default function Schema() {
   const url = site.url;
 
@@ -34,6 +59,15 @@ export default function Schema() {
       },
       email: site.email,
       sameAs: Object.values(site.socials),
+      // "Credentials" for a brand-authored site, honestly: the real
+      // subject-matter scope we write within (device hardware + the
+      // acupressure tradition, explicitly not medical claims), not a
+      // fabricated person with invented qualifications.
+      knowsAbout: [
+        "Acupressure",
+        "Transcutaneous electrical nerve stimulation (TENS)",
+        "Consumer wellness devices",
+      ],
     },
     {
       "@type": "WebSite",

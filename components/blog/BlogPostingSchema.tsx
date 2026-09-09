@@ -37,7 +37,19 @@ export default function BlogPostingSchema({ post }: { post: BlogPost }) {
     datePublished: post.publishedAt,
     dateModified: post.updatedAt,
     keywords: [post.targetKeyword, ...post.tags].join(", "),
-    author: { "@type": "Organization", name: blogAuthor, url: site.url },
+    author: {
+      "@type": "Organization",
+      name: blogAuthor,
+      url: site.url,
+      // Same honest "credentials" stance as components/Schema.tsx's
+      // Organization block: real subject-matter scope, not a fabricated
+      // person with invented qualifications.
+      knowsAbout: [
+        "Acupressure",
+        "Transcutaneous electrical nerve stimulation (TENS)",
+        "Consumer wellness devices",
+      ],
+    },
     publisher: {
       "@type": "Organization",
       name: site.name,
