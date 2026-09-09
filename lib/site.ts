@@ -38,8 +38,8 @@ export const site = {
    */
   metrics: {
     verified: false,
-    rating: 4.6,
-    reviewCount: 3184,
+    rating: 4.9,
+    reviewCount: 1024,
     unitsSold: 50000,
     countries: 34,
   },

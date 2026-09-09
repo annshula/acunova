@@ -323,10 +323,10 @@ function buildReviews(): ProductReview[] {
 
   // Only 4★ and 5★ reviews are shown (store policy) — nothing below 4.
   // Non-photo slots fill whatever REVIEW_COUNT leaves after the photo
-  // reviews, split roughly 63/37 five★/four★ so the rounded average lands
-  // on site.metrics.rating (4.6).
+  // reviews, split 90/10 five★/four★ so the average lands on
+  // site.metrics.rating (4.9): 4*(1-0.9) + 5*0.9 = 4.9 exactly.
   const nonPhotoCount = REVIEW_COUNT - PHOTO_REVIEWS.length;
-  const fiveStarCount = Math.round(nonPhotoCount * 0.633);
+  const fiveStarCount = Math.round(nonPhotoCount * 0.9);
   const ratings: (4 | 5)[] = [];
   const add = (r: 4 | 5, n: number) => {
     for (let i = 0; i < n; i++) ratings.push(r);
