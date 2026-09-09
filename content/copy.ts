@@ -53,6 +53,18 @@ export const hero = {
   // Three short proof chips under the CTAs. Deliberately specs, not
   // adjectives — "9 intensity levels" is checkable, "amazing relief" is not.
   chips: ["9 intensity levels", "4 interchangeable heads", "Free worldwide shipping"],
+  /**
+   * A self-contained direct answer to "what is an acupressure pen and what
+   * does it do" — same job as a blog post's `quickAnswer`, but for the home
+   * page. AEO scanners and answer engines specifically want the FIRST
+   * substantial paragraph on the page to answer the core question in full,
+   * not just the punchy one-liner `sub` above (which stays as the visual
+   * hook — this is additional, not a replacement). Every fact here is
+   * already established elsewhere on the page (hero.chips, showcase.points,
+   * method.paragraphs); nothing new is asserted.
+   */
+  directAnswer:
+    "An acupressure pen is a handheld, battery-powered device that applies focused pressure to specific points on the body, the same points people already work with a thumb or knuckle, combined with a low-intensity electrical pulse delivered through a small metal tip. The AccuPenPro pen runs on a single AA battery, offers nine selectable intensity levels shown on a front display, and ships with four interchangeable heads (a rounded ball, a ridged head, a fine point, and a flat spoon) for different areas of the body. It does not use needles and does not break the skin. It is a consumer wellness tool, not a medical device, and is not cleared by the FDA or Health Canada to treat, cure, or prevent any condition.",
 };
 
 /**

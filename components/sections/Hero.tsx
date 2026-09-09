@@ -122,6 +122,14 @@ export default function Hero() {
           {hero.sub}
         </p>
 
+        {/* A visually-quiet, fuller answer immediately after the punchy hero
+            line — see content/copy.ts hero.directAnswer for why this exists
+            as its own paragraph rather than folded into `sub`. Small and
+            muted so it reads as supporting detail, not a second headline. */}
+        <p className="mt-4 max-w-[58ch] text-[0.86rem] leading-[1.7] text-ink-mute text-pretty">
+          {hero.directAnswer}
+        </p>
+
         <motion.div
           variants={item}
           className="mt-10 flex flex-wrap items-center gap-3"
