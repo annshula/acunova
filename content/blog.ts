@@ -389,7 +389,7 @@ ${SAFETY_HTML}
     title: "Acupressure Points in the Hand You Can Use at a Desk",
     excerpt:
       "The hand carries several of the most-used points in the tradition, they are easy to find, and nobody notices you working them mid-meeting.",
-    targetKeyword: "hand acupressure points",
+    targetKeyword: "acupressure points hand",
     quickAnswer:
       "The best-known hand points are the web between thumb and index finger, the centre of the palm, the fleshy base of the thumb, and the sides of the fingertips. All are easy to locate and discreet enough to work at a desk, use a low intensity, since the hand is thin-tissued and bony.",
     tags: ["Point guides", "Desk workers"],
@@ -523,10 +523,10 @@ ${SAFETY_HTML}
   },
   {
     slug: "acupressure-points-feet",
-    title: "Acupressure Points in the Feet: Where They Are and How to Use Them",
+    title: "Foot Acupressure Points: Where They Are and How to Use Them",
     excerpt:
       "The feet carry more mapped points than almost any other area. Here's where the well-known ones sit, and a sensible seated routine for using them.",
-    targetKeyword: "acupressure points feet",
+    targetKeyword: "foot acupressure points",
     quickAnswer:
       "The most commonly used foot points sit in the arch, the ball just below the toes, the top of the foot between the big and second toe, and the heel. Work them seated, one foot at a time, at a low-to-moderate setting, the sole is thick-skinned but the top of the foot is not.",
     tags: ["Point guides"],
@@ -571,7 +571,7 @@ ${SAFETY_HTML}
   },
   {
     slug: "how-to-read-an-acupressure-chart",
-    title: "How to Read an Acupressure Points Chart (Without Getting Lost)",
+    title: "How to Read an Acupressure Points Chart",
     excerpt:
       "Charts look like a subway map of the body. Here's what the lines, dots and labels actually mean, and how to use one without memorising it.",
     targetKeyword: "acupressure points chart",
@@ -772,10 +772,10 @@ ${SAFETY_HTML}
   },
   {
     slug: "facial-pressure-points-for-tension",
-    title: "Facial Pressure Points for Tension: A Calmer Face, Not a New One",
+    title: "Face Acupressure Points for Tension: A Calmer Face, Not a New One",
     excerpt:
       "The jaw, temples and brow hold tension most people never notice until it's pointed out. Here's where to work it, gently.",
-    targetKeyword: "facial acupressure points",
+    targetKeyword: "face acupressure points",
     quickAnswer:
       "The most useful facial tension points sit at the temples, the hinge of the jaw, and the inner brow. All are thin-skinned, so use the lowest intensity setting and light pressure only. This is about easing tension, not a cosmetic or anti-ageing treatment, and we will not describe it as one.",
     tags: ["Point guides"],
@@ -939,6 +939,466 @@ ${SAFETY_HTML}
         question: "How long does a battery last in a cordless acupressure pen?",
         answer:
           "It depends on usage, but for a device used in short five-to-fifteen-minute sessions rather than continuously, a single standard AA cell typically lasts a long time before needing replacement, far longer than something powered continuously through the day.",
+      },
+    ],
+  },
+  {
+    slug: "headache-acupressure-points",
+    title: "Headache Acupressure Points: Where People Actually Press",
+    excerpt:
+      "The web of the hand, the base of the skull and the temples are the three spots people reach for first. Here's where they are and how to work them sensibly.",
+    targetKeyword: "headache acupressure points",
+    quickAnswer:
+      "The most commonly used points for tension headaches are the web between thumb and index finger, the hollows at the base of the skull, and the temples. Work each for under two minutes at a low, comfortable setting, and see a doctor for a headache that is severe, sudden, or unlike your usual pattern.",
+    tags: ["Point guides", "Honest answers"],
+    publishedAt: "2026-09-11",
+    updatedAt: "2026-09-11",
+    readingMinutes: 6,
+    coverImage: lifestyleNeckShoulders,
+    body: `
+<p>Search for a headache remedy and you will eventually land on the same three spots, again and again, across centuries of tradition and a fair number of modern wellness blogs. Here they are, plainly, along with what we can and can't honestly say about them.</p>
+${SAFETY_HTML}
+<h2>The web of the hand</h2>
+<p>The single most-cited point for headaches in the whole tradition. Find the fleshy web between thumb and index finger, squeeze it, and the tender spot is usually obvious immediately, often slightly toward the index-finger side.</p>
+<p>It's covered in more depth in our <a href="/blog/acupressure-points-in-the-hand">hand points guide</a>, including why the intensity needs to drop when you switch to a fine point head here.</p>
+<h2>The base of the skull</h2>
+<p>Run a thumb up the back of your neck to the ridge of bone where the skull begins. The hollows just below that ridge, either side of the spine, are where tension-type headaches connected to neck and shoulder tightness tend to concentrate.</p>
+<p>Work the hollows, not the spine itself, and start low, this area is more sensitive than it looks.</p>
+<h2>The temples</h2>
+<p>The soft hollow just behind the outer corner of each eyebrow. Thin-skinned facial tissue, so use the lowest intensity setting and light pressure only, the same rule covered in our <a href="/blog/facial-pressure-points-for-tension">facial points guide</a>.</p>
+<h2>A five-minute round</h2>
+<ol>
+<li>Web of each hand: 45 seconds each, low setting.</li>
+<li>Base of the skull, both hollows: 60 seconds each, low setting.</li>
+<li>Both temples: 30 seconds each, lowest setting.</li>
+</ol>
+<p>Roughly five minutes, and every spot is one you can find by feel without a chart.</p>
+<h2>What the evidence actually says</h2>
+<p>Some trials on acupressure for tension-type headache and migraine report a modest reduction in frequency or intensity; others don't find a clear effect beyond placebo, and headache research is notoriously hard to blind well. It's fair to call this a long-standing tradition with some supportive but inconclusive research behind it, not a proven treatment, and we won't claim it treats or prevents headaches or migraines.</p>
+<h2>When it's not a self-massage problem</h2>
+<p>A headache that is sudden and severe, the "worst of your life," comes with a fever, stiff neck, confusion, vision changes, weakness, or follows a head injury needs urgent medical attention, not a pressure point. And any headache that is frequent, worsening, or different from your usual pattern is worth a doctor's opinion rather than an ongoing home routine.</p>
+`,
+    faqs: [
+      {
+        question: "What is the best acupressure point for a headache?",
+        answer:
+          "The web between thumb and index finger is the most commonly cited point, followed by the hollows at the base of the skull and the temples. None is proven to treat headaches, but they're easy to find by feel and safe to work briefly at a low setting for most healthy adults.",
+      },
+      {
+        question: "Can acupressure get rid of a headache completely?",
+        answer:
+          "There's no good evidence it eliminates a headache outright. Some studies suggest a modest reduction in intensity or frequency for tension-type headaches, but the research is mixed. Treat it as a comfort measure alongside your usual approach, not a replacement for it, and see a doctor for severe, sudden, or unusual headaches.",
+      },
+    ],
+  },
+  {
+    slug: "acupressure-points-for-back-pain",
+    title: "Acupressure Points for Back Pain: The Spots People Reach For",
+    excerpt:
+      "The lower back and the muscle either side of the spine are where most people carry it. Here's where those points sit and a sensible way to work them.",
+    targetKeyword: "acupressure points for back pain",
+    quickAnswer:
+      "The most commonly used points for back tension sit either side of the lower spine, at the top of the hip bone, and behind each knee. Use a broader head and a moderate setting on the lower back's thick muscle, and always work either side of the spine, never directly on it.",
+    tags: ["Point guides"],
+    publishedAt: "2026-09-11",
+    updatedAt: "2026-09-11",
+    readingMinutes: 6,
+    coverImage: lifestyleArmsJoints,
+    body: `
+<p>Back pain is the reason a lot of people go looking for an acupressure tool in the first place, and it's also where the gap between what a device can honestly promise and what a listing implies tends to be widest. Here's the straightforward version.</p>
+${SAFETY_HTML}
+<p><strong>One rule before anything else:</strong> work the muscle either side of the spine, never the spine itself, and never directly over a vertebra.</p>
+<h2>Either side of the lower spine</h2>
+<p>The thick muscle running parallel to the spine, roughly a thumb's width out from the bone itself, is where most lower-back tension sits after a long day sitting or standing. It's also usually the tenderest spot you'll find in this area.</p>
+<p>This is dense muscle, so a flat or spoon head at a moderate-to-higher setting suits it better than a fine point.</p>
+<h2>The top of the hip bone</h2>
+<p>Run a hand back along your waistband to where it meets the top ridge of the hip bone. The muscle just above that ridge is a common secondary spot, particularly for anyone who spends the day standing.</p>
+<h2>Behind the knee</h2>
+<p>Not an obvious back-pain spot, but a genuinely traditional one: the crease behind the knee is classically linked to lower back tension. It's thin-skinned and sits over a joint, so use a lower setting than you would on the lower back itself.</p>
+<h2>A ten-minute round</h2>
+<ol>
+<li>Either side of the lower spine: 90 seconds each side, moderate setting, broader head.</li>
+<li>Top of each hip bone: 60 seconds each.</li>
+<li>Behind each knee: 45 seconds each, low setting.</li>
+</ol>
+<p>Read our <a href="/blog/choosing-acupressure-pen-heads">head guide</a> if you're unsure which tip suits the lower back specifically, the flat spoon head is built for exactly this area.</p>
+<h2>What this can and can't do</h2>
+<p>As a comfort measure for ordinary end-of-day muscular tightness, this is the same honest pitch as everywhere else on this site: a repeatable, precise version of pressing on a sore spot yourself. It is not a treatment for a diagnosed back condition, disc issue, or nerve pain, and it is not cleared as a medical device.</p>
+<h2>When to see a doctor instead</h2>
+<p>Back pain that radiates down a leg, comes with numbness, tingling or weakness, follows a fall or injury, or is accompanied by loss of bladder or bowel control needs medical attention, not a self-massage routine. Persistent or worsening pain that doesn't improve after a couple of weeks is also worth a proper diagnosis rather than an escalating home routine.</p>
+`,
+    faqs: [
+      {
+        question: "Where are the best acupressure points for lower back pain?",
+        answer:
+          "The muscle either side of the lower spine (never the spine itself), the area just above the top of the hip bone, and the crease behind the knee are the most commonly used spots. Work either side of the spine with a broader head at a moderate setting, and use a lower setting behind the knee where the skin is thinner.",
+      },
+      {
+        question: "Can an acupressure pen treat back pain?",
+        answer:
+          "No. It's a comfort tool for ordinary muscular tightness, the same category as a foam roller or a massage ball, not a treatment for a diagnosed back condition. Back pain that radiates down a leg, comes with numbness or weakness, or follows an injury needs a doctor, not a device.",
+      },
+    ],
+  },
+  {
+    slug: "what-is-acupressure",
+    title: "What Is Acupressure Massage? A Plain-Language Explainer",
+    excerpt:
+      "Acupressure in one page: what it is, how it differs from acupuncture and massage, and what a modern pen actually adds to a tradition that's thousands of years old.",
+    targetKeyword: "what is acupressure massage",
+    quickAnswer:
+      "Acupressure is a traditional practice of applying finger, thumb or tool pressure to specific points on the body, the same points mapped by acupuncture but without needles. It's a hands-on self-massage tradition, not a medically proven treatment, and a device like a pen simply makes the pressure more precise and repeatable.",
+    tags: ["Getting started", "Honest answers"],
+    publishedAt: "2026-09-11",
+    updatedAt: "2026-09-11",
+    readingMinutes: 6,
+    coverImage: cover,
+    body: `
+<p>"What is acupressure" is the question that should come before all our other guides, so here is the plain version, without assuming you already know the vocabulary.</p>
+<h2>The short definition</h2>
+<p>Acupressure is a traditional Chinese medicine practice of applying pressure, historically with fingers, thumbs or knuckles, to specific points on the body believed to sit along energy pathways called meridians. It is the needle-free sibling of acupuncture: same point map, same underlying theory, different tool.</p>
+<h2>Acupressure vs. acupuncture</h2>
+<p>The distinction is simple once someone says it plainly: acupuncture inserts thin needles at these points; acupressure presses on them instead, with no needle at all. Acupressure is something you can safely do to yourself at home; acupuncture requires a trained, licensed practitioner.</p>
+<h2>Acupressure vs. ordinary massage</h2>
+<p>Ordinary massage works broadly across a muscle to relax tissue generally. Acupressure is narrower and more deliberate: it targets specific, named points rather than kneading a whole area. In practice the two overlap constantly, a good massage therapist often lands on the same tender spots acupressure charts mark, whether or not they're using that language.</p>
+<h2>What "the tradition" actually means here</h2>
+<p>Acupressure traces back over two thousand years, refined long before anyone could study it with a clinical trial. That heritage is genuine and worth respecting on its own terms. It is a separate claim from "clinically proven," and we're careful not to blur the two, read our <a href="/blog/what-are-acupressure-meridians">meridians explainer</a> for the longer version of that distinction.</p>
+<h2>What a device adds to a 2,000-year-old idea</h2>
+<p>A modern acupressure pen doesn't reinvent the practice, it just changes the tool. Instead of a thumb, you get a small metal tip that can apply the same pressure at a setting you choose and repeat exactly, plus, on most pens, a low-intensity electrical pulse layered on top. It reaches your own back further than your arm does, and it doesn't tire the way a thumb does after ten minutes.</p>
+<p>What it does not do is turn acupressure into a proven medical treatment. That evidence question is covered honestly, point by point, in our <a href="/blog/do-acupressure-pens-work">"do acupressure pens work" guide</a>.</p>
+<h2>Where to start if this is all new</h2>
+<ul>
+<li>Read the <a href="/blog/acupressure-pen-safety">safety guide</a> first, always, before your first session.</li>
+<li>Try the <a href="/blog/acupressure-points-in-the-hand">hand points guide</a>, the easiest area to find points on yourself.</li>
+<li>Follow the <a href="/blog/how-to-use-an-acupressure-pen">how-to guide</a> for the four decisions (head, point, intensity, duration) that make the first session make sense.</li>
+</ul>
+`,
+    faqs: [
+      {
+        question: "What is acupressure massage exactly?",
+        answer:
+          "It's a traditional Chinese medicine practice of pressing specific points on the body, the same points mapped by acupuncture, using fingers, thumbs or a handheld tool instead of needles. It's a self-massage tradition rather than a medically proven treatment.",
+      },
+      {
+        question: "Is acupressure the same as acupuncture?",
+        answer:
+          "No. They share the same point map and traditional theory, but acupuncture uses thin needles inserted by a licensed practitioner, while acupressure uses pressure only, with no needles, and can be done on yourself at home.",
+      },
+    ],
+  },
+  {
+    slug: "trigger-point-therapy-explained",
+    title: "Trigger Point Therapy: What It Is and How a Pen Fits In",
+    excerpt:
+      "Trigger points are tight muscle knots, not traditional meridian points. Here's the real difference, and how a handheld tool works for each.",
+    targetKeyword: "trigger point therapy massage",
+    quickAnswer:
+      "Trigger point therapy targets tight, tender knots in a muscle that can be felt directly under the skin, using sustained pressure to encourage the knot to release. It's a Western massage-therapy concept, distinct from acupressure's traditional meridian points, though the two are often worked with similar tools and similar hands-on pressure.",
+    tags: ["Getting started", "Comparisons"],
+    publishedAt: "2026-09-11",
+    updatedAt: "2026-09-11",
+    readingMinutes: 6,
+    coverImage: lifestyleDesk,
+    body: `
+<p>Trigger point therapy and acupressure get used almost interchangeably online, and the tools that work one often work the other, but they come from different traditions and target different things. Worth untangling before you decide what you're actually looking for.</p>
+<h2>What a trigger point actually is</h2>
+<p>A trigger point is a small area within a muscle that feels unusually tight, dense or tender under the skin, often described as a "knot." The concept comes from Western physical therapy and sports medicine, not traditional Chinese medicine, and a trigger point is defined by how the tissue feels, not by a fixed point on a chart.</p>
+<h2>Trigger points vs. acupressure points</h2>
+<p>The overlap is real but the origin differs. Acupressure points are fixed locations from a traditional meridian map, the same spot regardless of how your muscle happens to feel that day. A trigger point is found by feel, in whichever muscle is actually tight right now, and two people with the same complaint might have their trigger point in slightly different places. In practice, many trigger points do sit near well-known acupressure points, which is part of why the two get conflated.</p>
+<h2>How trigger point work is typically done</h2>
+<p>The standard approach is sustained, direct pressure on the knot, often thirty seconds to two minutes, sometimes with small circular movements, until the area softens or the sensation eases. That's mechanically identical to how you'd work an acupressure point with a pen: find the tender spot by feel, apply steady pressure, hold, then move on.</p>
+<h2>Using a pen for trigger point work</h2>
+<p>The same qualities that suit acupressure point work, precise contact, an adjustable head to match the area, and a handle that reaches your own back, apply directly to trigger point work. See our <a href="/blog/choosing-acupressure-pen-heads">head guide</a> for matching a tip to a specific muscle, a rounded or multi-point head for a large muscle like the trapezius or calf, and a fine point for a small, precisely located knot.</p>
+<h2>What it isn't</h2>
+<p>Trigger point therapy, like acupressure, is a self-massage and comfort practice. It is not a substitute for physical therapy for a diagnosed muscular condition, and a knot that doesn't ease after consistent, sensible attention, or pain that radiates, numbness, or weakness, is a reason to see a professional rather than keep pressing harder.</p>
+`,
+    faqs: [
+      {
+        question: "Is trigger point therapy the same as acupressure?",
+        answer:
+          "They're related but not identical. Acupressure works fixed traditional points from a meridian map; trigger point therapy targets tight, tender knots found by feel wherever they happen to be in a muscle. Many trigger points sit near known acupressure points, but the underlying concept and origin differ, Western physical therapy versus traditional Chinese medicine.",
+      },
+      {
+        question: "Can you use an acupressure pen for trigger points?",
+        answer:
+          "Yes, mechanically the approach is the same, find the tender spot by feel, apply steady pressure at a comfortable setting, hold for thirty seconds to two minutes, then move on. Match the head to the muscle size just as you would for a traditional acupressure point.",
+      },
+    ],
+  },
+  {
+    slug: "acupressure-for-sleep",
+    title: "Acupressure for Sleep: The Points People Use to Wind Down",
+    excerpt:
+      "A short, calming round using the wrist, the sole of the foot and the centre of the palm, the traditional wind-down points, done honestly.",
+    targetKeyword: "acupressure for sleep",
+    quickAnswer:
+      "The points most associated with winding down sit on the inner wrist near the crease, the centre of the sole of the foot, and the centre of the palm. Work them gently at a low setting as part of an evening routine, they're a calming ritual, not a proven remedy for insomnia.",
+    tags: ["Point guides", "Routines"],
+    publishedAt: "2026-09-11",
+    updatedAt: "2026-09-11",
+    readingMinutes: 6,
+    coverImage: lifestyleDesk,
+    body: `
+<p>Trouble winding down is one of the most common reasons people search for acupressure at all. Here is what the tradition actually points to, done at low intensity as a calming ritual rather than sold as a cure for a sleepless night.</p>
+${SAFETY_HTML}
+<h2>The inner wrist</h2>
+<p>Near the crease of the wrist, on the little-finger side, in the small hollow you can feel when you flex your hand slightly. Traditionally one of the most-cited calming points, and gentle enough to work right before lights out.</p>
+<h2>The centre of the sole</h2>
+<p>Roughly a third of the way down the sole from the base of the toes, in the soft indentation that appears when you curl your toes. Thick, calloused skin here tolerates a slightly firmer setting than the wrist, see our <a href="/blog/acupressure-points-feet">foot points guide</a> for the fuller seated routine.</p>
+<h2>The centre of the palm</h2>
+<p>Make a loose fist, where your middle fingertip lands is roughly the spot. Traditionally associated with calming and settling, and a natural point to finish on.</p>
+<h2>A five-minute wind-down round</h2>
+<ol>
+<li>Inner wrist, both sides: 60 seconds each, low setting.</li>
+<li>Centre of each sole: 60 seconds each, moderate setting.</li>
+<li>Centre of each palm: 45 seconds each, low setting, to finish.</li>
+</ol>
+<p>Do this seated on the edge of the bed, lights already dimmed, as the last thing before you lie down. The ritual of a slow, deliberate few minutes matters as much as which exact points you press.</p>
+<h2>Being honest about what this is</h2>
+<p>There is some research interest in acupressure for sleep quality, and a handful of small trials report modest improvement, but the evidence is limited and nowhere near strong enough to call this a treatment for insomnia. If sleep trouble is persistent, affects your daily functioning, or comes with other symptoms, that's a conversation for a doctor, not a nightly point routine. What this round can honestly offer is what a warm drink or a dimmed room offers: a consistent, calming signal to your evening that it's time to slow down.</p>
+`,
+    faqs: [
+      {
+        question: "Does acupressure actually help you sleep?",
+        answer:
+          "The evidence is limited. Some small studies suggest a modest effect on sleep quality, but it isn't proven and shouldn't replace medical advice for ongoing insomnia. Its more reliable value is as a calming, consistent wind-down ritual, similar to dimming the lights or reading before bed.",
+      },
+      {
+        question: "What is the best acupressure point for sleep?",
+        answer:
+          "The inner wrist near the crease and the centre of the palm are the two most commonly cited calming points. Both are gentle, easy to find, and safe to work at a low setting as the last step before lying down.",
+      },
+    ],
+  },
+  {
+    slug: "acupressure-wristbands-vs-pen",
+    title: "Acupressure Wristbands vs. an Acupressure Pen",
+    excerpt:
+      "A wristband presses one fixed point, passively, all day. A pen finds any point and works it actively. Here's when each makes sense.",
+    targetKeyword: "acupressure wristbands",
+    quickAnswer:
+      "An acupressure wristband applies constant, fixed pressure to a single point, usually the inner wrist, and is worn passively for hours. A pen is handheld and lets you find and work any point on the body with adjustable pressure, but only while you're actively using it. Bands suit one known point worn all day, a pen suits variety and precision.",
+    tags: ["Comparisons", "Buying guide"],
+    publishedAt: "2026-09-11",
+    updatedAt: "2026-09-11",
+    readingMinutes: 5,
+    coverImage: lifestyleArmsJoints,
+    body: `
+<p>Acupressure wristbands, the kind sold for motion sickness and mentioned in our <a href="/blog/acupressure-points-for-nausea">nausea point guide</a>, are many people's first encounter with acupressure at all. Here's how they actually compare to a handheld pen.</p>
+<h2>How a wristband works</h2>
+<p>A band with a small, fixed plastic bead sewn in is worn around the wrist so the bead presses continuously on one specific point, almost always the inner-forearm point covered in our nausea guide. It's entirely passive: put it on, forget about it, the pressure is constant for as long as you wear it.</p>
+<h2>How a pen works, by comparison</h2>
+<p>A pen is active and deliberate: you choose the point, place the tip, and control the pressure and, on most models, a low-intensity electrical pulse layered on top. Nothing happens unless you're holding it and pressing the button.</p>
+<h2>The real trade-offs</h2>
+<table>
+<thead><tr><th></th><th>Wristband</th><th>Pen</th></tr></thead>
+<tbody>
+<tr><td>Which points</td><td>One fixed point per band</td><td>Any point you can reach</td></tr>
+<tr><td>Pressure control</td><td>Fixed, set by the bead</td><td>Adjustable, level by level</td></tr>
+<tr><td>Wear time</td><td>Hours, hands-free</td><td>Minutes, hands-on</td></tr>
+<tr><td>Discreetness</td><td>Very high, looks like a bracelet</td><td>Needs a free hand to use</td></tr>
+<tr><td>Best for</td><td>One known point, worn all day</td><td>Working through several points precisely</td></tr>
+</tbody>
+</table>
+<h2>Pick a band if…</h2>
+<ul>
+<li>You already know the one point you want, most often the inner-wrist nausea point.</li>
+<li>You want something hands-free you can wear through a flight, a commute, or a whole day.</li>
+</ul>
+<h2>Pick a pen if…</h2>
+<ul>
+<li>You want to work more than one point, or don't yet know which point suits you.</li>
+<li>You want to control exactly how much pressure or pulse you're getting.</li>
+<li>You want to reach a point on your own back or shoulder a wristband simply can't cover.</li>
+</ul>
+<p>They're not really competitors, plenty of people reasonably own a band for travel and a <a href="${productPath}">pen</a> for everything else.</p>
+`,
+    faqs: [
+      {
+        question: "Do acupressure wristbands actually work?",
+        answer:
+          "They apply real, continuous pressure to a genuine traditional point, most often the inner-wrist point associated with nausea, so the mechanism is real. Whether that translates into a meaningful effect is mixed in the research, similar to the honest answer we give about acupressure generally, some studies show modest benefit, others don't.",
+      },
+      {
+        question: "Can I use a wristband and an acupressure pen together?",
+        answer:
+          "There's no conflict wearing a band passively through the day and using a pen separately for other points or a dedicated session. Just don't stack both on the exact same point at the same time, and follow each product's own guidance.",
+      },
+    ],
+  },
+  {
+    slug: "acupressure-massage-explained",
+    title: "Acupressure Massage: What It Actually Involves",
+    excerpt:
+      "Not every massage that presses on a point is 'acupressure massage.' Here's what the term specifically means and what a session or a home routine looks like.",
+    targetKeyword: "acupressure massage near me",
+    quickAnswer:
+      "Acupressure massage is bodywork focused specifically on traditional meridian points using sustained finger, thumb, or tool pressure rather than the broader kneading of a typical massage. You can get it from a trained practitioner or do a simplified version yourself with your hands or a handheld tool.",
+    tags: ["Getting started", "Buying guide"],
+    publishedAt: "2026-09-11",
+    updatedAt: "2026-09-11",
+    readingMinutes: 5,
+    coverImage: kitFlatlay,
+    body: `
+<p>"Acupressure massage" turns up constantly in searches for a local practitioner, so it's worth being precise about what actually distinguishes it from a regular massage appointment, and what you can reasonably do yourself between visits.</p>
+<h2>What makes it "acupressure" specifically</h2>
+<p>A general massage works broadly across a muscle group to relax tissue. Acupressure massage is narrower: a practitioner (or you, at home) targets specific, named points from the traditional meridian map with sustained, direct pressure, sometimes combined with broader strokes around them. See our <a href="/blog/what-is-acupressure">what is acupressure explainer</a> for the fuller background on the tradition itself.</p>
+<h2>What a professional session typically looks like</h2>
+<p>Sessions are usually fully clothed (unlike many oil-based massages), performed on a mat or table, and involve a practitioner working through a sequence of points with their thumbs, palms, or sometimes elbows, often longer holds than a typical relaxation massage. Session length and approach vary a lot by practitioner, there's no single standardised format the way there is for, say, a Swedish massage.</p>
+<h2>What you can reasonably do yourself</h2>
+<p>You won't replicate a trained practitioner's full sequence, but the core mechanic, sustained pressure on a known point, is exactly what our point guides walk through: <a href="/blog/acupressure-points-neck-and-shoulders">neck and shoulders</a>, <a href="/blog/acupressure-points-in-the-hand">hands</a>, and <a href="/blog/acupressure-points-feet">feet</a> are the easiest places to start on yourself.</p>
+<h2>Hands versus a tool</h2>
+<p>A practitioner's hands can read tissue in a way no device can, that's a genuine advantage of a professional session. What a handheld pen adds for home use is precision and consistency: the same 2mm contact point, the same intensity level, reachable on your own back without needing a second person, every time.</p>
+<h2>Setting expectations</h2>
+<p>Whether from a practitioner or done yourself, acupressure massage is a comfort and relaxation practice with mixed, inconclusive scientific support, not a proven treatment for any diagnosed condition, our <a href="/blog/do-acupressure-pens-work">honest evidence guide</a> covers that distinction in full.</p>
+`,
+    faqs: [
+      {
+        question: "What's the difference between acupressure massage and regular massage?",
+        answer:
+          "Regular massage works broadly across a muscle to relax tissue generally. Acupressure massage specifically targets named points from the traditional meridian map with sustained, direct pressure. The two overlap in practice, but acupressure is the narrower, point-focused version.",
+      },
+      {
+        question: "Can I do acupressure massage on myself at home?",
+        answer:
+          "Yes, for the point-pressing part. You won't replicate a trained practitioner's full sequence or their trained touch, but pressing known points yourself, by hand or with a tool like a pen, follows the same core mechanic and is exactly what our point guides walk through.",
+      },
+    ],
+  },
+  {
+    slug: "p6-wrist-point-explained",
+    title: "The P6 Wrist Point: What It Is and Why It's So Well Known",
+    excerpt:
+      "P6, also called Neiguan, is the single most-studied acupressure point, thanks to motion sickness bands. Here's exactly where it is and what the research says.",
+    targetKeyword: "nausea acupressure point",
+    quickAnswer:
+      "P6, also known as Neiguan, sits on the inner forearm about three finger-widths below the wrist crease, between two central tendons. It's the point pressed by anti-nausea wristbands and is the most-studied acupressure point overall, with mixed but genuinely more substantial research behind it than most other points.",
+    tags: ["Point guides", "Honest answers"],
+    publishedAt: "2026-09-11",
+    updatedAt: "2026-09-11",
+    readingMinutes: 5,
+    coverImage: lifestyleArmsJoints,
+    body: `
+<p>If you've read our <a href="/blog/acupressure-points-for-nausea">nausea point guide</a>, you've already met this point without the name attached. It's worth its own page because P6 is, by a wide margin, the most-researched single point in all of acupressure, and understanding why tells you something about how to read every other point on this site.</p>
+<h2>Where P6 actually is</h2>
+<p>On the inside of the forearm, palm up, about three finger-widths below the wrist crease, in the gap between the two central tendons you can feel stand up when you make a loose fist. Traditionally named Neiguan, meaning roughly "inner gate," and numbered as the sixth point on the Pericardium meridian, hence "P6."</p>
+<h2>Why this one point gets studied so much</h2>
+<p>P6 became a serious research subject because it had a ready-made, testable delivery method already in wide consumer use, the fixed-bead wristband, sold for decades for motion sickness. That made it unusually easy to design trials around: a real product, a specific point, a measurable outcome (nausea). Most other acupressure points have never had anything close to that volume of study, simply because the research infrastructure wasn't already sitting there.</p>
+<h2>What the research on P6 actually shows</h2>
+<p>Multiple trials, particularly for postoperative and pregnancy-related nausea and motion sickness, report a modest reduction in symptoms with P6 stimulation, whether from pressure, wristbands, or mild electrical stimulation. Systematic reviews are more cautious, some find the effect holds up reasonably well, others attribute more of it to placebo than enthusiasts claim. The honest summary: P6 has the strongest evidence base of any acupressure point, and that evidence is still genuinely mixed, not settled.</p>
+<h2>How to work it</h2>
+<p>Locate the spot, three finger-widths below the wrist crease, between the tendons. Use a fine point head at a low setting, this is thin tissue over tendon, and hold for one to two minutes per wrist. Full walkthrough, plus the pregnancy exclusion that applies to this point specifically, is in our <a href="/blog/acupressure-points-for-nausea">nausea guide</a>.</p>
+<h2>The honest takeaway</h2>
+<p>P6 is the point where "acupressure has some real research behind it" is most defensible, and also the clearest example of why "some research" isn't the same as "proven." Severe or persistent nausea is a medical question, not a wrist-point one.</p>
+`,
+    faqs: [
+      {
+        question: "Where exactly is the P6 acupressure point?",
+        answer:
+          "On the inner forearm, palm facing up, roughly three finger-widths below the wrist crease, in the gap between the two central tendons. It's the same point pressed by over-the-counter motion sickness wristbands.",
+      },
+      {
+        question: "Is P6 the most scientifically studied acupressure point?",
+        answer:
+          "Yes, by a wide margin, largely because of the long-standing commercial wristbands built around it, which made it easy to design trials around. The evidence is more substantial than for most other points but still mixed, some trials show a modest benefit for nausea, others don't find a clear effect beyond placebo.",
+      },
+    ],
+  },
+  {
+    slug: "menstrual-cramp-relief-acupressure",
+    title: "Menstrual Cramp Relief: Where Acupressure Tradition Points",
+    excerpt:
+      "A few points traditionally associated with period discomfort, an honest look at the thin evidence behind them, and what actually helps beyond a pressure point.",
+    targetKeyword: "menstrual cramp relief",
+    quickAnswer:
+      "A handful of points, on the lower abdomen, the inner ankle, and the web of the hand, are traditionally associated with period discomfort. The research on acupressure for menstrual cramps is limited and inconclusive, so treat this as a gentle comfort addition alongside heat and rest, not a substitute for medical advice if pain is severe.",
+    tags: ["Point guides", "Honest answers"],
+    publishedAt: "2026-09-11",
+    updatedAt: "2026-09-11",
+    readingMinutes: 6,
+    coverImage: lifestyleKneesLegs,
+    body: `
+<p>Searches for menstrual cramp relief lead a lot of people to acupressure, so here is the honest version: what the tradition points to, what the (thin) evidence says, and where a pressure point stops being useful and a doctor becomes the right call.</p>
+${SAFETY_HTML}
+<p><strong>Skip this one entirely if you are or might be pregnant</strong>, per the general rule above, and several of the traditional points below are additionally flagged for pregnancy specifically.</p>
+<h2>The lower abdomen, a hand's width below the navel</h2>
+<p>A traditionally significant area for period-related discomfort. Work gently, this is soft tissue over the abdomen, use a broad head rather than a point, and stop if anything feels sharp rather than a mild, tolerable pressure.</p>
+<h2>The inner ankle, above the anklebone</h2>
+<p>Roughly four finger-widths above the inner anklebone, along the shin bone's back edge. One of the most commonly cited points in this context. <em>Traditionally and strongly flagged against in pregnancy.</em></p>
+<h2>The web of the hand</h2>
+<p>The same LI4 point covered in our <a href="/blog/acupressure-points-in-the-hand">hand points guide</a>, generally used for tension, and also traditionally listed among period-related points. <em>Also traditionally avoided in pregnancy</em>, same note as the ankle point.</p>
+<h2>A gentle five-minute round</h2>
+<ol>
+<li>Lower abdomen: 60-90 seconds, broad head, gentle setting.</li>
+<li>Inner ankle, both sides: 60 seconds each, moderate setting.</li>
+<li>Web of each hand: 45 seconds each, low setting.</li>
+</ol>
+<h2>What the evidence actually says</h2>
+<p>Research on acupressure for menstrual pain (dysmenorrhea) exists but is limited, many studies are small, and reviews describe the evidence as promising but far from conclusive. It would be dishonest to call this a proven remedy, and we won't. What has better-established support for period discomfort generally: heat (a heating pad or hot water bottle), gentle movement, and over-the-counter pain relief used as directed.</p>
+<h2>When it's not a pressure-point problem</h2>
+<p>Pain severe enough to disrupt daily life, that's worsening over time, or that comes with heavy bleeding or symptoms outside your normal pattern is worth discussing with a doctor. That's true regardless of what any pressure point can offer.</p>
+`,
+    faqs: [
+      {
+        question: "Does acupressure really help with period cramps?",
+        answer:
+          "The evidence is limited and inconclusive, some small studies suggest a modest benefit, but it's far from a proven remedy. It's reasonable as a gentle comfort addition alongside heat and rest, not as a replacement for medical care if pain is severe or unusual for you.",
+      },
+      {
+        question: "Can I use an acupressure pen for period pain if I might be pregnant?",
+        answer:
+          "No. Skip the device entirely if you are or might be pregnant, this is a firm rule for electrical stimulation devices generally, and several of the points traditionally used for period discomfort are separately flagged against use in pregnancy.",
+      },
+    ],
+  },
+  {
+    slug: "acupressure-ring-and-tools",
+    title: "Acupressure Rings, Rollers and Tools: What's Actually Worth Owning",
+    excerpt:
+      "Rings, rollers, mats, bands and pens all claim the same tradition. Here's what each tool actually does differently, and which one earns a place in a drawer.",
+    targetKeyword: "acupressure tools",
+    quickAnswer:
+      "Acupressure tools range from passive items you wear or roll (rings, mats, wristbands) to active handheld tools (pens, rollers) you direct yourself. Passive tools are easier but less precise; a handheld pen offers the most control over exactly which point gets pressure and how much.",
+    tags: ["Buying guide", "Comparisons"],
+    publishedAt: "2026-09-11",
+    updatedAt: "2026-09-11",
+    readingMinutes: 6,
+    coverImage: kitFlatlay,
+    body: `
+<p>Acupressure tools have multiplied well beyond the traditional thumb, rings, rollers, mats, wristbands, pens, all claiming the same underlying idea. Here's an honest rundown of what each one actually does, and where it earns a place.</p>
+<h2>Acupressure rings</h2>
+<p>Small metal rings with ridged grooves, rolled up and down each finger. Popular for their portability, a ring lives in a pocket, and for the mild, ticklish sensation on the fingers. Precision is low, you're working the whole finger rather than one exact point, and the effect is closer to a pleasant fidget than a targeted session.</p>
+<h2>Acupressure mats and pillows</h2>
+<p>Covered in full in our <a href="/blog/acupressure-mat-vs-acupressure-pen">mat vs. pen comparison</a>: a flat surface of plastic spikes you lie on, passive, whole-back, no aiming involved.</p>
+<h2>Acupressure wristbands</h2>
+<p>Covered in our <a href="/blog/acupressure-wristbands-vs-pen">wristband comparison</a>: a fixed bead pressing one known point, worn passively for hours.</p>
+<h2>Acupressure rollers and sticks</h2>
+<p>Wheeled or fixed wooden or plastic tools you drag along a muscle. More precise than a mat, less precise than a pen, since you're sliding along a path rather than holding steady on one point. Good for a warm-up pass over a large muscle before targeting a specific spot with something finer.</p>
+<h2>Acupressure pens</h2>
+<p>The most precise and most active of the group: a small metal tip you place and hold on an exact point, with adjustable intensity and, on most models, a low-level electrical pulse layered on the physical pressure. The trade-off for that precision is that it needs your hand the whole time, nothing about it is passive.</p>
+<h2>Matching the tool to the moment</h2>
+<table>
+<thead><tr><th>Tool</th><th>Precision</th><th>Effort required</th><th>Best for</th></tr></thead>
+<tbody>
+<tr><td>Ring</td><td>Low</td><td>Minimal</td><td>A discreet fidget at a desk</td></tr>
+<tr><td>Mat</td><td>None (passive)</td><td>Lie down and wait</td><td>A whole-back, hands-off wind-down</td></tr>
+<tr><td>Wristband</td><td>One fixed point</td><td>None once worn</td><td>A single known point, worn all day</td></tr>
+<tr><td>Roller</td><td>Medium</td><td>Moderate</td><td>Warming up a large muscle</td></tr>
+<tr><td>Pen</td><td>High</td><td>Active, hands-on</td><td>One exact sore spot, precisely</td></tr>
+</tbody>
+</table>
+<p>None of these tools, including <a href="${productPath}">a pen</a>, treats or cures anything. They're variations on the same idea, applying deliberate pressure to a point the tradition has mapped, at different levels of precision and effort. Plenty of people reasonably own more than one for different moments.</p>
+`,
+    faqs: [
+      {
+        question: "What's the difference between an acupressure ring and a pen?",
+        answer:
+          "A ring is a passive, low-precision tool you roll along a whole finger, more of a fidget than a targeted session. A pen is active and precise, a small tip placed exactly on one point with adjustable intensity. Rings suit a discreet habit; pens suit working a specific sore spot deliberately.",
+      },
+      {
+        question: "Which acupressure tool should I buy first?",
+        answer:
+          "It depends on what you want: a mat for a passive whole-back wind-down, a wristband for one known point worn all day, or a pen if you want precision and control over exactly which point gets attention and how much pressure it gets. Many people end up owning more than one for different situations.",
       },
     ],
   },
