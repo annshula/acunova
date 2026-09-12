@@ -402,12 +402,12 @@ export const faqs = [
   {
     id: "where-and-how-long",
     q: "Where do I use it, and for how long?",
-    a: "Start where you already rub yourself: the base of the neck, the top of the shoulders, the forearms, the lower back, the outside of the knee. The quick-start card in the box maps the common points, and there is a fuller guide on our blog. A sensible session is 5 to 15 minutes across a few points, once or twice a day. Longer is not better. If a spot goes numb, sore or red, stop and move on.",
+    a: "Start where you already rub yourself: the base of the neck, the top of the shoulders, the forearms, the lower back, the outside of the knee. There is a fuller point guide on our blog. A sensible session is 5 to 15 minutes across a few points, once or twice a day. Longer is not better. If a spot goes numb, sore or red, stop and move on.",
   },
   {
     id: "in-the-box",
     q: "What is in the box, and does it need charging?",
-    a: "The pen, all five heads (rounded ball, ridged, fine point and flat spoon), a storage case and a quick-start card. It runs on a single AA battery rather than a charger, which is also why it is fine to pack in hand luggage.",
+    a: "The pen with all five heads already in the pack (rounded ball, ridged, fine point and flat spoon). It runs on a single AA battery rather than a charger, which is also why it is fine to pack in hand luggage.",
   },
   {
     id: "why-not-hands-or-pads",

@@ -51,7 +51,7 @@ export const pen = {
     eras: [
       {
         title: "The points were written down",
-        body: "The classical Chinese medical texts set out a map of points along channels they called meridians. Whatever you make of the theory, the map itself has been in continuous use ever since, and it is still what the chart on the back of your quick-start card is drawn from.",
+        body: "The classical Chinese medical texts set out a map of points along channels they called meridians. Whatever you make of the theory, the map itself has been in continuous use ever since, and it is still what every acupressure chart in print today is drawn from.",
         image: {
           src: "/story/era-1-origins.webp",
           alt: "An old acupressure point chart on paper beside the AccuPenPro pen",

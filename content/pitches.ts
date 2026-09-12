@@ -151,7 +151,7 @@ export const quality = {
     {
       icon: "check" as const,
       title: "Kit count",
-      body: "Pen, five heads, case, quick-start card. Counted against the packing list at the bench, because the single most common complaint about this category is a head missing from the box.",
+      body: "Pen and all five heads, counted against the packing list at the bench, because the single most common complaint about this category is a head missing from the box.",
     },
     {
       icon: "truck" as const,
