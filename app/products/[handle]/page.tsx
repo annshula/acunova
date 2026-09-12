@@ -189,7 +189,9 @@ export default async function ProductPage({
       <ProductPurchase
         product={liveProduct}
         rating={reviewSet?.summary}
-        bestSeller={isFlagship}
+        soldLast90Days={
+          isFlagship ? site.metrics.unitsSoldLast90Days : undefined
+        }
       />
 
       {(isFlagship || pitch) && <PenStory story={story} />}

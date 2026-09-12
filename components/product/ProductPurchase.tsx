@@ -12,9 +12,9 @@ import { ProductViewTracker } from "@/components/analytics/ProductViewTracker";
 import { BuyBox } from "@/components/product/BuyBox";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import {
+  BagIcon,
   ChevronDownIcon,
   ChevronRightIcon,
-  ReturnIcon,
   ShieldIcon,
   WrenchIcon,
 } from "@/components/ui/Icons";
@@ -109,13 +109,18 @@ function ProofLink({
 export function ProductPurchase({
   product,
   rating,
-  bestSeller = false,
+  soldLast90Days,
 }: {
   product: Product;
   /** Aggregate rating shown as a scroll-to-reviews link — only present when this product has a real review dataset (gated on verified data). */
   rating?: { average: number; count: number };
-  /** Optional trust pill above the title — set only for the flagship pen. */
-  bestSeller?: boolean;
+  /**
+   * Units sold in the last 90 days, shown as a pill beside the rating. Passed
+   * only for the flagship, from `site.metrics.unitsSoldLast90Days` — and only
+   * while that figure is one the store can substantiate. See the note on it
+   * in lib/site.ts.
+   */
+  soldLast90Days?: number;
 }) {
   // Default to whichever variant carries the deepest real discount (a BOGO
   // or bundle deal) rather than always the first — that's the offer worth
@@ -178,18 +183,30 @@ export function ProductPurchase({
               {product.material}
             </p>
             <div className="flex flex-wrap items-center gap-2">
-              {/* A policy fact, not a sales claim. This slot used to read
-                  "Best seller", which is a factual assertion about volume the
-                  store cannot evidence (site.metrics.verified is false, and
-                  Shopify's own order data does not support it). The 30-day
-                  replacement window is real, documented policy
-                  (site.promise.returnsDetail), so it carries the same visual
-                  weight without inventing a number — and it says something the
-                  guarantee list below does not lead with. */}
-              {bestSeller && (
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-gold px-3 py-1.5 text-[0.64rem] font-semibold tracking-[0.16em] text-on-accent uppercase">
-                  <ReturnIcon className="h-3.5 w-3.5" />
-                  30-day replacement
+              {/* What this slot says has changed twice, and the reason is the
+                  same both times: only claims the store can back up.
+                  It began as "Best seller" — a volume assertion with no figure
+                  behind it, which Shopify's own order data did not support. It
+                  then carried the 30-day replacement window, which is real
+                  policy but already stated in the guarantee list under the
+                  buttons. A dated count is the version of the volume claim the
+                  store CAN stand behind: naming the window makes it
+                  checkable, and it stops being true on its own rather than
+                  quietly overstaying like "best seller" did. The figure is not
+                  invented here — it comes from site.metrics.unitsSoldLast90Days
+                  and has to be substantiated from real orders.
+                  A quiet bordered pill, not the gold badge it replaced: gold
+                  is promotional furniture, and this is a fact. */}
+              {soldLast90Days != null && soldLast90Days > 0 && (
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-line bg-ivory py-1.5 pr-3 pl-2.5 text-[0.78rem] text-ink-soft">
+                  <BagIcon className="h-3.5 w-3.5 shrink-0 text-ink-mute" />
+                  {/* Stated as a floor ("1,400+"), so the number has to be the
+                      count we know we have cleared, not a rounding of it — the
+                      + is what keeps it true as the real figure moves. */}
+                  <span className="font-semibold text-ink tabular-nums">
+                    {soldLast90Days.toLocaleString("en-US")}+
+                  </span>
+                  sold in the last 3 months
                 </span>
               )}
               {rating && (

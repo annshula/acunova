@@ -42,6 +42,17 @@ export const site = {
     reviewCount: 1024,
     unitsSold: 50000,
     countries: 34,
+    /**
+     * Shown in the product buy box as "1,400+ sold in the last 3 months".
+     * Unlike the rest of this block it is NOT gated on `verified`, because it
+     * renders as visible copy rather than schema.org markup — so it has to be
+     * a figure the store can substantiate from its own orders for the last 90
+     * days. It reads as a floor (`+`), so keep it at a count already cleared
+     * rather than a rounding-up. A rolling window goes stale on its own:
+     * recompute it from real order data instead of leaving one number sitting
+     * here.
+     */
+    unitsSoldLast90Days: 1400,
   },
 
   promise: {
