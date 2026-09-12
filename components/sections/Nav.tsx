@@ -166,61 +166,72 @@ export default function Nav() {
         }`}
         style={{ height: "var(--nav-h)" }}
       >
-        <nav className="mx-auto flex h-full max-w-310 items-center justify-between gap-4 px-6 sm:px-0">
-          <Logo variant="dark" />
+        {/* Same split as `Section` and `HeroFrame`: the gutter lives on the
+            outer element, the measure on the inner one — and it takes the same
+            `px-5 sm:px-8` values, so the bar and the content below share one
+            left edge. `max-w-310 px-6 sm:px-0` only yielded a margin once the
+            viewport passed 1240px, so on tablets and small laptops the logo sat
+            flush against the screen edge — and once the hero below it got its
+            proper gutter, the two were no longer on the same left edge, which
+            is the whole point of a transparent bar sitting inside the hero's
+            white panel. */}
+        <nav className="h-full px-5 sm:px-8">
+          <div className="mx-auto flex h-full max-w-310 items-center justify-between gap-4">
+            <Logo variant="dark" />
 
-          {/* Desktop links */}
-          <ul className="hidden items-center gap-8 lg:flex">
-            {links.map((l) => {
-              const active =
-                l.href === pathname ||
-                (l.href !== "/" &&
-                  !l.href.startsWith("/#") &&
-                  pathname.startsWith(l.href));
-              return (
-                <li key={l.href}>
-                  <Link
-                    href={l.href}
-                    aria-current={active ? "page" : undefined}
-                    className={`relative text-[0.9rem] transition-colors duration-200 ease-(--ease-out-soft) ${
-                      active ? "text-ink" : "text-ink-soft hover:text-ink"
-                    }`}
-                  >
-                    {l.label}
-                    {active && (
-                      <span
-                        aria-hidden
-                        className="absolute -bottom-1.5 left-0 h-px w-full bg-primary"
-                      />
-                    )}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+            {/* Desktop links */}
+            <ul className="hidden items-center gap-8 lg:flex">
+              {links.map((l) => {
+                const active =
+                  l.href === pathname ||
+                  (l.href !== "/" &&
+                    !l.href.startsWith("/#") &&
+                    pathname.startsWith(l.href));
+                return (
+                  <li key={l.href}>
+                    <Link
+                      href={l.href}
+                      aria-current={active ? "page" : undefined}
+                      className={`relative text-[0.9rem] transition-colors duration-200 ease-(--ease-out-soft) ${
+                        active ? "text-ink" : "text-ink-soft hover:text-ink"
+                      }`}
+                    >
+                      {l.label}
+                      {active && (
+                        <span
+                          aria-hidden
+                          className="absolute -bottom-1.5 left-0 h-px w-full bg-primary"
+                        />
+                      )}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
 
-          <div className="flex items-center gap-1 sm:gap-2">
-            <div className="hidden sm:block">
-              <CurrencySelector variant="bar" overHero={false} />
+            <div className="flex items-center gap-1 sm:gap-2">
+              <div className="hidden sm:block">
+                <CurrencySelector variant="bar" overHero={false} />
+              </div>
+              <div className="hidden sm:block">
+                <AccountMenu variant="dropdown" overHero={false} />
+              </div>
+              <CartButton onOpen={() => setMenuOpen(false)} />
+              <div className="hidden lg:block">
+                <Button href={productPath} size="sm" variant="primary">
+                  Buy now
+                </Button>
+              </div>
+              <IconButton
+                onClick={() => setMenuOpen(true)}
+                aria-label="Open menu"
+                aria-expanded={menuOpen}
+                aria-controls="mobile-menu"
+                className="lg:hidden"
+              >
+                <Icon name="menu" className="size-5" />
+              </IconButton>
             </div>
-            <div className="hidden sm:block">
-              <AccountMenu variant="dropdown" overHero={false} />
-            </div>
-            <CartButton onOpen={() => setMenuOpen(false)} />
-            <div className="hidden lg:block">
-              <Button href={productPath} size="sm" variant="primary">
-                Buy now
-              </Button>
-            </div>
-            <IconButton
-              onClick={() => setMenuOpen(true)}
-              aria-label="Open menu"
-              aria-expanded={menuOpen}
-              aria-controls="mobile-menu"
-              className="lg:hidden"
-            >
-              <Icon name="menu" className="size-5" />
-            </IconButton>
           </div>
         </nav>
       </header>

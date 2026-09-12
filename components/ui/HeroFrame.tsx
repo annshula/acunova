@@ -190,9 +190,21 @@ export function HeroFrame({
           header, and the same nav-h on the bottom keeps the box balanced so
           justify-center lines the copy up with the true middle of the visible
           viewport. Any asymmetry (a top margin to clear the bar, an uneven py)
-          drags the block off-centre. */}
-      <div className="relative mx-auto flex w-full max-w-310 flex-1 flex-col justify-center px-6 py-[calc(var(--nav-h)+var(--marquee-h)+2rem)] sm:px-0 lg:py-[calc(var(--nav-h)+var(--marquee-h)+3rem)]">
-        {children}
+          drags the block off-centre.
+
+          Horizontal breathing room is carried by the WRAPPER, with the
+          measure (`max-w-310`) on the inner box — the same split `Section`
+          uses (`px-5 sm:px-8` outside, `mx-auto max-w-*` inside), and the same
+          two gutter values, so the copy starts on the page's column at every
+          width. The old form — padding and measure on one element, with the
+          padding zeroed at `sm` (`mx-auto max-w-310 … sm:px-0`) — only
+          produced a margin once the viewport exceeded 1240px, so from `sm` up
+          to 1240px the copy sat flush against the screen edge (no gutter at
+          all on tablets and small laptops) while every section below it kept
+          its own, and below `sm` it was 4px wider on each side than those
+          sections' `px-5`. */}
+      <div className="relative flex w-full flex-1 flex-col justify-center px-5 py-[calc(var(--nav-h)+var(--marquee-h)+2rem)] sm:px-8 lg:py-[calc(var(--nav-h)+var(--marquee-h)+3rem)]">
+        <div className="mx-auto w-full max-w-310">{children}</div>
       </div>
 
       {/* ------------------------------- dots ------------------------------- */}
