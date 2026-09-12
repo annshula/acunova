@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "syncedAt": "2026-09-12T08:33:35.001Z",
+  "syncedAt": "2026-09-12T09:47:41.968Z",
   "shop": {
     "domain": "trackify-com.myshopify.com",
     "name": "Trackify",
@@ -32,6 +32,11 @@
           "availableForSale": true,
           "stockQuantity": 7664,
           "pricesByMarket": {
+            "IN": {
+              "amount": 3499,
+              "compareAtAmount": 5299,
+              "currencyCode": "INR"
+            },
             "CA": {
               "amount": 55.95,
               "compareAtAmount": 82.95,
@@ -42,20 +47,15 @@
               "compareAtAmount": 83.95,
               "currencyCode": "AUD"
             },
-            "US": {
-              "amount": 39.95,
-              "compareAtAmount": 59.95,
-              "currencyCode": "USD"
-            },
             "GB": {
               "amount": 29.95,
               "compareAtAmount": 44.95,
               "currencyCode": "GBP"
             },
-            "IN": {
-              "amount": 3499,
-              "compareAtAmount": 5299,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 39.95,
+              "compareAtAmount": 59.95,
+              "currencyCode": "USD"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/370894b1-f8d8-4236-9b3a-12a75d49c6eb.jpg?v=1786902932",
@@ -73,6 +73,11 @@
           "availableForSale": true,
           "stockQuantity": 8716,
           "pricesByMarket": {
+            "IN": {
+              "amount": 3999,
+              "compareAtAmount": 5699,
+              "currencyCode": "INR"
+            },
             "CA": {
               "amount": 62.95,
               "compareAtAmount": 89.95,
@@ -83,20 +88,15 @@
               "compareAtAmount": 90.95,
               "currencyCode": "AUD"
             },
-            "US": {
-              "amount": 44.95,
-              "compareAtAmount": 64.95,
-              "currencyCode": "USD"
-            },
             "GB": {
               "amount": 33.95,
               "compareAtAmount": 48.95,
               "currencyCode": "GBP"
             },
-            "IN": {
-              "amount": 3999,
-              "compareAtAmount": 5699,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 44.95,
+              "compareAtAmount": 64.95,
+              "currencyCode": "USD"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/8f652d8a-4b40-424d-835f-e574cd3e0926.jpg?v=1786902932",
@@ -114,6 +114,11 @@
           "availableForSale": true,
           "stockQuantity": 9880,
           "pricesByMarket": {
+            "IN": {
+              "amount": 4199,
+              "compareAtAmount": 6199,
+              "currencyCode": "INR"
+            },
             "CA": {
               "amount": 66.95,
               "compareAtAmount": 96.95,
@@ -124,20 +129,15 @@
               "compareAtAmount": 97.95,
               "currencyCode": "AUD"
             },
-            "US": {
-              "amount": 47.95,
-              "compareAtAmount": 69.95,
-              "currencyCode": "USD"
-            },
             "GB": {
               "amount": 35.95,
               "compareAtAmount": 51.95,
               "currencyCode": "GBP"
             },
-            "IN": {
-              "amount": 4199,
-              "compareAtAmount": 6199,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 47.95,
+              "compareAtAmount": 69.95,
+              "currencyCode": "USD"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/93c2b9c4-38cf-4516-b556-d6c3ca530065.jpg?v=1786902932",
@@ -155,6 +155,11 @@
           "availableForSale": true,
           "stockQuantity": 5308,
           "pricesByMarket": {
+            "IN": {
+              "amount": 3499,
+              "compareAtAmount": 5299,
+              "currencyCode": "INR"
+            },
             "CA": {
               "amount": 55.95,
               "compareAtAmount": 82.95,
@@ -165,20 +170,15 @@
               "compareAtAmount": 83.95,
               "currencyCode": "AUD"
             },
-            "US": {
-              "amount": 39.95,
-              "compareAtAmount": 59.95,
-              "currencyCode": "USD"
-            },
             "GB": {
               "amount": 29.95,
               "compareAtAmount": 44.95,
               "currencyCode": "GBP"
             },
-            "IN": {
-              "amount": 3499,
-              "compareAtAmount": 5299,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 39.95,
+              "compareAtAmount": 59.95,
+              "currencyCode": "USD"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/9ab8f2cc-2ba9-48b9-b735-ffd149833740.jpg?v=1786902932",
@@ -196,6 +196,11 @@
           "availableForSale": true,
           "stockQuantity": 5819,
           "pricesByMarket": {
+            "IN": {
+              "amount": 3999,
+              "compareAtAmount": 5699,
+              "currencyCode": "INR"
+            },
             "CA": {
               "amount": 62.95,
               "compareAtAmount": 89.95,
@@ -206,20 +211,15 @@
               "compareAtAmount": 90.95,
               "currencyCode": "AUD"
             },
-            "US": {
-              "amount": 44.95,
-              "compareAtAmount": 64.95,
-              "currencyCode": "USD"
-            },
             "GB": {
               "amount": 33.95,
               "compareAtAmount": 48.95,
               "currencyCode": "GBP"
             },
-            "IN": {
-              "amount": 3999,
-              "compareAtAmount": 5699,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 44.95,
+              "compareAtAmount": 64.95,
+              "currencyCode": "USD"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/c6e687c4-4219-49e9-9e78-6e10d3a5bc2d.jpg?v=1786902932",
@@ -237,6 +237,11 @@
           "availableForSale": true,
           "stockQuantity": 46331,
           "pricesByMarket": {
+            "IN": {
+              "amount": 3681.51,
+              "compareAtAmount": 5844.98,
+              "currencyCode": "INR"
+            },
             "CA": {
               "amount": 53,
               "compareAtAmount": 84,
@@ -247,20 +252,15 @@
               "compareAtAmount": 86,
               "currencyCode": "AUD"
             },
-            "US": {
-              "amount": 37.76,
-              "compareAtAmount": 59.95,
-              "currencyCode": "USD"
-            },
             "GB": {
               "amount": 29,
               "compareAtAmount": 46,
               "currencyCode": "GBP"
             },
-            "IN": {
-              "amount": 3681.51,
-              "compareAtAmount": 5844.98,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 37.76,
+              "compareAtAmount": 59.95,
+              "currencyCode": "USD"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/029e763f-3b6c-44ae-bf9b-74ce60d381df.jpg?v=1786902932",
@@ -268,6 +268,47 @@
           "subtitle": "Standard pack / 5 heads",
           "quantity": 1,
           "weightGrams": 180
+        },
+        {
+          "id": "gid://shopify/ProductVariant/49722686243043",
+          "title": "opp five head oil free 2PCS",
+          "sku": "CJYD151610812LO",
+          "price": 60.42,
+          "compareAtPrice": 119.9,
+          "availableForSale": false,
+          "stockQuantity": 0,
+          "pricesByMarket": {
+            "IN": {
+              "amount": 5890.81,
+              "compareAtAmount": 11689.96,
+              "currencyCode": "INR"
+            },
+            "CA": {
+              "amount": 84,
+              "compareAtAmount": 167,
+              "currencyCode": "CAD"
+            },
+            "AU": {
+              "amount": 86,
+              "compareAtAmount": 171,
+              "currencyCode": "AUD"
+            },
+            "GB": {
+              "amount": 46,
+              "compareAtAmount": 91,
+              "currencyCode": "GBP"
+            },
+            "US": {
+              "amount": 60.42,
+              "compareAtAmount": 119.9,
+              "currencyCode": "USD"
+            }
+          },
+          "image": null,
+          "shopifyTitle": "opp five head oil free 2PCS",
+          "subtitle": "opp five head oil free 2PCS",
+          "quantity": 1,
+          "weightGrams": 0
         }
       ],
       "images": [
@@ -284,6 +325,96 @@
           "height": 1000
         },
         {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sc3402fe0a09040348098bc4ee43c87dfy.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S7c52dc8b2f6044dc9121ada59345025ev.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 790,
+          "height": 910
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S2d28817f188e4cadaa5d9ec9d43a5bebm.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S62f6a358147c4006897565ae7a18f5e6m.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sf52b70494a1e48f58bd38f6e6d818a271.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S09c131c178f64179a1fe9a3c9f124c4er.webp?v=1789206174",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S82de8ec6ef4c418da48105847ec17ce9u.webp?v=1789206219",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S82e0288053be4a0cb5bd700a680968b9K.webp?v=1789206219",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S479c5347f7fd4b54b81391c4f3e9e938J.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sa378d10da4fb4417a07b142e1b1233bdY.webp?v=1789206219",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S76feb74656f24df18d715dd7ef72bf86q.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S36b0670a94a043009720487771249129c.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S5fbd8258196e469ba1f0b060c6effd2aP.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S4c487cc12fcd412aa7f6a0cf9f789015f.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sbe67745aa6f848d09948126c3dbd1c21V.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 800,
+          "height": 800
+        },
+        {
           "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S84cb4be72e9546b38e93c3574065d008j.webp?v=1788893818",
           "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
           "width": 1000,
@@ -300,96 +431,6 @@
           "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
           "width": 1000,
           "height": 1000
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S67945f27e60b4b859926550d0026adfek.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sb995d021ae334ebb99079f73d48fa39fB.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sc3402fe0a09040348098bc4ee43c87dfy.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S0e068698913e4b28841bfec65fb9494fk.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 790,
-          "height": 1104
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S2d28817f188e4cadaa5d9ec9d43a5bebm.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 800,
-          "height": 800
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S4c487cc12fcd412aa7f6a0cf9f789015f.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 800,
-          "height": 800
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S5b668a806ff74098b5d24afa1db9f49fv.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 800,
-          "height": 800
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S5fbd8258196e469ba1f0b060c6effd2aP.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S7ada4b10530f4f3a94a877dca84cf785h.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S7c52dc8b2f6044dc9121ada59345025ev.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 790,
-          "height": 910
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S9f36b9e156194c7380e20a5067dd175dg.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 790,
-          "height": 1100
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S36b0670a94a043009720487771249129c.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S62f6a358147c4006897565ae7a18f5e6m.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S76feb74656f24df18d715dd7ef72bf86q.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S94f13ba1e3e64a5e9f8cd03847e38e7ad.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 790,
-          "height": 1105
         }
       ],
       "media": [
@@ -401,11 +442,130 @@
           "height": 1000
         },
         {
+          "kind": "video",
+          "poster": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/preview_images/1c768e00c584414abb7f320429539d7a.thumbnail.0000000000.jpg?v=1789206268",
+          "sources": [
+            {
+              "src": "https://cdn.shopify.com/videos/c/vp/1c768e00c584414abb7f320429539d7a/1c768e00c584414abb7f320429539d7a.HD-720p-1.6Mbps-94202584.mp4",
+              "type": "video/mp4"
+            },
+            {
+              "src": "https://cdn.shopify.com/videos/c/vp/1c768e00c584414abb7f320429539d7a/1c768e00c584414abb7f320429539d7a.SD-480p-0.9Mbps-94202584.mp4",
+              "type": "video/mp4"
+            }
+          ]
+        },
+        {
           "kind": "image",
           "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sa895515640a942659a1ff572b10224cej.webp?v=1788893818",
           "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
           "width": 1000,
           "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sc3402fe0a09040348098bc4ee43c87dfy.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S7c52dc8b2f6044dc9121ada59345025ev.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 790,
+          "height": 910
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S2d28817f188e4cadaa5d9ec9d43a5bebm.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S62f6a358147c4006897565ae7a18f5e6m.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sf52b70494a1e48f58bd38f6e6d818a271.webp?v=1788893818",
+          "alt": "",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S09c131c178f64179a1fe9a3c9f124c4er.webp?v=1789206174",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S82de8ec6ef4c418da48105847ec17ce9u.webp?v=1789206219",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S82e0288053be4a0cb5bd700a680968b9K.webp?v=1789206219",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S479c5347f7fd4b54b81391c4f3e9e938J.webp?v=1788893818",
+          "alt": "",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sa378d10da4fb4417a07b142e1b1233bdY.webp?v=1789206219",
+          "alt": "",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S76feb74656f24df18d715dd7ef72bf86q.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S36b0670a94a043009720487771249129c.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S5fbd8258196e469ba1f0b060c6effd2aP.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S4c487cc12fcd412aa7f6a0cf9f789015f.webp?v=1788893818",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "kind": "image",
+          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sbe67745aa6f848d09948126c3dbd1c21V.webp?v=1788893818",
+          "alt": "",
+          "width": 800,
+          "height": 800
         },
         {
           "kind": "image",
@@ -420,123 +580,11 @@
           "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
           "width": 1000,
           "height": 1000
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S66064b4d043440caa2d4e78addc3dbf5B.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S67945f27e60b4b859926550d0026adfek.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sb995d021ae334ebb99079f73d48fa39fB.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sc3402fe0a09040348098bc4ee43c87dfy.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S0e068698913e4b28841bfec65fb9494fk.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 790,
-          "height": 1104
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S2d28817f188e4cadaa5d9ec9d43a5bebm.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 800,
-          "height": 800
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S4c487cc12fcd412aa7f6a0cf9f789015f.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 800,
-          "height": 800
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S5b668a806ff74098b5d24afa1db9f49fv.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 800,
-          "height": 800
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S5fbd8258196e469ba1f0b060c6effd2aP.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S7ada4b10530f4f3a94a877dca84cf785h.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S7c52dc8b2f6044dc9121ada59345025ev.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 790,
-          "height": 910
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S9f36b9e156194c7380e20a5067dd175dg.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 790,
-          "height": 1100
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S36b0670a94a043009720487771249129c.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S62f6a358147c4006897565ae7a18f5e6m.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S76feb74656f24df18d715dd7ef72bf86q.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "kind": "image",
-          "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S94f13ba1e3e64a5e9f8cd03847e38e7ad.webp?v=1788893818",
-          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
-          "width": 790,
-          "height": 1105
         }
       ],
       "subtitle": "Auto-sensing acupressure, no needles",
       "material": "ABS and aluminium alloy",
-      "descriptionHtml": "<p><b>No needles. Just real acupressure.</b> This auto-sensing acupressure pen locates pressure points and delivers gentle electronic stimulation at the push of a button — the same meridian-point technique used in traditional acupuncture, without the needles, the training, or the appointment.</p>\n\n<h3>Why people are switching to this over traditional tools</h3>\n<ul>\n<li>\n<b>Auto point-sensing</b> — the tip detects acupoints automatically, so you don't need to know pressure-point charts to use it correctly</li>\n<li>\n<b>Multiple head styles</b> — choose 3-head or 5-head tips, oil-free or oil-infused, depending on sensitivity and use case</li>\n<li>\n<b>Durable build</b> — ABS + aluminum alloy body designed for daily use</li>\n<li>\n<b>Portable</b> — compact enough for a desk drawer, gym bag, or carry-on</li>\n<li>\n<b>Multi-purpose</b> — home massage, post-workout recovery, everyday tension relief</li>\n</ul>\n\n<h3>Who it's for</h3>\n<p>Anyone dealing with everyday muscle tension, stress, or stiffness who wants a faster, needle-free alternative to traditional acupuncture — at home, on your schedule.</p>\n\n<h3>FAQ</h3>\n<p><b>Is this the same as acupuncture?</b><br>It uses the same meridian/pressure-point principle as acupuncture, but stimulates points electronically instead of with needles.</p>\n<p><b>Do I need training to use it?</b><br>No — the auto-sensing tip is designed to find active points without prior knowledge of acupoint charts.</p>\n<p><b>Is it safe for daily use?</b><br>Yes, it's designed for regular home use. As with any massage tool, avoid use directly over broken skin, varicose veins, or if pregnant without consulting a doctor.</p>\n<p><b>What's the difference between the head styles?</b><br>3-head tips are more precise for smaller areas; 5-head tips cover broader muscle groups faster. Oil-infused variants glide more smoothly on skin.</p>\n\n<p><i>This is a wellness/massage tool, not a medical device. Individual results vary.</i></p>",
+      "descriptionHtml": "<p><b>An acupressure pen you can actually check the specs on.</b> Most listings in this category tell you what the device will do for your body. This one tells you what it is: a 158 g pen in an ABS and aluminium-alloy body, nine intensity levels on a lit display, five screw-on heads, and a single AA cell. Press the tip to a point, pick a level, and that is the whole machine.</p>\n\n<h3>What you actually get</h3>\n<ul>\n<li>\n<b>Five heads, oil-free</b> — rounded ball, ridged, fine point and flat spoon, plus the fitted tip on the pen. Every head is in the box. None is held back as a paid extra.</li>\n<li>\n<b>Nine levels, held on the display</b> — the level you set stays on screen until you change it, so the setting that suited you yesterday is the one you return to, not a guess at the same number of button presses.</li>\n<li>\n<b>Auto point-sensing tip</b> — the tip responds as it passes over an active point, so you do not need a meridian chart memorised before you start.</li>\n<li>\n<b>One AA cell</b> — no charger, no cable, no charging cradle, and no battery that dies at three years old and takes the device with it. It travels in hand luggage without an argument.</li>\n<li>\n<b>170 mm, 158 g</b> — long enough to reach between your own shoulder blades one-handed, light enough to hold there.</li>\n</ul>\n\n<h3>Honest specifications</h3>\n<ul>\n<li>Body: ABS and aluminium alloy</li>\n<li>Weight: 158 g, oil-free build, without packaging</li>\n<li>Heads: five, interchangeable, threaded (not friction-fit)</li>\n<li>Intensity: nine selectable levels</li>\n<li>Power: one AA cell, not included</li>\n</ul>\n\n<h3>What it is, and what it is not</h3>\n<p>This is a consumer wellness and massage tool that applies pressure through a metal tip along with a low-level electrical pulse, in the same broad family as the TENS units sold in any pharmacy. It is <b>not a medical device</b>. It is not cleared by the FDA or Health Canada, and nothing here is a health claim or a treatment for any condition. If a listing for one of these tells you it cures something, that is the moment to close the tab.</p>\n\n<p>Do not use it if you have a pacemaker or any implanted electronic device, or if you are pregnant. Avoid broken skin, the front and sides of the neck, and the area near the eyes. If you have a heart condition, epilepsy or reduced sensation, ask a doctor first.</p>\n\n<h3>Common questions</h3>\n<p><b>Do I need to know the pressure points first?</b><br>No. The auto-sensing tip responds as it passes over an active point, which is what most people use to find where to work.</p>\n<p><b>How long should a session be?</b><br>Five to fifteen minutes across a few points, once or twice a day. Longer is not better. If a spot goes numb, sore or red, stop and move on.</p>\n<p><b>What is the difference between the heads?</b><br>The fine point concentrates on one spot, the ball and spoon spread the same pressure over a wider area, and the ridged head suits a broad muscle like a calf or a forearm.</p>\n<p><b>Is a battery included?</b><br>No. It takes one standard AA cell, which keeps the pen cheap to run and legal to fly with.</p>\n",
       "specs": [
         {
           "label": "Type",

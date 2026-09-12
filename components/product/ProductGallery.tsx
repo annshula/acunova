@@ -146,18 +146,59 @@ export function ProductGallery({
         )}
 
         {isVideo ? (
-          <div className="relative mx-auto w-full max-w-115 overflow-hidden rounded-card bg-parchment">
-            <video
-              key={active.poster}
-              controls
-              playsInline
-              poster={active.poster}
-              className="w-full"
-            >
-              {active.sources.map((s) => (
-                <source key={s.src} src={s.src} type={s.type} />
-              ))}
-            </video>
+          // The slot keeps the photos' 1:1 footprint and centres the video in
+          // it, rather than sizing itself to the video.
+          //
+          // Shopify's 720p file is 16:9 while every still on this listing is
+          // 1:1, and the gallery row (`flex-col-reverse … lg:flex-row`) is a
+          // flex container — so on desktop, where the default
+          // `align-items: stretch` applies across the row, this wrapper was
+          // stretched to the thumbnail rail's full height (max-h-115, 460px)
+          // while the video inside stayed 259px tall. The remaining ~200px
+          // showed the wrapper's own `bg-parchment` (#eaf4f1), a visibly
+          // deeper mint than the page canvas (#f4fefb) — a band of the wrong
+          // colour under the video, desktop only, because at mobile the row is
+          // `flex-col-reverse` and stretches across the other axis.
+          //
+          // A square slot fixes the colour two ways: the gallery no longer
+          // resizes when you click between a still and the video, and the
+          // space around the video is just the page. There is deliberately no
+          // background colour here — any fixed colour is one that can disagree
+          // with the page around it, which is the whole bug.
+          //
+          // The video keeps its natural ratio (`w-full`, no `h-full` +
+          // `object-contain`): a letterboxed element puts Chrome's native
+          // controls on the element's bottom edge rather than the frame's,
+          // floating them in the empty space.
+          //
+          // Rounding lives on an inner wrapper that HUGS the video. The slot's
+          // own radius can't reach it — the video is inset from all four of the
+          // slot's corners, so a radius there belongs to a transparent box
+          // nothing can see. That left the video as the one square-cornered
+          // rectangle in a frame where the thumbnails are `rounded-lg` and the
+          // slot's loading skeleton
+          // (app/products/[handle]/loading.tsx) is `rounded-card`.
+          // Wrapper + `overflow-hidden`, rather than a radius on the <video>
+          // itself: it's the same clip the thumbnail rail already puts around
+          // each `<Image>`, and it doesn't depend on the compositor honouring
+          // a radius on the playing video. Same 14px token as the skeleton, so
+          // the still-loading state and the loaded video agree.
+          <div className="relative mx-auto flex aspect-square w-full max-w-115 items-center justify-center">
+            <div className="w-full overflow-hidden rounded-card">
+              <video
+                key={active.poster}
+                controls
+                playsInline
+                poster={active.poster}
+                // block: kills the inline-baseline gap that would otherwise
+                // leave a few px of unclipped space under the video.
+                className="block w-full"
+              >
+                {active.sources.map((s) => (
+                  <source key={s.src} src={s.src} type={s.type} />
+                ))}
+              </video>
+            </div>
           </div>
         ) : (
           <button
