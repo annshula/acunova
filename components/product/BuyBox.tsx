@@ -21,35 +21,54 @@ import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import type { Product } from "@/lib/product";
 
-const MAX_QTY = 10;
+/**
+ * Ceiling on PACKS per order, not pens — a 2-pen pack can take an order to 20
+ * pens. Raising it means raising the real quantity sent to the cart with it.
+ */
+const MAX_PACKS = 10;
 
 /**
- * Pack options offered above the stepper. Both buy the same SKU — a 2-pack is
- * quantity 2, not a separate variant — because fulfilment (CJDropshipping)
- * maps per SKU and passes quantity straight through, so a bundle modelled as
- * its own variant would need a CJ SKU that ships two units and there isn't
- * one.
+ * Pack sizes offered above the stepper — how many pens one pack carries.
  *
- * `discount` mirrors the Shopify automatic discount "2-Pack Bundle - 20% off"
- * (minimum quantity 2, scoped to this variant). It is display only: the real
- * reduction is applied by Shopify at checkout, so the figure shown here and
- * the figure charged come from the same rule rather than this component
- * inventing one.
+ * Both sizes buy the same SKU: a 2-pack is quantity 2, not a separate
+ * variant, because fulfilment (CJDropshipping) maps per SKU and passes
+ * quantity straight through, so a bundle modelled as its own variant would
+ * need a CJ SKU that ships two units and there isn't one.
+ *
+ * **Pack size × packs, not one flat quantity.** These two controls answer
+ * different questions and used to share a single counter: the pills set
+ * `quantity` to 1 or 2 and the stepper incremented that same number, so
+ * pressing "+" from a 2-pack silently dropped the pack selection (at 3, no
+ * pill was highlighted at all) and the headline price never moved, because it
+ * was rendered from the per-unit amount. Now the pills choose the pack size
+ * and the stepper multiplies how many of that pack are wanted — which is what
+ * this surface always claimed to do, and what the reference build did with
+ * its 1/2-band variants.
+ *
+ * `BUNDLE_DISCOUNT` mirrors the Shopify automatic discount "2-Pack Bundle -
+ * 20% off" (minimum quantity 2, scoped to this variant). It is display only:
+ * the real reduction is applied by Shopify at checkout, so the figure shown
+ * here and the figure charged come from the same rule rather than this
+ * component inventing one.
  */
 const BUNDLE_MIN_QTY = 2;
 const BUNDLE_DISCOUNT = 0.2;
 
-const PACKS: ReadonlyArray<{ qty: number; label: string; badge?: string }> = [
-  { qty: 1, label: "1 pen" },
-  { qty: 2, label: "2 pens", badge: "Save 20%" },
+const PACKS: ReadonlyArray<{ size: number; label: string; badge?: string }> = [
+  { size: 1, label: "1 pen" },
+  { size: 2, label: "2 pens", badge: "Save 20%" },
 ];
 
 /**
  * The purchase surface — gallery lives beside this in the product page, this
  * is everything else: price, stock, the pack picker, quantity and the two
- * ways to check out. Each pack is a fixed SKU (1 / 2 / 4 bands) — the pack
- * picker below chooses which one — and the stepper here multiplies how many
- * of *that* pack you want, same as ordering several of the same size.
+ * ways to check out.
+ *
+ * Two quantities, kept apart on purpose: `packSize` (the pills) is how many
+ * pens one pack carries and `packs` (the stepper) is how many packs. The
+ * headline price is their product — the live localized amount for the
+ * selection — so both controls move it. See the PACKS doc above for why they
+ * used to share one counter and what that broke.
  *
  * `selectedId`/`onSelectId` are controlled by the parent (ProductPurchase)
  * rather than owned here, so picking a variant can also move ProductGallery's
@@ -65,7 +84,10 @@ export function BuyBox({
   selectedId: string;
   onSelectId: (id: string) => void;
 }) {
-  const [quantity, setQuantity] = useState(1);
+  /** How many pens one pack carries — the "1 pen" / "2 pens" pills. */
+  const [packSize, setPackSize] = useState(1);
+  /** How many packs — the stepper beside the buy buttons. */
+  const [packs, setPacks] = useState(1);
   const [buying, setBuying] = useState(false);
   const [buyError, setBuyError] = useState<string | null>(null);
   const { add } = useCart();
@@ -88,12 +110,25 @@ export function BuyBox({
   // cart API, so the whole purchase surface is disabled and labelled instead.
   const outOfStock = !selected.availableForSale;
 
-  // What the shopper actually pays for the current quantity. The Shopify rule
+  // The one number the headline price and both buy buttons quote: pens per
+  // pack × how many packs.
+  const pensTotal = packSize * packs;
+
+  // What the shopper actually pays for that selection. The Shopify rule
   // ("2-Pack Bundle - 20% off") is a minimum-quantity one, so it applies to
-  // every quantity at or above its threshold, not only to an exact 2 — mirror
-  // that here so the button total can never quote more than checkout charges.
-  const packDiscount = quantity >= BUNDLE_MIN_QTY ? BUNDLE_DISCOUNT : 0;
-  const cartTotal = selectedPrice.amount * quantity * (1 - packDiscount);
+  // every basket at or above its threshold, not only to an exact 2 — mirror
+  // that here so the price shown can never quote more than checkout charges.
+  //
+  // `selectedPrice.amount` is the localized amount from useLocalizedAmount (the
+  // synced Shopify presentment price for the shopper's market), so scaling it
+  // keeps the headline in the shopper's own currency instead of re-deriving a
+  // number from the default-market price.
+  const packDiscount = pensTotal >= BUNDLE_MIN_QTY ? BUNDLE_DISCOUNT : 0;
+  const cartTotal = selectedPrice.amount * pensTotal * (1 - packDiscount);
+  const compareAtTotal =
+    selectedPrice.compareAtAmount != null
+      ? selectedPrice.compareAtAmount * pensTotal
+      : null;
 
   const save =
     selectedPrice.compareAtAmount != null &&
@@ -114,18 +149,17 @@ export function BuyBox({
           transition={{ duration: 0.3, ease: easeOut }}
           className="font-display text-[2.2rem] leading-none font-semibold tracking-[-0.02em] text-ink tabular-nums"
         >
-          {/* Always a real, displayable price — selectedPrice.amount already
-              falls back to the server-rendered default-market price before
-              localization resolves (see useLocalizedAmount), so the price is
-              present in the initial HTML rather than a blank skeleton. */}
-          {formatMoney(selectedPrice.amount, selectedPrice.currencyCode)}
+          {/* The live total for the current selection — pack size × packs,
+              less the bundle discount — not the per-unit price. Always a
+              real, displayable figure: selectedPrice.amount falls back to the
+              server-rendered default-market price before localization
+              resolves (see useLocalizedAmount), so the price is present in the
+              initial HTML rather than a blank skeleton. */}
+          {formatMoney(cartTotal, selectedPrice.currencyCode)}
         </motion.span>
-        {selectedPrice.compareAtAmount != null && (
+        {compareAtTotal != null && (
           <span className="text-[1.05rem] text-ink-mute line-through tabular-nums">
-            {formatMoney(
-              selectedPrice.compareAtAmount,
-              selectedPrice.currencyCode,
-            )}
+            {formatMoney(compareAtTotal, selectedPrice.currencyCode)}
           </span>
         )}
         {save >= 45 ? (
@@ -177,21 +211,19 @@ export function BuyBox({
       {!outOfStock && (
         <fieldset className="mt-8">
           <legend className="mb-2.5 text-[0.68rem] font-semibold tracking-[0.2em] text-ink-mute uppercase">
-            Quantity
+            Pack size
           </legend>
           <div className="flex flex-wrap gap-2">
             {PACKS.map((pack) => {
-              const active = quantity === pack.qty;
-              const total =
-                selectedPrice.amount *
-                pack.qty *
-                (pack.qty >= BUNDLE_MIN_QTY ? 1 - BUNDLE_DISCOUNT : 1);
+              // Active follows the pack choice only, so the stepper can move
+              // without the pills appearing to lose the selection.
+              const active = packSize === pack.size;
               return (
                 <button
-                  key={pack.qty}
+                  key={pack.size}
                   type="button"
                   aria-pressed={active}
-                  onClick={() => setQuantity(pack.qty)}
+                  onClick={() => setPackSize(pack.size)}
                   className={cn(
                     "inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[0.82rem] font-medium transition-colors duration-300",
                     active
@@ -200,14 +232,6 @@ export function BuyBox({
                   )}
                 >
                   <span>{pack.label}</span>
-                  <span
-                    className={cn(
-                      "tabular-nums",
-                      active ? "text-white/70" : "text-ink-mute",
-                    )}
-                  >
-                    {formatMoney(total, selectedPrice.currencyCode)}
-                  </span>
                   {pack.badge && (
                     <span
                       className={cn(
@@ -228,29 +252,32 @@ export function BuyBox({
       )}
 
       {/* -------------------------------- quantity --------------------------------- */}
+      {/* Counts PACKS, not pens — the readout stays the pack count and the
+          headline price carries the pen total, so the two never disagree about
+          what the number between the arrows means. */}
       <div className="mt-7 flex items-center gap-3">
         <div className="inline-flex h-14 shrink-0 items-center rounded-full bg-parchment">
           <button
             type="button"
-            onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-            disabled={quantity <= 1}
-            aria-label="Decrease quantity"
+            onClick={() => setPacks((n) => Math.max(1, n - 1))}
+            disabled={packs <= 1}
+            aria-label="Decrease number of packs"
             className="grid h-full w-12 place-items-center rounded-l-full text-ink transition-colors hover:bg-line disabled:opacity-35"
           >
             <MinusIcon className="size-4" />
           </button>
           <span
             aria-live="polite"
-            aria-label={`Quantity: ${quantity}`}
+            aria-label={`${packs} ${packs === 1 ? "pack" : "packs"} of ${packSize} ${packSize === 1 ? "pen" : "pens"}, ${pensTotal} pens in total`}
             className="w-8 text-center text-[0.95rem] font-medium text-ink tabular-nums"
           >
-            {quantity}
+            {packs}
           </span>
           <button
             type="button"
-            onClick={() => setQuantity((q) => Math.min(MAX_QTY, q + 1))}
-            disabled={quantity >= MAX_QTY}
-            aria-label="Increase quantity"
+            onClick={() => setPacks((n) => Math.min(MAX_PACKS, n + 1))}
+            disabled={packs >= MAX_PACKS}
+            aria-label="Increase number of packs"
             className="grid h-full w-12 place-items-center rounded-r-full text-ink transition-colors hover:bg-line disabled:opacity-35"
           >
             <PlusIcon className="size-4" />
@@ -264,7 +291,7 @@ export function BuyBox({
             if (outOfStock) return;
             add(
               selected.id,
-              quantity,
+              pensTotal,
               Math.round(selectedPrice.amount * 100),
               selectedPrice.currencyCode,
             );
@@ -298,7 +325,7 @@ export function BuyBox({
             [
               {
                 variantId: selected.id,
-                qty: quantity,
+                qty: pensTotal,
                 priceCents: Math.round(selectedPrice.amount * 100),
               },
             ],
@@ -333,7 +360,6 @@ export function BuyBox({
         <Guarantee icon={<CheckIcon />}>{site.promise.hardware}</Guarantee>
         <Guarantee icon={<CheckIcon />}>{site.promise.support}</Guarantee>
       </ul>
-
     </div>
   );
 }
