@@ -123,10 +123,11 @@ const CSP = [
   // styles cannot execute script, so this is low risk.
   `style-src 'self' 'unsafe-inline'`,
   // Product imagery + video come from Shopify's CDN once the store is live.
-  // GA4 also paints a 1px beacon from google-analytics.com; Clarity beacons
-  // from c.bing.com; the Meta Pixel <noscript> fallback loads from
-  // facebook.com.
-  `img-src 'self' data: blob: https://cdn.shopify.com https://*.myshopify.com https://www.google-analytics.com https://*.google-analytics.com${META_PIXEL_SRC}${CLARITY_SRC}${CLARITY_IMG_SRC}${TIKTOK_SRC}`,
+  // GA4 also paints a 1px beacon from google-analytics.com, and gtag.js/GTM
+  // itself fires a `td` (transport diagnostics) beacon image straight from
+  // googletagmanager.com; Clarity beacons from c.bing.com; the Meta Pixel
+  // <noscript> fallback loads from facebook.com.
+  `img-src 'self' data: blob: https://cdn.shopify.com https://*.myshopify.com https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://*.googletagmanager.com${META_PIXEL_SRC}${CLARITY_SRC}${CLARITY_IMG_SRC}${TIKTOK_SRC}`,
   `media-src 'self' https://cdn.shopify.com https://*.myshopify.com`,
   `font-src 'self' data:`,
   // gtag.js sends hits to the GA4 endpoints over fetch/XHR; Clarity uploads

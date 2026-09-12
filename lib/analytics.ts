@@ -38,6 +38,13 @@ export type AnalyticsItem = {
   quantity?: number;
 };
 
+/**
+ * Meta's own loader snippet defines `window.fbq` as a queueing stub before
+ * fbevents.js finishes loading (`n.queue.push(arguments)` in the snippet), so
+ * a `track` call made right after `afterInteractive` injects the script is
+ * safe — the stub buffers it until the real library replaces it. The `fbq`
+ * check here only guards against the id being unset entirely.
+ */
 function fbq(event: string, data?: Record<string, unknown>) {
   if (typeof window === "undefined") return;
   window.fbq?.("track", event, data);
@@ -48,6 +55,11 @@ function gtag(event: string, params?: Record<string, unknown>) {
   window.gtag?.("event", event, params);
 }
 
+/**
+ * TikTok's loader snippet installs `ttq` as an array-like queue
+ * (`ttq.setAndDefer`) before events.js loads, so `track` calls made right
+ * after `afterInteractive` injects the script are buffered automatically.
+ */
 function ttq(event: string, data?: Record<string, unknown>) {
   if (typeof window === "undefined") return;
   window.ttq?.track(event, data);

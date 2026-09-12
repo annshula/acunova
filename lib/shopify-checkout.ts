@@ -48,6 +48,12 @@ export async function shopifyCheckout(
         .filter((item): item is NonNullable<typeof item> => item !== null);
       if (items.length > 0) {
         trackInitiateCheckout(items, currency);
+        // Every caller navigates the tab to Shopify immediately after this
+        // resolves. Without a beat, that hard navigation can abort the pixel
+        // beacons before they leave the browser, so InitiateCheckout would
+        // never reach Meta/TikTok. 250ms is enough for the request to fire
+        // and is not perceptible before the checkout redirect.
+        await new Promise((resolve) => setTimeout(resolve, 250));
       }
       return { ok: true, checkoutUrl: data.checkoutUrl };
     }
