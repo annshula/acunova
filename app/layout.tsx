@@ -108,11 +108,10 @@ export const metadata: Metadata = {
       "x-default": "/",
     },
   },
-  // No app/favicon.ico or app/icon.png for Next's auto-detection to pick up,
-  // so it's wired explicitly to /public/icon-192.png and icon-512.png
-  // instead of shipping a new asset just for this. Both are a real crop of
-  // the pen mark from public/brand/accupen-logo-black.png (previously a
-  // generic placeholder icon unrelated to the brand).
+  // No app/icon.png for Next's auto-detection to pick up, so it's wired
+  // explicitly to /public/icon-192.png and icon-512.png. app/favicon.ico and
+  // both icon sizes are generated from public/brand/accupenpro-favicon.png,
+  // the app-icon-style AP mark crop.
   icons: {
     icon: [
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },

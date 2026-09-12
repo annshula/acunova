@@ -15,8 +15,8 @@ import { site } from "@/lib/site";
 export type LogoVariant = "dark" | "light";
 
 const LOGO_SRC: Record<LogoVariant, string> = {
-  dark: "/brand/accupen-logo-black.png",
-  light: "/brand/accupen-logo-white.png",
+  dark: "/brand/accupenpro-logo-black.png",
+  light: "/brand/accupenpro-logo-white.png",
 };
 
 /** Native pixel ratio of the source artwork (1774x887) — keeps next/image from guessing and box-shifting on load. */
