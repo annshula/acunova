@@ -177,26 +177,36 @@ export function ProductPurchase({
 
       <div id="buy" className="scroll-mt-24 lg:sticky lg:top-28 lg:self-start">
         <div>
+          {/* What this slot says has changed twice, and the reason is the
+              same both times: only claims the store can back up.
+              It began as "Best seller" — a volume assertion with no figure
+              behind it, which Shopify's own order data did not support. It
+              then carried the 30-day replacement window, which is real
+              policy but already stated in the guarantee list under the
+              buttons. A dated count is the version of the volume claim the
+              store CAN stand behind: naming the window makes it
+              checkable, and it stops being true on its own rather than
+              quietly overstaying like "best seller" did. The figure is not
+              invented here — it comes from site.metrics.unitsSoldLast90Days
+              and has to be substantiated from real orders.
+              A quiet bordered pill, not the gold badge it replaced: gold
+              is promotional furniture, and this is a fact.
+              It shares a row with the rating rather than sitting on its own
+              line: both pills count what other people did with the product,
+              so side by side they read as one line of evidence. */}
           <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+            {/* The material spec is parked here, not deleted. It is a real
+                synced field (lib/product.ts) and still listed in full in
+                ProductDetails further down this page, so this slot was
+                restating a fact the page already carries — and it was the
+                leftmost thing in the buy box, competing with the price for
+                the first glance. Uncomment the <p> to put it back.
             <p className="font-label flex items-center gap-2.5 text-[0.62rem] font-medium tracking-[0.24em] text-ink-mute uppercase">
               <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold" />
               {product.material}
             </p>
+            */}
             <div className="flex flex-wrap items-center gap-2">
-              {/* What this slot says has changed twice, and the reason is the
-                  same both times: only claims the store can back up.
-                  It began as "Best seller" — a volume assertion with no figure
-                  behind it, which Shopify's own order data did not support. It
-                  then carried the 30-day replacement window, which is real
-                  policy but already stated in the guarantee list under the
-                  buttons. A dated count is the version of the volume claim the
-                  store CAN stand behind: naming the window makes it
-                  checkable, and it stops being true on its own rather than
-                  quietly overstaying like "best seller" did. The figure is not
-                  invented here — it comes from site.metrics.unitsSoldLast90Days
-                  and has to be substantiated from real orders.
-                  A quiet bordered pill, not the gold badge it replaced: gold
-                  is promotional furniture, and this is a fact. */}
               {soldLast90Days != null && soldLast90Days > 0 && (
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-line bg-ivory py-1.5 pr-3 pl-2.5 text-[0.78rem] text-ink-soft">
                   <BagIcon className="h-3.5 w-3.5 shrink-0 text-ink-mute" />
