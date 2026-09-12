@@ -14,8 +14,8 @@ import { ProductGallery } from "@/components/product/ProductGallery";
 import {
   ChevronDownIcon,
   ChevronRightIcon,
+  ReturnIcon,
   ShieldIcon,
-  StarIcon,
   WrenchIcon,
 } from "@/components/ui/Icons";
 import { RatingStars } from "@/components/ui/Stars";
@@ -114,7 +114,7 @@ export function ProductPurchase({
   product: Product;
   /** Aggregate rating shown as a scroll-to-reviews link — only present when this product has a real review dataset (gated on verified data). */
   rating?: { average: number; count: number };
-  /** Optional "Best seller" pill above the title — set only for the flagship pen. */
+  /** Optional trust pill above the title — set only for the flagship pen. */
   bestSeller?: boolean;
 }) {
   // Default to whichever variant carries the deepest real discount (a BOGO
@@ -178,10 +178,18 @@ export function ProductPurchase({
               {product.material}
             </p>
             <div className="flex flex-wrap items-center gap-2">
+              {/* A policy fact, not a sales claim. This slot used to read
+                  "Best seller", which is a factual assertion about volume the
+                  store cannot evidence (site.metrics.verified is false, and
+                  Shopify's own order data does not support it). The 30-day
+                  replacement window is real, documented policy
+                  (site.promise.returnsDetail), so it carries the same visual
+                  weight without inventing a number — and it says something the
+                  guarantee list below does not lead with. */}
               {bestSeller && (
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-gold px-3 py-1.5 text-[0.64rem] font-semibold tracking-[0.16em] text-on-accent uppercase">
-                  <StarIcon className="h-3.5 w-3.5" filled />
-                  Best seller
+                  <ReturnIcon className="h-3.5 w-3.5" />
+                  30-day replacement
                 </span>
               )}
               {rating && (
@@ -242,7 +250,7 @@ export function ProductPurchase({
           </p>
         </div>
 
-        <div className="mt-6 overflow-hidden rounded-card border border-line bg-ivory/60 p-4 shadow-(--shadow-e1) sm:p-5">
+        <div className="mt-6">
           <BuyBox
             product={product}
             selectedId={selectedId}

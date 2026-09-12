@@ -18,7 +18,7 @@ export const site = {
   // search term people actually type (Google Trends: ~5x the volume of
   // "acupressure pen"), a CTA, and stop counting before it runs past ~160.
   description:
-    "AccuPenPro acupressure pen, often searched as an acupuncture pen. Drug-free, no needles, 9 intensity levels, 4 heads. Shop now, free worldwide shipping.",
+    "AccuPenPro acupressure pen, often searched as an acupuncture pen. Drug-free, no needles, 9 intensity levels, 5 heads. Shop now, free worldwide shipping.",
   locale: "en_US",
   currency: "USD",
 
@@ -61,7 +61,7 @@ export const site = {
       "Send a photo within 30 days of delivery and we'll ship a free replacement or refund, and that covers damage, missing items, and mis-ships, not general change-of-mind returns.",
     // Verified, not promotional: the device's own rated hardware spec, not
     // a therapeutic claim. Nine intensity levels, four heads, one AA cell.
-    hardware: "9 intensity levels · 4 interchangeable heads · one AA cell",
+    hardware: "9 intensity levels · 5 interchangeable heads · one AA cell",
     support: "Human replies in under 12 hours",
   },
 } as const;

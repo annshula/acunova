@@ -98,3 +98,28 @@ Net effect: the real live PDP went from 5 sections with 2 broken images to
 9 sections with 0 broken images, without any of the underlying component
 code changing — it was 100% dead content becoming reachable via 3
 one-line string fixes.
+
+2026-09-12 | rejected | pdp-workbench-restructure | structure | AcuNova
+  Rejected: a "Revision 3" PDP restructure (Workbench + PenNarrative,
+  10 stacked bands merged to ~5, sticky spec rail beside the gallery),
+  built and shown live at /preview/pdp.
+  Kept: the original 10-section PenStory/PenMoments/ProductDetails/
+  BuildSection structure, unchanged.
+  Reason: user reviewed the rebuilt page and said the old design was
+  better ("it's okay old design it good! remove everything"), after
+  first asking for it and then separately asking for 3 visual-style
+  variants (Material/Editorial/Precise) at /preview/pdp before deciding
+  on structure. Structure was reverted; the bug fixes discovered along
+  the way were kept (see below) since they were never in question.
+  Kept from the same session, NOT reverted: content/product-pen.ts,
+  content/copy.ts and content/pitches.ts weight/head-count corrections
+  (158 g / 5 heads, was wrongly 60 g / 4 heads to match a different
+  product), the ProductDetails spec-sheet fix (data/product.json specs
+  no longer describe the discontinued 3-head/oil-infused/gift-box
+  options), the hematite "Fe2O3" watermark removal from PenStory.tsx,
+  and the single-SKU/2-pack pricing filter in lib/product.ts.
+  Separately surfaced but explicitly out of scope per user: 18 of 20
+  live Shopify gallery images are supplier marketing graphics, 11 with
+  baked-in medical claims (arthritis/sciatica/detox/blood-circulation
+  language) that contradict the site's own no-medical-claims policy.
+  User said not to address this now — flagged here so it is not lost.

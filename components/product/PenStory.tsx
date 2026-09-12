@@ -27,13 +27,6 @@ export default function PenStory({
       aria-label="Acupressure, an old practice on a battery"
       className="relative overflow-hidden bg-ink text-white"
     >
-      <span
-        aria-hidden
-        className="pointer-events-none absolute -top-1 left-1/2 -translate-x-1/2 font-mono text-[clamp(1.4rem,4.6vw,3.6rem)] whitespace-nowrap text-white/5 select-none"
-      >
-        Fe₂O₃ · iron(III) oxide · Fe₂O₃
-      </span>
-
       <div className="relative mx-auto w-full max-w-310 px-5 py-20 sm:px-8 lg:py-28">
         <div className="grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
@@ -54,35 +47,22 @@ export default function PenStory({
             <Reveal
               as="p"
               delay={0.14}
-              className="mt-7 max-w-[46ch] border-l-2 border-gold/60 pl-6 text-[1.02rem] leading-[1.7] text-white/70 text-pretty"
+              className="mt-6 max-w-[46ch] text-[1.02rem] leading-[1.7] text-white/70 text-pretty"
             >
               {s.lede}
             </Reveal>
-            {s.claim && (
-              <Reveal
-                as="p"
-                delay={0.2}
-                className="font-display mt-6 max-w-[34ch] text-[1.18rem] leading-snug font-semibold tracking-[-0.01em] text-gold"
-              >
-                {s.claim}
-              </Reveal>
-            )}
 
             <Stagger
               as="div"
-              className="mt-10 grid grid-cols-3 gap-4 sm:gap-6"
+              className="mt-9 flex flex-wrap gap-x-8 gap-y-5"
               stagger={0.08}
             >
               {s.stats.map((st) => (
-                <StaggerItem
-                  key={st.value}
-                  as="div"
-                  className="border-l border-white/15 pl-4"
-                >
-                  <span className="font-display block text-[clamp(1.25rem,2.2vw,1.7rem)] leading-none font-semibold tracking-[-0.01em] text-white tabular-nums">
+                <StaggerItem key={st.value} as="div">
+                  <span className="font-display block text-[clamp(1.15rem,2vw,1.5rem)] leading-none font-semibold tracking-[-0.01em] text-white tabular-nums">
                     {st.value}
                   </span>
-                  <span className="mt-2 block text-[0.7rem] leading-normal text-white/50">
+                  <span className="mt-1.5 block max-w-[16ch] text-[0.7rem] leading-normal text-white/50">
                     {st.label}
                   </span>
                 </StaggerItem>

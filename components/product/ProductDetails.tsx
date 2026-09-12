@@ -28,24 +28,14 @@ const LOCAL_FEATURE_IMAGES: Record<string, CatalogImage & { fit?: "cover" | "con
     width: 2048,
     height: 2048,
   },
-  "Two head styles": {
-    // 1376x768 is wider than the card's 4:3 box, and all four heads span
-    // its full width — a cover crop always clips the rightmost one. Only
-    // this entry sets fit: "contain" (below) so it letterboxes instead of
-    // cropping a head out of frame.
-    src: "/product/heads-macro.png",
-    alt: "The four AccuPenPro head styles laid out side by side",
-    width: 1376,
-    height: 768,
-    fit: "contain",
-  },
-  "Heads swap in seconds": {
-    // Cropped to 4:3 from pen-heads-layout.png (originally 1856x2304
-    // portrait, mostly empty background) so this section's object-cover
-    // box shows the full pen and every detached head instead of clipping
-    // the ones furthest from center.
+  "Five heads in the box": {
+    // The whole kit in one frame: the fitted ball tip on the pen plus the
+    // four that screw on in its place. Cropped to 4:3 from
+    // pen-heads-layout.png (originally 1856x2304 portrait, mostly empty
+    // background) so the object-cover box shows every head rather than
+    // clipping the outermost ones.
     src: "/product/pen-heads-layout-crop.png",
-    alt: "The AccuPenPro pen with its interchangeable heads detached and laid out",
+    alt: "The AccuPenPro pen with its four interchangeable heads laid out beneath it",
     width: 1856,
     height: 1392,
   },

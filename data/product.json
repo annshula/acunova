@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "syncedAt": "2026-09-08T19:19:55.175Z",
+  "syncedAt": "2026-09-12T08:33:35.001Z",
   "shop": {
     "domain": "trackify-com.myshopify.com",
     "name": "Trackify",
@@ -42,20 +42,20 @@
               "compareAtAmount": 83.95,
               "currencyCode": "AUD"
             },
-            "IN": {
-              "amount": 3499,
-              "compareAtAmount": 5299,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 39.95,
+              "compareAtAmount": 59.95,
+              "currencyCode": "USD"
             },
             "GB": {
               "amount": 29.95,
               "compareAtAmount": 44.95,
               "currencyCode": "GBP"
             },
-            "US": {
-              "amount": 39.95,
-              "compareAtAmount": 59.95,
-              "currencyCode": "USD"
+            "IN": {
+              "amount": 3499,
+              "compareAtAmount": 5299,
+              "currencyCode": "INR"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/370894b1-f8d8-4236-9b3a-12a75d49c6eb.jpg?v=1786902932",
@@ -83,20 +83,20 @@
               "compareAtAmount": 90.95,
               "currencyCode": "AUD"
             },
-            "IN": {
-              "amount": 3999,
-              "compareAtAmount": 5699,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 44.95,
+              "compareAtAmount": 64.95,
+              "currencyCode": "USD"
             },
             "GB": {
               "amount": 33.95,
               "compareAtAmount": 48.95,
               "currencyCode": "GBP"
             },
-            "US": {
-              "amount": 44.95,
-              "compareAtAmount": 64.95,
-              "currencyCode": "USD"
+            "IN": {
+              "amount": 3999,
+              "compareAtAmount": 5699,
+              "currencyCode": "INR"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/8f652d8a-4b40-424d-835f-e574cd3e0926.jpg?v=1786902932",
@@ -124,20 +124,20 @@
               "compareAtAmount": 97.95,
               "currencyCode": "AUD"
             },
-            "IN": {
-              "amount": 4199,
-              "compareAtAmount": 6199,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 47.95,
+              "compareAtAmount": 69.95,
+              "currencyCode": "USD"
             },
             "GB": {
               "amount": 35.95,
               "compareAtAmount": 51.95,
               "currencyCode": "GBP"
             },
-            "US": {
-              "amount": 47.95,
-              "compareAtAmount": 69.95,
-              "currencyCode": "USD"
+            "IN": {
+              "amount": 4199,
+              "compareAtAmount": 6199,
+              "currencyCode": "INR"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/93c2b9c4-38cf-4516-b556-d6c3ca530065.jpg?v=1786902932",
@@ -165,20 +165,20 @@
               "compareAtAmount": 83.95,
               "currencyCode": "AUD"
             },
-            "IN": {
-              "amount": 3499,
-              "compareAtAmount": 5299,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 39.95,
+              "compareAtAmount": 59.95,
+              "currencyCode": "USD"
             },
             "GB": {
               "amount": 29.95,
               "compareAtAmount": 44.95,
               "currencyCode": "GBP"
             },
-            "US": {
-              "amount": 39.95,
-              "compareAtAmount": 59.95,
-              "currencyCode": "USD"
+            "IN": {
+              "amount": 3499,
+              "compareAtAmount": 5299,
+              "currencyCode": "INR"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/9ab8f2cc-2ba9-48b9-b735-ffd149833740.jpg?v=1786902932",
@@ -206,20 +206,20 @@
               "compareAtAmount": 90.95,
               "currencyCode": "AUD"
             },
-            "IN": {
-              "amount": 3999,
-              "compareAtAmount": 5699,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 44.95,
+              "compareAtAmount": 64.95,
+              "currencyCode": "USD"
             },
             "GB": {
               "amount": 33.95,
               "compareAtAmount": 48.95,
               "currencyCode": "GBP"
             },
-            "US": {
-              "amount": 44.95,
-              "compareAtAmount": 64.95,
-              "currencyCode": "USD"
+            "IN": {
+              "amount": 3999,
+              "compareAtAmount": 5699,
+              "currencyCode": "INR"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/c6e687c4-4219-49e9-9e78-6e10d3a5bc2d.jpg?v=1786902932",
@@ -232,35 +232,35 @@
           "id": "gid://shopify/ProductVariant/49544206483683",
           "title": "5 heads, oil-free",
           "sku": "CJYD151610802BY",
-          "price": 49.95,
-          "compareAtPrice": 74.95,
+          "price": 37.76,
+          "compareAtPrice": 59.95,
           "availableForSale": true,
           "stockQuantity": 46331,
           "pricesByMarket": {
             "CA": {
-              "amount": 69.95,
-              "compareAtAmount": 103.95,
+              "amount": 53,
+              "compareAtAmount": 84,
               "currencyCode": "CAD"
             },
             "AU": {
-              "amount": 69.95,
-              "compareAtAmount": 104.95,
+              "amount": 54,
+              "compareAtAmount": 86,
               "currencyCode": "AUD"
             },
-            "IN": {
-              "amount": 4399,
-              "compareAtAmount": 6599,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 37.76,
+              "compareAtAmount": 59.95,
+              "currencyCode": "USD"
             },
             "GB": {
-              "amount": 36.95,
-              "compareAtAmount": 55.95,
+              "amount": 29,
+              "compareAtAmount": 46,
               "currencyCode": "GBP"
             },
-            "US": {
-              "amount": 49.95,
-              "compareAtAmount": 74.95,
-              "currencyCode": "USD"
+            "IN": {
+              "amount": 3681.51,
+              "compareAtAmount": 5844.98,
+              "currencyCode": "INR"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/029e763f-3b6c-44ae-bf9b-74ce60d381df.jpg?v=1786902932",
@@ -551,8 +551,8 @@
         },
         {
           "label": "Heads",
-          "value": "3-head or 5-head",
-          "description": "The 3-head tip is more precise on small areas; the 5-head covers a broad muscle group faster. Chosen by variant.",
+          "value": "Five heads, oil-free",
+          "description": "Ball, ridged, fine point and flat spoon tips, plus the fitted head on the pen. All five screw on and off without tools.",
           "image": {
             "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/9ab8f2cc-2ba9-48b9-b735-ffd149833740.jpg?v=1786902932",
             "alt": "The three-head AccuPenPro tip, oil-free version",
@@ -562,8 +562,8 @@
         },
         {
           "label": "Finish",
-          "value": "Oil-free or oil-infused",
-          "description": "Oil-infused heads glide more smoothly on skin, which most people prefer on the neck and shoulders.",
+          "value": "Oil-free",
+          "description": "The oil-free build: nothing to reapply and nothing to wipe off afterwards.",
           "image": {
             "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/c6e687c4-4219-49e9-9e78-6e10d3a5bc2d.jpg?v=1786902932",
             "alt": "The AccuPenPro pen in its retail pack with the oil applicator head",
@@ -595,8 +595,8 @@
         },
         {
           "label": "Pack",
-          "value": "Standard, blister or gift box",
-          "description": "The same pen in three retail packs. The gift box is the one to pick if it is a present.",
+          "value": "OPP retail pack",
+          "description": "The pen, its five heads and the quick-start card, shipped tracked to your door.",
           "image": {
             "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/93c2b9c4-38cf-4516-b556-d6c3ca530065.jpg?v=1786902932",
             "alt": "The AccuPenPro pen gift box presentation",
@@ -619,8 +619,8 @@
         },
         {
           "icon": "fit",
-          "label": "Two head styles",
-          "body": "3-head for precise work on smaller areas, 5-head to cover a broad muscle group faster.",
+          "label": "Five heads in the box",
+          "body": "Rounded ball, ridged, fine point and flat spoon, plus the fitted tip. One pen covers a knuckle or a whole shoulder.",
           "image": {
             "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/9ab8f2cc-2ba9-48b9-b735-ffd149833740.jpg?v=1786902932",
             "alt": "The three-head AccuPenPro tip, oil-free version",

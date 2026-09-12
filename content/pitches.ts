@@ -141,7 +141,7 @@ export const quality = {
     {
       icon: "refresh" as const,
       title: "Head-swap cycle",
-      body: "All four heads are fitted and removed in turn to catch a cross-threaded collar or a loose contact before it becomes a wobble in your hand three weeks in.",
+      body: "All five heads are fitted and removed in turn to catch a cross-threaded collar or a loose contact before it becomes a wobble in your hand three weeks in.",
     },
     {
       icon: "fit" as const,
@@ -151,7 +151,7 @@ export const quality = {
     {
       icon: "check" as const,
       title: "Kit count",
-      body: "Pen, four heads, case, quick-start card. Counted against the packing list at the bench, because the single most common complaint about this category is a head missing from the box.",
+      body: "Pen, five heads, case, quick-start card. Counted against the packing list at the bench, because the single most common complaint about this category is a head missing from the box.",
     },
     {
       icon: "truck" as const,
@@ -176,7 +176,7 @@ export type BuildContent = {
 /* ------------------------------------------------------------------ */
 export const buildPen: BuildContent = {
   eyebrow: "How it's built",
-  heading: "One body, one cell, four heads that screw straight on.",
+  heading: "One body, one cell, five heads that screw straight on.",
   lede: "There is no dock, no charging cradle and no app. The pen is a 170 mm aluminium-finish body with the control button and intensity display on the front, a threaded collar at the tip, and a single AA cell in the base. That is the whole machine.",
   points: [
     {

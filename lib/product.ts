@@ -85,6 +85,21 @@ const usd = (amount: number): Money => ({ amount, currencyCode: "USD" });
 const LOW_STOCK_THRESHOLD = 10;
 
 /**
+ * SKUs the storefront actually sells, per product handle. The Shopify product
+ * still carries every variant CJDropshipping lists (3-head, oil-infused,
+ * blister and gift-box packings) so their inventory and order history survive,
+ * but the site offers exactly one: the 5-head oil-free pen. Filtering here,
+ * rather than deleting variants upstream, keeps the decision reversible —
+ * remove the entry and every variant returns.
+ *
+ * A handle absent from this map is unfiltered, so other products are
+ * unaffected.
+ */
+const SALEABLE_SKUS: Record<string, ReadonlySet<string>> = {
+  "acupressure-pen-pro": new Set(["CJYD151610802BY"]),
+};
+
+/**
  * Exported so lib/product-live.ts (server-only) can reuse this exact mapping
  * for freshly Blob-read data — kept in this file, not there, so there is
  * only ever one place that turns a synced record into a `Product`.
@@ -92,7 +107,15 @@ const LOW_STOCK_THRESHOLD = 10;
 export function mapSyncedProducts(
   syncedProducts: SyncedCatalogRecord["products"],
 ): Product[] {
-  return syncedProducts.map((p) => ({
+  return syncedProducts.map((p) => {
+    const saleable = SALEABLE_SKUS[p.handle];
+    // Guard against an empty result: if a sync ever renames or drops the
+    // listed SKU, fall back to every variant rather than an unbuyable page.
+    const offered = saleable
+      ? p.variants.filter((v) => saleable.has(v.sku))
+      : p.variants;
+    const variants = offered.length > 0 ? offered : p.variants;
+    return {
     id: p.id,
     handle: p.handle,
     title: p.title,
@@ -109,7 +132,7 @@ export function mapSyncedProducts(
         : p.images.map((img) => ({ kind: "image" as const, ...img })),
     specs: p.specs,
     features: p.features ?? [],
-    variants: p.variants.map((v) => ({
+    variants: variants.map((v) => ({
       id: v.id,
       sku: v.sku,
       title: v.title,
@@ -127,7 +150,8 @@ export function mapSyncedProducts(
         v.stockQuantity <= LOW_STOCK_THRESHOLD,
       weightGrams: v.weightGrams,
     })),
-  }));
+    };
+  });
 }
 
 /**

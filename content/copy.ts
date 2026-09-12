@@ -52,7 +52,7 @@ export const hero = {
   secondaryHref: "#method",
   // Three short proof chips under the CTAs. Deliberately specs, not
   // adjectives — "9 intensity levels" is checkable, "amazing relief" is not.
-  chips: ["9 intensity levels", "4 interchangeable heads", "Free worldwide shipping"],
+  chips: ["9 intensity levels", "5 interchangeable heads", "Free worldwide shipping"],
   /**
    * A self-contained direct answer to "what is an acupressure pen and what
    * does it do" — same job as a blog post's `quickAnswer`, but for the home
@@ -188,7 +188,7 @@ export const showcase = {
     },
     {
       title: "Pocket-sized, no wires",
-      body: "170 mm long, 60 grams, one AA battery. It lives in a desk drawer, a gym bag or a carry-on, and there is nothing to plug in or charge.",
+      body: "170 mm long, 158 grams, one AA battery. It lives in a desk drawer, a gym bag or a carry-on, and there is nothing to plug in or charge.",
     },
   ],
 };
@@ -200,7 +200,7 @@ export const showcase = {
  */
 export const method = {
   eyebrow: "How it works",
-  headline: "An old practice, on a battery.",
+  headline: "Nine levels. One tip. No needles.",
   lede: "Acupressure is the practice of pressing specific points on the body, mapped along what traditional Chinese medicine calls meridians. People have been doing it with thumbs and knuckles for thousands of years, and most of us do a crude version of it every time we squeeze the back of our own neck.",
   body: "The AccuPenPro pen is a modern way of applying that same pressure: a metal tip you press against the point, plus a low-level electrical pulse you can dial from barely-there to firm. It is a comfort tool, and we will always describe it as one.",
   paragraphs: [
@@ -254,12 +254,12 @@ export const howToUse = [
 export const guarantee = {
   eyebrow: "Buy with confidence",
   headline: "What every order includes.",
-  body: "The pen, all four heads, free worldwide shipping, and a real fix if anything arrives wrong.",
+  body: "The pen, all five heads, free worldwide shipping, and a real fix if anything arrives wrong.",
   items: [
     {
       icon: "device" as const,
       label: "The complete kit",
-      body: "One AccuPenPro pen, all four interchangeable heads, a storage case and the quick-start card. No head is held back as a paid extra, the kit is the kit.",
+      body: "One AccuPenPro pen with all five heads, ready to use out of the pack. No head is held back as a paid extra, the kit is the kit.",
     },
     {
       icon: "ship" as const,
@@ -333,7 +333,7 @@ export const comparison = {
     {
       label: "Portable",
       values: [
-        "170 mm, 60 g, fits a pocket",
+        "170 mm, 158 g, fits a pocket",
         "Always with you",
         "Box, leads, pads, and somewhere flat to keep them",
       ],
@@ -407,7 +407,7 @@ export const faqs = [
   {
     id: "in-the-box",
     q: "What is in the box, and does it need charging?",
-    a: "The pen, all four heads (rounded ball, ridged, fine point and flat spoon), a storage case and a quick-start card. It runs on a single AA battery rather than a charger, which is also why it is fine to pack in hand luggage.",
+    a: "The pen, all five heads (rounded ball, ridged, fine point and flat spoon), a storage case and a quick-start card. It runs on a single AA battery rather than a charger, which is also why it is fine to pack in hand luggage.",
   },
   {
     id: "why-not-hands-or-pads",
@@ -483,6 +483,6 @@ export const marqueeWords = [
   "Free fix for damaged or wrong items",
   "Drug-free · Non-invasive",
   "Dispatched in 1–3 business days",
-  "4 interchangeable heads",
+  "5 interchangeable heads",
   "9 intensity levels",
 ];

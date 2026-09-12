@@ -11,7 +11,7 @@ import {
   PlusIcon,
   ReturnIcon,
 } from "@/components/ui/Icons";
-import { Magnetic, easeOut } from "@/components/ui/Motion";
+import { easeOut } from "@/components/ui/Motion";
 import { DeliveryPincodeCheck } from "@/components/product/DeliveryPincodeCheck";
 import { useCart } from "@/components/providers/CartProvider";
 import { useLocalizedAmount } from "@/components/providers/LocalizationProvider";
@@ -22,6 +22,27 @@ import { cn } from "@/lib/utils";
 import type { Product } from "@/lib/product";
 
 const MAX_QTY = 10;
+
+/**
+ * Pack options offered above the stepper. Both buy the same SKU — a 2-pack is
+ * quantity 2, not a separate variant — because fulfilment (CJDropshipping)
+ * maps per SKU and passes quantity straight through, so a bundle modelled as
+ * its own variant would need a CJ SKU that ships two units and there isn't
+ * one.
+ *
+ * `discount` mirrors the Shopify automatic discount "2-Pack Bundle - 20% off"
+ * (minimum quantity 2, scoped to this variant). It is display only: the real
+ * reduction is applied by Shopify at checkout, so the figure shown here and
+ * the figure charged come from the same rule rather than this component
+ * inventing one.
+ */
+const BUNDLE_MIN_QTY = 2;
+const BUNDLE_DISCOUNT = 0.2;
+
+const PACKS: ReadonlyArray<{ qty: number; label: string; badge?: string }> = [
+  { qty: 1, label: "1 pen" },
+  { qty: 2, label: "2 pens", badge: "Save 20%" },
+];
 
 /**
  * The purchase surface — gallery lives beside this in the product page, this
@@ -66,6 +87,13 @@ export function BuyBox({
   // A sold-out variant can't be ordered — buying it would be rejected by the
   // cart API, so the whole purchase surface is disabled and labelled instead.
   const outOfStock = !selected.availableForSale;
+
+  // What the shopper actually pays for the current quantity. The Shopify rule
+  // ("2-Pack Bundle - 20% off") is a minimum-quantity one, so it applies to
+  // every quantity at or above its threshold, not only to an exact 2 — mirror
+  // that here so the button total can never quote more than checkout charges.
+  const packDiscount = quantity >= BUNDLE_MIN_QTY ? BUNDLE_DISCOUNT : 0;
+  const cartTotal = selectedPrice.amount * quantity * (1 - packDiscount);
 
   const save =
     selectedPrice.compareAtAmount != null &&
@@ -145,6 +173,60 @@ export function BuyBox({
         />
       )}
 
+      {/* --------------------------------- packs ---------------------------------- */}
+      {!outOfStock && (
+        <fieldset className="mt-8">
+          <legend className="mb-2.5 text-[0.68rem] font-semibold tracking-[0.2em] text-ink-mute uppercase">
+            Quantity
+          </legend>
+          <div className="flex flex-wrap gap-2">
+            {PACKS.map((pack) => {
+              const active = quantity === pack.qty;
+              const total =
+                selectedPrice.amount *
+                pack.qty *
+                (pack.qty >= BUNDLE_MIN_QTY ? 1 - BUNDLE_DISCOUNT : 1);
+              return (
+                <button
+                  key={pack.qty}
+                  type="button"
+                  aria-pressed={active}
+                  onClick={() => setQuantity(pack.qty)}
+                  className={cn(
+                    "inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[0.82rem] font-medium transition-colors duration-300",
+                    active
+                      ? "border-ink bg-ink text-white"
+                      : "border-line bg-linen text-ink-soft hover:border-ink/30",
+                  )}
+                >
+                  <span>{pack.label}</span>
+                  <span
+                    className={cn(
+                      "tabular-nums",
+                      active ? "text-white/70" : "text-ink-mute",
+                    )}
+                  >
+                    {formatMoney(total, selectedPrice.currencyCode)}
+                  </span>
+                  {pack.badge && (
+                    <span
+                      className={cn(
+                        "rounded-full px-1.5 py-0.5 text-[0.62rem] font-semibold tracking-wide uppercase",
+                        active
+                          ? "bg-white/15 text-white"
+                          : "bg-accent-soft text-gold-deep",
+                      )}
+                    >
+                      {pack.badge}
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </fieldset>
+      )}
+
       {/* -------------------------------- quantity --------------------------------- */}
       <div className="mt-7 flex items-center gap-3">
         <div className="inline-flex h-14 shrink-0 items-center rounded-full bg-parchment">
@@ -175,43 +257,35 @@ export function BuyBox({
           </button>
         </div>
 
-        <Magnetic strength={0.15} className="block flex-1">
-          <button
-            type="button"
-            disabled={outOfStock}
-            onClick={() => {
-              if (outOfStock) return;
-              add(
-                selected.id,
-                quantity,
-                Math.round(selectedPrice.amount * 100),
+        <button
+          type="button"
+          disabled={outOfStock}
+          onClick={() => {
+            if (outOfStock) return;
+            add(
+              selected.id,
+              quantity,
+              Math.round(selectedPrice.amount * 100),
+              selectedPrice.currencyCode,
+            );
+            toast.success("Added to cart", {
+              description: product.title,
+              icon: (
+                <span className="grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500 text-white">
+                  <CheckIcon className="size-3" />
+                </span>
+              ),
+            });
+          }}
+          className="flex h-14 w-full flex-1 items-center justify-center gap-2.5 rounded-full bg-gold font-display text-[0.88rem] font-semibold tracking-widest whitespace-nowrap text-on-accent uppercase transition-colors duration-200 hover:bg-gold-deep disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          {outOfStock
+            ? "Out of stock"
+            : `Add to bag · ${formatMoney(
+                cartTotal,
                 selectedPrice.currencyCode,
-              );
-              toast.success("Added to cart", {
-                description: product.title,
-                icon: (
-                  <span className="grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500 text-white">
-                    <CheckIcon className="size-3" />
-                  </span>
-                ),
-              });
-            }}
-            className="group relative flex h-14 w-full items-center justify-center gap-2.5 overflow-hidden rounded-full bg-linear-to-b from-gold-hot to-gold font-display text-[0.88rem] font-semibold tracking-widest whitespace-nowrap text-on-accent uppercase transition-[transform,opacity] duration-400 ease-(--ease-out-expo) hover:-translate-y-0.5 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0"
-          >
-            <span
-              aria-hidden
-              className="pointer-events-none absolute inset-0 -translate-x-full bg-[linear-gradient(105deg,transparent_38%,rgba(255,255,255,0.42)_50%,transparent_62%)] transition-transform duration-900 ease-(--ease-out-expo) group-hover:translate-x-full"
-            />
-            <span className="relative">
-              {outOfStock
-                ? "Out of stock"
-                : `Add to bag · ${formatMoney(
-                    selectedPrice.amount * quantity,
-                    selectedPrice.currencyCode,
-                  )}`}
-            </span>
-          </button>
-        </Magnetic>
+              )}`}
+        </button>
       </div>
 
       <button
@@ -260,15 +334,6 @@ export function BuyBox({
         <Guarantee icon={<CheckIcon />}>{site.promise.support}</Guarantee>
       </ul>
 
-      <p className="mt-5 text-[0.72rem] leading-relaxed text-ink-mute">
-        A consumer wellness device, not a medical one: not FDA or Health Canada
-        cleared, and not for use with a pacemaker or during pregnancy. The full
-        safety list is in the{" "}
-        <a href="/faq" className="underline underline-offset-2 hover:text-ink">
-          FAQ
-        </a>
-        .
-      </p>
     </div>
   );
 }

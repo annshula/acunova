@@ -8,10 +8,10 @@
  * (content/copy.ts states them in full): this is a consumer wellness device,
  * not a medical one, so nothing here says or implies that it treats, cures,
  * heals, diagnoses or prevents anything. What sells the page instead is the
- * hardware (nine levels, four heads, one AA cell, a 2 mm tip), the honest
+ * hardware (nine levels, five heads, one AA cell, a 2 mm tip), the honest
  * history of acupressure labelled as the tradition it is, and the situations
  * people actually reach for it in. The three headline numbers (9 levels,
- * 4 heads, 60 g) are real, and they double as the proof.
+ * 5 heads, 158 g) are real, and they double as the proof.
  */
 
 export const pen = {
@@ -29,7 +29,7 @@ export const pen = {
   /* Cinematic dark story band — right after the buy box.                */
   /* ------------------------------------------------------------------ */
   story: {
-    eyebrow: "An old practice, on a battery",
+    eyebrow: "Nine levels. One tip. No needles",
     heading: "People have been pressing these points for two thousand years.",
     lede: "Nobody had to teach you to squeeze the back of your own neck at the end of a long day. You do it without thinking, and you go straight to the same handful of spots every time. Those spots are not a coincidence, they are the points classical Chinese medicine mapped a very long time ago, and the ones every acupressure chart still draws from today.",
     claim:
@@ -40,11 +40,11 @@ export const pen = {
         label: "intensity levels, from a faint tickle to a firm tap",
       },
       {
-        value: "4",
+        value: "5",
         label: "interchangeable heads: ball, ridged, fine point, flat spoon",
       },
       {
-        value: "60 g",
+        value: "158 g",
         label: "in the hand, on one AA cell. Nothing to plug in or charge",
       },
     ],
@@ -104,7 +104,7 @@ export const pen = {
       },
       {
         title: "The long flight",
-        body: "It runs on one AA cell and weighs 60 grams, so it goes in hand luggage without a charger, a cable or an argument at security.",
+        body: "It runs on one AA cell and weighs 158 grams, so it goes in hand luggage without a charger, a cable or an argument at security.",
       },
       {
         title: "Winding down",
@@ -149,7 +149,7 @@ export const pen = {
       {
         label: "Running cost",
         values: [
-          "One AA cell. Four reusable heads",
+          "One AA cell. Five reusable heads",
           "Replacement adhesive pads, over and over",
           "Free, and it costs you your thumbs",
         ],

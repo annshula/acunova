@@ -25,44 +25,121 @@ export default function PenVersus() {
         body={v.lede}
       />
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-3 lg:mt-16 lg:gap-5">
-        {v.columns.map((col, colIndex) => {
-          const isOurs = colIndex === 0;
-          return (
-            <Reveal
+      {/* A real comparison matrix rather than three stacked cards: the point
+          of this section is reading *across* the three options on one
+          attribute at a time, which cards force you to do from memory. The
+          pen's column is tinted the whole way down so it stays findable
+          without needing a border or a badge pinned to it.
+
+          Below `sm` the matrix collapses to one stack per option — a 3-column
+          table at 390px would either scroll sideways or squeeze every cell to
+          two words. */}
+      <Reveal className="mt-12 lg:mt-16">
+        <div className="hidden sm:block">
+          <table className="w-full border-collapse text-left">
+            <caption className="sr-only">
+              {v.heading} — {v.columns.join(", ")} compared
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col" className="w-[1%]" />
+                {v.columns.map((col, i) => (
+                  <th
+                    key={col}
+                    scope="col"
+                    className={cn(
+                      "px-5 pt-9 pb-5 align-bottom lg:px-6",
+                      // relative so the badge can pin to this cell's own
+                      // top-right corner rather than sitting in the flow and
+                      // pushing the heading down.
+                      i === 0 && "relative rounded-t-card bg-accent-soft/25",
+                    )}
+                  >
+                    {i === 0 && (
+                      <span className="absolute top-0 right-0 inline-flex items-center gap-1.5 rounded-tr-card rounded-bl-card bg-gold px-3 py-1.5 text-[0.6rem] font-semibold tracking-wide text-on-accent uppercase">
+                        <CheckIcon className="h-3 w-3" />
+                        This one
+                      </span>
+                    )}
+                    <span
+                      className={cn(
+                        "font-display block text-[1.02rem] leading-tight font-semibold tracking-[-0.02em]",
+                        i === 0 ? "text-ink" : "text-ink-soft",
+                      )}
+                    >
+                      {col}
+                    </span>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {v.rows.map((row, rowIndex) => (
+                <tr key={row.label}>
+                  <th
+                    scope="row"
+                    className="border-t border-line py-5 pr-6 align-top text-[0.62rem] font-medium tracking-[0.16em] whitespace-nowrap text-ink-mute uppercase"
+                  >
+                    {row.label}
+                  </th>
+                  {row.values.map((value, colIndex) => (
+                    <td
+                      key={colIndex}
+                      className={cn(
+                        "border-t border-line px-5 py-5 align-top text-[0.85rem] leading-[1.55] lg:px-6",
+                        colIndex === 0
+                          ? "bg-accent-soft/25 font-medium text-ink"
+                          : "text-ink-soft",
+                        colIndex === 0 &&
+                          rowIndex === v.rows.length - 1 &&
+                          "rounded-b-card",
+                      )}
+                    >
+                      {value}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Mobile: one block per option, same data, no horizontal scroll. */}
+        <div className="flex flex-col gap-8 sm:hidden">
+          {v.columns.map((col, colIndex) => (
+            <div
               key={col}
-              delay={colIndex * 0.08}
               className={cn(
-                "relative flex flex-col rounded-card border bg-linen p-6 lg:p-7",
-                isOurs
-                  ? "border-gold/50 shadow-(--shadow-e1) ring-1 ring-gold/20"
-                  : "border-line",
+                "rounded-card px-5 py-6",
+                colIndex === 0 && "relative overflow-hidden bg-accent-soft/25 pt-9",
               )}
             >
-              {isOurs && (
-                <span className="absolute -top-3 left-6 inline-flex items-center gap-1.5 rounded-full bg-gold px-3 py-1 text-[0.66rem] font-semibold tracking-wide text-on-accent uppercase">
+              {colIndex === 0 && (
+                <span className="absolute top-0 right-0 inline-flex items-center gap-1.5 rounded-bl-card bg-gold px-3 py-1.5 text-[0.6rem] font-semibold tracking-wide text-on-accent uppercase">
                   <CheckIcon className="h-3 w-3" />
-                  You’re looking at this one
+                  This one
                 </span>
               )}
               <h3
                 className={cn(
-                  "font-display text-[1.05rem] leading-tight font-semibold tracking-[-0.02em]",
-                  isOurs ? "text-ink" : "text-ink-soft",
+                  "font-display text-[1.02rem] leading-tight font-semibold tracking-[-0.02em]",
+                  colIndex === 0 ? "text-ink" : "text-ink-soft",
                 )}
               >
                 {col}
               </h3>
-              <dl className="mt-5 flex flex-1 flex-col gap-4">
+              <dl className="mt-4 flex flex-col gap-3.5">
                 {v.rows.map((row) => (
-                  <div key={row.label} className="border-t border-line pt-3.5">
-                    <dt className="text-[0.62rem] font-medium tracking-[0.16em] text-ink-mute uppercase">
+                  <div key={row.label}>
+                    <dt className="text-[0.6rem] font-medium tracking-[0.16em] text-ink-mute uppercase">
                       {row.label}
                     </dt>
                     <dd
                       className={cn(
-                        "mt-1.5 text-[0.84rem] leading-[1.55]",
-                        isOurs ? "font-medium text-ink" : "text-ink-soft",
+                        "mt-1 text-[0.84rem] leading-[1.55]",
+                        colIndex === 0
+                          ? "font-medium text-ink"
+                          : "text-ink-soft",
                       )}
                     >
                       {row.values[colIndex]}
@@ -70,10 +147,10 @@ export default function PenVersus() {
                   </div>
                 ))}
               </dl>
-            </Reveal>
-          );
-        })}
-      </div>
+            </div>
+          ))}
+        </div>
+      </Reveal>
 
       <Reveal
         as="p"
