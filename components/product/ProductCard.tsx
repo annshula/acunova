@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "@/components/ui/Image";
+import { useLocalizedAmount } from "@/components/providers/LocalizationProvider";
 import { formatMoney, type Product } from "@/lib/product";
 
 /**
@@ -21,11 +24,20 @@ export function ProductCard({ product }: { product: Product }) {
   );
   const cover = product.gallery[0];
 
+  // Same per-market lookup the product page uses, so the shop grid never
+  // shows a currency the shopper's country doesn't actually get charged in.
+  const price = useLocalizedAmount(
+    cheapest.id,
+    cheapest.price.amount,
+    cheapest.price.currencyCode,
+    cheapest.compareAtPrice?.amount ?? null,
+  );
+
   // A real, computed saving — not a decorative label.
-  const compareAt = cheapest.compareAtPrice?.amount;
+  const compareAt = price.compareAtAmount;
   const savingPct =
-    compareAt && compareAt > cheapest.price.amount
-      ? Math.round((1 - cheapest.price.amount / compareAt) * 100)
+    compareAt && compareAt > price.amount
+      ? Math.round((1 - price.amount / compareAt) * 100)
       : 0;
 
   return (
@@ -61,13 +73,13 @@ export function ProductCard({ product }: { product: Product }) {
 
           <div className="mt-auto flex items-baseline gap-2.5 pt-5">
             <span className="text-[1.05rem] font-medium text-ink tabular-nums">
-              {formatMoney(cheapest.price)}
+              {formatMoney({ amount: price.amount, currencyCode: price.currencyCode })}
             </span>
-            {compareAt && compareAt > cheapest.price.amount && (
+            {compareAt && compareAt > price.amount && (
               <span className="text-[0.85rem] text-ink-mute line-through tabular-nums">
                 {formatMoney({
                   amount: compareAt,
-                  currencyCode: cheapest.price.currencyCode,
+                  currencyCode: price.currencyCode,
                 })}
               </span>
             )}
