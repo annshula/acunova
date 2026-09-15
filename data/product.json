@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "syncedAt": "2026-09-12T09:47:41.968Z",
+  "syncedAt": "2026-09-15T19:31:34.657Z",
   "shop": {
     "domain": "trackify-com.myshopify.com",
     "name": "Trackify",
@@ -32,10 +32,10 @@
           "availableForSale": true,
           "stockQuantity": 7664,
           "pricesByMarket": {
-            "IN": {
-              "amount": 3499,
-              "compareAtAmount": 5299,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 39.95,
+              "compareAtAmount": 59.95,
+              "currencyCode": "USD"
             },
             "CA": {
               "amount": 55.95,
@@ -47,15 +47,15 @@
               "compareAtAmount": 83.95,
               "currencyCode": "AUD"
             },
+            "IN": {
+              "amount": 3499,
+              "compareAtAmount": 5299,
+              "currencyCode": "INR"
+            },
             "GB": {
               "amount": 29.95,
               "compareAtAmount": 44.95,
               "currencyCode": "GBP"
-            },
-            "US": {
-              "amount": 39.95,
-              "compareAtAmount": 59.95,
-              "currencyCode": "USD"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/370894b1-f8d8-4236-9b3a-12a75d49c6eb.jpg?v=1786902932",
@@ -73,10 +73,10 @@
           "availableForSale": true,
           "stockQuantity": 8716,
           "pricesByMarket": {
-            "IN": {
-              "amount": 3999,
-              "compareAtAmount": 5699,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 44.95,
+              "compareAtAmount": 64.95,
+              "currencyCode": "USD"
             },
             "CA": {
               "amount": 62.95,
@@ -88,15 +88,15 @@
               "compareAtAmount": 90.95,
               "currencyCode": "AUD"
             },
+            "IN": {
+              "amount": 3999,
+              "compareAtAmount": 5699,
+              "currencyCode": "INR"
+            },
             "GB": {
               "amount": 33.95,
               "compareAtAmount": 48.95,
               "currencyCode": "GBP"
-            },
-            "US": {
-              "amount": 44.95,
-              "compareAtAmount": 64.95,
-              "currencyCode": "USD"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/8f652d8a-4b40-424d-835f-e574cd3e0926.jpg?v=1786902932",
@@ -114,10 +114,10 @@
           "availableForSale": true,
           "stockQuantity": 9880,
           "pricesByMarket": {
-            "IN": {
-              "amount": 4199,
-              "compareAtAmount": 6199,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 47.95,
+              "compareAtAmount": 69.95,
+              "currencyCode": "USD"
             },
             "CA": {
               "amount": 66.95,
@@ -129,15 +129,15 @@
               "compareAtAmount": 97.95,
               "currencyCode": "AUD"
             },
+            "IN": {
+              "amount": 4199,
+              "compareAtAmount": 6199,
+              "currencyCode": "INR"
+            },
             "GB": {
               "amount": 35.95,
               "compareAtAmount": 51.95,
               "currencyCode": "GBP"
-            },
-            "US": {
-              "amount": 47.95,
-              "compareAtAmount": 69.95,
-              "currencyCode": "USD"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/93c2b9c4-38cf-4516-b556-d6c3ca530065.jpg?v=1786902932",
@@ -155,10 +155,10 @@
           "availableForSale": true,
           "stockQuantity": 5308,
           "pricesByMarket": {
-            "IN": {
-              "amount": 3499,
-              "compareAtAmount": 5299,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 39.95,
+              "compareAtAmount": 59.95,
+              "currencyCode": "USD"
             },
             "CA": {
               "amount": 55.95,
@@ -170,15 +170,15 @@
               "compareAtAmount": 83.95,
               "currencyCode": "AUD"
             },
+            "IN": {
+              "amount": 3499,
+              "compareAtAmount": 5299,
+              "currencyCode": "INR"
+            },
             "GB": {
               "amount": 29.95,
               "compareAtAmount": 44.95,
               "currencyCode": "GBP"
-            },
-            "US": {
-              "amount": 39.95,
-              "compareAtAmount": 59.95,
-              "currencyCode": "USD"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/9ab8f2cc-2ba9-48b9-b735-ffd149833740.jpg?v=1786902932",
@@ -196,10 +196,10 @@
           "availableForSale": true,
           "stockQuantity": 5819,
           "pricesByMarket": {
-            "IN": {
-              "amount": 3999,
-              "compareAtAmount": 5699,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 44.95,
+              "compareAtAmount": 64.95,
+              "currencyCode": "USD"
             },
             "CA": {
               "amount": 62.95,
@@ -211,15 +211,15 @@
               "compareAtAmount": 90.95,
               "currencyCode": "AUD"
             },
+            "IN": {
+              "amount": 3999,
+              "compareAtAmount": 5699,
+              "currencyCode": "INR"
+            },
             "GB": {
               "amount": 33.95,
               "compareAtAmount": 48.95,
               "currencyCode": "GBP"
-            },
-            "US": {
-              "amount": 44.95,
-              "compareAtAmount": 64.95,
-              "currencyCode": "USD"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/c6e687c4-4219-49e9-9e78-6e10d3a5bc2d.jpg?v=1786902932",
@@ -237,10 +237,10 @@
           "availableForSale": true,
           "stockQuantity": 46331,
           "pricesByMarket": {
-            "IN": {
-              "amount": 3681.51,
-              "compareAtAmount": 5844.98,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 37.76,
+              "compareAtAmount": 59.95,
+              "currencyCode": "USD"
             },
             "CA": {
               "amount": 53,
@@ -248,19 +248,19 @@
               "currencyCode": "CAD"
             },
             "AU": {
-              "amount": 54,
+              "amount": 55,
               "compareAtAmount": 86,
               "currencyCode": "AUD"
+            },
+            "IN": {
+              "amount": 2987,
+              "compareAtAmount": 4978.33,
+              "currencyCode": "INR"
             },
             "GB": {
               "amount": 29,
               "compareAtAmount": 46,
               "currencyCode": "GBP"
-            },
-            "US": {
-              "amount": 37.76,
-              "compareAtAmount": 59.95,
-              "currencyCode": "USD"
             }
           },
           "image": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/029e763f-3b6c-44ae-bf9b-74ce60d381df.jpg?v=1786902932",
@@ -278,30 +278,30 @@
           "availableForSale": false,
           "stockQuantity": 0,
           "pricesByMarket": {
-            "IN": {
-              "amount": 5890.81,
-              "compareAtAmount": 11689.96,
-              "currencyCode": "INR"
+            "US": {
+              "amount": 60.42,
+              "compareAtAmount": 119.9,
+              "currencyCode": "USD"
             },
             "CA": {
-              "amount": 84,
+              "amount": 85,
               "compareAtAmount": 167,
               "currencyCode": "CAD"
             },
             "AU": {
-              "amount": 86,
-              "compareAtAmount": 171,
+              "amount": 87,
+              "compareAtAmount": 172,
               "currencyCode": "AUD"
+            },
+            "IN": {
+              "amount": 3534.49,
+              "compareAtAmount": 9956.66,
+              "currencyCode": "INR"
             },
             "GB": {
               "amount": 46,
               "compareAtAmount": 91,
               "currencyCode": "GBP"
-            },
-            "US": {
-              "amount": 60.42,
-              "compareAtAmount": 119.9,
-              "currencyCode": "USD"
             }
           },
           "image": null,
@@ -493,42 +493,42 @@
         {
           "kind": "image",
           "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sf52b70494a1e48f58bd38f6e6d818a271.webp?v=1788893818",
-          "alt": "",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
           "width": 800,
           "height": 800
         },
         {
           "kind": "image",
           "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S09c131c178f64179a1fe9a3c9f124c4er.webp?v=1789206174",
-          "alt": "",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
           "width": 1000,
           "height": 1000
         },
         {
           "kind": "image",
           "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S82de8ec6ef4c418da48105847ec17ce9u.webp?v=1789206219",
-          "alt": "",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
           "width": 1000,
           "height": 1000
         },
         {
           "kind": "image",
           "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S82e0288053be4a0cb5bd700a680968b9K.webp?v=1789206219",
-          "alt": "",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
           "width": 1000,
           "height": 1000
         },
         {
           "kind": "image",
           "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/S479c5347f7fd4b54b81391c4f3e9e938J.webp?v=1788893818",
-          "alt": "",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
           "width": 800,
           "height": 800
         },
         {
           "kind": "image",
           "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sa378d10da4fb4417a07b142e1b1233bdY.webp?v=1789206219",
-          "alt": "",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
           "width": 1000,
           "height": 1000
         },
@@ -563,7 +563,7 @@
         {
           "kind": "image",
           "src": "https://cdn.shopify.com/s/files/1/0721/8869/0659/files/Sbe67745aa6f848d09948126c3dbd1c21V.webp?v=1788893818",
-          "alt": "",
+          "alt": "Acupressure Pen - Auto-Sensing Meridian Massage Tool, No Needles",
           "width": 800,
           "height": 800
         },
