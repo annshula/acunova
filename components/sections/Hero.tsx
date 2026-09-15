@@ -57,6 +57,11 @@ import { hero } from "@/content/copy";
  */
 const SLIDES: HeroSlide[] = [
   {
+    desktopSrc: "/hero/forearm-desktop.png",
+    mobileSrc: "/hero/forearm-mobile.png",
+    alt: "A close-up of the AccuPenPro pen's tip pressed against the inner forearm",
+  },
+  {
     desktopSrc: "/hero/linen-desktop.png",
     mobileSrc: "/hero/linen-mobile.png",
     alt: "The AccuPenPro pen and its four interchangeable heads laid out on white linen",
@@ -65,11 +70,6 @@ const SLIDES: HeroSlide[] = [
     desktopSrc: "/hero/inuse-desktop.png",
     mobileSrc: "/hero/inuse-mobile.png",
     alt: "A close-up of the AccuPenPro pen being pressed against the side of the neck",
-  },
-  {
-    desktopSrc: "/hero/forearm-desktop.png",
-    mobileSrc: "/hero/forearm-mobile.png",
-    alt: "A close-up of the AccuPenPro pen's tip pressed against the inner forearm",
   },
   {
     desktopSrc: "/hero/dish-desktop.png",
