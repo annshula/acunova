@@ -6,7 +6,8 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState, type ButtonHTMLAttributes } from "react";
 
 import { AccountMenu } from "@/components/account/AccountMenu";
-import { CurrencySelector } from "@/components/localization/CurrencySelector";
+// Currency switch hidden: keep auto geo-detected currency, don't let users override it.
+// import { CurrencySelector } from "@/components/localization/CurrencySelector";
 import { useCart } from "@/components/providers/CartProvider";
 import { Logo } from "@/components/ui/Logo";
 import Button from "@/components/ui/Button";
@@ -210,9 +211,10 @@ export default function Nav() {
             </ul>
 
             <div className="flex items-center gap-1 sm:gap-2">
-              <div className="hidden sm:block">
+              {/* Currency switch hidden: keep auto geo-detected currency, don't let users override it. */}
+              {/* <div className="hidden sm:block">
                 <CurrencySelector variant="bar" overHero={false} />
-              </div>
+              </div> */}
               <div className="hidden sm:block">
                 <AccountMenu variant="dropdown" overHero={false} />
               </div>
@@ -299,7 +301,8 @@ export default function Nav() {
                   full-width shop CTA underneath carries the weight. */}
               <div className="border-t border-line px-5 pt-5 pb-[calc(env(safe-area-inset-bottom)+1.25rem)]">
                 <div className="flex items-center justify-center gap-3">
-                  <CurrencySelector variant="drawer" />
+                  {/* Currency switch hidden: keep auto geo-detected currency, don't let users override it. */}
+                  {/* <CurrencySelector variant="drawer" /> */}
                   <AccountMenu variant="list" />
                   <CartButton onOpen={() => setMenuOpen(false)} />
                 </div>
