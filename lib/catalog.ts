@@ -33,8 +33,8 @@ export type SyncedVariant = {
   stockQuantity?: number | null;
   /** Per-country price list, from the store's real (single-country) Shopify Markets only — see lib/shopify/sync-product.ts. Empty until a product has been through that sync. */
   pricesByMarket?: Record<string, MarketPrice>;
-  /** The real Shopify variant image (per finish/colour) — undefined for a product synced before images were added to the schema. */
-  image?: string;
+  /** The real Shopify variant image (per finish/colour) — undefined for a product synced before images were added to the schema, null when Shopify has no image for this variant. */
+  image?: string | null;
 };
 
 export type SyncedProduct = {
